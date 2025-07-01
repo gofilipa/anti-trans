@@ -1,5 +1,11 @@
-# ignore models
-models/
+# ignore models and spacy
+training/heritage/.venv/
+training/heritage/models/
+training/heritage/output_doc.spacy
 
 # ignore evals
 evals/data/
+
+# state bills web scraping
+bills/state_bills/chrome/chromedriver/
+bills/state_bills/bills_pdf/

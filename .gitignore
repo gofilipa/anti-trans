@@ -1,6 +1,7 @@
 # ignore models and spacy
 training/heritage/.venv/
-training/heritage/models/
+training/models/
+training/checkpoints/
 training/heritage/output_doc.spacy
 
 # ignore evals

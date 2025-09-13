@@ -1,58 +1,33 @@
 * draft
-** todos
-- [X] choose shrier quotes
-- [X] read Butler, /BTM/
-- [ ] read Amin's critique of Butler; 
-- [ ] read /CA/ annotations & articles.
-
-** outline
-- anti-trans bill titles
-  - patriarchal langauge shows an attachment to norms, protecting
-    women and children, figures that need to be protected. 
-- close reading of Shrier
-  - we can begin to parse out some of the deeper contradictions here:
-    that free expression only applies to certain kinds of expression. 
-  - an example of the kind of reading I don't want to do
-- Sedgwick and readings of shame.
-  - remember Heather Love's critique: that Sedgwick is still trying to
-    make shame a politically viable object.
-  - Cassius Adair reading trans erotics in porn.
-- Close reading of ML mechanism, and of results.
-  - contrast with Butlerian close reading (or do this at top?)
-  
 ** argument (& method?)
 This is an essay about ways of reading. 
 
 This is an essay about a machine process, one that you are by now
 familiar with, even if you don't know how it works on a technical
 level. My goal is to illuminate this machine process by drawing an
-analogy between it and human affects of fear and desire, specifically,
-what fear implies about desire, in the phobia that the body has toward
-its own desire.
+analogy between it and human attatchment to normativity, specifically,
+to desire.
 
 The analogy between machines and bodies evokes a longstanding
 conflation of the two in the term "Artificial Intelligence," which is
 itself an anthropomorphization of machine processes like algorithmic
 prediction.[fn:1] My intention is not to do away with this conflation,
-but to re-orient some of the terms on which it rests. Information
-processing is seen as intelligent, as human-like (it is
+but to re-orient some of the terms on which it rests.
+
+Information processing is seen as intelligent, as human-like (it is
 anthromoporphized) but with the benefit of being free of the human
-body. So let us bring the body back into the machine. This paper
-achieves this goal in two ways: by attending to embodied experience of
-phobia, and what phobia reveals about desire, and by tracing the
-materiality of machine learning processes.
+body. So let us bring the body back into the machine.
 
 To bring machines and bodies into relation, I enlist the concept of
 normativity, and particularly, the attachment to normativity that, I
 will show, brings procedures of both desire and of algorithmic
 prediction into productive relation. I will take, on the one hand, the
 desire for normative gender identities that underlies contemporary
-discourses of transphobia, expressed in the anti-trans legislative
-movement, and, on the other hand, what happens to data as it is used
-to train machine learning models. Across these widely different
-domains, I argue, this shared drive toward normativity enables me to
-deploy machine learning as an apt tool for studying normativity in
-transphobic language.
+discourses of transphobia, and on the other hand, what happens to data
+as it is used to train machine learning models. Across these widely
+different domains, I argue, this shared drive toward normativity
+enables me to deploy machine learning as an apt tool for studying
+normativity in transphobic language.
 
 The investment in normativity is a through line, common ground,
 between transphobia and trans affirmation. It is the answer to the
@@ -60,7 +35,10 @@ question--What do trans subjects and far right ideologues have in
 common? In a more subtle way, it is also an attempt to bring desire
 explicitly into computational processing.
 
-** TODO close reading
+
+
+** bank
+*** ANTI-TRANS BILLS
 There are currently 81 legislative bills in Congress that concern
 trans people's rights. Below is a list of some of their titles:
 
@@ -108,6 +86,7 @@ glaring the surface of these bills, in their titles that invoke the
 fear of gender nonconformity as a national threat, from which the
 American people (especially children) need protection.
 
+*** IRREVERSABLE DAMAGE
 In public discourses, the fear is that transness is contagious, that
 it can spread from person to person. This fear, which is popularized
 in the now debunked medical diagnosis called "Rapid-onset Gender
@@ -166,7 +145,7 @@ RIGHT NOW. THAT IS ATTEMPTING TO CONTROL US RIGHT NOW.
 
 SO I SEE THAT I HAVE TO MOVE SHRIER TO THE TOP!
 
-*** TODO close reading of bills via Butler
+*** LEGISLATIVE BILLS
 The bills are not written irony, they are written in a declarative
 legal language. 
 
@@ -212,17 +191,11 @@ thinking here of Judith Butler, and her famous (and contentious) claim
 that even seemingly physical phenomena, like biological sex, is
 discursively produced.
 
-
-
-
-
 While I enjoy doing this kind of analysis of irony, it is exactly the
 kind of reading that I don't want to do for this project. Because the
 more that I engage with the material and the public discourse around
 it, the more I am convinced that this particular historical moment
 needs another mode of reading.
-
-** another mode of reading lol
 
 
 * Footnotes

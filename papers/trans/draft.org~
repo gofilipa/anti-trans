@@ -1,0 +1,566 @@
+* tsq paper
+
+** notes
+*** purpose & outline
+An article about the shared investments across between pro- and
+anti-trans advocacy. The notion of gender as a subjective phenomenon.
+Using Machine Learning tools to explore this.
+
+The problem:
+- pro-trans groups say that gender is subjective, based on perception,
+  not on body.
+- anti-trans groups say that if gender is subjective, then there is no
+  need to bring the body into alignment.
+- subjectivity is not a good argument for trans rights advocacy. It
+  neglects the body (Amin) and reinforces late-stage capitalism
+  (Gould). 
+
+Approach: Machine Learning analysis
+- What do these two sides have in common? What investments do they
+  have in common?
+- Using machine learning tools, which are really good at finding what
+  is shared, approximating, to surface their shared investments.
+- Doing a Trans Studies analysis of a very straight reality TV show,
+  Love Is Blind.
+
+Frameworks:
+- Chu's trans subjects explore what it means to be "attached" to
+  norms.
+  - Trans people want "a normal fucking life." “Desire for the norm
+    persists through nonnormative attempts at
+  normativity” (107).
+- Prosser's arguments about desire for heteronormativity.
+- Bey's argument for gender abolition, nonrecognition, uncaptured, a
+  way of being out of the taxonomy (Amin).
+  - Builds on strands of queer theory that resist categorization. 
+
+Connecting to debates in Trans Studies about the desire for
+normativity and passing in trans subjects. Looking at how the desire
+for normativity can be a through line between trans subjects and
+anti-trans groups. If we can find some kind of connection, solidarity,
+then could we bridge the gaps of hate and fear of the unknown?
+
+*** cutouts from drafts
+**** global and political discourses on defining gender
+In North America, where I am located, a mounting wave of transphobia
+has recently propelled a series of executive orders with titles like
+"Defending Women From Gender Ideology Extremism And Restoring
+Biological Truth To The Federal Government" and "Keeping Men Out of
+Women's Sports. These initiatives double down on the primacy of sex
+over defining sex as "binary and biological," and relegating gender to
+a personal feeling that has no bearing on sex identification [The
+White House 2025a, The White House 2025b].
+
+The push to solidify sex as "binary and biological" is a reaction to
+the fluidity, nebulousness, and slipperyness of how gender is
+conceptualized in trans affirming discourse. The American Psychiatric
+Association defines gender identity as "a person’s inner sense of
+being a girl/woman, boy/man, some combination of both, or something
+else" ["What is Gender Dysphoria?" 2025]. Similarly, the World Health
+Organization defines gender identity as "a person’s innate, deeply
+felt internal and individual experience of gender," and constrasts it
+to biolgoical sex, adding that gender identity "may or may not
+correspond to the person’s physiology or designated sex at birth"
+["What is Gender Dysphoria?" 2025, "Gender and health" 2025].
+
+In this view, gender is associated with gender identity, an internal
+phenomenon. Sex, by contrast, is a biological fact, one that can be
+altered to reflect a person's internal sense of gender. This view
+inspires transphobic reasoning around the issue of medical care--if
+gender is an internal phenomenon, then why do people feel the need to
+physically transition? In other words, if gender identity can actually
+diverge from external sex characteristics (genitals, facial hair,
+etc), then sex has no bearing on gender identity, which means that
+transgender people shouldn't need to transition at all.
+**** amin on divergence model leaving out gender as expression
+The development of the gender identification has, according to Queer
+and Trans Studies scholar Kadji Amin, created a domino effect where
+gender is increasingly idealized and divorced from bodily expression.
+Amin argues that identity terms often used within transgender
+discourse, particularly the terms "cisgender" and "nonbinary," reflect
+an idealized conceptualizations that actually re-stigmatize
+non-normative gender expressions.
+
+One significant effect of the categories is that they create idealized
+forms of normativity that do not accurately describe any
+gender-sexuality in lived reality. This is because normative
+categories like "heterosexual" and "cisgender" form as a reaction to
+the emergence of non-normative identities. Amin explains that, rather
+than descriptive categories, the terms heterosexual, cisgender, and
+binary represent fictions, "increasingly idealized and uninhabitable
+normative categories," created to balance the non-normative identities
+of homosexual, transgender, and nonbinary [Amin 116].
+
+As a reaction to non-normative categories, the normative categories of
+"heterosexual," "cisgender," and "binary" imply idealized notions of
+gender-sexuality that are difficult to inhabit because there is not
+inner feeling of identification. This lack of identificatory feeling
+explains why, for example, many apparently cisgender people find it
+difficult to identify with the "cisgender" and "binary" nominatives.
+While it is relatively simple to name the experience of discomfort in
+one's embodied gender-sexuality as gender dysphoria, it is less
+straightforward to name and describe the experience of what is
+unremarkable, routine, and even banal. There is no salient feeling
+that describe the experience of being comfortable in one's
+gender-sexuality.
+
+As it increasingly diverges in categories, Amin argues, gender
+identity becomes buried "deeper and deeper within the private recesses
+of the self, where it increasingly disavows any relation to the
+social" [Amin 116]. In other words, idealized categories like
+cisgender and nonbinary make non-normative gender identities less and
+less visible. For example, in the identity of the "femme" (feminine)
+presenting nonbinary person describes a woman assigned with a feminine
+gender expression that nonetheless identifies as nonbinary.
+
+The effect of prioritizing non-normative gender as an /identity/ that
+is invisible, that is not immediately apparent despite being marked,
+is to marginalize gender as /expression/, which re-stigmatizes those
+gender groups that already experience social stigma. Amin points to
+feminized genders to make this point--the queen and the fairy, for
+instance. Defining gender as an external expression or embodiment is
+more likely to make visible and validate those gender which experience
+stigamtization based precisely on how those genders present outwardly. 
+
+**** anti- and pro-trans align on defining gender
+One effect of idealizing gender-sexuality is place it as a
+psychological identification. On this point, at least, both the
+transphobic and the trans-affirming perspective align. For example, a
+recent executive order from the United States White House
+unambiguously contrasts "sex" from "gender identity," which it defines
+as:
+#+begin_quote
+A fully internal and subjective sense of self, disconnected from
+biological reality and sex and existing on an infinite continuum, that
+does not provide a meaningful basis for identification and cannot be
+recognized as a replacement for sex. ["Protecting women" 2025]
+#+end_quote
+Similarly, the World Health Organization (WHO), who has codified
+gender dysphoria as "gender incongruence," defends the right
+gender-affirming care ["Gender incongruence and transgender health in
+the ICD"]. The WHO affirms that sex is separate from gender, which is
+a "socia construct," and that gender itself is separate from gender
+identity:
+#+begin_quote
+Gender and sex are related to but different from gender identity.
+Gender identity refers to a person’s deeply felt, internal and
+individual experience of gender, which may or may not correspond to
+the person’s physiology or designated sex at birth. ["Gender and
+health" 2025]
+#+end_quote
+Both those who deny and affirm the rights of transgender people agree
+on one thing: that gender identity is distinct from expressed and
+embodied forms of gender.
+
+**** close reading ACLU & Heritage
+To explore this question, I'm going to show a few examples from my
+current research, which uses ML tools for the purpose of studying
+discriminatory and prejudiced language. For this, I scrape data from
+various internet sources, which represent different perspectives.
+Then, I use this data to train (very small) ML models, to see how they
+respond to certain prompts.
+
+The goal here is not to generate text for the sake of generating text,
+but to surface certain insights about the data on which that text was
+trained.
+
+I'm going to show some examples of ML-generated text based on two very
+different data sources, representing different political perspectives
+on the topic of transgender rights in the US.
+
+    SLIDE heritage screenshot
+
+One of these sources represents an American conservative perspective,
+and comes from the Heritage Foundation, which is a think-tank in
+Washington DC whose goal is to influence governmental policy. You can
+see some of the headlines here from their website, like "Sorry
+Democrats, but Trumps' 'Two Sexes' Executive Order is Constitutional".
+All of these articles, about 300 in total, were included in my
+dataset. 
+
+    SLIDE ACLU trans screenshot
+
+Coming from the opposing side, from the progressive pole, is the ACLU,
+the American Civil Liberties Union, which is a group of legal
+professionals and volunteers who advocate on behalf of civil rights
+for marginalized groups in the US. Here, you'll see articles that
+speak of trans in terms of "rights" and "liberation," and connect it
+to LGB rights more broadly.
+
+With these datasets, I then trained two individual large language
+models, using gpt-2 (an open source model) as the base model. I'll
+mention quickly, for those who don't know, that training models
+happens in various stages. What I did was take an already trained
+model, gpt2, and re-trained it on a smaller and more specific dataset.
+This is technically called "fine-tuning", and its much easier and less
+resource intensive than training the underlying "base" model (I am
+more than happy to explain more details in the Q&A).
+
+So, after training, I fed a series of prompts to both of the resulting
+models.
+
+These prompts included:
+
+    SLIDE prompts
+
+#+begin_quote
+Masculinity is
+
+Femininity is
+
+Transgender is
+
+Gender binary is
+
+Man is
+
+Woman is
+#+end_quote
+
+And finally, I comapared the results.
+
+First, there was a strong contrast of gender and how genders are
+conceptualized between the model trained on the ACLU data and model
+trained on the Heritage data. First, I'll show some examples from the
+ACLU model, which represents the progressive side:
+
+#+begin_quote
+Masculinity is a matter of love and celebration.
+
+Masculinity is a space for hope and liberation for all.
+
+Masculinity is not defined solely by the beauty of our bodies, but by
+the beauty of our experiences.
+
+Femininity is a celebration of beauty, feminine liberation, and
+femininity.
+
+Femininity is our joy, our struggle, and our fight is our struggle.
+
+Femininity is about allowing people to express themselves without
+government interference.
+#+end_quote
+
+As you can see, terms associated with "masculinity" and "femininity"
+are characterized by gender-affirming, even celebratory language,
+which is very positive and empowering; using words like "liberation,"
+"beauty", and "joy". Reading this, you get the sense that these terms
+come from contexts mentioning transgender experiences, and in the
+training data, "masculinity" and "femininity" may have been prepended
+by the term "trans."
+
+From these examples, you may also notice the tendency of language
+models (especially very small and underdeveloped ones) to repeat
+themselves. This is a quirk due to their predictive nature, where the
+goal is to guess the next word based on what is most likely. As a
+result, they get themselves stuck into these little loops of saying
+the same thing over and over again---which I find kind of endearing.
+
+Now, I'll show the text generated by the model trained on the Heritage
+Foundation data.
+
+#+begin_quote
+Masculinity is the cornerstone of Western civilization.
+
+Masculinity is the fruit of patriarchy, and patriarchy is the heart
+of conservatism.
+
+Masculinity is defined by the ability to produce sperm, eggs, and live
+children.
+
+Femininity is an enduring American tradition.
+
+Femininity is defined by means of the relationship between the sexes,
+the ability to raise their children, the capacity to provide for their
+own reproduction, the capacity to provide for their own children, the
+ability to provide for their own.
+#+end_quote
+
+Here, these gender terms are also positive, but their associations
+with culture, tradition, and reproduction---things that suggest
+stability rather than empowerment.
+
+So you can see, even from just glancing at the results, that there are
+direct connections between the training data and the model outputs. By
+processing the training data, the model learned not just how language
+works, the "facts or rules" of language, but absorbed the perspectives
+contained within that language. So that, depending on the dataset that
+the model is trained on, the terms "masculinity" and "femininity" will
+have totally different meanings.
+
+Perhaps this is not surprising. But what I also found, which deepens
+this a little bit, is that gendered terms reveal investments in other,
+seemingly unrelated or benign terms.
+
+    SLIDE subjective
+
+For example, the Heritage Foundation model kept repeating the term
+"subjectivity" when it mentions gender:
+
+#+begin_quote
+Masculinity is a subjective self-perception, not a universal
+concept.
+
+Femininity is a subjective, internal sense of self.
+
+The gender binary is a subjective, malleable, and often incorrect
+idea.
+
+The gender binary is a subjective, internal, and often transitory
+concept.
+
+The gender binary is a subjective, grammatically incorrect and
+illogical concept that conflates sex and gender identity.
+#+end_quote
+
+If you're familiar with American conservative viewpoint---that gender
+binary is based firmly on biology---you may notice that these examples
+don't reflect that view. Rather, they represent the a progressive view
+of the gender binary which asserts that gender is based on aspects of
+identity beyond just biology.
+
+The reason for this, I believe, is that this particular term,
+"subjective" /does not/ describe the conservative position. Rather, it
+describes a conservative frame for the progressive position. In other
+words, it represents what a transphobic person thinks a progressive
+person thinks gender is---as something insubstantial, as a feeling.
+
+This explains why there is a curious hint of contempt in some of the
+examples, which use terms like "illogical" and "incorrect" alongside
+"subjective." These are traces of derision which are sustained from
+the training data.
+
+In the model outputs then, we see not just a single perspective of
+gender, but a /flattening/ of perspectives into a single statement.
+From the training data, there are distinct expressions, distinct
+viewpoints, which in the model, have been aggregated into an
+apparently univocal utterance.
+
+So, language in this form, in an /aggregate form/, the so called
+"facts and rules" of language come hand in hand with specific
+perspectives, and sometimes distinct perspectives.
+
+**** close reading ACLU on "reality"
+From the other side, the ACLU-generated text, we see the exact same
+phenomenon. Instead of "subjective", however, the investment is in the
+term "reality." 
+
+#+begin_quote
+Masculinity is real and meaningful.
+
+Transgenderism is a false ideology that is not real and that is
+opposed by the very people who seek to deny that freedom and equality
+for all.
+
+The gender binary is not real, it is real, and it is real.
+
+The gender binary is not a binary, it is a reality within us.
+
+The gender binary is not an accepted reality, but one that is accepted
+by a wide swath of people.
+#+end_quote
+
+Here there is more ambivalence around the term "real", which depends
+on whether it is being asserted in a positive way, such as
+"Masculinity is real," or within a negative construction, such as
+"Transgenderism is a false ideology that is not real."
+
+In a couple of the examples, this ambivalence is directly at odds. For
+example, in this amusing construction, "The gender binary is not real,
+it is real, and it is real."
+
+*** reading notes
+**** Gould, Wren Ariel. “Coconstructing (Trans-)Capitalist Realism: Trans Activisms Collude in the Political Economy Structuring Anti-Trans Laws.” TSQ: Transgender Studies Quarterly, vol. 11, no. 2, May 2024, pp. 214–38. Silverchair, https://doi.org/10.1215/23289252-11215470.
+**** Terán, Ira, and Emrys Travis. “A Small Piece of Red Sky to Fly In.” TSQ, vol. 11, no. 2, May 2024, pp. 186–213. DOI.org (Crossref), https://doi.org/10.1215/23289252-11215457.
+- Trans Marxism views trans identity as "nothing less than the bodily
+  manifestation of a broader struggle for the reconfiguration of the
+  human toward the coordinates of socialism" (Terán, Travis, "A Small
+  Piece of Red Sky to Fly in")
+
+**** Raha, Nat. “The Limits of Trans Liberalism—By Nat Raha.” Verso, https://www.versobooks.com/blogs/news/2245-the-limits-of-trans-liberalism-by-nat-raha. Accessed 20 Feb. 2025.
+- "trans liberalism" - the idea that extending equal rights to trans
+  people is the solution to inequality. 
+  - "This form of trans politics—that may be described as ‘trans
+    liberalism’—argues that transgender rights are the solution to the
+    problems facing trans people, and will enable our participation in
+    (Western) capitalist society; that, alongside rights, positive
+    media representation is the best method to win over the cisgender
+    world and improve the standing of trans subjects within the
+    multicultural diversity of an apparently equal society. The basis
+    of this ‘equality’ is fictitious: the neoliberal states, in which
+    these demands are made, reproduce socio-economic divisions along
+    intersecting lines of race and class, gender, sexuality,
+    dis/ability, nationality and immigration status. Without
+    challenging the existing inequality of society, trans activism
+    modelled on ‘successful’ liberal lesbian and gay rights
+    initiatives—such as the work undertaken by the Human Rights
+    Campaign in the US and Stonewall UK—advocates for social inclusion
+    that occurs with and through the disenfranchisement of the poor."
+    (Nat Raha, "The Limits of Trans Liberalism", 2015)
+
+**** Love is Blind
+
+Transcripts in the pods:
+- Season 2, episodes: 1, 2, 3
+- Season 3, episodes: 1, 2, 3
+- Season 4, episodes: 1, 2, 3
+
+Honeymoon and reality episodes:
+- Season 2, episodes: 4-10
+- Season 3, episodes: 4-10
+- Season 4, episodes: 4-12
+**** Bettcher, Talia Mae; Transphobia. TSQ 1 May 2014; 1 (1-2): 249–251. doi: https://doi.org/10.1215/23289252-2400181
+
+Transphobia indicates a rational fear, "grounded in a larger cisgender
+social context", which is structural and difficult to parcel out:
+- "Provisionally, the term can be defined to mean any negative
+  attitudes (hate, contempt, disapproval) directed toward trans people
+  because of their being trans. When taken literally, the word means a
+  kind of fear. But like homophobia (on which the word is modeled), it
+  is used more broadly. And while transphobia suggests an analogy with
+  terms like agoraphobia and therefore implies irrationality
+  (Merriam-Webster's Collegiate Dictionary defines homophobia as “an
+  irrational fear of, aversion to, or discrimination against
+  homosexuality or homosexuals”1; most dictionaries do not define
+  transphobia at all), this implication ought to be rejected.
+  Transphobia occurs in a broader social context that systematically
+  disadvantages trans people and promotes and rewards antitrans
+  sentiment. It therefore has a kind of rationality to it, grounded in
+  a larger cisgenderist social context (Hopkins 1996)." (Bettcher
+  249).
+- "A trans woman might be targeted not because of her trans status
+  but because she is simply viewed as a sex worker (Namaste 2005).
+  Moreover, at least in some cases, transphobia may be inseparably
+  blended with misogyny or racism in ways that challenge a single-axis
+  model of power (Juang 2006). Such inseparabilities undermine the
+  attempt to account for transphobia in a way that excludes or
+  marginalizes considerations of sexism, racism, classism, ableism,
+  and so forth. This consideration is important because it questions
+  why certain instances of violence should be characterized as
+  instances of transphobia (as opposed to instances of racism or
+  sexism) in the first place and what the underlying political agenda
+  sustaining such characterization is. My conclusion, at any rate, is
+  that while we might have a definition of transphobia, the term is
+  not much more than a convenient (and not altogether innocent)
+  placeholder for the real intellectual work that remains to be done."
+  (Bettcher 251).
+
+**** Amin, Kadji. “Taxonomically Queer? Sexology and New Queer, Trans, and Asexual Identities.” GLQ: A Journal of Lesbian and Gay Studies, vol. 29, no. 1, 2023, pp. 91–107.
+
+About how we categorize gender.
+
+We've moved from a heterosexual matrix to a kaleidoscope, "in which
+each axis of definition is mobile and may be combined with any other
+axis, making way for an almost infinite array of variations" (Amin,
+"Taxonomically" 91).
+
+The "a nuanced and nimble vocabulary through which to know, define,
+and communicate their own unique gender and sexual subjectivity," a
+taxonomy, goes against queerness and Queer and Trans Theory, and
+participates in racial and sexological logics. 
+- "what could be further from the queer — which might be glossed as a
+  deconstructive method of troubling categorizations — than taxonomy,
+  a scientific method of establishing them?" (Amin, "Taxonomically"
+  92).
+- "contemporary queer systems of identity are the latest iteration of
+  the classificatory logics behind sexology in particular and racial
+  science more generally" (Amin, "Taxonomically" 92).
+- "How are the scholarly fields of queer and trans studies — which
+  have taken shape in ambivalent resistance to sexology and taxonomy
+  alike — to contend with the departure of the cultures to which they
+  owe their existence from this basic orientation?" (Amin,
+  "Taxonomically" 93).
+
+History of taxonomization
+- "the distinction between gender and sexuality was always a
+  sexological invention — a taxonomical principle masquerading as an
+  ontological distinction" (Amin, "Taxonomically" 92).
+
+Taxonomy a tactic of white supremacy:
+- "As damaging as sexological taxonomies have been for many gender and
+  sexual deviants, to be sexologically diagnosable in the first place
+  was a white distinction — a testament to the individuality,
+  complexity, and value of white bodies and psyches. As many scholars
+  have demonstrated, Indigenous and racialized peoples were not
+  considered deviant as sexological individuals who might be
+  homosexuals, sadists, sexual fetishists, etc., but rather en masse,
+  as constitutively and polymorphously perverse populations (Ross
+  2005; Driskill 2016)." (Amin, "Taxonomically" 95).
+
+Can taxonomy be queered? According to Love?
+- "In light of this noxious history, is it even conceivable to put a
+  queer spin on taxonomy? This question dovetails with methodological
+  debates in queer studies that ask if scientific and social
+  scientific methods that have been part of the objectification of the
+  world in ways organized around anti-Blackness, colonial conquest,
+  and the pathologization of deviance can be repurposed for more
+  innocent or even progressive ends or whether such methods inevitably
+  perpetuate the hierarchical, violent, and racist epistemological
+  frameworks from which they emerged (Love 2015; Ghaziani and Brim
+  2019). We might locate the contemporary queer, trans, and asexual
+  taxonomical renaissance as a crucial case study within this debate."
+  (Amin, "Taxonomically" 96).
+
+Taxonomy has epistemological assumptions, significantly, that
+identities are essential, and dovetail with current ideas of gender
+being biologically rooted. 
+- "Taxonomy’s biological inheritance brings with it the conceit that
+  taxonomical categories and divisions are objective and innate, the
+  hidden laws that govern what manifests in the natural world. This is
+  the foundational premise of Hirschfeld’s taxonomy: that everything —
+  from choice of hobbies, to aptitude for a certain profession, to
+  gait, to taste in undergarments, to preference for certain sex acts,
+  to attraction to cavalrymen — is ultimately biologically determined,
+  albeit according to sexed elements that are far more complex and
+  variable than mere binary genital anatomy. Despite the ethos of
+  self-identification and rejection of outside (or insider) experts
+  classifying individuals according to “objective” criteria, new queer
+  taxonomies end up dovetailing, sometimes intentionally (Chasin
+  2013), with popular and medical beliefs that sexual and gender
+  identities are biologically rooted, innate, unchanging, and discrete
+  from one another. This, in turn, reinforces damaging, exclusionary,
+  and grossly oversimplified criteria about who counts as, for
+  instance, a “true” transsexual or authentic asexual. Indeed, the
+  vernacular thirst to taxonomize partakes of a scientism that
+  animates faith in taxonomy as a significant and meaningful method in
+  the first place." (Amin, "Taxonomically" 100).
+- "New spins on taxonomy risk installing a new universalism that
+  downgrades competing epistemologies to the status of the local, the
+  backward, the traditional, or the false conflation." (Amin,
+  "Taxonomically" 101).
+
+
+Dis-identification as a strategy for working within these taxonomies
+- "I want to acknowledge the creative and resourceful ways in which
+  Indigenous and racialized people “dis-identify” with these
+  categories, creatively reworking them and exposing their normative
+  operations from within (Muñoz 1999). Such disidentificatory
+  performances occur every time an Indigenous or racialized person
+  lays claim to one of these categories while calling attention to the
+  fact that theirs are usually not the bodies evoked by this category,
+  and even that, racially speaking, they may not have access to
+  cisgender binaries or ideals about “healthy” levels of sexual desire
+  in the first place" (Amin, "Taxonomically" 103).
+
+
+Dis-identification as a strategy for working within these taxonomies
+
+"Whether or not scholars critique it, however, the queer taxonomical
+imaginary is likely here to stay. I, for one, find the growing
+bifurcation of queer, trans, and asexual scholarly analytics from
+queer, trans, and asexual practices of living frankly unethical. My
+proposal, then, is threefold. First, “deidealize” queerness by
+recognizing that taxonomy can be queer, in the sense of being useful
+and meaningful to queer-identified people (Amin 2017). This approach
+requires cultivating scholarly sympathy and empirical curiosity about
+the identifications, erotics, relations, and life-ways opened up by
+new, queer, trans, and asexual taxonomies. Second, continually center
+those Indigenous, non-Western, and historical ontologies of being that
+new taxonomies — with their universalist scientific trappings —
+threaten to erase, incorporate, [End Page 104] and/or supersede.
+Finally, fuck with the universalizing presumptions of the taxonomical
+method from within by generating idiosyncratic interpretations and
+translations that explode the epistemological and ontological
+foundations of taxonomy itself. That, I think, would be an ethical
+scholarly approach to new queer, trans, and asexual taxonomies."
+

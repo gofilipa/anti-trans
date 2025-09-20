@@ -1,65 +1,266 @@
 * tsq paper
 ** draft
+
+*** sketch
 Are there, could there be, any way of connecting the bad feelings
 across polarized political groups? Of finding shared investments?
 
-What is trans about straight people? What is straight about trans
-people? What similar investments do they share? Could these be a
-possible route for connection, empathy, understanding?
+What investments connect the anti-trans and trans perspectives?
+Machine learning as a tool for finding the shared, the average, the
+obvious.
 
 This work fits into a larger question of what can criticism do. What
-kind of interventions can we make.
+kind of interventions can we make, what affinities may offer. 
 
-Machine learning as a tool for finding the shared, the average, the
-obvious. 
+Close reading analysis:
+- Question -- what changes when you introduce the physical body?
+- Answer -- desire shifts from the self to the other, is displaced.
+  - Sex becomes a problem, moves from highly invested to ambivalent,
+    to problematic.
+
+*** sedgwick and reading practices
+Back in 1997, reflecting on activist work in the midst of the AIDS
+crisis, Eve Kosofsky Sedgwick considers the efficacy of certain types
+of knowledge, especially knowledge of systematic oppression,
+injustice, and discrimination: she asks, "what does knoweldge do, the
+pursuit of it, the having and exposing of it, the receiving-again of
+knowledge one arlready knows?" (/Novel Gazing/ 3). She clarifies that,
+"for someone to have an unmystified, angry view of large and genuinely
+systemic oppressions does not /instrinsically/ or /necessarily/ enjoin
+that person to any specific train of epistemological or narrative
+consequences” (/Novel Gazing/ 3). In other words, this kind of
+analysis does not convince people of anything they don't already know.
+
+In our modern day, where information and outrage seem to be
+self-generating, this thought, which lead to her famous essay on the
+topic of paranoid reading in /Touching Feeling/, bears a return and
+another shot.
+
+This essay experiments with a new form of reading that does not aim to
+expose, describe, constellate--or any of the common verbs used to
+illustrate close reading analysis--text. Rather, it aims to
+approximate, to average, to find a middle ground, between words and
+word meaning. It uses computational tools to do so, as computers are
+ver good at counting and finding averages. And it does so with the
+larger goal of surfacing shared investments that similarly center on
+middle grounds, that is, normativity.
+
+*** close reading: machine learning 
+These machines work in ways that make them ideal for studying shared
+investments even across polarizing perspectives. This is because they
+are built to be predictive. And their predictions are based on
+generating what is most likely.
+
+There are two technical concepts that are central to understanding how
+this prediction process works.
+
+First, word vectors. Word vectors are how a machine learning model
+encodes word meaning, how it knows what each word in its database
+means. They are the model's dictionary, so to speak. But instead of
+consisting of a traditional definition, written in human language, the
+word vector consists of numbers, a long list of numbers. Each of these
+numbers describes probabilities associated between that word and every
+other word in the model's database.
+
+'queen': [-0.3583, -0.6767, 0.1689, -0.6164, -0.0135, -0.2284, 0.3359,
+        0.1149, -0.1512, -0.8014]
+
+In this example, the word "queen", is represented by the list of
+numbers: .3583, -0.6767, 0.1689, -0.6164, -0.0135, -0.2284, 0.3359,
+0.1149, -0.1512, -0.8014. Each of those numbers indicates "queen"'s
+relationship to another word, say "woman" or "orange," as a
+probability score. In the word vector database, "Queen" and "woman"
+would likely have a high probability, due to their both being
+associated with humans and femininity, while "woman" and "orange" have
+a much lower probability. That means that in vector space, the
+multi-dimensional space where the words are plotted as coordinates, or
+/vectors/, the the coordinates that represent "woman" would be nearby
+the coordinates that represent "Queen," and farther from the
+coordinates that represent "orange."
+
+Vectors transform what we think of as word meaning by quantifying it
+into a numerical representation, which can be plotted on a graph. And
+the idea is that once word meaning is quantified, it can be
+calculated. The matrix format of the word vector enables linear
+algebra operations, which computers can do very well. A host of
+algorithms now become possible: from example, cosine similarity
+calculates the distance between two vectors, that is, two words; and
+regression analysis guesses the relationship between an independant
+and dependant variable, or relation between one word and another.
+
+Meaning, crucially, can be calcuated via a formula. That's what the
+authors argue, anyway, in the paper that introduced word vectors to
+the world, titled "Efficient Estimation of Word Representations in
+Vector Space" (Mikolov et al. 2013). To illustrate the power of word
+vectors, the authors offer a formula to calculate the vector "queen"
+by subtracting "man" from "king" and adding "woman."[fn:1]
+
+#+begin_src
+  vector(”King”) - vector(”Man”) + vector(”Woman”) = vector("Queen")
+#+end_src
+
+This example, which introduced word vectors to the world, was
+presumably chosen for its intelligibility, as it is based on operands
+whose differences are assumed to be stable across cultures. To get
+"queen", one need only add femininity to a king, and subtract
+masculinity from the sum. There is no need of elaborating the meaning
+of these terms, their meaning is stabilized as self-evident and
+universally by the equals sign that balances them. That readers know
+what a "man" and "woman" are, just as they know what a "king" and
+"queen" is, not only speaks to assumptions of gender, but how these
+are implicated within those of patriarchy and imperialism.[fn:2]
+
+So the first important concept is that of numerical representation of
+semantic meaning: once word vectors quantify semantic meaning, then
+that meaning can be computed. The second concept has to do with the
+training process, which involves three functions or formulas.
+
+The first step is the "hypothesis" step. Here, a model will take
+a sample sentence from the dataset, and it will block out the second
+half of that sentence. Then, it will try to guess which words should
+go in that second half. Because the model has no idea what the words
+mean, the guess will be wrong. But that's doesn't matter, because the
+purpose of the hypothesis is to make any guess, so that it has
+something from which it build on in the future steps.
+
+Then, after making this guess, it moves to the next step, where the
+machine checks its prediction against the actual result---it will
+compare the predicted word vector against the actual word vector. And
+it will calculate the mathematical difference between the prediction
+and the actual result, which is called the "loss".
+
+Finally, in the third step, it moves to the minimizing this "loss" by
+/very slightly/ adjusting word vectors, an adjustment that it
+calculated through the gradient descent algorithm. The model will do
+this many times, making incremental changes each time, so progress is
+very slow, but also very precise. (And this constant iteration of
+numbers, and the computer processing required to do it, is why
+language models take lots of time, energy, and computer hardware to
+train). At each round of training, the numbers attached to each words
+are slightly adjusted toward the most likely number, which is in
+effect, an average of that words relationship to every other word in
+the database.
+
+I read this iterative shifting of numbers (representing words) within
+the model as a kind of /approximation/ or even /normalization/ of
+language. The model generates language by approximating what is most
+likely, most plausible, based on its training data.
+
+And this is exactly why, while models are good at guessing or
+predicting, they are not at all good at being creative, at innovating.
+A model can only generate what it has already seen before. Even a
+phenomenon like “hallucination,” that a model spews text that has no
+bearing in reality, is based on the tendency of models to repeat what
+they've already seen. They hallucinate not because they are creative
+or random, but because they are designed from statistical processes to
+generate what is most plausible rather than most accurate.
+
+*** TODO close reading: love is blind
+- What are the norms that drive the characters in their search for
+  love?
+- How does desire/sex change after the introduction of the physical
+  body?
 
 
-** some theory:
+Desiring the normative:
+- "I want to have kids, but I want to have a family, and I want to be
+  able to have that experience, but I want to have kids, and I want to
+  have a family." (PODS)
+  - kids, family, interesting contrast there.
+- "I want my mom to have grandchildren." (PODS)
+- "I want someone who wants to be a dad, and I want someone who wants
+  to be a grandfather." (PODS)
+- "I want somebody who's gonna be there forever." (PODS)
 
-Malatino - negative feelings are a means of intra-trans relation.
-Arguing for the political efficacy of negative feelings. (Need to get
-the specific argument/possibilities here).
+Cliches around loving a person for who they are "on the inside" 
+- "I want to be with somebody who loves me for who I am on the
+  inside." (PODS)
+- "I want to be loved for who you are on the inside." (PODS)
+- "I want someone who will love me regardless of what I look like." (PODS)
+- "I want someone who will accept me regardless." (PODS)
+  - there is a personality distinct from the outside body. 
 
-Love - bad feelings don't lead us anywhere. Sometimes we should just
-stay with them, regress with them. We do not have to progress, to get
-better. Sometimes we cannot. 
+Yet desire for the physical:
+- "I want to feel you and hug you." (PODS)
+- "I want to be a better person for you." (PODS)
 
-Chun - Negative feelings are a tool of polarization, a way of aligning
-people around a cause, but in a way that also keeps them separate. For
-example, incels. Homophily, explained via magnetic polarization:
-"polarized filings both repel one another and stick together through
-their overwhelming attraction to their opposite pole" (Chun 85).
+Ambivalence about having sex:
+- "Having sex is sexy, but there's something about it that I don't
+  want to put my finger on." (PODS)
+- "Having sex is something that I am very attracted to, but it is also
+  something that I am not attracted to." (PODS)
+- "Having sex is not something that I would ever wish on anyone else."
+  (PODS)
+- "Having sex is something I would rather do." (PODS)
+- "Having sex is sexy, it's fun, and I've never even seen a woman
+  having sex with me." (PODS)
+- "Having sex is not something I would want in a partner, but it's
+  something I can definitely do." (PODS)
+- "Having sex is so sexy, and I'm so fucking excited to get engaged."
+  (PODS)
+- "Having sex is hard for me, and I just feel like it's not worth it."
+  (PODS)
+- "Having sex is a physical act, and I'm not attracted to physical
+  attraction." (PODS)
 
-Prosser - being trans isn't about making constant disruptions, but
-about finding your way back to the body:
-- "If, for queer theory, transition is to be explored in terms of its
-  deconstructive effects on the body and identity (transition as a
-  symptom of the constructedness of the sex/gender system and a figure
-  for the impossibility of this system's achievement of identity), I
-  read transsexual narratives to consider how transition may be the
-  very route to identity and bodily integrity. In transsexual accounts
-  transition does not shift the subject away from the embodiment of
-  sexual difference but more fully into it" (Prosser 6).
-- "transsexual and transgendered narratives alike produce not the
-  revelation of the fictionality of gender categories but the sobering
-  realization of their ongoing foundational power" (Prosser 11).
+The physical body introduces a problem.
+
+POSTPODS
+
+Desire is projected, desiring for the other person rather than for the
+self.
+- "I want to" or "I want someone who" to "I want her/him to".
+  (POSTPODS)
+- "I want him to be able to say, "I'm done."" (POSTPODS)
+- "I want her to know that I do love her." (POSTPODS)
+- "I want her to know that I'm willing to do what it takes for her to
+  be happy and to be a part of me." (POSTPODS)
+- "I want her to know that I'm not compromising with my feelings."
+  (POSTPODS)
+- "I want it to feel fully right to you." (POSTPODS)
+- "I'm glad you didn't try." (POSTPODS)
+
+Normativity:
+- "I mean, this is not a normal marriage."
+- 
+
+Sex
+- "Having sex is not a normal thing, you know." (POSTPODS)
+- "Having sex is not a normal thing for a couple."
+- "Having sex is a thing, right?"
+- "Having sex is a big deal for me, but it's not something that I
+  would ever do." (PODS)
+- "Having sex is so easy, and it's really scary." (POSTPODS)
+- "Having sex is a very scary step." (POSTPODS)
+- "Sex is a big part of my life." (POSTPODS)
+- "Sex is a very, very, very, very, very serious thing." (POSTPODS)
+- "Sex is a very, very, very, very scary, very, very real fear."
+  (POSTPODS)
+- "Sex is so sacred to me, and that's why I love it." (POSTPODS)
+
+The genders are interchangable (could be because most sentences start
+with "I"). 
+
+
+
 
 
 
 ** notes
-*** purpose & outline
+*** sketches
 An article about the shared investments across between pro- and
-anti-trans advocacy. The notion of gender as a subjective phenomenon.
-Using Machine Learning tools to explore this.
+anti-trans perspectives. Using ML to explore this.
 
-The problem:
+One problem:
 - pro-trans groups say that gender is subjective, based on perception,
   not on body.
 - anti-trans groups say that if gender is subjective, then there is no
   need to bring the body into alignment.
 - subjectivity is not a good argument for trans rights advocacy. It
   neglects the body (Amin) and reinforces late-stage capitalism
-  (Gould). 
+  (Gould).
+
+Another problem: what do trans and cis people share? 
 
 Approach: Machine Learning analysis
 - What do these two sides have in common? What investments do they
@@ -85,6 +286,247 @@ normativity and passing in trans subjects. Looking at how the desire
 for normativity can be a through line between trans subjects and
 anti-trans groups. If we can find some kind of connection, solidarity,
 then could we bridge the gaps of hate and fear of the unknown?
+
+*** some theory:
+Malatino - negative feelings are a means of intra-trans relation.
+Arguing for the political efficacy of negative feelings. (Need to get
+the specific argument/possibilities here).
+
+Love - bad feelings don't lead us anywhere. Sometimes we should just
+stay with them, regress with them. We do not have to progress, to get
+better. Sometimes we cannot. 
+
+Chun - Homophily: Negative feelings are a tool of polarization, a way
+of aligning people around a cause, but in a way that also keeps them
+separate. For example, incels. Explained via magnetic polarization:
+"polarized filings both repel one another and stick together through
+their overwhelming attraction to their opposite pole" (Chun 85).
+
+Prosser - being trans isn't about making constant disruptions, but
+about finding your way back to the body:
+- "If, for queer theory, transition is to be explored in terms of its
+  deconstructive effects on the body and identity (transition as a
+  symptom of the constructedness of the sex/gender system and a figure
+  for the impossibility of this system's achievement of identity), I
+  read transsexual narratives to consider how transition may be the
+  very route to identity and bodily integrity. In transsexual accounts
+  transition does not shift the subject away from the embodiment of
+  sexual difference but more fully into it" (Prosser 6).
+- "transsexual and transgendered narratives alike produce not the
+  revelation of the fictionality of gender categories but the sobering
+  realization of their ongoing foundational power" (Prosser 11).
+
+*** transcript analysis
+
+**** generated outputs between pods and postpods trained models
+Transcripts in the pods:
+- Season 2, episodes: 1, 2, 3
+- Season 3, episodes: 1, 2, 3
+- Season 4, episodes: 1, 2, 3
+
+Honeymoon and reality episodes:
+- Season 2, episodes: 4-10
+- Season 3, episodes: 4-10
+- Season 4, episodes: 4-12
+
+Input phrases:
+- "want" - changes from pods to postpods -- becomes displaced into the
+  other, where before was focused on subjectivity, the self.
+  - perhaps desire goes away because it become projected onto the
+    other.
+- "having sex" - in the pods, it's a "thing"; while in the postpods,
+  it's "a big issue", "big deal", "scary", "tough". 
+  - moves from a concept invested with importance to a problem.
+- "he is / she is" - have similar predicates.
+  - genders are interchangeable.
+  - not yet specific.
+- "afraid"
+  - more variety in postpod episodes; focused on fear of the future,
+    of relationships not working out.
+
+*** reading notes
+**** Gould, Wren Ariel. “Coconstructing (Trans-)Capitalist Realism: Trans Activisms Collude in the Political Economy Structuring Anti-Trans Laws.” TSQ: Transgender Studies Quarterly, vol. 11, no. 2, May 2024, pp. 214–38. Silverchair, https://doi.org/10.1215/23289252-11215470.
+**** Terán, Ira, and Emrys Travis. “A Small Piece of Red Sky to Fly In.” TSQ, vol. 11, no. 2, May 2024, pp. 186–213. DOI.org (Crossref), https://doi.org/10.1215/23289252-11215457.
+- Trans Marxism views trans identity as "nothing less than the bodily
+  manifestation of a broader struggle for the reconfiguration of the
+  human toward the coordinates of socialism" (Terán, Travis, "A Small
+  Piece of Red Sky to Fly in")
+
+**** Raha, Nat. “The Limits of Trans Liberalism—By Nat Raha.” Verso, https://www.versobooks.com/blogs/news/2245-the-limits-of-trans-liberalism-by-nat-raha. Accessed 20 Feb. 2025.
+- "trans liberalism" - the idea that extending equal rights to trans
+  people is the solution to inequality. 
+  - "This form of trans politics—that may be described as ‘trans
+    liberalism’—argues that transgender rights are the solution to the
+    problems facing trans people, and will enable our participation in
+    (Western) capitalist society; that, alongside rights, positive
+    media representation is the best method to win over the cisgender
+    world and improve the standing of trans subjects within the
+    multicultural diversity of an apparently equal society. The basis
+    of this ‘equality’ is fictitious: the neoliberal states, in which
+    these demands are made, reproduce socio-economic divisions along
+    intersecting lines of race and class, gender, sexuality,
+    dis/ability, nationality and immigration status. Without
+    challenging the existing inequality of society, trans activism
+    modelled on ‘successful’ liberal lesbian and gay rights
+    initiatives—such as the work undertaken by the Human Rights
+    Campaign in the US and Stonewall UK—advocates for social inclusion
+    that occurs with and through the disenfranchisement of the poor."
+    (Nat Raha, "The Limits of Trans Liberalism", 2015)
+
+**** Bettcher, Talia Mae; Transphobia. TSQ 1 May 2014; 1 (1-2): 249–251. doi: https://doi.org/10.1215/23289252-2400181
+
+Transphobia indicates a rational fear, "grounded in a larger cisgender
+social context", which is structural and difficult to parcel out:
+- "Provisionally, the term can be defined to mean any negative
+  attitudes (hate, contempt, disapproval) directed toward trans people
+  because of their being trans. When taken literally, the word means a
+  kind of fear. But like homophobia (on which the word is modeled), it
+  is used more broadly. And while transphobia suggests an analogy with
+  terms like agoraphobia and therefore implies irrationality
+  (Merriam-Webster's Collegiate Dictionary defines homophobia as “an
+  irrational fear of, aversion to, or discrimination against
+  homosexuality or homosexuals”1; most dictionaries do not define
+  transphobia at all), this implication ought to be rejected.
+  Transphobia occurs in a broader social context that systematically
+  disadvantages trans people and promotes and rewards antitrans
+  sentiment. It therefore has a kind of rationality to it, grounded in
+  a larger cisgenderist social context (Hopkins 1996)." (Bettcher
+  249).
+- "A trans woman might be targeted not because of her trans status
+  but because she is simply viewed as a sex worker (Namaste 2005).
+  Moreover, at least in some cases, transphobia may be inseparably
+  blended with misogyny or racism in ways that challenge a single-axis
+  model of power (Juang 2006). Such inseparabilities undermine the
+  attempt to account for transphobia in a way that excludes or
+  marginalizes considerations of sexism, racism, classism, ableism,
+  and so forth. This consideration is important because it questions
+  why certain instances of violence should be characterized as
+  instances of transphobia (as opposed to instances of racism or
+  sexism) in the first place and what the underlying political agenda
+  sustaining such characterization is. My conclusion, at any rate, is
+  that while we might have a definition of transphobia, the term is
+  not much more than a convenient (and not altogether innocent)
+  placeholder for the real intellectual work that remains to be done."
+  (Bettcher 251).
+
+**** Amin, Kadji. “Taxonomically Queer? Sexology and New Queer, Trans, and Asexual Identities.” GLQ: A Journal of Lesbian and Gay Studies, vol. 29, no. 1, 2023, pp. 91–107.
+
+About how we categorize gender.
+
+We've moved from a heterosexual matrix to a kaleidoscope, "in which
+each axis of definition is mobile and may be combined with any other
+axis, making way for an almost infinite array of variations" (Amin,
+"Taxonomically" 91).
+
+The "a nuanced and nimble vocabulary through which to know, define,
+and communicate their own unique gender and sexual subjectivity," a
+taxonomy, goes against queerness and Queer and Trans Theory, and
+participates in racial and sexological logics. 
+- "what could be further from the queer — which might be glossed as a
+  deconstructive method of troubling categorizations — than taxonomy,
+  a scientific method of establishing them?" (Amin, "Taxonomically"
+  92).
+- "contemporary queer systems of identity are the latest iteration of
+  the classificatory logics behind sexology in particular and racial
+  science more generally" (Amin, "Taxonomically" 92).
+- "How are the scholarly fields of queer and trans studies — which
+  have taken shape in ambivalent resistance to sexology and taxonomy
+  alike — to contend with the departure of the cultures to which they
+  owe their existence from this basic orientation?" (Amin,
+  "Taxonomically" 93).
+
+History of taxonomization
+- "the distinction between gender and sexuality was always a
+  sexological invention — a taxonomical principle masquerading as an
+  ontological distinction" (Amin, "Taxonomically" 92).
+
+Taxonomy a tactic of white supremacy:
+- "As damaging as sexological taxonomies have been for many gender and
+  sexual deviants, to be sexologically diagnosable in the first place
+  was a white distinction — a testament to the individuality,
+  complexity, and value of white bodies and psyches. As many scholars
+  have demonstrated, Indigenous and racialized peoples were not
+  considered deviant as sexological individuals who might be
+  homosexuals, sadists, sexual fetishists, etc., but rather en masse,
+  as constitutively and polymorphously perverse populations (Ross
+  2005; Driskill 2016)." (Amin, "Taxonomically" 95).
+
+Can taxonomy be queered? According to Love?
+- "In light of this noxious history, is it even conceivable to put a
+  queer spin on taxonomy? This question dovetails with methodological
+  debates in queer studies that ask if scientific and social
+  scientific methods that have been part of the objectification of the
+  world in ways organized around anti-Blackness, colonial conquest,
+  and the pathologization of deviance can be repurposed for more
+  innocent or even progressive ends or whether such methods inevitably
+  perpetuate the hierarchical, violent, and racist epistemological
+  frameworks from which they emerged (Love 2015; Ghaziani and Brim
+  2019). We might locate the contemporary queer, trans, and asexual
+  taxonomical renaissance as a crucial case study within this debate."
+  (Amin, "Taxonomically" 96).
+
+Taxonomy has epistemological assumptions, significantly, that
+identities are essential, and dovetail with current ideas of gender
+being biologically rooted. 
+- "Taxonomy’s biological inheritance brings with it the conceit that
+  taxonomical categories and divisions are objective and innate, the
+  hidden laws that govern what manifests in the natural world. This is
+  the foundational premise of Hirschfeld’s taxonomy: that everything —
+  from choice of hobbies, to aptitude for a certain profession, to
+  gait, to taste in undergarments, to preference for certain sex acts,
+  to attraction to cavalrymen — is ultimately biologically determined,
+  albeit according to sexed elements that are far more complex and
+  variable than mere binary genital anatomy. Despite the ethos of
+  self-identification and rejection of outside (or insider) experts
+  classifying individuals according to “objective” criteria, new queer
+  taxonomies end up dovetailing, sometimes intentionally (Chasin
+  2013), with popular and medical beliefs that sexual and gender
+  identities are biologically rooted, innate, unchanging, and discrete
+  from one another. This, in turn, reinforces damaging, exclusionary,
+  and grossly oversimplified criteria about who counts as, for
+  instance, a “true” transsexual or authentic asexual. Indeed, the
+  vernacular thirst to taxonomize partakes of a scientism that
+  animates faith in taxonomy as a significant and meaningful method in
+  the first place." (Amin, "Taxonomically" 100).
+- "New spins on taxonomy risk installing a new universalism that
+  downgrades competing epistemologies to the status of the local, the
+  backward, the traditional, or the false conflation." (Amin,
+  "Taxonomically" 101).
+
+
+Dis-identification as a strategy for working within these taxonomies
+- "I want to acknowledge the creative and resourceful ways in which
+  Indigenous and racialized people “dis-identify” with these
+  categories, creatively reworking them and exposing their normative
+  operations from within (Muñoz 1999). Such disidentificatory
+  performances occur every time an Indigenous or racialized person
+  lays claim to one of these categories while calling attention to the
+  fact that theirs are usually not the bodies evoked by this category,
+  and even that, racially speaking, they may not have access to
+  cisgender binaries or ideals about “healthy” levels of sexual desire
+  in the first place" (Amin, "Taxonomically" 103).
+
+
+Dis-identification as a strategy for working within these taxonomies
+
+"Whether or not scholars critique it, however, the queer taxonomical
+imaginary is likely here to stay. I, for one, find the growing
+bifurcation of queer, trans, and asexual scholarly analytics from
+queer, trans, and asexual practices of living frankly unethical. My
+proposal, then, is threefold. First, “deidealize” queerness by
+recognizing that taxonomy can be queer, in the sense of being useful
+and meaningful to queer-identified people (Amin 2017). This approach
+requires cultivating scholarly sympathy and empirical curiosity about
+the identifications, erotics, relations, and life-ways opened up by
+new, queer, trans, and asexual taxonomies. Second, continually center
+those Indigenous, non-Western, and historical ontologies of being that
+new taxonomies — with their universalist scientific trappings —
+threaten to erase, incorporate, [End Page 104] and/or supersede.
+Finally, fuck with the universalizing presumptions of the taxonomical
+method from within by generating idiosyncratic interpretations and
+translations that explode the epistemological and ontological
+foundations of taxonomy itself. That, I think, would be an ethical
+scholarly approach to new queer, trans, and asexual taxonomies."
 
 *** cutouts from drafts
 **** global and political discourses on defining gender
@@ -415,198 +857,8 @@ In a couple of the examples, this ambivalence is directly at odds. For
 example, in this amusing construction, "The gender binary is not real,
 it is real, and it is real."
 
-*** reading notes
-**** Gould, Wren Ariel. “Coconstructing (Trans-)Capitalist Realism: Trans Activisms Collude in the Political Economy Structuring Anti-Trans Laws.” TSQ: Transgender Studies Quarterly, vol. 11, no. 2, May 2024, pp. 214–38. Silverchair, https://doi.org/10.1215/23289252-11215470.
-**** Terán, Ira, and Emrys Travis. “A Small Piece of Red Sky to Fly In.” TSQ, vol. 11, no. 2, May 2024, pp. 186–213. DOI.org (Crossref), https://doi.org/10.1215/23289252-11215457.
-- Trans Marxism views trans identity as "nothing less than the bodily
-  manifestation of a broader struggle for the reconfiguration of the
-  human toward the coordinates of socialism" (Terán, Travis, "A Small
-  Piece of Red Sky to Fly in")
+* Footnotes
+[fn:2] I am always astounded at the ways that computer scientists
+perpetuate stereotypes.
 
-**** Raha, Nat. “The Limits of Trans Liberalism—By Nat Raha.” Verso, https://www.versobooks.com/blogs/news/2245-the-limits-of-trans-liberalism-by-nat-raha. Accessed 20 Feb. 2025.
-- "trans liberalism" - the idea that extending equal rights to trans
-  people is the solution to inequality. 
-  - "This form of trans politics—that may be described as ‘trans
-    liberalism’—argues that transgender rights are the solution to the
-    problems facing trans people, and will enable our participation in
-    (Western) capitalist society; that, alongside rights, positive
-    media representation is the best method to win over the cisgender
-    world and improve the standing of trans subjects within the
-    multicultural diversity of an apparently equal society. The basis
-    of this ‘equality’ is fictitious: the neoliberal states, in which
-    these demands are made, reproduce socio-economic divisions along
-    intersecting lines of race and class, gender, sexuality,
-    dis/ability, nationality and immigration status. Without
-    challenging the existing inequality of society, trans activism
-    modelled on ‘successful’ liberal lesbian and gay rights
-    initiatives—such as the work undertaken by the Human Rights
-    Campaign in the US and Stonewall UK—advocates for social inclusion
-    that occurs with and through the disenfranchisement of the poor."
-    (Nat Raha, "The Limits of Trans Liberalism", 2015)
-
-**** Love is Blind
-
-Transcripts in the pods:
-- Season 2, episodes: 1, 2, 3
-- Season 3, episodes: 1, 2, 3
-- Season 4, episodes: 1, 2, 3
-
-Honeymoon and reality episodes:
-- Season 2, episodes: 4-10
-- Season 3, episodes: 4-10
-- Season 4, episodes: 4-12
-**** Bettcher, Talia Mae; Transphobia. TSQ 1 May 2014; 1 (1-2): 249–251. doi: https://doi.org/10.1215/23289252-2400181
-
-Transphobia indicates a rational fear, "grounded in a larger cisgender
-social context", which is structural and difficult to parcel out:
-- "Provisionally, the term can be defined to mean any negative
-  attitudes (hate, contempt, disapproval) directed toward trans people
-  because of their being trans. When taken literally, the word means a
-  kind of fear. But like homophobia (on which the word is modeled), it
-  is used more broadly. And while transphobia suggests an analogy with
-  terms like agoraphobia and therefore implies irrationality
-  (Merriam-Webster's Collegiate Dictionary defines homophobia as “an
-  irrational fear of, aversion to, or discrimination against
-  homosexuality or homosexuals”1; most dictionaries do not define
-  transphobia at all), this implication ought to be rejected.
-  Transphobia occurs in a broader social context that systematically
-  disadvantages trans people and promotes and rewards antitrans
-  sentiment. It therefore has a kind of rationality to it, grounded in
-  a larger cisgenderist social context (Hopkins 1996)." (Bettcher
-  249).
-- "A trans woman might be targeted not because of her trans status
-  but because she is simply viewed as a sex worker (Namaste 2005).
-  Moreover, at least in some cases, transphobia may be inseparably
-  blended with misogyny or racism in ways that challenge a single-axis
-  model of power (Juang 2006). Such inseparabilities undermine the
-  attempt to account for transphobia in a way that excludes or
-  marginalizes considerations of sexism, racism, classism, ableism,
-  and so forth. This consideration is important because it questions
-  why certain instances of violence should be characterized as
-  instances of transphobia (as opposed to instances of racism or
-  sexism) in the first place and what the underlying political agenda
-  sustaining such characterization is. My conclusion, at any rate, is
-  that while we might have a definition of transphobia, the term is
-  not much more than a convenient (and not altogether innocent)
-  placeholder for the real intellectual work that remains to be done."
-  (Bettcher 251).
-
-**** Amin, Kadji. “Taxonomically Queer? Sexology and New Queer, Trans, and Asexual Identities.” GLQ: A Journal of Lesbian and Gay Studies, vol. 29, no. 1, 2023, pp. 91–107.
-
-About how we categorize gender.
-
-We've moved from a heterosexual matrix to a kaleidoscope, "in which
-each axis of definition is mobile and may be combined with any other
-axis, making way for an almost infinite array of variations" (Amin,
-"Taxonomically" 91).
-
-The "a nuanced and nimble vocabulary through which to know, define,
-and communicate their own unique gender and sexual subjectivity," a
-taxonomy, goes against queerness and Queer and Trans Theory, and
-participates in racial and sexological logics. 
-- "what could be further from the queer — which might be glossed as a
-  deconstructive method of troubling categorizations — than taxonomy,
-  a scientific method of establishing them?" (Amin, "Taxonomically"
-  92).
-- "contemporary queer systems of identity are the latest iteration of
-  the classificatory logics behind sexology in particular and racial
-  science more generally" (Amin, "Taxonomically" 92).
-- "How are the scholarly fields of queer and trans studies — which
-  have taken shape in ambivalent resistance to sexology and taxonomy
-  alike — to contend with the departure of the cultures to which they
-  owe their existence from this basic orientation?" (Amin,
-  "Taxonomically" 93).
-
-History of taxonomization
-- "the distinction between gender and sexuality was always a
-  sexological invention — a taxonomical principle masquerading as an
-  ontological distinction" (Amin, "Taxonomically" 92).
-
-Taxonomy a tactic of white supremacy:
-- "As damaging as sexological taxonomies have been for many gender and
-  sexual deviants, to be sexologically diagnosable in the first place
-  was a white distinction — a testament to the individuality,
-  complexity, and value of white bodies and psyches. As many scholars
-  have demonstrated, Indigenous and racialized peoples were not
-  considered deviant as sexological individuals who might be
-  homosexuals, sadists, sexual fetishists, etc., but rather en masse,
-  as constitutively and polymorphously perverse populations (Ross
-  2005; Driskill 2016)." (Amin, "Taxonomically" 95).
-
-Can taxonomy be queered? According to Love?
-- "In light of this noxious history, is it even conceivable to put a
-  queer spin on taxonomy? This question dovetails with methodological
-  debates in queer studies that ask if scientific and social
-  scientific methods that have been part of the objectification of the
-  world in ways organized around anti-Blackness, colonial conquest,
-  and the pathologization of deviance can be repurposed for more
-  innocent or even progressive ends or whether such methods inevitably
-  perpetuate the hierarchical, violent, and racist epistemological
-  frameworks from which they emerged (Love 2015; Ghaziani and Brim
-  2019). We might locate the contemporary queer, trans, and asexual
-  taxonomical renaissance as a crucial case study within this debate."
-  (Amin, "Taxonomically" 96).
-
-Taxonomy has epistemological assumptions, significantly, that
-identities are essential, and dovetail with current ideas of gender
-being biologically rooted. 
-- "Taxonomy’s biological inheritance brings with it the conceit that
-  taxonomical categories and divisions are objective and innate, the
-  hidden laws that govern what manifests in the natural world. This is
-  the foundational premise of Hirschfeld’s taxonomy: that everything —
-  from choice of hobbies, to aptitude for a certain profession, to
-  gait, to taste in undergarments, to preference for certain sex acts,
-  to attraction to cavalrymen — is ultimately biologically determined,
-  albeit according to sexed elements that are far more complex and
-  variable than mere binary genital anatomy. Despite the ethos of
-  self-identification and rejection of outside (or insider) experts
-  classifying individuals according to “objective” criteria, new queer
-  taxonomies end up dovetailing, sometimes intentionally (Chasin
-  2013), with popular and medical beliefs that sexual and gender
-  identities are biologically rooted, innate, unchanging, and discrete
-  from one another. This, in turn, reinforces damaging, exclusionary,
-  and grossly oversimplified criteria about who counts as, for
-  instance, a “true” transsexual or authentic asexual. Indeed, the
-  vernacular thirst to taxonomize partakes of a scientism that
-  animates faith in taxonomy as a significant and meaningful method in
-  the first place." (Amin, "Taxonomically" 100).
-- "New spins on taxonomy risk installing a new universalism that
-  downgrades competing epistemologies to the status of the local, the
-  backward, the traditional, or the false conflation." (Amin,
-  "Taxonomically" 101).
-
-
-Dis-identification as a strategy for working within these taxonomies
-- "I want to acknowledge the creative and resourceful ways in which
-  Indigenous and racialized people “dis-identify” with these
-  categories, creatively reworking them and exposing their normative
-  operations from within (Muñoz 1999). Such disidentificatory
-  performances occur every time an Indigenous or racialized person
-  lays claim to one of these categories while calling attention to the
-  fact that theirs are usually not the bodies evoked by this category,
-  and even that, racially speaking, they may not have access to
-  cisgender binaries or ideals about “healthy” levels of sexual desire
-  in the first place" (Amin, "Taxonomically" 103).
-
-
-Dis-identification as a strategy for working within these taxonomies
-
-"Whether or not scholars critique it, however, the queer taxonomical
-imaginary is likely here to stay. I, for one, find the growing
-bifurcation of queer, trans, and asexual scholarly analytics from
-queer, trans, and asexual practices of living frankly unethical. My
-proposal, then, is threefold. First, “deidealize” queerness by
-recognizing that taxonomy can be queer, in the sense of being useful
-and meaningful to queer-identified people (Amin 2017). This approach
-requires cultivating scholarly sympathy and empirical curiosity about
-the identifications, erotics, relations, and life-ways opened up by
-new, queer, trans, and asexual taxonomies. Second, continually center
-those Indigenous, non-Western, and historical ontologies of being that
-new taxonomies — with their universalist scientific trappings —
-threaten to erase, incorporate, [End Page 104] and/or supersede.
-Finally, fuck with the universalizing presumptions of the taxonomical
-method from within by generating idiosyncratic interpretations and
-translations that explode the epistemological and ontological
-foundations of taxonomy itself. That, I think, would be an ethical
-scholarly approach to new queer, trans, and asexual taxonomies."
-
+[fn:1] Mikolov et al.

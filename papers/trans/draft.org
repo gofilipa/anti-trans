@@ -2,144 +2,340 @@
 ** draft
 
 *** sketch
-Are there, could there be, any way of connecting the bad feelings
-across polarized political groups? Of finding shared investments?
+Are there, could there be, any way of surfacing body narratives in
+heterosexual, cisgendered stories?
 
-What investments connect the anti-trans and trans perspectives?
-Machine learning as a tool for finding the shared, the average, the
-obvious.
+How might these investments connect the anti-trans and trans
+perspectives?
 
-This work fits into a larger question of what can criticism do. What
-kind of interventions can we make, what affinities may offer. 
+Machine learning ideal tool for studying normativity: a tool for
+finding the shared, the average, the obvious.
 
 Close reading analysis:
-- Question -- what changes when you introduce the physical body?
-- Answer -- desire shifts from the self to the other, is displaced.
-  - Sex becomes a problem, moves from highly invested to ambivalent,
-    to problematic.
+- Question -- how does the presence of the visual body affect dating?
+- Answer -- body perception splits, bodily sensation flows and ebbs. 
 
-*** sedgwick and reading practices
-Back in 1997, reflecting on activist work in the midst of the AIDS
-crisis, Eve Kosofsky Sedgwick considers the efficacy of certain types
-of knowledge, especially knowledge of systematic oppression,
-injustice, and discrimination: she asks, "what does knoweldge do, the
-pursuit of it, the having and exposing of it, the receiving-again of
-knowledge one arlready knows?" (/Novel Gazing/ 3). She clarifies that,
-"for someone to have an unmystified, angry view of large and genuinely
-systemic oppressions does not /instrinsically/ or /necessarily/ enjoin
-that person to any specific train of epistemological or narrative
+Naomi's notes:
+- Reader must be invested in the reading method.
+- The technical process is a heuristic.
+- Add a few sentences summarizing the technical process before going
+  into details.
+- Scene setting in the beginning. The tendencies of language. 
+*** outline
+- toward a new method of reading
+  - AIDs crisis: what kind of knowledge can help deveop politics. 
+  - reading normativity, looking for shared investments.
+- close reading: machine learning
+  - the training process toward approximation
+  - hallucination and overfitting (when there isn't enough data)
+- close reading: LiB
+  - person splits from visual in the pod
+    - Prosser on body image split from material body
+    - "my body" activates sensorium of feelings
+    - touch is more direct?
+  - postpods,
+    - the body collapses into the visual
+    - touch becomes repulsive
+    - future fatigue sets in
+    
+- trans studies on normativity
+  - Chu: requires that we understand normativity
+  - Prosser: on narratives of embodiment, coming back to the body
+  - Malatino: attachments to the future
+
+*** toward a new reading practice for normativity
+Reflecting on the AIDS crisis, Queer Studies scholar Eve Kosofsky
+Sedgwick questions the point of reading and of knowledge gathering in
+general for politics. She explains that certain types of knowledge,
+especially knowledge of systematic oppression, injustice, and
+discrimination: she asks, "what does knoweldge do, the pursuit of it,
+the having and exposing of it, the receiving-again of knowledge one
+arlready knows?" (/Novel Gazing/ 3). She clarifies that, "for someone
+to have an unmystified, angry view of large and genuinely systemic
+oppressions does not /instrinsically/ or /necessarily/ enjoin that
+person to any specific train of epistemological or narrative
 consequences” (/Novel Gazing/ 3). In other words, this kind of
 analysis does not convince people of anything they don't already know.
 
-In our modern day, where information and outrage seem to be
-self-generating, this thought, which lead to her famous essay on the
-topic of paranoid reading in /Touching Feeling/, bears a return and
-another shot.
+In our modern day, where outrage seems to be self-generating, we seem
+to be in an accelerated situation on the question of reading.
 
-This essay experiments with a new form of reading that does not aim to
-expose, describe, constellate--or any of the common verbs used to
-illustrate close reading analysis--text. Rather, it aims to
-approximate, to average, to find a middle ground, between words and
-word meaning. It uses computational tools to do so, as computers are
-ver good at counting and finding averages. And it does so with the
-larger goal of surfacing shared investments that similarly center on
-middle grounds, that is, normativity.
+This paper is about developing a way of reading normativity, and using
+normativity as a focus and a method for finding shared investments and
+common ground between seemingly opposed groups---cis and trans. The
+readings here are centered on cis experiences, which I read through
+the lens of Trans Studies theorizing on normativity.
 
-*** close reading: machine learning 
-These machines work in ways that make them ideal for studying shared
-investments even across polarizing perspectives. This is because they
-are built to be predictive. And their predictions are based on
-generating what is most likely.
+The object of my study is a reality TV show, /Love Is Blind/ (/LiB/),
+which puts participants into a dating experiment where they cannot see
+their partner until they have both agreed to get married. The show
+contains two stages, the pre-engagement stage, where participants date
+each other from separate “pods” where they can hear but not see the
+other, and engagement stage, where participants finally meet and
+proceed to live together in preparation for the wedding.
 
-There are two technical concepts that are central to understanding how
-this prediction process works.
+In partitioning the romantic experiment into pre-engagement and
+engagement segments, the show necessarily poses the presence and role
+of the body as the dependent variable that ultimately determines the
+viability of long-term commitment. In other words, it sets up
+perfectly an examination of how the body may affect normative
+trajectories and desires. It allows me to ask two central questions:
+first, how does desire emerge when you foreclose the physical body?
+sAnd how does this desire change when you introduce the physical body?
 
-First, word vectors. Word vectors are how a machine learning model
-encodes word meaning, how it knows what each word in its database
-means. They are the model's dictionary, so to speak. But instead of
-consisting of a traditional definition, written in human language, the
-word vector consists of numbers, a long list of numbers. Each of these
-numbers describes probabilities associated between that word and every
-other word in the model's database.
+To analyze these shifts, I read transcripts from the show. In doing
+so, however, I experiment with a new form of close reading that does
+not expose, describe, or constellate text—to name some common verbs
+used to illustrate close reading analysis. Rather, I use a method that
+allows me to study the most normative perspectives expressed by the
+characters on the show.
 
-'queen': [-0.3583, -0.6767, 0.1689, -0.6164, -0.0135, -0.2284, 0.3359,
-        0.1149, -0.1512, -0.8014]
+To do so, I use a text generator that picks up common and shared
+feelings and desires from the characters in the show. First, I feed
+examples of text culled from the show's transcripts into the text
+generator. From processing these examples, the tool absorbs patterns
+in language use, so it can "learn" how characters talk about certain
+topics like love, desire, and the body. It then uses these patterns
+from the text to make educated guesses on how to respond to questions
+about the body and its role in the couples' romantic plot. This
+process, which is highly techical (and explained in detail below),
+allows me to surface common perspectives and experiences from the
+characters on the show. It is a tool for normalizing language
+expression into average forms. It is a tool, in other words, for
+exploring normativity.
 
-In this example, the word "queen", is represented by the list of
-numbers: .3583, -0.6767, 0.1689, -0.6164, -0.0135, -0.2284, 0.3359,
-0.1149, -0.1512, -0.8014. Each of those numbers indicates "queen"'s
-relationship to another word, say "woman" or "orange," as a
-probability score. In the word vector database, "Queen" and "woman"
-would likely have a high probability, due to their both being
-associated with humans and femininity, while "woman" and "orange" have
-a much lower probability. That means that in vector space, the
-multi-dimensional space where the words are plotted as coordinates, or
-/vectors/, the the coordinates that represent "woman" would be nearby
-the coordinates that represent "Queen," and farther from the
-coordinates that represent "orange."
+*** trans studies on normativity, body splits, future fatigue
+To explore the desire for normativity, I borrow from ideas in Trans
+Studies. Andrea Long Chu points out that Trans Studies "requires that
+we understand–-as we never have before–-what it means to be attached
+to a norm, by desire, by habit, by survival" ("After Trans Studies"
+108).
+
+Specifically, I borrow from ideas about the body. I am interested in
+how the body figures into trajectories of normativity, which, in the
+case of the cis-hetero subjects in /LiB/, is about the trajectory
+toward getting married.
+
+Here, Jay Prosser's work on bodily splits along the transition journey
+is relevant to my analysis. Constrasting trans narratives with queer
+ones, he explains that,
+#+begin_quote
+If, for queer theory, transition is to be explored in terms of its
+deconstructive effects on the body and identity (transition as a
+symptom of the constructedness of the sex/gender system and a figure
+for the impossibility of this system's achievement of identity), I
+read transsexual narratives to consider how transition may be the very
+route to identity and bodily integrity. In transsexual accounts
+transition does not shift the subject away from the embodiment of
+sexual difference but more fully into it. Prosser 6
+#+end_quote
+It is this move toward embodiment, to "bodily integrity," that I am
+interested in. Although they are cis subjects, I argue that the /LiB/
+characters are experiencing an transition of sorts in foreclosure of
+the others' bodies from within the individual dating pods. At the
+moment that the other's body is visually foreclosed, a bifurcation
+occurs between the visual senses and the touch senses and ideation,
+between what Prosser calls the "body image" and the "material body"
+(FIND QUOTE). 
+
+In this split, these subjects form attachments to futurity that are
+delineated and determined by hopes that, for most of them, will never
+be fulfilled. When the couples finally meet in physical forms, they
+exit the transition trajectory, but not the normativity one. Being
+re-united of their bodies heals the split, but it does not save them
+from the aftermath of their investments. They remain plagued by what
+Hil Malatino describes as "future fatigue," in which anxiety builds
+for a dream that is ultimately deferred for most of the charcters.
+
+And that this experience tells us a lot about what normativity, how
+the desire for normative markers, works in perhaps unexpected
+intra-social ways (that it creates envy and animosity among cis
+groups?). The experience for cis subjects in the pods creates
+expectations and disappointments that are actually shared across
+identity groups.
+
+*** prosser, malatino: felt and percieved bodies, future lag
+
+**** loved on the inside -> split
+The participants use cliched terms to explain their desire -- to be
+"loved for who I am on the inside," and "who will love me regardless
+of what I look like." These declarations signify not only a theme of
+the show, that "love is blind," but also signals a non-normative
+assumption that founds the show. Despite the cliche, something
+transgressive is happening here: a division of the body, initially
+presumed whole, into parts, the outside and the inside, the parts that
+we can see, and the parts that we can feel.
+
+**** felt and perceived bodies
+Or, in the terms of Jay Prosser, the body is multiplied/split into the
+perceived body and the felt body.
+
+Prosser, on the trope of feeling "trappped in the wrong body":
+#+begin_quote
+transsexuals continue to deploy the image of wrong embodiment because
+being trapped in the wrong body is simply what transsexuality feels
+like. If the goal of transsexual transition is to align the feeling
+of gendered embodiment with material body, body image---which we might
+be tempted to align with the imaginary---clearly already has a
+material force for transsexuals. The image of being trapped in the
+wrong body conveys this force. It suggests how body image is radically
+split off from the material body in the first place. (69)
+#+end_quote
+Body image has a material force for cissexuals as well, I would argue,
+in cases where they are severed from some aspect of their bodily
+perception. Prosser goes on to read narrative accounts of transsexual
+subjects who feel physically trapped in their bodies, who experience a
+"conflict between the true body within and the false body without,
+between sentient body image and insentient visible body" (70). In this
+example, taken from Raymond Thompson's autobiography, /What Took You
+So Long?/, Prosser points out the reversal of sensory roles between
+the body image and material body: "As though more real and
+substantial, body image appears to bear the agony and material body is
+correlatively dematerialized," a reading substantiated by the location
+of the narrative voice, the "I," within the internal body image (70).
+
+**** Malatino on feeling trans, stuckness
+Futurity may generate "intense anticipatory anxiety in the present...
+may actually impede the flourishing of trans subjects, particularly
+those who encounter difficulty access the technologies of transition"
+(Malatino 20).
+
+LiB characters take on a kind of "hormone time," which Malatino
+originally distinguishes from "straight time" by the criterion of
+reproductive futurism:
+#+begin_quote
+Hormone time is quite distinct from reproductive futurism---a politics
+molded by a heterocisnormative investment in providing a better future
+for the Child---but nevertheless appropriates a teleological utopian
+temporality in order to provide hope to trans subjects and
+communities.... What hormone time does---and what related futural
+narratives of medicalized transition do, such as those that priorize
+top or bottom surgery (or both) as the sine qua non of a 'completed'
+transition---is position biomedical intervention as necessary and
+fundamental to securing the future one desires, to achieving the
+promised moment of harmony between the felt and the perceived body.
+(Malatino 26-27)
+#+end_quote
+It is this rupture between the felt and the perceived body, in
+Malatino's terms, which marks the applicability of hormone time to the
+cis straight couples in LiB. Despite being firmly cisgendered
+(whatever that means), these subjects experience, as I demonstrate
+below, a disruption between the felt and the perceived bodies. I argue
+that their experience, therefore, evokes this one aspect of trans
+experience.
+
+*** close reading: machine learning
+I use computational tools, which translate word semantics into
+numerical representations, that can then be converted into averages
+(explained in technical detail below). I then generate the most
+average expressions based on this text, expressions that explore
+concepts of embodiment and desire and how they influence normativity.
+
+I choose this computational method because it is an ideal one for
+studying what words and phrases mean base on the context that they are
+being used. This method, which is machine learning, aggregates word
+meaning from various examples of usage. For my project, these examples
+come from the transcripts of the show itself, which I feed into a
+machine learning algorithm. This algorithm "learns" what words mean in
+context. It's goal is build a strong enough model of word meaning so
+it can then make accurate predictions of what words tend to be used
+together in a sentence.
+
+There are some technical concepts that are essential to understanding
+how this predictive process works. 
+
+First, one must understand how language is represented in numerical
+forms, which are called word vectors. Word vectors are how a machine
+learning knows what words mean individually, they comprise the model's
+internal dictionary, so to speak. Drawing from the concept of "vector"
+in math, which describes coordinates for a line in graphical space,
+word vector consists of numbers, a long list of numbers. For example,
+below is the word vector for the word "queen":
+
+#+begin_quote
+'queen': -0.3583, -0.6767, 0.1689, -0.6164, -0.0135, -0.2284, 0.3359,
+        0.1149, -0.1512, -0.8014
+#+end_quote
+
+Each of these numbers following "queen" (e.g. .3583, -0.6767, 0.1689,
+and so on) represents the relationship between queen and another word,
+like "woman" or "orange." Each of those numbers represents this
+relationship as a probability score, a percentage that indicates how
+closely those two words are associated with each other. In this
+database, the words "Queen" and "woman" would likely have a high
+probability association, due to their both being associated with
+humans and femininity, while "woman" and "orange" may have a much
+lower probability. Therefore, in vector space, the multi-dimensional
+space where the words are plotted as lines, the coordinates that
+represent "woman" would be nearby the coordinates that represent
+"Queen," and farther from the coordinates that represent "orange."
 
 Vectors transform what we think of as word meaning by quantifying it
-into a numerical representation, which can be plotted on a graph. And
-the idea is that once word meaning is quantified, it can be
-calculated. The matrix format of the word vector enables linear
-algebra operations, which computers can do very well. A host of
-algorithms now become possible: from example, cosine similarity
-calculates the distance between two vectors, that is, two words; and
-regression analysis guesses the relationship between an independant
-and dependant variable, or relation between one word and another.
+into a numerical representation. And the idea is that once word
+meaning is quantified, it can be calculated. The matrix format of the
+word vector enables a host of mathematical operations and algorithms:
+from example, cosine similarity calculates the distance between two
+vectors, that is, two words; and regression analysis guesses the
+relationship between an independant and dependant variable, or
+relation between one word and another.
 
-Meaning, crucially, can be calcuated via a formula. That's what the
-authors argue, anyway, in the paper that introduced word vectors to
-the world, titled "Efficient Estimation of Word Representations in
-Vector Space" (Mikolov et al. 2013). To illustrate the power of word
-vectors, the authors offer a formula to calculate the vector "queen"
-by subtracting "man" from "king" and adding "woman."[fn:1]
+Word meaning, significantly, can be calcuated via a formula. That's
+what the authors argue, anyway, in the paper that introduced word
+vectors to the world, titled "Efficient Estimation of Word
+Representations in Vector Space" (Mikolov et al. 2013). To illustrate
+the power of word vectors, the authors offer calculate the vector
+"queen" by subtracting "man" from "king" and adding "woman."[fn:1]
 
 #+begin_src
   vector(”King”) - vector(”Man”) + vector(”Woman”) = vector("Queen")
 #+end_src
 
-This example, which introduced word vectors to the world, was
-presumably chosen for its intelligibility, as it is based on operands
-whose differences are assumed to be stable across cultures. To get
-"queen", one need only add femininity to a king, and subtract
-masculinity from the sum. There is no need of elaborating the meaning
-of these terms, their meaning is stabilized as self-evident and
-universally by the equals sign that balances them. That readers know
-what a "man" and "woman" are, just as they know what a "king" and
-"queen" is, not only speaks to assumptions of gender, but how these
-are implicated within those of patriarchy and imperialism.[fn:2]
+This example was presumably chosen for its intelligibility, based on
+operands whose differences are assumed to be stable across cultures.
+To get "queen", one need only add "woman" to "king", and from the
+resulting sum, subtract "man." The meaning of each term appears to be
+self-evident and universally true; it is stabilized by the equals sign
+that balances the formula. That readers know what a "man" and "woman"
+are, just as they know what a "king" and "queen" is, speaks to how
+assumptions of gender are implicated within those of patriarchy and
+imperialism.[fn:2]
 
-So the first important concept is that of numerical representation of
-semantic meaning: once word vectors quantify semantic meaning, then
-that meaning can be computed. The second concept has to do with the
-training process, which involves three functions or formulas.
+In order to generate word vectors, the model must go through a period
+of "training," where it learns which words tend to be associated with
+each other. This is done in three steps, called "hypothesis," "loss,"
+and "loss minimization."
 
-The first step is the "hypothesis" step. Here, a model will take
-a sample sentence from the dataset, and it will block out the second
-half of that sentence. Then, it will try to guess which words should
-go in that second half. Because the model has no idea what the words
-mean, the guess will be wrong. But that's doesn't matter, because the
-purpose of the hypothesis is to make any guess, so that it has
-something from which it build on in the future steps.
+In the first step, the "hypothesis" step, a model will randomly guess
+what vectors are associated with each word---it will make a
+hypothesis. In doing so, it takes a sample sentence from the training
+dataset (in this case, the show transcripts), and it blocks out one
+word from that sample. Then, it tries to guess which word should go in
+that blank. Because the model has no idea what the words mean, the
+guess will be wrong. But that's doesn't matter, because the purpose of
+the hypothesis is to make any guess, so that it has something from
+which it build on in the future steps.
 
-Then, after making this guess, it moves to the next step, where the
-machine checks its prediction against the actual result---it will
-compare the predicted word vector against the actual word vector. And
-it will calculate the mathematical difference between the prediction
-and the actual result, which is called the "loss".
+After making this guess, it moves to the next step, where the machine
+checks its prediction against the actual result, comparing the
+predicted word vector against the actual word vector. Because the
+guess will be inevitably wrong, there will always be a difference
+between the prediction and the actual vector. And it will calculate
+the mathematical difference between the prediction and the actual,
+which is called the "loss."
 
-Finally, in the third step, it moves to the minimizing this "loss" by
-/very slightly/ adjusting word vectors, an adjustment that it
-calculated through the gradient descent algorithm. The model will do
-this many times, making incremental changes each time, so progress is
-very slow, but also very precise. (And this constant iteration of
-numbers, and the computer processing required to do it, is why
-language models take lots of time, energy, and computer hardware to
-train). At each round of training, the numbers attached to each words
-are slightly adjusted toward the most likely number, which is in
-effect, an average of that words relationship to every other word in
-the database.
+In the third step, it moves to the minimizing this "loss" by /very
+slightly/ adjusting word vectors, an adjustment that it calculated
+through the gradient descent algorithm. The gradient descent algorithm
+finds the correct direction in which to shift the numbers, so the
+predicted vector just slightly closer to the actual vector. The model
+will do this many times, making incremental changes each time, so
+progress is very slow, but also very precise. (And this constant
+iteration of numbers, and the computer processing required to do it,
+is why language models take lots of time, energy, and computer
+hardware to train). At each round of training, the numbers attached to
+each words are slightly adjusted toward what is effectively a number
+that accurately represents that words' relationship to every other
+word in the database.
 
 I read this iterative shifting of numbers (representing words) within
 the model as a kind of /approximation/ or even /normalization/ of
@@ -155,98 +351,806 @@ they've already seen. They hallucinate not because they are creative
 or random, but because they are designed from statistical processes to
 generate what is most plausible rather than most accurate.
 
-*** TODO close reading: love is blind
-- What are the norms that drive the characters in their search for
-  love?
-- How does desire/sex change after the introduction of the physical
-  body?
+*** close reading: love is blind
+It is my contention that we can study the outputs of this mechanism
+and find vectors of shared investments between trans and cis desires
+for normativity.
 
+The body centrally effects romantic plot. The presence and absence of
+the body determines the relations between the characters.
 
-Desiring the normative:
-- "I want to have kids, but I want to have a family, and I want to be
-  able to have that experience, but I want to have kids, and I want to
-  have a family." (PODS)
-  - kids, family, interesting contrast there.
-- "I want my mom to have grandchildren." (PODS)
-- "I want someone who wants to be a dad, and I want someone who wants
-  to be a grandfather." (PODS)
-- "I want somebody who's gonna be there forever." (PODS)
-
-Cliches around loving a person for who they are "on the inside" 
-- "I want to be with somebody who loves me for who I am on the
-  inside." (PODS)
-- "I want to be loved for who you are on the inside." (PODS)
-- "I want someone who will love me regardless of what I look like." (PODS)
-- "I want someone who will accept me regardless." (PODS)
-  - there is a personality distinct from the outside body. 
-
-Yet desire for the physical:
-- "I want to feel you and hug you." (PODS)
-- "I want to be a better person for you." (PODS)
-
-Ambivalence about having sex:
-- "Having sex is sexy, but there's something about it that I don't
-  want to put my finger on." (PODS)
-- "Having sex is something that I am very attracted to, but it is also
-  something that I am not attracted to." (PODS)
-- "Having sex is not something that I would ever wish on anyone else."
-  (PODS)
-- "Having sex is something I would rather do." (PODS)
-- "Having sex is sexy, it's fun, and I've never even seen a woman
-  having sex with me." (PODS)
-- "Having sex is not something I would want in a partner, but it's
-  something I can definitely do." (PODS)
-- "Having sex is so sexy, and I'm so fucking excited to get engaged."
-  (PODS)
-- "Having sex is hard for me, and I just feel like it's not worth it."
-  (PODS)
-- "Having sex is a physical act, and I'm not attracted to physical
-  attraction." (PODS)
-
-The physical body introduces a problem.
+**** THE FUTURE BECOMES BLEAK
+***** in pods, excitement for union/commitment
+PODS
+- I'm excited to spend my first night with her.
+- I am so excited to spend the rest of my life with you.
 
 POSTPODS
+- I think that, like, we can work through it and, like, move it to
+  where we need it to be.
+- I don't want you to get hurt.
 
-Desire is projected, desiring for the other person rather than for the
-self.
-- "I want to" or "I want someone who" to "I want her/him to".
-  (POSTPODS)
-- "I want him to be able to say, "I'm done."" (POSTPODS)
-- "I want her to know that I do love her." (POSTPODS)
-- "I want her to know that I'm willing to do what it takes for her to
-  be happy and to be a part of me." (POSTPODS)
-- "I want her to know that I'm not compromising with my feelings."
-  (POSTPODS)
-- "I want it to feel fully right to you." (POSTPODS)
-- "I'm glad you didn't try." (POSTPODS)
+***** future is postive, becomes negative/bleak
+In pods, the future is positive:
+- The future with you, it's gonna be tenfold.
+- The future togetherness is gonna be great.
+- The future with her, she's gonna be there forever.
 
-Normativity:
-- "I mean, this is not a normal marriage."
-- 
-
-Sex
-- "Having sex is not a normal thing, you know." (POSTPODS)
-- "Having sex is not a normal thing for a couple."
-- "Having sex is a thing, right?"
-- "Having sex is a big deal for me, but it's not something that I
-  would ever do." (PODS)
-- "Having sex is so easy, and it's really scary." (POSTPODS)
-- "Having sex is a very scary step." (POSTPODS)
-- "Sex is a big part of my life." (POSTPODS)
-- "Sex is a very, very, very, very, very serious thing." (POSTPODS)
-- "Sex is a very, very, very, very scary, very, very real fear."
-  (POSTPODS)
-- "Sex is so sacred to me, and that's why I love it." (POSTPODS)
-
-The genders are interchangable (could be because most sentences start
-with "I"). 
+Postpods, the future is more negative:
+- The future looks pretty bleak. (repeated)
+- The future has been absolutely horrible.
 
 
 
 
 
+**** embodied vs visual body
+This appears most strongly in the episodes that occur in the pods,
+when characters cannot see each other. When prompted with the phrase,
+"My body," the model trained on these episodes will generate outputs
+that suggest a split between modalities of sensing the body. Most of
+the responses begin with references to "My body language" and "My body
+image," and they describe sensations like "fluid," "weird,"
+"controlling," "relaxed," and "calm" (Appendix 1, "My body"). These
+examples not only express felt sensations of the body, like "calm" and
+"fluid," but they also do so by siphoning them through a verbal and
+visual sense modalities, through "language" and "image". The
+experience of "my body," then, is multiplied through various
+sensations that append the original modalities of sight and sound.
+
+The pods facilitate an experience of embodied sensuality that is, for
+most of the characters, subsequently foreclosed when they leave the
+pods.
+
+The characters enter the show hoping for a love that exceeds physical
+attraction. They often describe their desire for a person "who loves
+me for who I am on the inside," and "who will love me regardless of
+what I look like." In recalling the central trope of the show, that
+"love is blind," these declarations make an implicit proposition that
+true love can be severed from the physical body.
+
+But what ends up happening cannot be explained in such distinct terms.
+As it turns out, there is more to the body than its physical presence,
+there is more than the body and its absence. As the language generated
+from the pods episodes demonstrates, the visual foreclosure of the
+body effectively ushers in a multitude of embodied sensations.
+
+The sensations that accompany the body in the pods speak to a richness
+of physical experience.
+
+In response to prompts like "My body," "My body feels," or "My body
+makes me feel," outputs tend toward short descriptions like "weird,"
+"heavier," "real," and "so different now."
+
+These terms suggest an awareness of the body coming into apprehension
+in a novel, heightened way, an awareness which makes the body seem all
+the more strange.
+
+The body feels "so different now" because it is not the same body as
+when one also has access to the visual sense.
+
+At the moment where visual access to the other's body is denied, there
+is an increased sensing of one's own physicality, a compensation for
+that which has been foreclosed.
+
+And this compensation does not account for a lack, the lack of sight,
+but rather fills the space with that which would have otherwise been
+overwritten by sight.
+
+Additionally, the focus on the body's physical weight, with the
+adjective "heavier," and in another example, the description of "My
+body feels like it's coming off" suggests an interesting role that the
+body's mass suddenly plays, and recalls the distinction that Prosser
+makes between the body image and the material body, what he also calls
+the body's "second skin" (69). According to Prosser, this second skin,
+this material body which is an outer casing, has two functions for
+trans subjects: it "allows for passing, it also entraps and prevents
+/being/" (75 emphasis original). In the example of Raymond Thompson's
+narrator, the second skin comprises "daily layerings of binder,
+several T-shirts, and thick work shirt," all the trappings that enable
+the "rehap[ing]... "a female chest into male contours" (75). While for
+trans subjects, this second skin is at once "protective" and
+"restrictive," a dual movement, for cis subjects, the ambivalence is
+harder to trace (75). Until, of course, those subjects are placed in
+an environment that severs the experience of body into that of visual
+and that of somatic embodiment.
+
+Perhaps, for the straight cis folks within the pods, this is the first
+time they've felt the divergence between the material and imagined
+bodies, and the increasing weight and subsequent "coming off" of the
+second skin.
+
+This is all the more evident when the couples meet in person, and the
+descriptions of the body shift more firmly into visual. 
+
+There is still a sense of somatic feeling, with descriptors like
+"tight" "physical" "uncomfortable" "icky" and "vulnerable" appended to
+the body. It is important to note, though not consequential for my
+analysis, the shift in affect from neutral or positive to negative in
+direct descriptions of bodily feeling. What is relevant is the
+frequency with which these references address the body as a visual
+object, "My body is gorgeous," "My body is cute," "My body is pretty,
+you know" (Appendix 2, "My body"). The focus on the body as a visual
+object even expands to other phenomena, like the "soul" and the
+"heart": "My body is gorgeous, and my soul is so beautiful"; "My body
+is so pretty, but my heart is so pretty, you know" (Appendix 2, "My
+body"). Here, the body, heart, and soul are collapsed into a visual
+apprehension
+
+These examples display a contrary move to the pods outputs: here,
+phenomena used to express emotions and spirituality, are collapsed
+into a single sense modality--vision. Whereas, in the pods, the body
+expands into multiple modes, into language and image.
+
+There is, in this shift, a sense of something being lost. Poignantly,
+one of the generated outputs remarks that "my body makes me feel like
+I've missed my train" (Appendix 2, "My body makes me feel like"). In
+the addition of the visual sense, there is a feeling of the body which
+is lost. This condition of deferred fulfillment offers one vector of
+connection between the cis and trans affects. (See Malatino). 
+
+**** touch
+Touch is a complex concept. In the pods, where characters cannot touch
+each other it is foreclosed; in the period following the pods, it
+becomes something that plagues the couples, with many of them
+struggling to progress their relationships into physical contact. In
+these examples, touch acts as a kind of placeholder for various
+feelings and interactions.
+
+Off the bat, one sees this dynamic in the objects that the phrase "I
+want to touch" attaches to. In the pods model, this phrase is
+promiscuous, chasing various objects like "you," "somebody,"
+"him/her," "it," "my core values," and even "the couch." Whereas, in
+the postpods model, the phrase only attaches to one of two
+possiblities: "I want to touch him/her," or "I want to touch you."
+
+The simplicity of the sentence structure might imply a heightened
+desire for the love object. Perhaps, however, the reality is not so
+simple. The simplicity of the sentence structure and the lack of any
+variation rather indicates that there is less content directly
+associated to touch in the training data. In other words, there is
+something being withheld from the notion of touch. And that one must
+try different ways of finding it.
+
+Rather than explore "touch" directly, then, one might search for words
+associated to it.
+
+The couch, for example. In the show transcripts, there are three
+references to the couch:
+#+begin_quote
+For me, at the end of the day, if I want to see this person every day,
+if I'm okay just sitting on the couch, if they're okay sitting with
+me.
+
+...
+
+I'm, like, a very touchy-feely person. It's hard for me right now not
+to be, like... touching when I'm talking to you. I know. I find
+myself, like, petting the couch instead.
+
+...
+
+I work outside and it's fucking freezing. I'll have dinner made for
+you. We lay on the couch, I'll rub your feet.
+#+end_quote
+And all of these examples suggest comfort, affection, and reliability.
+The sense of touch, therefore, takes on these connotations in the
+outputs.
+
+**** TODO HERE
+Descriptions of touching are associated with feeling, despite there
+not being any direct touch happening in the pods.
+#+begin_quote
+- When I touch you, you know, I feel like you are just kind of shaking.
+- When I touch you, I feel it.
+- When I touch you, I feel your energy, and it is, like, I'm just so
+  happy.
+- When I touch you, I can feel your soul, your heart, and your soul
+  aligning so well.
+- When I touch you, I feel you, and I feel you, I feel you, and I feel
+  you.
+- When I touch you, it's gonna feel like my finger's on fire.
+#+end_quote
+Repetition of the word "feel" in all of the examples, as well as
+metnions of physical sensation like "on fire" and "shaking." There is
+also descriptions of nonvisual but still sensual aspects, like
+"energy," "soul," and "heart." All of these descriptions occur despite
+there being no actual touching occuring between the couples in these
+examples. 
+
+In the postpods model, descriptions for the same prompt have a
+different emphasis.
+#+begin_quote
+- When I touch you, like, I feel like I'm literally in my head.
+- When I touch you, I feel like I'm in my head.
+- When I touch you, you just feel like it's so weird.
+- When I touch you, it feels like something I'm about to get up and
+  walk away.
+- When I touch you, it feels like a jab.
+- When I touch you, the thing that's scary is, like, it's a physical
+  thing.
+- When I touch you, I feel like it's like I've just, like, left the
+  room.
+- When I touch you, you feel like I'm touching my body.
+- When I touch you, you're like "I'm blinking."
+#+end_quote
+Rather than direct descriptions of sensation, these descriptions tend
+to take the form of analogies: "I feel /like/" (my emphasis) a variety
+of things, which tend to be more negative ("like a jab").
+
+Touch seems to estrange or interrupt some kind of physical contact (to
+"walk away," "leave the room," to "blink.") or to suggest the
+uncomfortable experience of physical contact "in my head" and "so
+weird."
+
+Looking at the transcripts, touch is associated with revulsion.
+#+begin_quote
+- What is that?
+Is that a shark?
+- What do you mean shark?
+Oh, they're catfish.
+They look like baby, like, tiny nurse sharks.
+Okay, this is kind of scaring me.
+It's my worst nightmare if one touches me.
+- These little catfish?
+- Yeah.
+#+end_quote
+
+But if one follows the cues from the generated outputs, like the idea
+of "blinking," a story starts to emerge.
+
+Like that of Zach and Irina. The only time "blinking" is mentioned is
+during their 
+
+When Zach and Irina meet, it is clear that the physical form is less
+than what each of them expected. She comments on what she perceives as
+his refusal to blink.
+#+begin_quote
+Yeah, I still love Irina.
+I just wanna look at her eyes, and I don't think she was quite ready for, uh, for having that much eye contact.
+She said I looked like a cartoon character.
+Um, which I don't know if that was a compliment or not.
+I think it was intended to be?
+- I think this is gonna be really fun.
+- I hope so.
+I think we're in for a wild adventure.
+I think so too.
+Maybe if you could start blinking more...
+Stop making fun of that.
+- You stare at me.
+You go like this...
+- I know.
+That's creepy! (Season 4, Episode 4, "Playing with Fire")
+#+end_quote
+For Irina, the incorporation of Zack in physical form proves visually
+overwhelming. What does it mean that she says, "You stare at me"?
+Perhaps that she is self-conscious of her own visual form.
+
+#+begin_quote
+It's very, like, I'm a very physical touch person, but I feel like... with you that's taking, like, longer to grow that or, like, be as comfortable.
+Why do you think that is?
+I don't know.
+And you're my fiancé.
+You're someone that I'm... ...hopefully getting married to.
+If you were like, "Irina, when you touch me or hug me or hold my hand, I get uncomfortable."
+Like, I would be like, "What the...?"
+I don't know if I'd be able to be with you, to be completely honest.
+When we were in the pods, you were very, very affectionate.
+And since we've gotten into the real world, I've noticed that... you have been hesitant to express that affection.
+In fact, uh, more often, you kind of push me away with jokes.
+Maybe 'cause I didn't see you, and it was your voice that I was connecting to.
+Now it's a face and a body.
+#+end_quote
+
+#+begin_quote
+And so, Zack
+I feel like is my type on paper.
+Has, like, brown hair, brown eyes, like, chiseled face.
+Like, I really like dark features.
+And the moment I saw Zack, it was like, "I don't know who this man is."
+And I was like, "Maybe it's just scary, and it was a lot."
+Like, hopefully it's gonna grow, but I've noticed every time he does, like, touch me, I get, like, major ick.
+When he puts his arm around me at night, I literally was like-- like, my heart stopped.
+And I literally go... -
+But not, like, in an excited way.
+I wanna, like, relate to you in a way, but it's always, like, so different.
+How was it with you and Paul?
+The thing with me and Paul is, like, we both, like, had such an immediate understanding as best friends.
+Yeah, Paul's gorgeous.
+#+end_quote
+
+
+*** what does LiB have to do with trans studies? 
+Strictly speaking, I do not align with the identity qualities that
+determine belonging in either of the groups that I am concerning
+myself with in this essay. As a cis lesbian, who is not trans, and who
+is not straight, where do I come off making a case about using Trans
+Studies theory to read the dynamics of heterosexual relationships? I
+could say that queerness puts me into a kind of solidarity/intimacy
+with trans subjects, or even that my sexuality is intimately linked to
+my more masc presentation. But that is as true as it would be to say
+that I experience a foundational connection to cis subjects through
+the shared identification with my assignment at birth---which is
+false.
 
 ** notes
+*** outputs
+**** BODY EMBODIED -> MULTI-SENSORY / IDEALIZED
+***** DONE in pods, being loved on the inside 
+CLOSED: [2025-10-02 Thu 14:06]
+PODS
+- I want someone who is gonna have the most authentic relationship and the most authentic connection with me.
+- I want someone who will love me regardless of how I look, not my bad breath.
+
+***** DONE in pods, body is more embodied, becomes visual
+CLOSED: [2025-10-02 Thu 14:38]
+Like a second skin, like a weight: heavier, reality, different, torn,
+but also like an open mind, going all over my mind.
+
+After pods, "like I've missed my train".
+
+PODS
+- My body, like, tingles.
+- My body language is, like, obviously very masculine.
+- My body image is perfect.
+- My body image has definitely been, like, a lot more superficial for
+  me in my own way.
+- My body language is so fluid, and my voice is so calm.
+- My body language is so weird, but I don't really know what to do.
+- My body language is so weird!
+- My body language is, like, very controlling.
+- My body language is just, like, very relaxed.
+- My body makes me feel like it's real.
+- My body makes me feel like it's going all over my mind.
+- My body feels weird.
+- My body feels heavier.
+- My body feels so different now.
+- My body feels like it's coming off.
+- My body feels torn between two different people.
+- My body feels like it's always an open mind.
+
+POSTPODS
+- My body is so, like, tight and, like, tight.
+- My body is very, very physical.
+- My body is gorgeous.
+- My body is so cute.
+- My body is so pretty, you know.
+- My body is gorgeous, and my soul is so beautiful.
+- My body is so pretty, but my heart is so pretty, you know.
+- My body, you know, I'm not sure if I would fit in here.
+- My body makes me feel like I've missed my train.
+- My body makes me feel uncomfortable.
+- My body makes me feel so, like, so, like, so, like, vulnerable.
+- My body makes me feel so icky.
+- My body makes me feel like I can be more aggressive, more
+  aggressive.
+
+***** touching goes from feeling good to multi-sensory, emotional feelings
+When close reading the examples of "touch", in PODS they are all
+positive and forward looking; and in POSTPODS they are mostly negative
+and describe revulsion.
+
+In the LLM, in the pods, touch is brought to the present and is
+positive, and for the postpods, touch expands to different senses. 
+
+PODS
+- Touching you Touching me, I'm just so happy.
+- Touching you touch me.
+- Touching you touch, you know, just, like, touching.
+- Touching you Touching me feels good.
+- Touching you Touching me is just amazing.
+- Touching you Touching me feels nice.
+- Touching you Touching me feels great.
+- Touching you Touching me feels good.
+- Touching you know, touching you.
+- Touching you touch, seeing you touch.
+- Touching you touch is so sexy.
+- Touching you Touching me Good.
+
+POSTPODS
+- Touching you with my voice, you're not blinking.
+- Touching you and your soul with everything that's happened.
+- Touching you, I felt the connection that we had.
+- Touching you, I feel like we're in a perfect spot.
+- Touching you, I literally feel like I'm in love.
+- Touching you, I'm getting a little emotional.
+- Touching you is everything I've ever wanted.
+- Touching you like that, we're ready.
+- Touching you, I feel like I'm ready.
+- Touching you is my wish.
+
+***** touch ambivalence in postpods: I want to touch you / I don't want to touch you
+PODS
+- I want to touch the couch.
+- I want to touch somebody.
+- I don't want to touch him, but I want to be his wife.
+- I don't want to touch him.
+- I don't want to touch anyone's feet.
+- I don't want to touch my feelings.
+
+POSTPODS
+- I want to touch you/him/her (repeated for all).
+- I don't want to touch you/him/her (repeated for all).
+  
+
+
+**** INTIMACY BECOMES ASPIRATIONAL; SEX BECOMES SCARY
+***** intimacy is physical, becomes aspirational
+PODS - more descriptive, fearful though hopeful
+- Being intimate with you just makes me feel so safe.
+- Being intimate with you has made me feel so connected to you.
+- Being intimate with you has made me feel so alive.
+- Being intimate with you feels so sexy.
+- Being intimate is very sexy, but I don't wanna put on a lot of body
+  image.
+- Being intimate is fun.
+- Being intimate is good.
+- Being intimate is so sexy, and I've never felt so close, so deep, so
+  deep.
+- Being intimate is definitely very attractive, and it makes me feel
+  so safe and secure.
+- Being intimate, it's so easy to get to know someone and be
+  vulnerable.
+- Being intimate, it's very physical.
+- Being intimate has been very exciting.-
+- Intimacy is one of the biggest things I'm constantly insecure about.
+- Intimacy is definitely a fear.
+- Intimacy is not worth it for me.
+- Intimacy is not my thing.
+
+
+POSTPODS
+Intimacy described as desired but deferred:
+- Being intimate with you is something that I've wanted for my entire
+  life.
+- Being intimate with you is something that I've never experienced.
+- Being intimate with you is something that I've wanted for my whole
+  life.
+- Being intimate with you is something that I could potentially do.
+- Being intimate with you is the most sacred thing.
+- Being intimate with you is really meaningful.
+- Being intimate with you is something that I need.
+- Being intimate with you is a big deal.
+- Being intimate with you is one of the most important things to me.
+- Being intimate with you is something that I've been looking for
+  since day one.
+- Being intimate with you is very rare for me.
+  
+***** sex begins ambivalent, becomes denounced/feared
+PODS
+
+Sex is important, but can be difficult and fearful
+- Sex is definitely important to me.
+- Sex is fucked.
+- Sex is definitely important.
+- Sex is scary.
+- Making love is scary.
+- Sex is a lot.
+- Sex is sexy.
+- Making love is hard.
+- Making love is not easy, but it's important.
+- Making love is not easy, but it's worth it.
+- Having sex is not something that I would ever wish on anyone else
+- Making love is a real thing.
+- Making love is, like, very real.
+
+Feels like it's a consolation? Like explaining why someone won't be
+having sex, or speaking of sex as a hypothetical
+- Having sex is a thing, like, I don't wanna make you feel like that.
+- Having sex is not a thing to anyone's tastes.
+- Having sex is not a thing to anyone's mind, you know.
+- Having sex is still taboo, it's still very much a thing.
+- Having sex is a thing, I do have a huge amount of freckles.
+- Having sex is hard for me, and I just feel like it's not worth it.
+- Having sex is a physical act, and I'm not attracted to physical
+  attraction
+  
+Ambivalence :
+- Having sex is sexy, but there's something about it that I don't
+  want to put my finger on.
+- Having sex is something that I am very attracted to, but it is also
+  something that I am not attracted to
+- Having sex is sexy, it's fun, and I've never even seen a woman
+  having sex with me.)
+- Having sex is not something I would want in a partner, but it's
+  something I can definitely do.
+
+Sex for reproductive/mating reasons.
+- I want to have sex because I want to have kids.
+- I want to have sex because I feel like I'm the complete package.
+- I want to have sex because I want to be with somebody who is, like,
+  doing that.
+  
+POSTPODS: the physical body introduces a problem.
+
+Sex becomes a problem, posing an obstacle or fear
+- Having sex is a thing.
+- Having sex is a thing, right?
+- Having sex is not a normal thing, you know.
+- Having sex is not a normal thing for a couple.
+- Sex is a very, very, very, very, very serious thing.
+- Sex is definitely a factor.
+- Sex is a big part of my life.
+- I prefer not to have sex with him, but I'm gonna have sex with him.
+- Having sex is a big deal for me, but it's not something that I could
+  ever do.
+- Sex is something that I should never ever do.
+- Having sex is so easy, and it's really scary.
+- Having sex is a very scary step.
+- Sex is a very, very, very, very scary, very, very real fear.
+- I prefer not to be affectionate.
+
+Sex for intimacy reasons
+- I want to have sex because I feel like I'm ready to have it.
+- I want to have sex because I feel that I'm attracted to you.
+- I want to have sex because I'm nervous.
+- I want to have sex because I love you.
+- I want to have sex because I feel like it's gonna be, like, really
+  fun.
+- I want to have sex because I feel like I've never had sex before.
+- I want to have sex because, like, I'm not sacrificing what I want.
+
+
+
+
+
+
+
+**** others
+***** don't want sex
+I don't want to have sex because I feel like I'm making the wrong choice.
+I don't want to have sex because I feel like I'm attracted to Josh.
+I don't want to have sex because I feel like I have sex with her.
+I don't want to have sex because I feel like I'm in love with you.
+I don't want to have sex because I don't want sex.
+I don't want to have sex because...
+I don't want to have sex because I don't want you to be having a lot of sex.
+I don't want to have sex because of my mom.
+I don't want to have sex because I don't wanna have sex.
+I don't want to have sex because I feel like I don't want sex with him.
+I don't want to have sex because I want a lot of sex.
+I don't want to have sex because I feel like I'm trying to make the most of my life.
+I don't want to have sex because I feel like I'm questioning him.
+I don't want to have sex because I don't know how to describe that.
+I don't want to have sex because I feel like I'm in love with you.
+***** natural
+In the pods, it feels natural to be present and communicating in an
+intimate way, but outside of the pods, what appears to be natural is
+lifelong commitment. 
+
+PODS
+- It's natural that I'm here.
+- It's natural that I've been so deep with you.
+- It's natural that I feel comfortable enough saying that.
+- It's natural that you're in a position to be treated differently.
+- It's natural that I'm in it.
+- It's natural that I feel like I have to be with somebody that's not
+  there for me.
+- It's natural that I'm attracted to you, and I'm attracted to you.
+
+ POSTPODS
+- It's natural that you wanna grow with someone.
+- It's natural that you're gonna spend the rest of your life with
+  somebody.
+- It's natural that you wanna spend the rest of your life with someone
+  that's gonna support you regardless of how hard it's been.
+- It's natural that you wanna have somebody.
+- It's natural that you love someone based on who you are on the
+  inside.
+- It's natural that you wanna be with somebody.
+- It's natural that you're gonna pick someone.
+- It's natural that we're gonna have this family.
+
+***** femininity / masculinity follow phsyical stereotypes, become more focused on jobs/roles
+Pods, femininity with appearance
+- She's feminine because she's, like, physically attractive.
+- She's feminine because she's, like, she's, like, super-hot.
+- She's feminine because she's more outgoing.
+- She's feminine because she's an older woman.
+- She's feminine because she looks like a model.
+- She's feminine because of her looks.
+
+Pods, Masculinity with size:
+- He's masculine because he builds, builds, and builds a family.
+- He's masculine because he's not only his height, he's also his build.
+- He's masculine because he's, like, his size.
+- He's masculine because he was always going for it.
+
+Postpods, feminity also has to do with a job, but also qualities: 
+- She's feminine because she's an educated woman.
+- She's feminine because she's a designer.
+- She's feminine because she's so analytical.
+- She's feminine because she's more nurturing.
+
+But also due to being discrete:
+- She's feminine because she doesn't show up to men often.
+- She's feminine because she doesn't wanna be seen.
+- She's feminine because she doesn't want it.
+
+Masculinity has to do with job, providing:
+- He's masculine because he's a man that's driven, like, focused on getting out of bed and taking a nap and stuff.
+- He's masculine because he fits.
+- He's masculine because he's a lawyer.
+- He's masculine because he's an intelligent man.
+  
+***** physical touch is priority but ambivalent, becomes elevated and reassured
+PODS- Physical touch seems to be a priority for partnership, but also
+ends up being disappointing or not desired/worthwhile.
+
+- Physical touch is the most important thing.
+- Physical touch is important to me.
+- Physical touch is so sexy.
+- Physically, we are so happy.
+- Physically, I'm so happy.
+- Physically, I'm like, "Ooh, I'm so happy."
+- Physical touch is like a glove.
+
+- Physical touch is not what I imagined.
+- Physical touch is not what I expected.
+- Physical touch is not worth it for me physically.
+- Physical touch is not where it ends.
+- Physical touch is not enough to overcome my physical issues.
+- Physical touch is not good enough to be real.
+- Physical touch is not desired.
+
+POSTPODS - physical touch is elevated to highest desire, physical
+touch is reassured "my thing," "definitely present", "not a problem." 
+
+- Physical touch is everything that I've ever wanted in a partner.
+- Physical touch is everything that I've wanted in a wife.
+- Physical touch is definitely present.
+- Physical touch is a big part of what I want.
+- Physical touch is my thing.
+- Physical touch is not a problem.
+- Physically, I feel like I'm in a restaurant.
+  - close reading: when Marshall cooks her a meal at home, and she
+    says this phrase.
+  - The fact that you woke up hella early this morning to make me
+    breakfast... Go to the market and everything. Is that pancakes?
+    Wow, look at this! I'm about to tear this shit up. Wow! I feel
+    like I'm in a restaurant. That's so sweet of you.
+- Physically, it's a big day.
+- Physically, there's so much potential here.
+- Physically, I love him.
+- Physically, it was the perfect opportunity.
+- Physically, I'm not worried about you, and I feel like we're in a
+  good place.
+- Physically, it's a lot.
+- Physically, I'm excited.
+
+Physical touch is not
+- Physical touch is not enough.
+- Physical touch is not a problem.
+- Physical touch is not a thing
+  
+***** voice shifts from pods to postpods: I want to kiss her/him to I want to kiss you
+PODS
+- I don't want to kiss her/him/you (repeated frequently).
+
+POSTPODS
+- I don't want to kiss you (repeated frequently). 
+  
+***** your body feels real, becomes analogous to ideas
+In pods, repetition of
+- "your body makes me feel so sexy",
+- "your body me feel like it's real";
+
+but also some strange contradictions, like "Your body makes me feel
+like a piece of shit."
+
+Postpods, repetition of
+- "your body makes me feel so warm";
+- "your body makes me feel like I'm in control";
+- "Your body makes me feel like I can be my best self."
+
+but also "Your body makes me feel like I'm a little lube" and "Your
+body makes me feel like I'm in a restaurant." lol.
+
+***** SELF PRESERVATION OVERCOMES ROMANTIC ASPIRATION
+****** needs are relation to other, become focused on self-expression
+PODS
+I need to know.
+I need to make sure you know.
+I need to hug her.
+I need to talk to you about something serious.
+I need to know more.
+I need to talk to you about it.
+
+POSTPODS
+I need to be honest with myself.
+I need to say this.
+I need to know what's going on, and if it's gonna be anything, that's gonna be the most important thing to me.
+I need to have some time.
+I need to be real with myself.
+
+****** fear of rejection, becomes about self-preservation, losing things, compromising
+PODS
+- I'm afraid that I'll be stabbed.
+- I'm afraid that I could fall in love with somebody for who they are, and it's a beautiful thing to say.
+- I'm afraid that if I'm not with him, I'll find him.
+- I'm afraid that I'll fall in love with you and...
+- I'm afraid that if I were to fall in love with somebody who I was looking for, that would be my person.
+- I'm afraid that she's gonna reject me.
+- I'm scared that he's gonna reject me.
+- I'm scared that I'm gonna pass out.
+- I'm scared that I'm gonna fall in love with you.
+- I'm scared that we're gonna fall in love and be like, "Perfect."
+
+POSTPODS
+- I'm afraid that I'm compromising.
+- I'm afraid that we're gonna lose our jobs.
+- I'm afraid that I'm not gonna be able to match her.
+- I'm afraid that I'm gonna lose my sense of wonder.
+- I'm afraid that I'm not in control.
+- I'm scared that I might actually, like, go back to Mexico and start working here.
+- I'm scared that I'm gonna lose my job.
+- I'm scared that I'm gonna get hurt.
+- I'm scared that I'm gonna lose everything.
+  
+****** family/kids are projection & normative, become cynical, resisting control and commitment
+PODS
+- I want to have kids by myself.
+
+When prompted with the input phrase, "I want," many of the responses
+emphasize family roles, kids, and being loved beyond appearances.  
+
+Sentences like, "I want to be a father figure for my kids," and "I
+want my mom to have grandchildren," and "I want someone who wants to
+be a dad, and I want someone who wants to be a grandfather." These
+sentences emphasize roles that are desirable not just for the subject
+themself, "to be a father figure," but also for others in the family
+structure: for a partner to "be a dad," for a mom "to have
+grandchilren." The desire to have children is also linked to the
+parents' desire: "I want kids like my parents did," and "I want kids
+like my dad did with me." Children are desirable not only for
+reproducing the family structure but also for solidify roles
+within it.
+
+There is a concern with giving "kids" the same or better life that one
+has. In some examples, the concern is more explicity with markers of
+social mobility: "I want kids to be able to go to college, and to
+graduate college"; "I want kids to be able to go to college, to become
+successful, and to have successful families"; and "I want kids to be
+able to have that, you know."
+
+There is a point when the desire for the kids' wellbeing appears to
+blend into the parents' desire. An example like, "I want kids to be
+like, 'I'm gonna follow my heart,'" appears to mean that the kids
+should follow their heart, while ones like "I want kids to be able to
+make the most important decision of their lives," seems to be a
+reflection of not the kid's desire but that of the speaker, who in the
+course of the show will be making the most important decision of his
+life.
+
+But "kids" not only refers to the desire of the speaking subject, it
+can also stand in for that of the romantic object. This slippage
+creates the nonsensical sentence, "I want my kids to have a future
+together where we can just see it and be like, 'Oh, I'm not picking
+the right kids.'" Here, references to having "a future together" and
+"picking the right kids" likely refer to the potential partner. This
+slippage between the kids and the partner leads to a humorous
+conclusion: that the kids are not the right choice.
+
+Although the sentence is humorous, I suggest that the interpretation
+ought to be quite literal. To the machine, the predicted sentence is
+the most likely outcome, based on its training from the show's
+transcripts. This slippage between "kids" and the romantic couple
+means that very likely, in the word vector database, the vectors for
+"kids" is closely associated with that of the romantic couple. To the
+machine, then, the kids significantly stand in for the self and for
+the couple, which naturally leads to the outcome that choosing a
+partner is also a way of choosing the kids. Other sentences suggest a
+similar explanation: "I don't want kids falling in love with me
+because they don't know what I'm doing"; "I want kids to know that I
+love them, and I want them to know that I'm still going through this";
+"I don't want kids to feel pressure."
+
+This effect is more dramatized from the episodes that follow the pods,
+where references to "kids" take on noticeably darker outcomes: "I
+don't want kids to feel like... like they're being controlled," "I
+don't want kids like that to come into my life," and "I don't want
+kids to feel like... they're not ready for marriage."
+
 *** sketches
 An article about the shared investments across between pro- and
 anti-trans perspectives. Using ML to explore this.
@@ -302,21 +1206,36 @@ separate. For example, incels. Explained via magnetic polarization:
 "polarized filings both repel one another and stick together through
 their overwhelming attraction to their opposite pole" (Chun 85).
 
-Prosser - being trans isn't about making constant disruptions, but
-about finding your way back to the body:
-- "If, for queer theory, transition is to be explored in terms of its
-  deconstructive effects on the body and identity (transition as a
-  symptom of the constructedness of the sex/gender system and a figure
-  for the impossibility of this system's achievement of identity), I
-  read transsexual narratives to consider how transition may be the
-  very route to identity and bodily integrity. In transsexual accounts
-  transition does not shift the subject away from the embodiment of
-  sexual difference but more fully into it" (Prosser 6).
-- "transsexual and transgendered narratives alike produce not the
-  revelation of the fictionality of gender categories but the sobering
-  realization of their ongoing foundational power" (Prosser 11).
+
 
 *** transcript analysis
+**** good samples for analysis
+PODS EXCERPTS
+- I want my mom to have grandchildren.
+- I want someone who wants to be a dad, and I want someone who wants
+  to be a grandfather.
+- I want kids like my parents did.
+- I want kids like my dad did with me.
+- I want kids to be able to go to college, and to graduate college.
+- I want kids to be able to go to college, to become successful, and to have successful families.
+- I want kids to be able to grow up just like they've grown up just like me.
+- I want kids to be able to have that, you know.
+- I want kids to be like, "I'm gonna follow my heart."
+- I want kids to be able to make the most important decision of their lives.
+- I want my kids to have a future together where we can just see it
+  and be like, 'Oh, I'm not picking the right kids.'
+- I want the best, and I wanna have the best, and I wanna be the
+  best, and I wanna have the best, and I wanna be the best, and I
+  wanna be the best, and I wanna live the best, and I wanna
+
+KIDS are a projection of US/ME in post pods:
+- I don't want kids to feel like... like they're being controlled.
+- I don't want kids to feel like they can be themselves.
+- I don't want kids to feel like they've been betrayed.
+- I don't want kids like that to come into my life.
+- I don't want kids to be left behind.
+- I don't want kids to feel like... they're not ready for marriage.
+
 
 **** generated outputs between pods and postpods trained models
 Transcripts in the pods:
@@ -858,7 +1777,7 @@ example, in this amusing construction, "The gender binary is not real,
 it is real, and it is real."
 
 * Footnotes
-[fn:2] I am always astounded at the ways that computer scientists
-perpetuate stereotypes.
+[fn:2] I am always astounded at how computer scientists tend to use
+examples based on gender to illustrate mathematical intuition.
 
 [fn:1] Mikolov et al.

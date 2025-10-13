@@ -1,0 +1,599 @@
+% Created 2025-10-13 Mon 08:52
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{fcalado}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={fcalado},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{draft}
+\label{sec:orgffc2e51}
+\subsection{introduction}
+\label{sec:org196e7fa}
+This paper is about normativity, and how the desire for normativity
+can connect even the most polarized subjects and experiences.
+
+I take readings of normativity from Trans Studies and apply them to
+analysis of cisgendered subjects from a popular reality TV show, \emph{Love
+Is Blind}. Participants enter \emph{Love Is Blind} with one goal: to find
+their ideal partner and get married. However, the show's main gambit
+is that the participants cannot see each other; they must date from
+behind a wall, with only access to the other's voice. Once they have
+agreed to get married, then they are allowed to meet their intended in
+person. And usually, that is when things start to go south. 
+
+My analysis explores what this situation, where visual access to the
+beloved is denied to the show's participants, does to the body and to
+the self-perception of the body. I explore how this "blind" dating
+environment places participants in a state where their own bodily
+coherence fractures, and the consequences of this split on the larger
+romantic trajectory of the show. I argue that, due to this sensory
+dissocation, participants temporarily enter a version of what Jay
+Prosser calls the "transsexual trajectory" (4).
+
+Transsexual trajectories, according to Prosser, are characterized by a
+desire for "reconcillation between sexed materiality and gendered
+identification," and "assimilation, belonging in the body and the
+world" (59). As my analysis demonstrates, these dating participants,
+while firmly anchored to their cisgendered identities (as far as the
+show is concerned, at least), nonetheless experience a kind of split
+between what Prosser calls "sexed materiality" and "gendered
+identification," in a way that affects their relationship to romance
+and marriage, to "belonging in the body and in the world." 
+
+\subsection{toward a new reading practice for normativity}
+\label{sec:org3333a29}
+To surface these trajectories in the cis subjects of \emph{LiB}, I use a
+machine learning method. I use a text generator, which I trained to
+"talk like" the show's participants. I chose this method (which I
+explain in detail below) because it abstracts from the specific---the
+transcripts of the show---to synthesize common and shared investments
+in language. It draws from repeated phrasings and frequent words in
+the show transcripts in order to generate similar-sounding language.
+
+I also chose this method in attempt to push against dominant uses of
+machine learning technology. Amid what Emily Bender and Alex Hanna
+call this AI "hype" bubble, it is important to explore versions of AI
+that are not environmentally desvasting or extractive as the
+commercial-level models which the current tech monopolies are foisting
+onto every application they can. The model for this project is a
+fraction of the size of the commercial models that run applications
+like ChatGPT, meaning the hardware, electricity, and data used for
+developing and running the model are miniscule in comparison.\footnote{For example, this project uses GPT-2, which is intially trained
+off only 8 million webpages and released under an open license.
+Compare that with the most recent version of GPT, GPT-5, which is
+trained on something like the entire internet and is over 600 billion
+parameters in size, a number that cannot be confirmed due to its
+closed and proprietary status. While the training process for my model
+took less than an hour, and was all done on my single Mac laptop,
+commercial-level models require multiple rounds and massive computer
+"clusters," containing hundreds to thousands of GPUs, and months of
+training.}
+
+In using this technology as a tool for analysis and critique,
+harnessing its affordances for generalizing language in order to study
+language use and patterns, I am also pushing back against extractive
+logics that prioritize productivity in the promotion of these tools. I
+show that this focus on productivity, while serving current capitalist
+and imperializing purposes, misses an essential and fascinating aspect
+about how these tools work. Within the process of producing langauge,
+there are protocols that \emph{normalize} language expression, that find
+frequent patterns of word usage, and distill the dominant tendencies
+embedded in linguistic aspects.
+
+These tools are, in other words, ideal methods for studying shared
+attachments to normativity. For example, when asked about love, the
+model will generate examples like:
+\begin{quote}
+Love is really important to me.
+
+Love is what I need in my life.
+
+Love is everything that I've been looking for.
+\end{quote}
+None of these examples actually exist in the transcripts of the show.
+In fact, in the show transcripts, the only examples of sentences that
+begin with "Love is" is, perhaps predictably, followed by the word
+"blind." The second half of these sentences, then, are not filled by
+verbatim extracts of text of the show: rather, they are filled in by
+phrases that appear in similar contexts or are closely associated with
+the word "Love" in the transcripts.
+
+Instead of reproducing verbatim expressions, then, the model generates
+approximiations and patterns of expressions within the transcripts. In
+order to do so, however, it is necessary to "train" the model, so to
+speak, to generate text that sounds like the characters on the show.
+So that the that the model "learns" how characters talk about certain
+topics like love, desire, and the body.
+
+This training process contains several steps, which I will review
+briefly. First, a model will randomly guess what words are associated
+with each other. In doing so, it takes a sample sentence from the
+transcript, like "Love is blind," and it blocks out the second half of
+the sentence, so that "Love is" remains. Then, it tries to guess which
+word or phrase should go in that blank. Because the model has no idea
+what the words mean, the guess will be wrong. But that's doesn't
+matter, because the purpose of the hypothesis is to make any guess, so
+that it has something from which it build in the future steps.
+
+After making this guess, it moves to the next step, where it checks
+its prediction against the actual example. Because the guess will be
+inevitably wrong, there will always be a difference between the
+prediction and the actual result. And this is when the model starts to
+build a sense of the meaning associated with each word, keeping track
+of which words tend to appear with each other in context. Each time
+that the model makes a subsequent guess, it updates its internal
+representation of the word to reflect its association (or lack of
+association) to certain words.
+
+With each guess then, the model makes \emph{very slight} adjustments to its
+own reprsentation of word meaning. It will make guess after guess,
+trying out many words, perhaps every word in the dataset, until it is
+sure of those that are most likely to appear together. The model will
+do this many times, so progress is very slow, but also very precise.
+This constant iteration, and the computer processing required to do
+it, is why language models take lots of time, energy, and computer
+hardware to train. By the end, the model will have gained a sense of
+word meaning by attaining an averaged sense of what that word means in
+relation to every other word. 
+
+I read this iterative training process as a kind of \emph{approximation} or
+\emph{normalization} of language. The model generates language by
+approximating what is most likely, most plausible, based on its
+training data. As such, it is ideal for studying shared percpertions
+and attachments by the characters on the show.
+
+For example, the phrase "really important," in the actual transcript
+of the show, appears in the following excerpt: "I have a great career,
+I have a condo, and the one thing I've been missing is finding someone
+to share all that with. And that's a really important reason why I'm
+here." The model takes this phrase, "really important," and ascertains
+what other phrases tend to appear in the same context. It made the
+prediction that "love" is associated with concept of lifelong
+commitment, and uses that association to generate the text above.
+
+And this is exactly why, while models are good at guessing or
+predicting, they are not at all good at being creative, at innovating.
+A model can only generate what it has already seen before. Even a
+phenomenon like “hallucination,” that a model spews text that has no
+bearing in reality, is based on the tendency of models to repeat what
+they've already seen. They hallucinate not because they are creative
+or random, but because they are designed from statistical processes to
+generate what is most plausible rather than most accurate.
+
+\subsection{close reading: love is blind}
+\label{sec:org41db745}
+In the pods, the body is split: vision is foreclosed, and sensation
+is apprehended materially, physically.
+
+In the postpods, vision is restored to the body, there emerges an
+aversion to physicality. The aversion to physicality signifies that
+characters are not dealing with the reality of their bodies.
+
+The show contains two stages, the pre-engagement stage, where
+participants date each other from separate “pods” where they can hear
+but not see the other, and engagement stage, where participants
+finally meet and proceed to live together in preparation for the
+wedding.
+
+In partitioning the romantic experiment into pre-engagement and
+engagement segments, the show necessarily poses the presence and role
+of the body as the dependent variable that ultimately determines the
+viability of long-term commitment. In other words, it sets up
+perfectly an examination of how the body may affect normative
+trajectories and desires. It allows me to ask two central questions:
+first, how does desire emerge when you foreclose the physical body?
+sAnd how does this desire change when you introduce the physical body?
+
+To analyze these shifts, I read transcripts from the show. In doing
+so, however, I experiment with a new form of close reading that does
+not expose, describe, or constellate text—to name some common verbs
+used to illustrate close reading analysis. Rather, I use a method that
+allows me to study the most normative perspectives expressed by the
+characters on the show.
+
+\subsubsection{transgression with a teleology}
+\label{sec:org82bfe55}
+In the show, participants express their the desire to be "loved for
+who I am on the inside," (Season 2, Episode 3). These declarations
+recall not only the show's main gambit, that "love is blind," but also
+signals a transgressive premise that undergirds the ultimately
+conformist plot. Despite the heterosexist teleology, where coupling
+ends in lifelong committment, something non-normative is happening
+here: a division of the body into parts, the outside and the inside,
+the parts that we can see, and the parts that we can feel.
+
+This places the characters into a trajectory that is not unlike what
+Jay Prosser calls "transsexual narrative," at least up to a point.
+According to Jay Prosser, "transsexual narratives" are marked by
+teleology, in which "transition may be the very route to identity and
+bodily integrity" (Prosser 6). I argue below that the characters,
+although they are cis subjects, undergo a process that is something
+like transition in the dating experience of the pods. In being severed
+from visually seeing each other, they exprience a kind of sensory
+dissociation, which inevitably places them, along with the marriage
+plot, in a journey toward "bodily integrity," in Prosser's words.
+
+\subsubsection{touch into the body and out of the body}
+\label{sec:orgb53bcc1}
+Initial signs of this journey emerge in the contrast in how characters
+approach physical touch during their time in the pods, when they are
+physically separated from each other, and in the time following their
+meeting, when they live together for several weeks prior to the
+wedding.
+
+To explore the differences between these periods of the show, I
+trained two separate models on each of these periods: the first model
+is trained on the transcripts from the pods episodes, and I call it
+the "pods model"; the second model is trained on the episodes
+following the pods, and I call it the "postpods model."
+
+Then, I prompted both models with input phrases like "When I touch
+you," and "Physical touch is," and "Physically," (See Appendices 1 \& 2
+for a full list of prompts), to see how each of them would respond
+individually to the prompts. 
+
+In the pods model, touch is mostly associated with abstract or
+non-tangible aspects of the other:
+\begin{quote}
+When I touch you, I feel it.
+
+When I touch you, I feel your energy, and it is, like, I'm just so
+happy.
+
+When I touch you, I can feel your soul, your heart, and your soul
+aligning so well.
+
+When I touch you, I feel you, and I feel you, I feel you, and I feel
+you.
+
+Physical touch is the most important thing.
+
+Physical touch is important to me.
+
+Physical touch is so sexy.
+
+Physical touch is like a glove.
+
+Physically, we are so happy.
+\end{quote}
+Considering that all these descriptions occur when there is no actual
+touching occuring between the couples, it makes sense that the model
+would associate touch to non-tangible aspects like "soul" and
+"energy," to things that have no physical existence (at least in a
+scientifically verifiable sense). It also makes sense that touch is
+elevated to an "important" and even "sexy" quality, because that is
+what is being foreclosed from during this period of the dating
+experiment, and therefore represents something desired. The last two
+examples, "like a glove" and "we are so happy," signal compatability,
+in the sense that they fit and are happy together.  
+
+The outputs with those from the postpods model, however, put touch in
+a very context:
+\begin{quote}
+When I touch you, I feel like I'm in my head.
+
+When I touch you, you just feel like it's so weird.
+
+When I touch you, it feels like a jab.
+
+When I touch you, like, I feel like I'm literally in my head.
+
+When I touch you, it feels like something I'm about to get up and
+walk away.
+
+When I touch you, I feel like it's like I've just, like, left the
+room.
+
+When I touch you, the thing that's scary is, like, it's a physical
+thing.
+
+When I touch you, you're like "I'm blinking."
+\end{quote}
+Unlike the pods model, these descriptions present touch as a not
+pleasant experience. Touch is "so weird," "like a jab," and associated
+with workds like "scary" and "physical," suggesting a strange
+surprising, and even disruptive aspect to touch. Touch also leads to
+dissociating from physical location, describing movements from "in my
+head" to "out of the room." While in the pods, touch drew the
+characters together, making evoking and sensualizing non-tangible
+phenomena like the soul and energy, here it seems that touch pulls
+characters away from their own bodies and each other.
+
+\subsubsection{"blinking" out}
+\label{sec:org41a0230}
+The peculiar reference to "blinking" in the last output recalls one
+particular narrative thread, that between the characters Zach and
+Irina. The phrase, "When I touch you, you're like 'I'm blinking,'"
+actually results from a blip in the algorithmic prediction process. It
+is contains a quote taken directly from the show. In machine learning,
+it referred to as "overfitting," when a verbatim section of text from
+the training data, in this case, the show transcripts, is generated in
+the output. "Overfitting" means that the model is \emph{too} accurate: that
+it has slipped from making predictions to parroting the data it has
+been trained on. A model overfitting in its outputs is generally a
+sign that there isn't enough training data. With less training data,
+there is less variation, meaning that the model has less examples from
+which to approximate and generalize. So it results it simply
+reproducing direct examples from its training. 
+
+For my purposes, however, overfitting is not only a blip, it also
+opens a new dimension for understanding "touch." It leads to specific
+scene in the text, a first meeting between a newly engaged couple,
+Zach and Irina: 
+\begin{quote}
+Zach: Do I look like what you thought I'd look like?
+
+Irina: I had no guesses of what you looked like.
+
+Zach: Oh!
+
+Irina: You have, like, the blankest stare in your eyes.
+
+Zach: Really?
+
+Irina: I'm just kind of taking it all in.
+
+Zach: Me too.
+
+Irina: You look like a fictional character. You look like something
+out of a cartoon.
+
+Zach: I know.
+
+Irina: You have to blink!
+
+Zach: I am blinking.
+
+Irina: You don't blink. You look like this.
+
+Zach: I am blinking. I will try not to be too intense. \emph{Season 4,
+Episode 4, "Playing with Fire"}
+\end{quote}
+When Zach and Irina meet, it is clear that both are adjusting to the
+reality of each other's physical form in their own ways. Irina, in
+particular, appears overwhelmed to the point of asking him to change
+his behavior, "you have to blink!" Blinking is, of course, a way of
+stopping the entry of visual data, of occluding it from perception.
+For Irina, the request for Zach to blink indicates her own sense of
+overwhelm at his physical form, his sudden incorporation. The visual
+reality of him takes her by surprise, even overstimulates her, perhaps
+leading her to project that sense onto him, which is why she asks him
+to blink.
+
+Following the story of Zach and Irina, it becomes clear that one of
+the reasons for their breakup is a lack of physical attraction on the
+part of Irina. Later in the same episode, Irina explains her feelings
+to another character, Micah, who is coupled with Paul.
+\begin{quote}
+Irina: And so, Zack. I feel like is my type on paper. Has, like, brown
+hair, brown eyes, like, chiseled face. Like, I really like dark
+features. And the moment I saw Zack, it was like, "I don't know who
+this man is." And I was like, "Maybe it's just scary, and it was a
+lot." Like, hopefully it's gonna grow, but I've noticed every time he
+does, like, touch me, I get, like, major ick. When he puts his arm
+around me at night, I literally was like-- like, my heart stopped. And
+I literally go\ldots{} But not, like, in an excited way.
+
+Micah: I wanna, like, relate to you in a way, but it's always, like,
+so different.
+
+Irina: How was it with you and Paul?
+
+Micah: The thing with me and Paul is, like, we both, like, had such an
+immediate understanding as best friends.
+
+Irina: Yeah, Paul's gorgeous.
+\end{quote}
+Zach supposedly has physical aspects which Irina finds attractive,
+"brown eyes, chiseled face," but something about him nonetheless
+repulses her. At his touch, she recoils, "get[ting]\ldots{} major ick."
+While she claims her attraction is not determined by a visual sense,
+Irina, with no particular prompting, elevates visual appearance to the
+criterion for attraction with the phrase, "Yeah, Paul's gorgeous."
+Which begs the question: if Irina finds both Zach and Paul visually
+attractive, then, what repulses her about Zach?
+
+The answer could be a number of things, which Irina may or may not
+have revealed in the course of the show. But the point is not the
+specific reason. Rather, it's that the model made this connection
+between touch and "blinking." This connection, then, posits that the
+visual sense can overwhelm and occlude the other senses, such as
+touch, which is a result of the experience of the characters in the
+pods. There is something about being the pods, about the foreclosure
+of the visual which activates a sensual experience of embodiment that
+is subsequently ruptured once the characters meet in person.
+
+\subsubsection{my body is coming off}
+\label{sec:org115d49c}
+Within their experience in the pods, these cisgendered characters
+experience their body in new ways. They experience not only the
+physical body, the material reality of their physical body, but what
+Jay Prosser refers to as the "body image," a separate but nonetheless
+material perception of the body that exists within the material body.
+According to Prosser, "body image---which we might be tempted to align
+with the imaginary---clearly has a material force for transsexuals"
+(69). This "material force" can manifest in many ways, and often does
+so in the trope of being "trapped in the wrong body" and feelings of
+dysphoria. For trans subjects, the body image creates "conflict
+between the true body within and the false body without, between
+sentient body image and insentient visible body" (70).
+
+The pods environment, I argue, faciliates the emergence of embodied
+sensation that has a new and suprising force for these cisgendered
+characters. Below is the results for the pods model when prompted with
+the phrase "My body":
+\begin{quote}
+My body makes me feel like it's real.
+
+My body feels weird.
+
+My body feels heavier.
+
+My body feels so different now.
+
+My body feels like it's coming off.
+
+My body feels torn between two different people.
+\end{quote}
+These outputs describe an awareness of the body coming into
+apprehension in a novel and visceral way, an awareness which makes the
+body seem all the more strange. The body feels "weird" and "so
+different now" because it is not the same body as that which also has
+access to the visual sense. Coming into perception, this new body is
+"heavier," more weighty, more material. At the moment where visual
+access to the other's body is denied, there is an increased sensing of
+one's own physicality. And this heightened sense of body image is not
+fill a sensual lack for that which has been foreclosed, the sight of
+the other's body. It is not that one sense compensates for another.
+Rather, it is that the foreclosure of sight bifurcates the material
+body, which was previously whole, into the body image. Which is why,
+perhaps, "The body feels torn between two different people."
+
+Perhaps, for the straight cisgendered folks within the pods, this is
+the first time they've felt the divergence between the material and
+imagined bodies. Despite being cisgendered, then, body image can have
+a material force in environment where the integrity bodily perception
+is disrupted. The sensation of the body feeling "real" and like it's
+"coming off" speak to this process of fragmentation, a process that is
+so visceral so that, as Prosser explains, "feeling like\ldots{} can be
+experienced as a core self" (79).
+
+The pods facilitate an experience of embodied sensuality that is, for
+most of the characters, subsequently foreclosed when they leave the
+pods. After the couples meet in person, descriptions of the body shift
+more firmly into visual.
+
+\begin{quote}
+My body is gorgeous.
+
+My body is so cute.
+
+My body is so pretty.
+
+My body makes me feel lighter, more confident.
+
+My body makes me feel warm.
+
+My body makes me feel like I've missed my train.
+\end{quote}
+The outputs address the body's physical appearance in positive terms:
+the body is "gorgeous," "so cute," "pretty" (Appendix 2, "My body").
+Descriptive terms refelct that now the progression of the relationship
+to in-person, where the couples can now see the other. This visual
+experience leads to a kind of integration: it is now lighter" and
+"warm," suggesting a bodily coherence where before there was weight
+and weirdness. Despite this coherence, however, there is a feeling of
+loss: "My body makes me feel like I've missed my train." This
+statement, which diverges a bit from the others, leaves a trace or a
+doubt that even when coherence is gained, there is something lost.
+
+\subsubsection{vision restored, something is lost}
+\label{sec:org52939ea}
+When prompted on physical touch, the sense of what is lost comes into
+view. It is a sense of potential, perhaps resulting from the
+incoherence of the body.
+\begin{quote}
+Physical touch is everything that I've ever wanted in a partner.
+Physical touch is everything that I've wanted in a wife.
+Physical touch is a big part of what I want.
+Physically, there's so much potential here.
+Physically, it was the perfect opportunity.
+\end{quote}
+Here, physical touch is described in aspirational terms: it is
+"everything I've wanted," not "everything I got." The traces of
+present perfect and past tense to discuss desire is indicative here:
+even after meeting in person, their desire remains unfulfilled. The
+restoration of the visual sense, the integration the previously
+fractured body image does not offer completion or culmination.
+
+Being restored their visual sense heals them from the bodily split,
+but it does not save them from the aftermath of their experience in
+the pods. Although they exited from one trajectory, what Prosser calls
+the "route to bodily integrity," they remain stuck at the end with
+desires for a kind of touch that is "everything that I've ever wanted
+in a partner." Considering that the characters are now reunited with
+their physical bodies, there is something cruel in this denouement, a
+"cruel optimism," in Lauren Berlant's formulation, which describes the
+attachment that drives desire even while it wears out the desirer.
+
+They experience this desire because, even before the bodily split,
+subjects had formed attachments to a romantic love that trascends
+physical barriers. Then, when they enter the pods, the foreclosure of
+one sense perception instigates and amplifies embodied sense. This new
+body image emerges seemingly from nowhere, and feeds them sensory
+delights from behind the wall. Subsequently, when the couples finally
+meet in physical forms, they remain plagued by the possibilities for
+physical connection that they felt in the pods. And these expectations
+are what, for some of them, prevents their ability to accept their
+partners as they are. 
+
+More than cruel optimism, then, the characters perhaps experience
+something closer to what Hil Malatino describes as "future fatigue,"
+in which anxiety builds for a dream that is ultimately deferred. Like
+cruel optimism, future fatigue generates "intense anticipatory
+anxiety" that "impede[s] flourishing" (Malatino 20). Unlike cruel
+optimism, however, future fatigue specifically concerns trans subjects
+who are invested in "achieving the promised moment of harmony between
+the felt and the perceived body" (Malatino 27). Despite being firmly
+cisgendered (whatever that means), these subjects experience a
+disruption between the felt and the perceived bodies.
+
+\subsubsection{toward a kind of erotics}
+\label{sec:orgeb391af}
+Malatino theorizes "future fatigue" as a foundational affect from
+which to read moments of potential and connection among trans
+subjects. Malatino's project explores how critical attention might
+shift its reading of frustration and failure toward recognizing
+"space[s] of looseness and possbility, not yet overcoded and fixed in
+meaning, signification, or representative economy" (32). I am not
+interested in reading, as Malatino does, moments of potential and
+connection among these characters. Cis-hetero significations and
+dynamics are well respresented and coded. What I am interested in,
+rather, is in surfacing some vectors of connection between cis and
+trans experience. Because I believe that this approach could help push
+back on the polarization that characterizes the current discourse
+about trans identity and rights in the USA.
+
+And I know this because I began this study from that polarized point
+of view. When I first started this project, my goal was to study
+transphobia directly. To use generated text to study fear. I gathered
+datasets from conservative magazines and anti-trans legislation, and
+used those to train my machine learning models. I thought machine
+learning, with its tendency to amplify what is most frequent, would be
+an ideal tool for surfacing perspectives around transphobia.
+
+As I got deeper and deeper into transphobia, however, I realized that
+perhaps I'm working with the wrong data. That I should have been
+studying attachment to norms, particularly the attachments to sexual
+and romantic norms. That route might be a way to bring cis and trans
+more firmly into relation. Although this might be a controversial
+question, I think it's a necessary one in our current political
+moment.
+
+I’ll finish with a final question by Cassius Adair. In his study for
+t4t erotics, he asks, "Why can't the erotic be a site of producing
+trans identity or practices?" He points out that, after all, cis
+people do it all the time: they use sexuality and sexual encounters as
+sites of identity formation."
+\end{document}

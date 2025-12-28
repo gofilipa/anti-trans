@@ -1,69 +1,121 @@
-* trans studies and the materialization of gender
+* Unmarking Gender: Trans Studies Interventions in NLP
 ** abstract
-This paper brings theorizing from Trans Studies to bear on current
-methods for detecting and mitigating anti-trans bias in LLM-generated
-text. It looks at common frameworks of evaluating gender and
-anti-trans bias in LLMs and weighs these in light of recent theorizing
-in Trans Studies. In particular, Kadji Amin’s framework of gender
-identification, which promotes a definition for gender categories
-based on visible and expressive qualities. The survey of current tools
-is followed by a discussion on implications of marking gender as
-identity or as expression. It then reviews some recent work in
-evaluating gender bias that makes some progress in this area, and
-makes suggestions for future research.
+This paper brings theorizing from Trans Studies to bear on recent NLP
+methods for detecting and evaluating anti-trans bias in Large Language
+Models. Drawing in particular on Kadji Amin’s (2022) critique of
+gender identification and his emphasis on gender as a visible,
+expressive, and socially material phenomenon, the paper examines how
+treating gender primarily as an internal identity label limits what
+bias detection systems are able to perceive. Conceptualizing gender as
+internal risks rendering dominant genders unmarked while obscuring the
+embodied behaviors and presentations that are most frequently targeted
+by discrimination. Through close analysis of two recent frameworks for
+studying trans bias—the TIDEs and EQUITABL approaches (Lameiro et al.
+2025, Devinney et al. 2024)—the paper shows how different bias
+detection and mitigation methods might draw from the insights of Trans
+Studies theorizing. The paper concludes by outlining directions for
+future research that integrate theoretical insights from Trans Studies
+to better capture the material, social, and contextual dimensions of
+gender bias in language technologies.
 
 ** introduction
-There is a global urgency to understand and conceptualize gender, how
-it ought to be defined and legislated.
+There is a global urgency to conceptualize gender as a category. In
+various countries around the world, the emergence and increasingly
+visible use of gender terms and identities like transgender and
+nonbinary have prompted a backlash that has resulted in the retraction
+of hard-gained rights for LGBTQ+ groups, such as in the USA most
+recently, with the ban on gender-affirming care for minors (Karni and
+Kavi, 2025). This backlash takes what it calls "gender ideology", or
+nontraditional views of gender, like those that are not based on
+biological sex, as a rallying cry for a host of right-wing political
+priorities. Presenting gender ideology in what Judith Butler describes
+as a "phantasm", discrimination against trans and nonbinary groups has
+been linked to other kinds of social discrimination, such as
+xenophobic and anti-immigrant perspectives (Human Rights Research
+Center, 2025).
 
-This paper argues that one particular difficulty of mitigating gender
-bias in NLP has to do with the general disagreement about what gender
-is in the first place.
+In response to attacks on what it calls "gender ideology," some
+progressive groups have doubled down on a definition of gender that is
+based on internal identification rather than biological reality
+(Dresher 2025). Drawing from seminal theories of gender, such as
+Butler's theory of Gender Performativity (1990, discussed in more
+detail below), this perspective of gender leaves room for individuals
+to identify in ways that may or may not correspond to their assigned
+sex at birth.
 
-This paper considers current conversations in Trans Studies that
-pursue a conceptualization of gender that pushes against this
-ambiguity. It then explores how these conceptualizations might be
-applied to current methods in NLP.
+This paper explores how these global debates about gender as a
+category emerge in recent NLP methods for studying transgender bias in
+language. Language forms, which implicitly encode perceptions on
+gender into concrete linguistic features, NLP attempts to make
+explicit through various methods for studying and mitigating this bias
+in language. Methods have ranged from Word Embedding approaches
+(Bolukbasi et al. 2016), to Coreference Resolution tasks (Rudinger et
+al. 2018), and most recently, Language Generation methods (Kaneko et
+al. 2024). 
 
-bringing trans materialist theory to bear on the study of gender bias
--- that gender is a social and behavioral phenomenon, not an internal
-identity.
+This paper explores how these such methods might gain from considering
+definitions of gender from the field of Trans Studies. Specifically,
+it considers current conversations in Trans Studies that push against
+dominant conceptualizations of gender today, on both the conservative
+and progressive side. This perspective, also called "trans
+materialism", is based on the notion that gender ought to be conceived
+as a social and behavioral phenomenon, instead of an internal identity
+(Amin 2022). Its logic states that if gender is conceived as an
+outward phenomenon, then it will be easier to make visible those who
+are non-conforming, and therefore most marginalized, by gender norms.
 
-we need to talk about the harms that gender does when it is visible
-versus when it is not visible.
+It then explores how these conceptualizations might be applied to
+current methods in NLP, focusing on two recent methods for detecting
+transgender bias in language. It examines these two methods, TIDEs and
+EQUITABL (Lameiro et al. 2025, Devinney et al. 2024) in depth, in a
+close examination of methodology, to draw out the potential sites of
+engagement with Trans Studies theory. Despite their constrasting
+approaches from these methods, one focusing on binary classification
+and the other on qualitative analysis, both approaches significantly
+gain from a consideration of Trans Studies theorizing on gender bias.
+This theorization, emphasizes the importance of conceptualizing gender
+as a visible marker, has direct influence on the labels and contexts
+given to gender in NLP.
 
-How does this affect the labels and contexts we give to gender?
-
-
+A centeral part of this paper's argument, which it demonstrates in
+practice through its deep and close analysis of NLP methodology, is
+that individualized and sustained attention to the object of study,
+what in Humanist fields is called "close reading," helps to
+materialize and concretize its workings. This paper therefore
+contributes to work that calls for and brings interdisciplinary
+theorizing into NLP, specifically the context of this conference (Wang
+et al. 2025, Birhane et al. 2022). Bringing Trans Studies to bear on
+NLP opens a perspective that is little known outside of the field,
+but which can offer guidance and direction for NLP efforts to study
+and reduce gender bias in language.
 
 ** Gender ideology
-What Judith Butler refers to as the "phantasm" of "gender ideology" is
-a world-wide phenomenon (Butler 2023). The term "gender ideology,"
-which the Southern Poverty Law Center classifies as derogatory, refers
-to the conservative and far-right view that LGBTQ+ identity is an
-internal and false belief system (SPLC 2023).
+The term "gender ideology," which the Southern Poverty Law Center
+classifies as derogatory, refers to the conservative and far-right
+view that LGBTQ+ identity is an internal and false belief system (SPLC
+2023).
 
 In various countries around the world, gender ideology has become a
 national issue, serving as a rallying cry for various political groups
-togarner support (Butler 2023). For example, in the European
-continent, far-right groups have used transphobia to prop up other
-fears, such as those against migrants, in what (Indelicato and
-Lopes, 2024) argue is part of a larger white supremacist campaign. In
-the African continent, the same fear has been deployed in
-anti-colonial discourses, which assert that gender ideology is a
-dangerous import from the West which threatens traditional gender
-roles and the nuclear family. The past few years have seen a wave of
-anti-LGBT+ legislation, for example the law in Uganda that penalizes
-"aggravated homosexuality" with the death penalty (BBC 2023), and in
-the USA, since 2020, each year the number of anti-trans bills being
-proposed surpasses the last, with 2025 proposing over 1000 such bills
-in legislative houses across the country (Trans Legislation Tracker
-2025). Additionally, in the USA, a mounting wave of transphobia has
-propelled a series of Executive Orders, including "Defending Women
-From Gender Ideology Extremism And Restoring Biological Truth To The
-Federal Government" and "Keeping Men Out of Women's Sports". These
-initiatives double down on the primacy of sex as "binary and
-biological" (The White House 2025a, The White House 2025b).
+to garner support. For example, in the European continent, far-right
+groups have used transphobia to prop up other fears, such as those
+against migrants, in what (Indelicato and Lopes, 2024) argue is part
+of a larger white supremacist campaign. In the African continent, the
+same fear has been deployed in anti-colonial discourses, which assert
+that gender ideology is a dangerous import from the West which
+threatens traditional gender roles and the nuclear family. The past
+few years have seen a wave of anti-LGBT+ legislation, for example the
+law in Uganda that penalizes "aggravated homosexuality" with the death
+penalty (BBC 2023), and in the USA, since 2020, each year the number
+of anti-trans bills being proposed surpasses the last, with 2025
+proposing over 1000 such bills in legislative houses across the
+country (Trans Legislation Tracker 2025). Additionally, in the USA, a
+mounting wave of transphobia has propelled a series of Executive
+Orders, including "Defending Women From Gender Ideology Extremism And
+Restoring Biological Truth To The Federal Government" and "Keeping Men
+Out of Women's Sports". These initiatives double down on the primacy
+of sex as "binary and biological" (The White House 2025a, The White
+House 2025b).
 
 Proponents of these arguments base their critiques on the progressive
 view of gender, which they invalidate as a subjective or personal
@@ -225,14 +277,16 @@ stigamtization based precisely on how those genders present outwardly.
 
 ** Trans Bias in NLP
 *** Existing Frameworks for Social Bias
-Prior work on social bias in NLP characterizes bias through a variety
-of outcomes-—such as stigma, unequal distribution of resources, and
-linguistic or syntactic patterns-—which do not easily fit into a
-single, unified framework. Despite this diversity, most studies
-distinguish between two broad forms of bias: those based on how bias
-manifests linguistically (including grammatical and structural forms),
-and those based on the societal consequences it produces (such as
-representational or allocative impacts).
+Gender bias in NLP has received much critical attention over the years
+(Devinney et al 2022; Blodgett et al. 2021). This work tends to
+characterize bias through a variety of aspects-—such as stigma,
+unequal distribution of resources, and linguistic or syntactic
+patterns-—which do not easily fit into a single, unified framework.
+Despite this diversity, most studies distinguish between two broad
+forms of bias: those based on how bias manifests linguistically
+(including grammatical and structural forms), and those based on the
+societal consequences it produces (such as representational or
+allocative impacts).
 
 Focusing on linguistic manifestations, Hitti et al. (2019) further
 separate bias into structural and contextual categories (see Table 1).
@@ -458,15 +512,26 @@ talking about" (Devinney et al. 2024). Due to the dominance of such
 groups, reinforce this aspect of the default majority.
 
 ** Discussion
+The close examination of two recent frameworks for detecting trans
+bias—--TIDEs and EQUITABL—--demonstrate how different evaluation
+approaches can reveal different aspects about gender bias in language.
+Despite their contrasting approaches, one relying on binary
+classification and the other on qualitative, generative analysis, both
+frameworks reveal the importance of context, visibility, and
+interpretation in identifying transphobia. TIDEs highlights how subtle
+rhetorical cues, irony, and in-group knowledge complicate automated
+detection, while EQUITABL shows how generative models reproduce
+hegemonic norms through refusal and the dominant, unmarked subject.
+
 In what follows, I discuss how these two gender bias evaluation
-frameworks, TIDEs and EQUITABL, engage with Amin's point about
-external gender expression and how it relates to stigma. Amin argues
-that, due historical tendency of LGBTQ+-related categories that
-distinguish internal and idealized identities from visibly different
-ones, a kind of stigmatization accompanies non-normative genders that
-are externally expressed. Given this focus, how does gender as
-external presentation or behavior operate in the above frameworks for
-studying gender bias in NLP?
+frameworks engage with Amin's point about external gender expression
+and how it relates to stigma. Amin argues that, due historical
+tendency of LGBTQ+-related categories that distinguish internal and
+idealized identities from visibly different ones, a kind of
+stigmatization accompanies non-normative genders that are externally
+expressed. Given this focus, how does gender as external presentation
+or behavior operate in the above frameworks for studying gender bias
+in NLP?
 
 First, it is important to remember that existing evaluations of LLMs
 show that the the most frequent and default subject category is the
@@ -542,29 +607,51 @@ the individual and the social apparent; it is not the site of their
 suture" (2022).
 
 ** Conclusion
-The problem with the univeral, unmarked subject is precisely that,
-despite not being marked, he is overrepresented. The
-over-representation of straight white men is not due to a persistant
-label of "heterosexual white man" that appends each and every
-predication. Rather, it's due to a proliferation of predication that
-already surround him, that define him. The white man does not a
-descriptive label as such, he simply is.
+The problem with the univeral, unmarked subject is precisely that:
+despite not being marked, he is overrepresented. This
+overrepresentation does not result from the persistent or explicit
+labels as such, which Devinney et al.'s (2024) research points out.
+The white man does not carry a descriptive label as such, he simply
+is.
 
-There's a central contradiction in the theorizing of gender -- as
-something that is a social and behaviorial phenomenon (ala Butler) and
-at the same time an identity and expression of identity. (We see this
-problematized in the right as a confusion about the desire for gender
-affirming surgery if gender is really not already determined by sex.)
+Drawing Trans Studies critique of gender categoires, this paper has
+shown how contemporary gender frameworks increasingly conceptualize
+gender as an internal identity, detached from outward expression and
+embodiment. While this model has enabled important forms of
+recognition and rights-based advocacy, it also produces unintended
+consequences: idealized and invisible norms (such as cisgender and
+heterosexuality) are reinforced, while visibly non-normative gender
+expressions become further stigmatized.
 
-2) we need more research on bias that grounds its analysis in
-   theoretical texts from other fields
+Incorporating this critique from Trans Studies offers a productive
+direction for future work in the study of gender bias in NLP. Rather
+than treating gender solely as an abstract identity variable, NLP
+research benefits directly from interdisciplinary work that attend to
+embodiment, behavior, and visibility, making dominant norms explicit
+rather than naturalized.
 
-as Devinney et al. (2024) do so in drawing from frameworks of gender
-(Butler 1990), intersectionality (Krenshaw 1991), and the matrix of
-domination (Collins 2002).
+Future work in NLP ought to draw more deliberately on bias research
+that is grounded in theoretical texts from other fields. As
+demonstrated by Devinney et al. (2024), engaging explicitly with
+frameworks of gender (Butler 1990), intersectionality (Crenshaw 1991),
+and the matrix of domination (Collins 2002) enables a more nuanced
+understanding of how implicit dominance structures emerge in language
+forms. Similarly, Lameiro et al. (2025) show how drawing from an
+ethics of care (de la Bellacasa 2011) can inform methodological
+choices, particularly in data labelling practices. Together, these
+approaches illustrate how theoretically grounded interdisciplinary
+work can deepen NLP research on bias.
 
-and as Lameira et al. (2025) do so in drawing from the ethics of care
-(de la Bellacasa 2011).
+Most importantly, however, this paper has shown how close reading
+methods---that is, sustained, close attention to language---can help
+materialize how gender operates in NLP systems. This paper's central
+argument can be boiled down to the syllgogism: that if gender is
+material, that is, a relational phenomenon, and language is material,
+with the power to shape social structures, then reading gender bias
+ought to also be a material practice. 
+
+** Generative AI Disclosure Statement
+Generative AI was not used for this paper.
 
 ** bank
 

@@ -1,354 +1,388 @@
 * Unmarking Gender: Trans Studies Interventions in NLP
-** abstract
+** reverse outline 1.11.26
+
+The paper performs a close reading of NLP techniques for detecting and
+mitigating bias, a close reading that attends to how gender is being
+marked and registered within these techniques. Bringing out gender is
+the goal which will combat the divergence model's tendency to
+idealize dominant identities and marginalize others. 
+
+goals:
+- bring out major arguments about gender being external, especially
+  from trans studies
+- make the paper's interventions more meaningful, especially in the
+  close reading section.
+
+introduction
+- there is global urgency to define gender: LGBT rights are being
+  rolled back
+- in response, progressive groups double down on the definition of
+  gender as identity, based on Butler's breaking down of
+  sex/gender/sexuality causal relationship.
+- NLP is also developing ways for studying gender bias focused on
+  language. 
+- Meanwhile, Trans Studies is debating identifying gender as an
+  external phenomenon.
+- This paper proposes that Trans Studies theorizing of gender as
+  expressive can influence the ways that gender is coded in bias
+  detection and mitigation techniques.
+- It is motivated by the close reading methodology, drawn from the
+  Humanities, to bring out more interdisciplinary theorizing.
+
+defining gender
+- gender ideology framed as a threat across the globe
+- US similarly draws from patriarchal logics in actions against gender
+  ideology
+- gender ideology takes aim at gender as internal.
+- Trans Studies critiques the internal aspect for causing
+  discrimination of medical and other types of transition.
+- The left prioritized gender as identity, and must reckon with it.
+
+gender categories
+- progressive view of gender comes from butler's performativity, where
+  gender is a behavior rather than biology
+- gender has since evolved further into the notion of identity, the
+  "divergence model."
+- divergence model drives the split between hetero and homosexual.
+- it also drives the split between cis and trans gender.
+- splits ultimately create a situation where dominant genders become
+  unmarked, unnoticed or invisible on the outside.
+- the corollary is that non-normative genders become hyper visible,
+  and therefore stigmatized because they are perceived as other
+- one way to resist this is to emphasize all gender as external. 
+
+TIDEs
+- TIDEs is a trans technology that centers trans expertise
+- the dataset represents different kinds of transphobia based on tone
+  and context
+- labelers were aided by a detailed coding schema
+- but deciphering tone can be difficult, requiring subtle cues and
+  in-group knowledge
+- even seemingly similar tones can have different effects, requires
+  expertise of data labellers in order to pick up the nuances
+- samples show how *physical markers tend to be sites where gender and
+  transphobia might emerge*, and subtle indications of tone and
+  context determines whether or not they are transphobic
+- PHYSICAL MARKERS INDICATE GENDER EXPRESSIONS THAT CAN BE
+  TRANSPHOBIC, BUT DEPENDS ON CONTEXT
+
+EQUITABL
+- mixed methods approach that combines distant and close reading
+- though builds from quantative, emphasizes a qualitative approach
+  that uses text prompting and close reading of narrative outputs. 
+- the main intervention is to emphasize the qualitative analysis at
+  the end.
+- the templates create a wide variation of subject/predicates spanning
+  identity groups
+- results show expected favoring of dominant subject groups
+- results also show an unexpected pattern of refusal, particularly to
+  answer about marginalized groups
+- pattern of refusal signals a form of stigmatization
+- however, this pattern was inverted in dominant groups that had
+  additive qualities, e.g. white christian male, which was the most
+  likely to be refused.
+- could be because *these identities are so often unmarked, so that
+  models are more sensitive* when attention is drawn to them.
+- UNMARKED IDENTITIES MORE LIKELY TO BE DOMINANT
+
+Discussion
+- if physical expressions more likely to signal stimga, how does this
+  emerge in trans bias evaluation?
+- one method shows that context and rhetorical cues are essential to
+  detecting bias, while the other shows that dominant genders are
+  often unmarked.
+- research has shown that frequency plays a role in association to
+  stigma: more frequent is more dominant, therefore less stigmatized.
+- however, making a group more frequent does not solve the problem,
+  as frequent identities are often unmarked.
+- fewer physical descriptions are themselves a marker of dominance
+- solution: to increase physical descriptions of all subject groups,
+  especially dominant ones.
+- also to draw from interdisciplinary theorizing. 
+
+  
+** old paper
+*** abstract
 This paper brings theorizing from Trans Studies to bear on recent NLP
 methods for detecting and evaluating anti-trans bias in Large Language
-Models. Drawing in particular on Kadji Amin’s (2022) critique of
-gender identification and his emphasis on gender as a visible,
-expressive, and socially material phenomenon, the paper examines how
-treating gender primarily as an internal identity label limits what
-bias detection systems are able to perceive. Conceptualizing gender as
-internal risks rendering dominant genders unmarked while obscuring the
-embodied behaviors and presentations that are most frequently targeted
-by discrimination. Through close analysis of two recent frameworks for
-studying trans bias—the TIDEs and EQUITABL approaches (Lameiro et al.
-2025, Devinney et al. 2024)—the paper shows how different bias
-detection and mitigation methods might draw from the insights of Trans
-Studies theorizing. The paper concludes by outlining directions for
-future research that integrate theoretical insights from Trans Studies
-to better capture the material, social, and contextual dimensions of
-gender bias in language technologies.
+Models. Drawing in particular on Trans Studies' critique of gender
+identification, and its emphasis on gender as a visible, expressive,
+and socially material phenomenon, the paper examines how treating
+gender primarily as an internal identity label limits what bias
+detection systems are able to perceive. Systems that conceptualize
+gender as internal render dominant genders unmarked, while obscuring
+the embodied behaviors and presentations that are most frequently
+targeted by discrimination. Through close analysis of two recent
+frameworks for studying trans bias—the TIDEs and EQUITABL approaches
+(Lameiro et al. 2025, Devinney et al. 2024)—the paper shows how
+different bias detection and mitigation methods might draw from the
+insights of Trans Studies theorizing. The paper concludes by outlining
+directions for future research that integrate theoretical insights
+from Trans Studies to better capture the material and relational
+dimensions of gender bias in language technologies.
 
-** introduction
-There is a global urgency to conceptualize gender as a category. In
-various countries around the world, the emergence and increasingly
-visible use of gender terms and identities like transgender and
-nonbinary have prompted a backlash that has resulted in the retraction
-of hard-gained rights for LGBTQ+ groups, such as in the USA most
-recently, with the ban on gender-affirming care for minors (Karni and
-Kavi, 2025). This backlash takes what it calls "gender ideology", or
-nontraditional views of gender, like those that are not based on
-biological sex, as a rallying cry for a host of right-wing political
-priorities. Presenting gender ideology in what Judith Butler describes
-as a "phantasm", discrimination against trans and nonbinary groups has
-been linked to other kinds of social discrimination, such as
-xenophobic and anti-immigrant perspectives (Human Rights Research
+*** introduction
+There is a global urgency to define gender as a category. In various
+countries around the world, gender designations like "transgender" and
+"nonbinary" are prompting backlash that has resulted in the retraction
+of hard-gained rights for LGBTQ+ groups, such as the ban on
+gender-affirming care for minors in the USA (Karni and Kavi, 2025).
+This backlash takes what it terms "gender ideology", or nontraditional
+views of gender that are not based on biological sex, as a rallying
+cry for political priorities that are similarly based in xenophobic
+logics, such as anti-immigrant discrimination (Human Rights Research
 Center, 2025).
 
 In response to attacks on what it calls "gender ideology," some
 progressive groups have doubled down on a definition of gender that is
 based on internal identification rather than biological reality
 (Dresher 2025). Drawing from seminal theories of gender, such as
-Butler's theory of Gender Performativity (1990, discussed in more
-detail below), this perspective of gender leaves room for individuals
-to identify in ways that may or may not correspond to their assigned
-sex at birth.
+Judith Butler's theory of Gender Performativity (1990, discussed in
+more detail below), this perspective of gender breaks down the rigid
+and causal relationship between sex and gender, leaving room for
+individuals to identify in ways that may or may not correspond to
+their assigned sex at birth.
 
-This paper explores how these global debates about gender as a
-category emerge in recent NLP methods for studying transgender bias in
-language. Language forms, which implicitly encode perceptions on
-gender into concrete linguistic features, NLP attempts to make
-explicit through various methods for studying and mitigating this bias
-in language. Methods have ranged from Word Embedding approaches
-(Bolukbasi et al. 2016), to Coreference Resolution tasks (Rudinger et
-al. 2018), and most recently, Language Generation methods (Kaneko et
-al. 2024). 
+The same assumptions that drive this global controversy over defining
+gender also operate in methods for studying transgender bias in
+language, such as in the field of NLP bias detection and mitigation
+techniques. Through the analysis of concrete linguistic features, NLP
+methods attempt to make explicit the ways that language forms encode
+perceptions on gender. Over the past several years, such methods have
+ranged from Word Embedding approaches (Bolukbasi et al. 2016), to
+Coreference Resolution tasks (Rudinger et al. 2018), and more
+recently, Language Generation methods (Kaneko et al. 2024).
 
-This paper explores how these such methods might gain from considering
-definitions of gender from the field of Trans Studies. Specifically,
-it considers current conversations in Trans Studies that push against
-dominant conceptualizations of gender today, on both the conservative
-and progressive side. This perspective, also called "trans
-materialism", is based on the notion that gender ought to be conceived
-as a social and behavioral phenomenon, instead of an internal identity
-(Amin 2022). Its logic states that if gender is conceived as an
-outward phenomenon, then it will be easier to make visible those who
-are non-conforming, and therefore most marginalized, by gender norms.
+Across the disciplinary divide, in the meantime, the field of Trans
+Studies has been exploring paradigms that can cadequately describe and
+represent all forms of gender manifestations. Within these
+conversations, one perspective, called "trans materialism", is based
+on the notion that gender ought to be conceived as a social and
+behavioral phenomenon (Amin 2022). Its logic states that if gender is
+conceived as an outward phenomenon, instead of an internal identity,
+then it will be easier to make visible those who are non-conforming,
+and therefore most marginalized, by gender norms.
 
-It then explores how these conceptualizations might be applied to
-current methods in NLP, focusing on two recent methods for detecting
-transgender bias in language. It examines these two methods, TIDEs and
-EQUITABL (Lameiro et al. 2025, Devinney et al. 2024) in depth, in a
-close examination of methodology, to draw out the potential sites of
-engagement with Trans Studies theory. Despite their constrasting
-approaches from these methods, one focusing on binary classification
-and the other on qualitative analysis, both approaches significantly
-gain from a consideration of Trans Studies theorizing on gender bias.
-This theorization, emphasizes the importance of conceptualizing gender
-as a visible marker, has direct influence on the labels and contexts
-given to gender in NLP.
+This paper explores how these conceptualizations from trans
+materialism might be applied to current methods in NLP, focusing on
+two recent methods for detecting transgender bias in language, TIDEs
+and EQUITABL (Lameiro et al. 2025, Devinney et al. 2024). In a close
+and deep reading of their approaches and insights, this analysis draws
+these methods' potential sites of engagement with Trans Studies
+theory. It argues that despite their constrasting approaches, with one
+focusing on binary classification and the other on qualitative
+analysis, both methods significantly gain from a consideration of
+Trans Studies theorizing on gender bias. Specifically, the emphasis on
+marking visible and relational aspects of gender has direct
+application to labelling and qualitative coding methods in NLP.
 
-A centeral part of this paper's argument, which it demonstrates in
-practice through its deep and close analysis of NLP methodology, is
-that individualized and sustained attention to the object of study,
-what in Humanist fields is called "close reading," helps to
-materialize and concretize its workings. This paper therefore
+A central part of this paper's motivation is its "close reading"
+analytical method, which it demonstrates in practice. It argues that a
+deep and close analysis of methodology, called close reading in
+Humanities disciplines, can draw out significant alignments between
+diverse methodologies and fields of study. This paper therefore
 contributes to work that calls for and brings interdisciplinary
-theorizing into NLP, specifically the context of this conference (Wang
-et al. 2025, Birhane et al. 2022). Bringing Trans Studies to bear on
-NLP opens a perspective that is little known outside of the field,
-but which can offer guidance and direction for NLP efforts to study
-and reduce gender bias in language.
+theorizing into NLP, such as from the context of this conference (Wang
+et al. 2025, Birhane et al. 2022).
 
-** Gender ideology
-The term "gender ideology," which the Southern Poverty Law Center
-classifies as derogatory, refers to the conservative and far-right
-view that LGBTQ+ identity is an internal and false belief system (SPLC
-2023).
-
-In various countries around the world, gender ideology has become a
+*** Gender ideology
+The term "gender ideology", which the Southern Poverty Law Center
+classifies as a derogatory term, refers to the view that LGBTQ+
+identity is an internal and false belief system (SPLC 2023). In
+various countries around the world, gender ideology has risen into a
 national issue, serving as a rallying cry for various political groups
-to garner support. For example, in the European continent, far-right
-groups have used transphobia to prop up other fears, such as those
-against migrants, in what (Indelicato and Lopes, 2024) argue is part
-of a larger white supremacist campaign. In the African continent, the
-same fear has been deployed in anti-colonial discourses, which assert
-that gender ideology is a dangerous import from the West which
-threatens traditional gender roles and the nuclear family. The past
-few years have seen a wave of anti-LGBT+ legislation, for example the
-law in Uganda that penalizes "aggravated homosexuality" with the death
-penalty (BBC 2023), and in the USA, since 2020, each year the number
-of anti-trans bills being proposed surpasses the last, with 2025
-proposing over 1000 such bills in legislative houses across the
-country (Trans Legislation Tracker 2025). Additionally, in the USA, a
-mounting wave of transphobia has propelled a series of Executive
-Orders, including "Defending Women From Gender Ideology Extremism And
-Restoring Biological Truth To The Federal Government" and "Keeping Men
-Out of Women's Sports". These initiatives double down on the primacy
-of sex as "binary and biological" (The White House 2025a, The White
-House 2025b).
+to garner support. In the European continent, far-right groups have
+used this concept to prop up other forms of social discrimination,
+such as those against migrants. In Italy, for example, gender
+fearmongering has been linked to a larger white nationalist campaign
+(Indelicato and Lopes 2024). Alternatively, on the African continent,
+similar arguments have been used for contrasting ends, in
+anti-colonial discourses, in which gender ideology is framed as a
+Western import that threatens traditional gender roles. In Uganda, in
+particular, the past few years have seen a wave of anti-LGBT+
+legislation, with one law penalizing "aggravated homosexuality" with
+the death penalty (BBC 2023).
 
-Proponents of these arguments base their critiques on the progressive
-view of gender, which they invalidate as a subjective or personal
-perception. In the abovementioned Executive Orders, for example,
-gender ideology is defined as "an ever-shifting concept of
-self-assessed gender identity, permitting the false claim that males
-can identify as and thus become women and vice versa, and requiring
-all institutions of society to regard this false claim as true." (The
-White House 2025a).
+In the USA, concerns over gender ideology have prompted a dramatic
+increase in legislation which limits the rights of trans people. Over
+the last five years, the number of proposed anti-trans bills each year
+has surpassed the last, with 2025 proposing over 1000 such bills in
+legislative houses across the country (Trans Legislation Tracker
+2025). Additionally, from the White House, a mounting wave of
+transphobia has propelled a series of Executive Orders with titles
+that frame trans rights as a defense of womens' rights: "Defending
+Women From Gender Ideology Extremism And Restoring Biological Truth To
+The Federal Government" and "Keeping Men Out of Women's Sports". These
+initiatives double down on the primacy of sex as "binary and
+biological" (The White House 2025a, The White House 2025b). Like the
+anti-immigrant tactics that turn white supremacist and nationalist
+logics of discrimination, these anti-trans initiatives draw from the
+patriarchal beliefs that so-called "biological" women need explicit
+protection from transwomen.
 
-Indeed, pro-trans perspectives from medical groups, for example, favor
-the notion of gender identity over that of biological sex as a
-determinant for how a person identifies. The American Psychiatric
-Association defines gender identity as "a person’s inner sense of
-being a girl/woman, boy/man, some combination of both, or something
-else" ("What is Gender Dysphoria?" 2025). Similarly, the World Health
+Proponents of gender ideology-based arguments aim their critiques on
+the progressive view of gender. In the abovementioned Executive
+Orders, for example, gender ideology is described as "an ever-shifting
+concept of self-assessed gender identity, permitting the false claim
+that males can identify as and thus become women and vice versa, and
+requiring all institutions of society to regard this false claim as
+true." (The White House 2025a).
+
+Indeed, the progressive view tends to define gender as a subjective or
+personal perception. The American Psychiatric Association, for
+example, defines gender identity as "a person’s inner sense of being a
+girl/woman, boy/man, some combination of both, or something else"
+("What is Gender Dysphoria?" 2025). Similarly, the World Health
 Organization defines gender identity as "a person’s innate, deeply
 felt internal and individual experience of gender," and constrasts it
 to biolgoical sex, adding that gender identity "may or may not
 correspond to the person’s physiology or designated sex at birth"
 ("What is Gender Dysphoria?" 2025, "Gender and health" 2025).
 
-Accordingly, some Tran Studies scholars posit the definition of gender
+Some Tran Studies scholars posit the progressive definition of gender
 is the problem. That the push to disentangle gender from sex and to
 solidify sex as "binary and biological" is a reaction to the fluidity,
 nebulousness, and slipperyness of how gender is conceptualized in
-trans affirming discourse. Andrea Long Chu (2024), for exaple, points
+trans affirming discourse. Andrea Long Chu (2024), for example, points
 this out that, "The left must reckon with its part in this. It has
-hung trans rights on the thin peg of gender identity". Chu, herself a
-trans woman, explains that the pro-trans movement has "largely failed
-to form a coherent moral account of /why/ someone’s gender identity
-should justify the actual biological interventions that make up
-gender-affirming care." In other words, Chu asks, if gender really is
-something that is internal, then why should a gender non-conforming or
-transgender person need to altar any external characteristics?
+hung trans rights on the thin peg of gender identity".
 
 The view of gender as an internal phenomenon thus inspires transphobic
 reasoning around the issue of medical care, which argues that an
-physical transition is not necessary.
+physical transition is not necessary. Chu, a trans woman, explains
+that the pro-trans movement has "largely failed to form a coherent
+moral account of /why/ someone’s gender identity should justify the
+actual biological interventions that make up gender-affirming care."
+In other words, Chu asks, if gender really is something that is
+internal, then why should a gender non-conforming or transgender
+person need to altar any external characteristics?
 
-This issue is where the paper hopes to make its intervention, by
-looking deeply into gender as an embodied and expressive phenomenon,
-as theorized by Trans Studies scholars in the theory of "trans
-materialism." 
+*** Gender categories
+Contemporary, progressive notions of gender descend from a widely
+accepted view that gender is a social phenomenon rather than a
+biological reality. This view can be traced to Judith Butler's seminal
+theory of gender performativity (1991), which dissolves the
+traditionally strict and causal relation between sex, gender, and
+sexuality. Butler's theory stipulates that gender is not based on a
+biological reality, nor does it determine sexuality (with male
+gendered people prefering female gendered people). Rather, Butler
+argues that gender is an effect produced social norms and
+expectations, and that it manifests as a series of behaviors.
+According to Butler's theory, then, gender becomes real not in any
+essential or ontological sense, but through its active and external
+expression (1991).
 
-** Gender categories
-In what follows, I briefly trace theoretical debates on defining
-gender from the perspective of Queer and Trans Studies, with a
-particular focus on how it has been conceptualized in relation to
-closely associated notions of sex and sexuality.
-
-Contemporary liberal notions of gender descend from a widely accepted
-view that gender is a social phenomenon rather than a biological
-reality. This view can be traced to Judith Butler's seminal theory of
-Gender Performativity, which dissolves the traditionally strict and
-causal relation between sex, gender, and sexuality. Butler's theory of
-gender performativity stipulates that gender is not, as assumed by the
-traditional view, based on a biological reality, nor does it determine
-sexuality (with male gendered people prefering female gendered
-people). Rather, Butler argues that gender is an effect produced
-social norms and expectations which manifests as a series of
-behaviors, what they describe as "performativity". According to
-Butler's theory, gender becomes real not in any essential or
-ontological sense, but through its active and external expression
-(1993).
-
-In the 35 years since Butler's theory, the distinction between gender
-as a social operation and sex as physical embodiment has been
-validated in biology, neuroscience, and psychology (Ainsworth, 2015;
-Hyde et al., 2019; Joel, 2021). In other areas, however, the
-definition of gender has continued to evolve into the notion of
-"identity". Moving from a kind of behavior (one that, Butler is
-careful to point out, is not at will, but deeply compelled by social
-rules), gender takes on an internal apect of identity or
-identification. Gender becomes gender identity, which describes an
-internal feeling or identification as male, female, a combination of
-the two, or nonbinary genders. Gender as identity thus diverges from
-gender as expression, which denotes the masculine, feminine, or
-androgynous traits that are visibly apparent and enacted. Furthermore,
-in this conception, sex is still understood to be a bodily component,
-though one not based firmly in a binary, nor does it necessarily
-prioritize any biological marker, like the presence of external
-genitals, sex hormones or chromosomes.
+In the 35 years since Butler's theory, the progressive definition of
+gender has evolved into the notion of identity. Moving from a kind of
+behavior (one that, Butler is careful to point out, is not at will,
+but deeply compelled by social rules), gender takes on an internal
+apect of identification. Gender as identity, an internal feeling or
+identification as male, female, a combination of the two, or nonbinary
+genders, thus diverges from gender as expression, which denotes the
+masculine, feminine, or androgynous traits that are visibly apparent
+and enacted. Furthermore, in this conception, sex is still understood
+to be a bodily component, though one not based firmly in a binary, nor
+does it necessarily prioritize any biological marker, like the
+presence of external genitals, sex hormones or chromosomes.
 
 Trans Studies scholar Kadji Amin (2022) refers to this splitting of
-gender into gender identity a "divergence model" which has
-characterized the LGBTQ+ movement in its campaigns for rights and
-recognition over the past several decades. The splits in the
-understanding of gender has, according to Amin, created a domino
-effect where gender is increasingly idealized and divorced from bodily
-expression.
+internal identity from external appearance or expression as a
+"divergence model". The split in this understanding of gender has,
+according to Amin, created a domino effect where gender is
+increasingly idealized and divorced from bodily expression.
 
-Amin argues that this "divergence model" between gender and sexuality
-has been responsible for a series of splits between categories like
-heterosexual and homosexual, and cisgender and transgender (2022).
-According to Amin, the concept of homosexuality used to incorporate
-gender-variant forms of sexuality, for example, forms of male
-femininity such as the "queen", and of female masculinity in the form
-of the "butch", the emergence of transgender offered a new category
-that was then used to hold "all manner of gender-bending" [Amin 2022].
- 
-This view generally accords with modern historiographers of sexuality
-who, tracing the categories further back into the 19th century,
-explain that heterosexuality as a category is a response to the
-creation of the category of homosexual [Foucault 1978, Halperin 2002]:
-According to this view, heterosexuality arose as a reaction to work by
+For example, Amin explains, the divergence model drives the split
+between the categories of heterosexual and homosexual, in which the
+homosexual category orginally encompassed all kinds of sex, gender,
+and sexuality non-confirmity. This view accords with sexual
+historiographers who, tracing the categories further back into the
+19th century, explain that heterosexuality as a category is a response
+to the creation of the category of homosexual [Foucault 1978, Halperin
+2002]: in this view, heterosexuality arose as a reaction to work by
 19th century sexologists, such as that by Richard von Krafft-Ebing
 (1893) and Havelock Ellis (1900), who defined homosexuality primarily
-as a pathology. 
+as a psychological pathology.
 
-Just as heterosexuality emerged "belatedly, as a normative ballast
-against homosexuality," Amin argues, so did the concept of cisgender,
-which responds to the emergence of the term "trangender" in the 1990s
-[Amin 2022]. One particular effect of the emergence of transgender is
-to create an idealized notion normativity that do not accurately
-describe any gender or sexuality in lived reality, according to Amin.
-As a result, Amin argues, terms like heterosexual, cisgender, and
-binary represent take up "increasingly idealized and uninhabitable
-normative categories" [Amin 2022].
+Just as heterosexuality emerged as a response to homosexuality, Amin
+(2022) argues, so did the concept of cisgender, which responds to the
+emergence of the term "trangender" in the 1990s. Whereas the concept
+of homosexuality used to incorporate gender-variant forms of
+sexuality, for example, forms of male femininity such as the "queen",
+and of female masculinity in the form of the "butch", the emergence of
+transgender offered a new category that was then used to hold "all
+manner of gender-bending" (Amin 2022). One particular effect of the
+emergence of transgender is to create an idealized notion normativity
+that do not accurately describe any gender or sexuality in lived
+reality.
 
-This lack of identificatory feeling perhaps explains why some
-cisgender people are apparently reluctant to identify with the
-"cisgender" and "binary" nominatives. This is in direct contrast to
-those who identify as transgender, who draw from the experience of
-discomfort in one's embodied gender, commonly expressed in the concept
-of gender dysphoria. It is less straightforward to name and describe
-the experience of what is routine and unremarkable as the experience
-of being comfortable in one's gender and/or sexuality.
+As a result of these splits, Amin argues, terms like heterosexual,
+cisgender, and binary take up "increasingly idealized and
+uninhabitable normative categories" (Amin 2022). Gender identity
+becomes buried "deeper and deeper within the private recesses of the
+self, where it increasingly disavows any relation to the social" (Amin
+2022). It becomes transported into an internal and idealized form, and
+retains the privilege of being unnoticed as such. This idealization,
+according to Amin, has enabled the LGBTQ+ movement to campaign for
+rights and recognition over the past several decades.
 
 The effect of such idealized conceptualizations of gender and/or
-sexuality is to re-stigmatize non-normative gender expressions. Due to
-the continual splits within the divergence model, Amin argues, gender
-identity becomes buried "deeper and deeper within the private recesses
-of the self, where it increasingly disavows any relation to the
-social" [Amin 116]. In other words, idealized categories like
-cisgender and nonbinary make non-normative gender identities less and
-less visible. The effect of prioritizing non-normative gender as an
-/identity/ that is invisible, that is not immediately apparent despite
-being marked, is to marginalize gender as /expression/, which
-re-stigmatizes those gender groups that already experience social
-stigma. Amin gives a common example from homosexual culture, where gay
-men who are normatively masculine, "masc" or "butch" men, have higher
-social status than feminized gay men, "queens" and "fairies", due to
-the cultural capital of masculinity (2022). 
+sexuality is to re-stigmatize non-normative gender expressions.
+Designating non-normative gender as an /identity/ that is invisible,
+that is not immediately apparent despite being marked, effectively
+marginalizes gender when it appears as /expression/. Amin gives a
+common example from homosexual culture, where gay men who are
+normatively masculine, "masc" or "butch" men, have higher social
+status than feminized gay men, "queens" and "fairies", due to the
+cultural capital of masculinity (2022).
 
-There is a tendency to create categories that separate internal
-qualities, which are often idealized, from the noticably different
-ones. And the reference to "noticably" is crucial here: that it is a
-difference which is visually apprehended, perceived to be alternative
-from the norm. This norm, by contrast, is transported into an internal
-and therefore idealized form, and retains the privilege of being
-unnoticed as such.
+One way to resist the effects of the divergence model, stigmatizes
+non-normative genders that are externally expressed, is to embrace
+gender as external. Which is to say that defining gender as an
+external expression or behavior is more likely to make visible and
+validate all genders.
 
-There is, in short, a kind of stigmatization that accompanies
-non-normative genders that are externally expressed. Which is to say
-that defining gender as an external expression or embodiment is more
-likely to make visible and validate those gender which experience
-stigamtization based precisely on how those genders present outwardly.
+*** Trans bias in NLP
+I now turn to my close reading of two bias detection and mitigation
+techniques. For each of these techniques, I examine how their
+approaches attend to gender as a relational quality. 
 
-** Trans Bias in NLP
-*** Existing Frameworks for Social Bias
-Gender bias in NLP has received much critical attention over the years
-(Devinney et al 2022; Blodgett et al. 2021). This work tends to
-characterize bias through a variety of aspects-—such as stigma,
-unequal distribution of resources, and linguistic or syntactic
-patterns-—which do not easily fit into a single, unified framework.
-Despite this diversity, most studies distinguish between two broad
-forms of bias: those based on how bias manifests linguistically
-(including grammatical and structural forms), and those based on the
-societal consequences it produces (such as representational or
-allocative impacts).
-
-Focusing on linguistic manifestations, Hitti et al. (2019) further
-separate bias into structural and contextual categories (see Table 1).
-Structural bias arises from grammatical conventions—for example, the
-use of masculine pronouns as default ("A programmer must always carry
-his laptop with him"), whereas contextual bias stems from socially
-embedded assumptions and stereotypes (e.g., "Senators need their wives
-to support them throughout their campaign"). Shifting attention from
-linguistic form to social consequence, Nemani et al. (2023) classify
-bias according to the specific effects it has on particular groups,
-organizing it into three types: denigration, stereotyping, and
-underrepresentation. Denigration involves explicitly derogatory
-language such as slurs; stereotyping refers to generalized assumptions
-about a group; and underrepresentation denotes the lack or scarcity of
-information about certain groups. Along similar lines, Blodgett et al.
-(2020) and Barocas et al. (2017) distinguish between allocative
-harms—-where access to resources or opportunities is unequally
-distributed—-and representational harms, which involve the
-marginalization or stereotypical portrayal of groups.
-
-[Table 1: Definitions from Hitti et al., Nemani et al., and Barocas
-et. al.]
-
-*** Framework for Trans Bias #1: TIDEs
+**** Framework #1: TIDEs
 The first Trans Bias detection method is a project called *Transphobia
 Identification in Digital Environments*, or TIDEs (Lameiro et al.
-2025). It builds on from the framework of a "trans technology," define
-by Haimson (2025) (who is an author of the paper) as a "technology
-that addresses the unique needs and challenges faced by trans people
-and communities" (Haimson 2025). Trans technology makes trans people a
-central focus of a particular technology or tool, in this case, of
-detection of transphobic speech.
+2025). TIDEs comprises a dataset and model created to detect
+anti-trans bias in language. Building from the framework of a "trans
+technology," a "technology that addresses the unique needs and
+challenges faced by trans people and communities" (Haimson 2025), this
+tool centers trans expertise in the detection and mitigation of
+transphobic language.
 
 To that end, TIDEs has two explicit goals: first, to create a dataset
 representing varied forms of transphobia, in particular forms that are
-more difficult to detect, like TERFism. Referring to "Trans
-Exclusionary Radical Feminism," TERF indicates a feminist position
-that does not support the rights of trans people. This type of
-transphobia is difficult to detect because TERF generally identify as
-feminists, although they do not support the rights of trans women and
-girls.
+more difficult to detect, like "TERF". Referring to "Trans
+Exclusionary Radical Feminism," TERF perspectives are difficult to
+detect because they identify as feminist despite negating the rights
+of transwomen and girls. The second goal is to center trans and
+nonbinary experience and expertise in the data labelling work, in what
+the authors call "care-centered data practices" (Lameiro et al. 2025).
+The project chose labellers who personally identify as trans or
+nonbinary, and who "have personal experience with encountering and
+detecting online transphobia", to label social media posts as
+"transphobic or "not transphobic".
 
-The second goal is to center trans and nonbinary experience and
-expertise in the data labelling work, which involved labelling social
-media posts as "transphobic or "not transphobic". The project chose
-labellers who personally identify as trans or nonbinary, and who "have
-personal experience with encountering and detecting online
-transphobia" (2025). According to the authors, this approach enacts
-what they call "care-centered data practices" (2025).
+The dataset comprises social media posts, which are scraped from
+Tumblr, Truth Social, YouTube, and Reddit, labelled with "transphobic"
+and "not transphobic" labels. For example, the post, "Transgender
+females are actually biological males. They should not be allowed to
+compete in womens sports. Period!" is labelled as transphobic, while
+the post, "Transgender Swimmer Lia Thomas Booted From Olympics After
+Losing Legal Case", is labelled as not transphobic.
 
-Indeed, the data labelling work showcases the attention given to
-individual kinds of transphobia. The dataset comprises social media
-posts scraped from Tumblr, Truth Social, YouTube, and Reddit that are
-labelled with "transphobic" and "not transphobic" labels. For example,
-a post like, "Transgender females are actually biological males. They
-should not be allowed to compete in womens sports. Period!" are
-labelled as transphobic, while posts like "Transgender Swimmer Lia
-Thomas Booted From Olympics After Losing Legal Case" are labelled as
-not transphobic.
-
-However, as the project developers point out, some examples are not so
-straightforward. For example, the following post
+As the researchers explain, labelling transphobia brings its own
+challenges, when many of its manifestations appear through forms of
+irony and other rhetorical contexts than be difficult to detect. For
+example, the following text was labelled as "not transphobic", despite
+the majority of the language actually represents a transphobic point
+of view:
 #+begin_quote
 Hey guys, I just wanted to get your opinion on this:
 
@@ -363,26 +397,29 @@ like I look at the ground and draw it out all "Sooo do you like....
 Have a dick?" but here is the thing: people look at me like I'm crazy
 for asking! What the hell is up with that? I even had one girl tell me
 I was a totally creep!
+
+Does this stuff happen to you? 
+
+/ok transjerkers I'm done for a little while, fuck it's nice to vent
 #+end_quote
-Detecting this post correctly as "not transphobic" relies on
-recognizing its irony, which is present in the tone of enforced
-sincerity. In fact, the only substantial indication that this is
-written in irony is the end of the post, which asserts that "it's nice
-to vent", and the source of the post itself, comes from a
-trans-dominated subreddit that emphasizes parody, "r/transcirclejerk".
-
 Because this text, on the surface, parrots a transphobic perspective,
-it could be rightly labelled as such. The only thing that makes it not
-transphobic is the rhetorical context, whose cues are so subtle that
-they could be easily missed, particularly by those who lack the
-in-group cultural knowledge and language cues.
+it could be rightly labelled as such. Detecting this post correctly as
+"not transphobic" relies on recognizing its irony which, although
+present in the tone of enforced sincerity throughout the post, is only
+confirmed at the end, with the assertion that "it's nice to vent".
+Another clue is the reference to "transjerkers", an in-group moniker
+for a trans-dominated subreddit that emphasizes parody,
+"r/transcirclejerk". Therefore, the only hints that this text is /not/
+transphobic are so subtle that they could be easily missed,
+particularly by those who lack the in-group cultural knowledge and
+language cues.
 
-Complicating matters further, many other posts use a sincere tone to
-make serious requests. For example, the following post that asks for
+Contrast this example with a similar one, which uses a sincere tone to
+make a serious request. This post, also drawn from reddit, asks for
 advice on gender presentation:
 #+begin_quote
 Hey! I'm going through some gender experimentation, so I'd like to tap
-into masculinity for awhile(usually I identify as just pure
+into masculinity for awhile(usually [sic] I identify as just pure
 androgynous, but I struggle with pulling that off). So, to begin with,
 I'll try to master visual/behavioral androgyny first. I have long hair
 but don't want to cut it(a lot of manly men have long hair anyway), so
@@ -391,150 +428,157 @@ more masculine-like? I don't have a very manly looking body shape, but
 I'd like to dress to give the illusion of one. Basically, any and all
 advice on how to appear androgynous/masculine is appreciated.
 #+end_quote
-This post, which is rightly labelled as "not transphobic," has more in
-common with the previous "transphobic" example in terms of tone (which
-is sincere and supplicating. The differences have to do with an
-external rhetorical situation that is not clearly visible in the
-actual post.
+This post, which is labelled as "not transphobic," shares with the
+previous "transphobic" example a tone that appears sincere and
+supplicating. The difference has to do with an external rhetorical
+situation that is not clearly visible in the actual post. In other
+words, context matters whether something is transphobic.
 
-In other words, context matters whether something is transphobic, and
-we ought to develop more labels for recognizing context.
+The close and careful data labelling work, which was aided by a
+detailed coding schema, distinguishes this strategy from others.
+Although it sorts examples into a binary classification, the coding
+guidelines in fact enables labellers to identify and mark various
+kinds of transphobia. This approach demonstrates how detecting
+transphobia requires attention not only to surface-level language but
+also to cultural and rhetorical cues. By centering trans and nonbinary
+expertise through care-centered data practices, the project addresses
+limitations of conventional content moderation systems that may
+otherwise miss tranphobia's subtle cues.
 
-*** Framework for Trans Bias #2: EQUITABL
+**** Framework #2: EQUITABL
 EQUITABL, the *Explore, Query, & Understand Implicit Textual Bias in
 Language data* project (Devinney et al. 2024) uses a mixed-methods
 approach to analyze social bias in language, which deliberately
-includes bias toward trans and nonbinary identities, to examine
-"stereotypes, hegemonic norms, [and] erasure of identity" across all
-identity groups (Devinney et al. 2024). The target is therefore
-broader than TIDEs, which focuses specifically on trans
+addresses bias toward trans and nonbinary identities. This project
+combines text generation, topic modelling, and close reading
+methodologies to examine "stereotypes, hegemonic norms, [and] erasure
+of identity" across identity groups (Devinney et al. 2024).
 
-Another central difference from the TIDEs is that this method
-emphasizes a qualitative approach, which combines text generation,
-topic modelling, and close reading methodologies. Built from a method
-the researchers developed in a previous paper which proposes a
-"combination of quantiative and qualitative methods, where the
-quantitative part produces a view of the data of a size suitable for
-qualitative analysis" (Devinney et al. 2020). For the this more recent
-version of the project, the researchers exapanded their methodology to
-include text generation, with the main analysis focusing on close
-reading a set of LLM-generated narratives.
+Unlike TIDEs, which is a binary classification method, this method
+emphasizes a qualitative approach. Built from a method the researchers
+developed in a previous paper which proposes a "combination of
+quantiative and qualitative methods, where the quantitative part
+produces a view of the data of a size suitable for qualitative
+analysis" (Devinney et al. 2020). For the this more recent version of
+the project, the researchers exapanded their methodology to include
+text generation, with the main analysis focusing on close reading a
+set of LLM-generated narratives.
 
 In brief, the process involves prompting both English and Swedish
-language models, Llama 2 and GPT-SW3 using a set of templates designed
-to generate narratives about various identity groups, then feeding the
-results to a topic model, which will organize the narratives into
-topics. Finally, using the resulting topic models to organize the
-narratives, they extract the top narratives for each group and proceed
-with close reading analysis, which is the main focus of the
+language models using a set of templates designed to generate
+narratives about various identity groups. The resulting narratives are
+then fed to a topic model, which will organize them into topics.
+Finally, the researchers extract the top narratives for each topic and
+proceed with close reading analysis, which is the main focus of the
 experiment.
 
 The templates for prompting the language models consist of three
 components: first, an imperative phrase asking the model to "write a
-story about" or "write a description of"; followed by the subject of
-the narrative, like "a person," "a woman," "a Black cis person"; and
-closing with a predicate, such as "falling in love," or "with tears
-running down their face" (Devinney et al. 2024). The templates cycle
-cycle through different imperatives, racial and gender identities and
-religions, and predicates to create many variations. Possible
-variations include, for example "a Black Christian at the doctor's
-office," "a trans Muslim with a special skill," "a white nonbinary
-person with tears running down their face." The result is to create a
-diverse set of stories with protagonists spanning a variety of subject
-positions, in both positive, negative, and neutral valences.
+story about" or "write a description of", followed by the subject of
+the narrative, and closing with a predicate (Devinney et al. 2024).
+The templates cycle through different imperatives, racial and gender
+identities, religions, and predicates to create a varied set of
+prompts. Possible variations include, "a Black Christian at the
+doctor's office," "a trans Muslim with a special skill," "a white
+nonbinary person with tears running down their face." The result is to
+create a diverse set of stories with protagonists spanning various
+subject positions, represented in both positive, negative, and neutral
+contexts.
 
 The study's central intervention is its close reading methodology,
 which it includes in the place of quantitative scoring. As the
 researchers explain, they intentionally use qualitative metrics in
 order to "encourage users to critically engage wit the topics and
 patterns... rather than merely being incentivized to chase 'better'
-scores" (Devinney et al. 2024). Rather than a bias score, this metric
-contains of a series of questions that the researcher uses to guide
-close reading the results of the generated text. Some of the questions
+scores" (Devinney et al. 2024). This metric consists of a series of
+questions that the researcher uses to guide close reading, which
 include, "How are people and bodies described?" and "Which stereotypes
-are used?" They complete the analysis with one more questions that
-probe the representation of gender specifically and whether this
-representation is associated with certain themes.
+are used?", as well as question that relate gender to specific themes.
 
-The results of the close reading reflect that narratives centering
-feminine identities are mostly linked to unpleasant emotions like
-depression and anxiety, a quality that is exacerbated in narratives
-about trans women. Narratives about masculine subjects, by contrast,
-are mostly positive in tone, associated with happy events like
-weddings and parties. Additionally, narratives about nonbinary persons
-express overt themes of struggle and the need for community support,
-and the researchers note that these struggles tend to end on a
-positive, "uplifting" note.
+According to the researchers, close readings indicate that narratives
+centering feminine identities are mostly linked to unpleasant emotions
+like depression and anxiety, a quality that is exacerbated in
+narratives about trans women. Narratives about masculine subjects, by
+contrast, are mostly positive in tone, associated with happy events
+like weddings and parties. Additionally, narratives about nonbinary
+persons express overt themes of struggle and the need for community
+support, and the researchers note that these struggles tend to end on
+a positive, "uplifting" note.
 
-Amid these perhaps unsurprising results, there was an unexpected
-pattern of refusal from the model, which declined to discuss certain
-topics and identity groups. In the refusals, the models explain that
-their programming instructions require them to either stay away from
-topics of identity and/or to promote "negative or derogatory language"
-(Devinney et al. 2024). This tendency to refuse is notably more
-pronounced prompts specifying marginalized groups, whereas dominant
-groups (men, Christians) were more likely to be answered.
+Amid these perhaps unsurprising results, researchers note an
+unexpected pattern of refusal from the model, which declined to
+discuss certain topics and identity groups. In these refusals, the
+models explain that their programming instructions require them to
+either stay away from topics of identity that may promote "negative or
+derogatory language" (Devinney et al. 2024). This tendency to refuse
+is notably more pronounced prompts specifying marginalized groups,
+whereas dominant groups (men, Christians) were more likely to be
+answered.
 
-The only exception to this rule occured when identity markers from
-socially dominant groups were combined, such as "white" and
-"Christian," which created a higher instance of refusal than similarly
-intersectional, though less dominant, identity combinations. The
-researchers explain that, "When we look specifically at the
-intersection of race and gender, there is a very clear pattern where
-the most dominant groups are the least likely to be answered", which
-is a "direct inversion of the pattern for non-intersectional gender"
-(Devinney et al. 2024). For example, the least refused prompt was the
-phrase "a man," while the most refused one was "a white Christian"
-(Devinney et al. 2024). 
+However, there was an exception to the pattern of refusals as they
+concerned socially dominant grops. When identity markers from socially
+dominant groups were combined in an additive way, such as "white",
+"Christian", and "man" to form "a white Christian man", the model was
+more likely to refuse than similarly intersectional, though less
+dominant, identity combinations. For example, a model would be more
+likely refuse a prompt about a "white Christian man" than a "Black
+christian man." The researchers explain that, "When we look
+specifically at the intersection of race and gender, there is a very
+clear pattern where the most dominant groups are the least likely to
+be answered", which is a "direct inversion of the pattern for
+non-intersectional gender" (Devinney et al. 2024). For example, they
+explain, the least refused prompt was the phrase "a man," while the
+most refused one was "a white Christian" (Devinney et al. 2024).
 
-As the researchers rightly point out, refusing to answer a prompt
-about a specific identity group is its own form of discrimination:
-"The refusals themselves actually produce risk and harm. They suggest
-that the model likely cannot say anything nice, which is alarming when
-frequently repeated about minoritized groups" (Devinney et al. 2024).
-Such refusals implicitly reinforce that only a select and dominant
-subset of identities are fit for discussion, while other, more
-marginalized groups are not. 
+Of course, refusing to answer a prompt about a specific identity group
+is its own form of discrimination. As the researchers rightly point
+out, such refusals implicitly reinforce that only a select and
+dominant subset of identities are fit for discussion, while other,
+more marginalized groups are not: "The refusals themselves actually
+produce risk and harm. They suggest that the model likely cannot say
+anything nice, which is alarming when frequently repeated about
+minoritized groups" (Devinney et al. 2024).
 
-Which relates to another notable aspect of the results, the "unmarked
-majority". The researchers explain that "When not otherwise specified,
-‘a person’ is assumed to be a man, as well as likely white, straight,
-cisgender, and Christian; additionally [...] being a provider"
-(Devinney et al. 2024). In other words, a lack of identity
-specification leads the model to assume a dominant identity, a default
-white, straight, cisgender, Christian male identity. This aspect of
-the results perhaps also explains why the model may refuse to answer
-generate narratives of intersectional dominant groups ("a white
-Christian"). The researchers posit that such social groups are "so
-often unmarked that specifying them draws extra attention to the
-concept of 'identity,' which the model has been discouraged from
-talking about" (Devinney et al. 2024). Due to the dominance of such
-groups, reinforce this aspect of the default majority.
+This notable inversion of the usual pattern also speaks to another
+pecularity of the results, that which the researchers call the
+"unmarked majority." A lack of identity specification in the model
+prompts will lead the model to assume a dominant identity, which is a
+white, straight, cisgender, Christian male identity. The researchers
+explain that, "When not otherwise specified, ‘a person’ is assumed to
+be a man, as well as likely white, straight, cisgender, and Christian;
+additionally [...] being a provider" (Devinney et al. 2024).
 
-** Discussion
-The close examination of two recent frameworks for detecting trans
-bias—--TIDEs and EQUITABL—--demonstrate how different evaluation
-approaches can reveal different aspects about gender bias in language.
-Despite their contrasting approaches, one relying on binary
-classification and the other on qualitative, generative analysis, both
-frameworks reveal the importance of context, visibility, and
-interpretation in identifying transphobia. TIDEs highlights how subtle
-rhetorical cues, irony, and in-group knowledge complicate automated
-detection, while EQUITABL shows how generative models reproduce
-hegemonic norms through refusal and the dominant, unmarked subject.
+While perhaps unsurprising, this aspect of the results may perhaps
+explain why the model refuses to generate narratives of intersectional
+dominant groups ("a white Christian"). The researchers posit that such
+social groups are "so often unmarked that specifying them draws extra
+attention to the concept of 'identity,' which the model has been
+discouraged from talking about" (Devinney et al. 2024).
 
+*** Discussion
 In what follows, I discuss how these two gender bias evaluation
-frameworks engage with Amin's point about external gender expression
-and how it relates to stigma. Amin argues that, due historical
-tendency of LGBTQ+-related categories that distinguish internal and
-idealized identities from visibly different ones, a kind of
-stigmatization accompanies non-normative genders that are externally
-expressed. Given this focus, how does gender as external presentation
-or behavior operate in the above frameworks for studying gender bias
-in NLP?
+frameworks engage with Trans Studies' theorizing about external gender
+expression and how it relates to stigma. As Amin (2022) argues, due to
+the historical tendency of LGBTQ+-related categories to distinguish
+internal and idealized identities from visibly different ones, a kind
+of stigmatization accompanies non-normative genders that are
+externally expressed. Given this focus, how does gender as external
+presentation or behavior operate in the above frameworks for studying
+gender bias in NLP?
 
-First, it is important to remember that existing evaluations of LLMs
-show that the the most frequent and default subject category is the
+The close examination of these two frameworks for detecting trans
+bias—-TIDEs and EQUITABL—-demonstrate how bias evaluation can reveal
+concrete aspects of gender bias in language. Despite their contrasting
+approaches, TIDEs relying on binary classification and EQUITABL on
+qualitative analysis, both frameworks reveal the importance of context
+and interpretation in identifying transphobia. TIDEs highlights how
+subtle rhetorical cues, specifically irony, and in-group knowledge
+complicate automated detection, while EQUITABL shows how generative
+models reproduce hegemonic norms through refusal and the dominant,
+unmarked subject.
+
+It is important to remember that existing evaluations of LLMs show
+that the the most frequent and default subject category is the
 straight white male, and that other subject categories, like woman,
 black, and homosexual, are less prevalent in both training data and
 model outputs (Guo and Caliskan 2021). Additionally, research has also
@@ -542,7 +586,7 @@ shown a correlation between the presence and frequency of certain
 identities in the training data and their association with positive
 and negative terms (Devinney 2024, van Loon 2022): van Loon et al.
 (2022), in particular, find that the less frequently a group is named,
-the more negative the associations with that group. 
+the more negative the associations with that group.
 
 If a group's relatively frequent presence the training data has a
 positive effect on their representation, one might reasonably assume
@@ -554,18 +598,18 @@ subject is often unmarked. As Devinney et al. (2024) point out, the
 majority of the texts about white male subjects were the ones least
 likely to describe that subject in external, physical terms. 
 
-That is perhaps because of an inverse relationship here between
-physical markers of identity and positions of social dominance, which
-Devinney et al.'s (2024) work seems to bear out. Here, less physical
-description is itself a marker of social dominance. In those results,
-white women are described in physical terms only slightly more than
-white men, while marginalized identities are described in more detail
-than both groups. For example, trans women are described in more
-physical language than cis women, which are typically not described in
-physical detail, unless they are mentioned as a bride, according to
-the researchers (Devinney et al. 2024). In other words, the more
-physicalized a person, the more likely that person is from a
-marginalized group.
+That is perhaps because of an inverse relationship between physical
+markers of identity and positions of social dominance, which Devinney
+et al.'s (2024) work bear out. Here, less physical description is
+itself a marker of social dominance. In those results, white women are
+described in physical terms only slightly more than white men, while
+marginalized identities are described in more detail than both groups.
+For example, trans women are described in more physical language than
+cis women, which are typically not described in physical detail,
+unless they are mentioned as a bride, according to the researchers
+(Devinney et al. 2024). These results suggest that the more that a
+person is described in physical terms, the more likely they come from
+a marginalized group.
 
 One solution, then, may be to increase physical descriptions of all
 subjects--though especially white, male, heterosexual, Christian
@@ -580,20 +624,21 @@ bias, they offer one of increasing it, such as by including phrases
 like "the pretty doctor" so that a model will interpret "doctor" to be
 female.
 
-Toward this end, researchers might spend more time with close reading
-methods, such as those displayed by TIDEs and EQUITABL methods. Such
-close and careful reading will help primarily with the identification
-of targets and attributes which describe gender as physical and
-behavioral, rather than as internal or psychological.
+Toward this end, this paper makes one overall suggestion: that
+researchers spend more time with close reading methods, such as those
+displayed by TIDEs and EQUITABL methods. Such close and careful
+reading will help primarily with the identification of targets and
+attributes which describe gender as physical and behavioral, rather
+than as internal or psychological.
 
-And such methods can apply to multiple approaches to gender bias
+This suggestion applies to multiple approaches to gender bias
 evaluation. The TIDEs researchers, for example, developed a robust
-qualitative coding system, to make sure they could catch all examples
-of transphobia. This system is nuanced enough to distinguish
-transphobia within "Religious", "Medical", "Political", and "TERF"
-contexts, among others (Lameiro et al. 2025). Although the final model
-is a binary classification model, these label are built into the
-detection process through the data labellers' careful coding work.
+qualitative coding system that could catch various examples of
+transphobia. This system is nuanced enough to distinguish transphobia
+within "Religious", "Medical", "Political", and "TERF" contexts, among
+others (Lameiro et al. 2025). Although the final model is a binary
+classification model, these label are built into the detection process
+through the data labellers' careful coding work.
 
 Amin's point--that if gender were conceptualized as an outward,
 expressive phenomenon, rather than an identity category, there would
@@ -601,27 +646,20 @@ be less social stigma--thus applies to widely different methods for
 evaluating gender and specifically trans bias in NLP. Through methods
 like close reading and qualitative coding, NLP can move closer toward
 making visible unmarked but dominant gender as /presentation/ and
-/behavior/, rather than identity. For, as Amin points out,
-"Identification is the psychic process that makes the interval between
-the individual and the social apparent; it is not the site of their
-suture" (2022).
+/behavior/, rather than identity.
 
-** Conclusion
-The problem with the univeral, unmarked subject is precisely that:
-despite not being marked, he is overrepresented. This
-overrepresentation does not result from the persistent or explicit
-labels as such, which Devinney et al.'s (2024) research points out.
-The white man does not carry a descriptive label as such, he simply
-is.
-
-Drawing Trans Studies critique of gender categoires, this paper has
-shown how contemporary gender frameworks increasingly conceptualize
-gender as an internal identity, detached from outward expression and
-embodiment. While this model has enabled important forms of
-recognition and rights-based advocacy, it also produces unintended
-consequences: idealized and invisible norms (such as cisgender and
-heterosexuality) are reinforced, while visibly non-normative gender
-expressions become further stigmatized.
+*** Conclusion
+This paper has shown that, while contemporary gender frameworks that
+conceptualize gender as an internal identity, detached from outward
+expression and embodiment, has enabled important forms of recognition
+and rights-based advocacy, it also produces unintended consequences:
+idealized and invisible norms (such as cisgender and heterosexuality)
+are reinforced, while visibly non-normative gender expressions become
+further stigmatized. The problem with the univeral, unmarked subject
+is precisely that: despite not being marked, he is overrepresented.
+This overrepresentation does not result from the persistent or
+explicit labels as such. The white man does not carry a descriptive
+label as such, he simply is.
 
 Incorporating this critique from Trans Studies offers a productive
 direction for future work in the study of gender bias in NLP. Rather
@@ -645,75 +683,10 @@ work can deepen NLP research on bias.
 Most importantly, however, this paper has shown how close reading
 methods---that is, sustained, close attention to language---can help
 materialize how gender operates in NLP systems. This paper's central
-argument can be boiled down to the syllgogism: that if gender is
-material, that is, a relational phenomenon, and language is material,
-with the power to shape social structures, then reading gender bias
-ought to also be a material practice. 
+argument can be boiled down to the logic that if gender is a
+expressive and relational phenomenon, and language has the power to
+shape social structures, then reading gender bias ought to also be a
+material practice.
 
-** Generative AI Disclosure Statement
+*** Generative AI Disclosure Statement
 Generative AI was not used for this paper.
-
-** bank
-
-Trans liberalism is a problem because it overlooks class. 
-
-** outline
-How trans materialism affects our approach toward gender
-representation.
-
-overview:
-- [X] opening: disagreements globally about what is gender, affecting
-  transgender rights movement. 
-  - Both pro and anti trans turn on the fluidity of gender.
-- thesis: bringing trans materialist theory to bear on the study of
-  gender bias -- that gender is a social and behavioral phenomenon,
-  not an internal identity. How does this affect the labels and
-  contexts we give to gender?
-- defining gender:
-  - [X] Butler: identity/self only comes into being through action, but it
-    is a result, a construction, of a psychological process, through a
-    series of disavowals.
-  - [X] divergence model
-  - [ ] amin: we ought to treat gender as a behavioral/social phenomenon,
-    - otherwise we keep kicking the can of gender nonconformity down the
-      road.
-    - we need recognition in particular for feminized masculinity
-  - nonbinary identity is unethical,
-    - because it makes visible already mainstreamed kinds of gender
-    - because it severs gender from sexuality and from sex
-    - leading to today's anti-trans discourse
-
-
-How do you develop a categorization schema based on social relations
-and behavior?
-
-
-
-*** old outline?
-- word embeddings, underrepresentation:
-  - van Loon: freqency of terms has effect on positivity
-  - what is not readily marked is assumed to be invisible or inoperative
-    - critique of Charlesworth: the ways that class is being theorized
-      in trans studies and how that affects intersectionality.
-- counterfactual augmentation methods
-  - giving the same contexts to male, female, nonbinary. 
-- is it possible to have an unmarked gender that is not dominant?
-  - the problem is that we do not denaturalize the sexes
-    - Wolfe, Caliskan: males with masculinity, females with
-      femininity.
-    - Halberstam: there is female masculinity.
-- it's about switching identity for presentation. 
-  - all of them should have the same contexts? male, female,
-    nonbinary? But we should have specificity on presentation. That
-    someone of a more feminized gender might have typically feminine
-    traits like longer hair? 
-
-
-
-
-
-* Footnotes
-
-[fn:1] Ironically, many of these anti-gender ideology movements are
-funded by Western religious groups, particulary the Vatican and
-Evangenlical organizations in the USA [Butler 2023].

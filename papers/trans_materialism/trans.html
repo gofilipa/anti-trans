@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-12-27 Sat 19:51 -->
+<!-- 2025-12-28 Sun 12:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -200,38 +200,135 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgdba891e">1. abstract</a></li>
+<li><a href="#org5763561">1. Framework for Trans Bias #1: TIDEs</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdba891e" class="outline-2">
-<h2 id="orgdba891e"><span class="section-number-2">1.</span> abstract</h2>
+<div id="outline-container-org5763561" class="outline-2">
+<h2 id="org5763561"><span class="section-number-2">1.</span> Framework for Trans Bias #1: TIDEs</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-This paper brings theorizing from Trans Studies to bear on recent NLP
-methods for detecting and evaluating anti-trans bias in large language
-models (LLMs). Drawing in particular on Kadji Amin’s (2022) critique
-of gender identification and his emphasis on gender as a visible,
-expressive, and socially material phenomenon, the paper examines how
-treating gender primarily as an internal identity label limits what
-bias detection systems are able to perceive. Conceptualizing gender as
-internal risks rendering dominant genders unmarked while obscuring the
-embodied behaviors and presentations that are most frequently targeted
-by discrimination. Through close analysis of two recent frameworks for
-studying trans bias—&#x2013;the TIDEs and EQUITABL approaches (Lameiro et
-al. 2025, Devinney et al. 2024)—&#x2013;the paper shows how different bias
-detection and mitigation methods can draw from the insights of Trans
-Studies theorizing. The paper concludes by outlining directions for
-future research that integrate theoretical insights from Trans Studies
-to better capture the material, social, and contextual dimensions of
-gender bias in language technologies.
+The first Trans Bias detection method is a project called <b>Transphobia
+Identification in Digital Environments</b>, or TIDEs (Lameiro et al.
+2025). It builds on from the framework of a "trans technology," define
+by Haimson (2025) (who is an author of the paper) as a "technology
+that addresses the unique needs and challenges faced by trans people
+and communities" (Haimson 2025). Trans technology makes trans people a
+central focus of a particular technology or tool, in this case, of
+detection of transphobic speech.
+</p>
+
+<p>
+To that end, TIDEs has two explicit goals: first, to create a dataset
+representing varied forms of transphobia, in particular forms that are
+more difficult to detect, like TERFism. Referring to "Trans
+Exclusionary Radical Feminism," TERF indicates a feminist position
+that does not support the rights of trans people. This type of
+transphobia is difficult to detect because TERF generally identify as
+feminists, although they do not support the rights of trans women and
+girls.
+</p>
+
+<p>
+The second goal is to center trans and nonbinary experience and
+expertise in the data labelling work, which involved labelling social
+media posts as "transphobic or "not transphobic". The project chose
+labellers who personally identify as trans or nonbinary, and who "have
+personal experience with encountering and detecting online
+transphobia" (2025). According to the authors, this approach enacts
+what they call "care-centered data practices" (2025).
+</p>
+
+<p>
+Indeed, the data labelling work showcases the attention given to
+individual kinds of transphobia. The dataset comprises social media
+posts scraped from Tumblr, Truth Social, YouTube, and Reddit that are
+labelled with "transphobic" and "not transphobic" labels. For example,
+a post like, "Transgender females are actually biological males. They
+should not be allowed to compete in womens sports. Period!" are
+labelled as transphobic, while posts like "Transgender Swimmer Lia
+Thomas Booted From Olympics After Losing Legal Case" are labelled as
+not transphobic.
+</p>
+
+<p>
+However, as the project developers point out, some examples are not so
+straightforward. For example, the following post
+</p>
+<blockquote>
+<p>
+Hey guys, I just wanted to get your opinion on this:
+</p>
+
+<p>
+Whenever I meet someone I really quickly try to establish whether or
+not they have a dick, I don't just restrict this to potential sexual
+partners I mean everyone I meet. It just seems super important you
+know? Like how am I supposed to sleep at night unless I catalogue
+everyone's genitalia?
+</p>
+
+<p>
+[&#x2026;] I've started flat out asking everyone I meet. I try to be polite,
+like I look at the ground and draw it out all "Sooo do you like&#x2026;.
+Have a dick?" but here is the thing: people look at me like I'm crazy
+for asking! What the hell is up with that? I even had one girl tell me
+I was a totally creep!
+</p>
+</blockquote>
+<p>
+Detecting this post correctly as "not transphobic" relies on
+recognizing its irony, which is present in the tone of enforced
+sincerity. In fact, the only substantial indication that this is
+written in irony is the end of the post, which asserts that "it's nice
+to vent", and the source of the post itself, comes from a
+trans-dominated subreddit that emphasizes parody, "r/transcirclejerk".
+</p>
+
+<p>
+Because this text, on the surface, parrots a transphobic perspective,
+it could be rightly labelled as such. The only thing that makes it not
+transphobic is the rhetorical context, whose cues are so subtle that
+they could be easily missed, particularly by those who lack the
+in-group cultural knowledge and language cues.
+</p>
+
+<p>
+Complicating matters further, many other posts use a sincere tone to
+make serious requests. For example, the following post that asks for
+advice on gender presentation:
+</p>
+<blockquote>
+<p>
+Hey! I'm going through some gender experimentation, so I'd like to tap
+into masculinity for awhile(usually I identify as just pure
+androgynous, but I struggle with pulling that off). So, to begin with,
+I'll try to master visual/behavioral androgyny first. I have long hair
+but don't want to cut it(a lot of manly men have long hair anyway), so
+how could I fix it up to look more masculine? Also, how could I dress
+more masculine-like? I don't have a very manly looking body shape, but
+I'd like to dress to give the illusion of one. Basically, any and all
+advice on how to appear androgynous/masculine is appreciated.
+</p>
+</blockquote>
+<p>
+This post, which is rightly labelled as "not transphobic," has more in
+common with the previous "transphobic" example in terms of tone (which
+is sincere and supplicating. The differences have to do with an
+external rhetorical situation that is not clearly visible in the
+actual post.
+</p>
+
+<p>
+In other words, context matters whether something is transphobic, and
+we ought to develop more labels for recognizing context.
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: fcalado</p>
-<p class="date">Created: 2025-12-27 Sat 19:51</p>
+<p class="date">Created: 2025-12-28 Sun 12:58</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -7,11 +7,10 @@ marked and registered within these techniques. Bringing out gender is
 the goal which will combat the divergence model's tendency to
 idealize dominant identities and marginalize others. 
 
-goals:
-- bring out major arguments about gender being external, especially
-  from trans studies
-- make the paper's interventions more meaningful, especially in the
-  close reading section.
+points:
+- gender as identity marginalizes non-normative identities. 
+- main suggestion: that gender ought to be marked as physical in
+  bias mitigation techniques. 
 
 introduction
 - there is global urgency to define gender: LGBT rights are being
@@ -19,10 +18,9 @@ introduction
 - in response, progressive groups double down on the definition of
   gender as identity, based on Butler's breaking down of
   sex/gender/sexuality causal relationship.
-- NLP is also developing ways for studying gender bias focused on
-  language. 
 - Meanwhile, Trans Studies is debating identifying gender as an
   external phenomenon.
+- NLP is also developing ways for studying gender bias.
 - This paper proposes that Trans Studies theorizing of gender as
   expressive can influence the ways that gender is coded in bias
   detection and mitigation techniques.
@@ -63,8 +61,6 @@ TIDEs
 - samples show how *physical markers tend to be sites where gender and
   transphobia might emerge*, and subtle indications of tone and
   context determines whether or not they are transphobic
-- PHYSICAL MARKERS INDICATE GENDER EXPRESSIONS THAT CAN BE
-  TRANSPHOBIC, BUT DEPENDS ON CONTEXT
 
 EQUITABL
 - mixed methods approach that combines distant and close reading
@@ -83,22 +79,43 @@ EQUITABL
   likely to be refused.
 - could be because *these identities are so often unmarked, so that
   models are more sensitive* when attention is drawn to them.
-- UNMARKED IDENTITIES MORE LIKELY TO BE DOMINANT
+
 
 Discussion
-- if physical expressions more likely to signal stimga, how does this
-  emerge in trans bias evaluation?
+- if according to TS, physical expressions more likely to signal
+  stimga, how does this emerge in trans bias evaluation?
 - one method shows that context and rhetorical cues are essential to
   detecting bias, while the other shows that dominant genders are
   often unmarked.
+  - these suggest that stigma tends to occupy physical descriptions;
+  and that normative identities tend to be not described, to be
+  idealized.  
+- most systems for detecting bias are based in a logic of diminishing
+  references to gender, making the genders interchangeable or treating
+  gender markers as something to be evacuated.
 - research has shown that frequency plays a role in association to
   stigma: more frequent is more dominant, therefore less stigmatized.
+  - increasing gender may work
 - however, making a group more frequent does not solve the problem,
   as frequent identities are often unmarked.
 - fewer physical descriptions are themselves a marker of dominance
 - solution: to increase physical descriptions of all subject groups,
   especially dominant ones.
 - also to draw from interdisciplinary theorizing. 
+
+
+- UNMARKED IDENTITIES MORE LIKELY TO BE DOMINANT
+  - -> this bears out Amin's point about normative identities being
+    idealized.
+  - there seems to be an association between physical description and
+    stigma, according to the models. 
+
+- -> PHYSICAL MARKERS INDICATE GENDER EXPRESSIONS THAT CAN BE
+  TRANSPHOBIC, BUT DEPENDS ON CONTEXT
+  - this bears out Amin's point that physical markers are where
+    discrimination tends to emerge. (But, can decreasing physical
+    markers be a solution? It seems like a possiblity, but also could
+    make such groups even less prevalent and more stigmatized). 
 
   
 ** old paper

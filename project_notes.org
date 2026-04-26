@@ -1,0 +1,100 @@
+* project notes
+
+** training model to work with gender terms
+Deciding the direction that I want to go in.
+- [ ] [[../stats/syllabus.pdf][statistics course]]
+- [ ] machine learning course
+- [ ] how to fine-tune on small and largely homogenous datasets
+- [ ] learn about different training methods and model architectures,
+  like
+  - [ ] MoE,
+  - [ ] quant,
+  - [ ] LORA
+  - [ ] RAG
+- [ ] evals
+- [ ] start to create a new dataset for studying transphobia
+
+*** brainstorm datasets 
+To get a dataset from the testimonies for and against the bills. For
+example, Ohio house bill 68, which [[https://www.erininthemorning.com/p/ohio-trans-ban-proponents-push-family?utm_source=substack&utm_medium=email][Erin Reed writes about]].
+
+See Matt Sharpe (Alliance for Defense of Freedom) [[https://search-prod.lis.state.oh.us/cm_pub_api/api/unwrap/general_assembly_135/chamber/135th_ga/ready_for_publication/committee_docs/cmte_s_govt_1/testimony/cmte_s_govt_1_2023-11-28-0200_920/hb68_sharp_proponent.pdf][testimony here]]. And
+the [[https://www.legislature.ohio.gov/legislation/135/hb68/committee][rest of the hearing documents]].
+
+And then to pull out the ways that they are defining gender, talking
+about gender. 
+*** processing text from legislative bills
+April 2024
+- cleaned punctuation, section headings, and reformatted definitions
+  with regex.
+
+May 13 2024:
+- Results are better with cleaner dataset on gpt-neo-125m
+
+**** fine-tuning possiblities
+What do I want to measure in the data?
+- a general understanding of how gender is being defined across all
+  bills.
+  - train 
+- an understanding of how anti-trans vs trans-affirming are defining
+  gender; distinctive terms across definitions.
+  - text generation models:
+    - separate models for pro & anti
+  - sentiment analysis model:
+    - pro and anti labels in sentiment analysis
+    - measure affirmative vs non-affirmative language.
+
+**** gpt-neox-small on congress_17-18
+- April 16: 
+  - re-trained epochs 1-6: seems like epoch 4 or 5 is the best for
+    this dataset.
+
+**** iterate Tiny Llamas models from dataset
+SCHEDULED: <2024-04-15 Mon>
+- April 5: did it quantized, and results aren't great. going to try
+  with a nonquantized model
+- April 12: the nonquantized version isn't that great either, though
+  its better. Going to read up on how to adjust params to make
+  training more effective.
+- May 31: training now, adjusting hypeparameters like epochs, batch
+  size, steps. Still not going great, needs more research.
+
+**** should use RAG or nah with legislative data? 
+**** look into quant and how it's better for small datasets
+**** add hyperparams to mistral model on HF models hub
+**** done processing/cleaning tasks
+***** DONE cleaning text
+CLOSED: [2024-05-13 Mon 15:58] DEADLINE: <2024-05-10 Fri>
+- [X] change the beginning of the definition to include just the
+  sentence "The term "MATCH" means..."
+- [X] clean some punctuation from the dataset.
+- [X] regex:
+  - remove numerations
+    - (1
+    - (1)
+    - (a
+    - replace:
+    - s -> 's
+***** DONE train text generation model with congress defs.
+CLOSED: [2024-03-29 Fri 16:45] DEADLINE: <2024-03-29 Fri>
+- creat atl-cluster folder with slurm file
+- upload folder to cluster
+- run job
+
+***** DONE python environment set up for training on the clusters 
+CLOSED: [2024-03-21 Thu 16:38] DEADLINE: <2024-03-21 Thu>
+
+***** DONE download PDFs of state bills from tracker
+CLOSED: [2024-03-22 Fri 10:52] DEADLINE: <2024-03-22 Fri>
+
+**** Named Entity Recognition
+- See Mattingly's tutorial:
+  https://ner.pythonhumanities.com/03_01_create_ner_training_set.html 
+- Is it possible for me to fine tune a model to pick out definitions
+  from other documents?
+
+*** ethical/toxicity lexicon
+- marginalization
+- power differential
+- inclusion (vs diversity)
+- stereotypes

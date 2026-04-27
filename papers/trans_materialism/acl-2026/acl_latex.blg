@@ -9,44 +9,51 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: custom.bib
-You've used 3 entries,
+Warning--I didn't find a database entry for "ussd:2025"
+Warning--I didn't find a database entry for "translegislation:2025"
+Warning--I didn't find a database entry for "vaca:206"
+Warning--missing publisher in ellis:1900
+Warning--missing publisher in foucault:1978
+Warning--missing publisher in krafft-ebing:2021
+You've used 39 entries,
             3764 wiz_defined-function locations,
-            757 strings with 6353 characters,
-and the built_in function-call counts, 1682 in all, are:
-= -- 150
-> -- 46
-< -- 3
-+ -- 18
-- -- 13
-* -- 93
-:= -- 291
-add.period$ -- 11
-call.type$ -- 3
-change.case$ -- 19
-chr.to.int$ -- 4
-cite$ -- 3
-duplicate$ -- 102
-empty$ -- 141
-format.name$ -- 19
-if$ -- 369
-int.to.chr$ -- 1
+            1002 strings with 16595 characters,
+and the built_in function-call counts, 27090 in all, are:
+= -- 2543
+> -- 949
+< -- 44
++ -- 377
+- -- 275
+* -- 1613
+:= -- 4024
+add.period$ -- 163
+call.type$ -- 39
+change.case$ -- 312
+chr.to.int$ -- 42
+cite$ -- 42
+duplicate$ -- 1676
+empty$ -- 2169
+format.name$ -- 361
+if$ -- 6163
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 19
-newline$ -- 18
-num.names$ -- 12
-pop$ -- 44
+missing$ -- 324
+newline$ -- 191
+num.names$ -- 160
+pop$ -- 793
 preamble$ -- 1
-purify$ -- 16
+purify$ -- 246
 quote$ -- 0
-skip$ -- 99
+skip$ -- 1561
 stack$ -- 0
-substring$ -- 61
-swap$ -- 48
-text.length$ -- 1
+substring$ -- 1079
+swap$ -- 893
+text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 27
-warning$ -- 0
-while$ -- 11
+type$ -- 327
+warning$ -- 3
+while$ -- 173
 width$ -- 0
-write$ -- 38
+write$ -- 507
+(There were 6 warnings)

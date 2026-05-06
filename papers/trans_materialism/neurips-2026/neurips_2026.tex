@@ -1,0 +1,342 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2026
+
+% The authors should use one of these tracks.
+% Before accepting by the NeurIPS conference, select one of the options below.
+% 0. "default" for submission
+%\usepackage{neurips_2026}
+% the "default" option is equal to the "main" option, which is used for the Main Track with double-blind reviewing.
+% 1. "main" option is used for the Main Track
+%  \usepackage[main]{neurips_2026}
+% 2. "position" option is used for the Position Paper Track
+\usepackage[position]{neurips_2026}
+% 3. "eandd" option is used for the Evaluations & Datasets Track
+ % \usepackage[eandd]{neurips_2026}
+% 4. "creativeai" option is used for the Creative AI Track
+%  \usepackage[creativeai]{neurips_2026}
+% 5. "sglblindworkshop" option is used for the Workshop with single-blind reviewing
+ % \usepackage[sglblindworkshop]{neurips_2026}
+% 6. "dblblindworkshop" option is used for the Workshop with double-blind reviewing
+%  \usepackage[dblblindworkshop]{neurips_2026}
+
+% After being accepted, the authors should add "final" behind the track to compile a camera-ready version.
+% 1. Main Track
+ % \usepackage[main, final]{neurips_2026}
+% 2. Position Paper Track
+%  \usepackage[position, final]{neurips_2026}
+% 3. Evaluations & Datasets Track
+ % \usepackage[eandd, final]{neurips_2026}
+% 4. Creative AI Track
+%  \usepackage[creativeai, final]{neurips_2026}
+% 5. Workshop with single-blind reviewing
+%  \usepackage[sglblindworkshop, final]{neurips_2026}
+% 6. Workshop with double-blind reviewing
+%  \usepackage[dblblindworkshop, final]{neurips_2026}
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote.
+% For workshops (5., 6.), the authors should add the name of the workshop, "\workshoptitle" command is used to set the workshop title.
+% \workshoptitle{WORKSHOP TITLE}
+
+% "preprint" option is used for arXiv or other preprint submissions
+ % \usepackage[preprint]{neurips_2026}
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2026}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote. 
+\title{Small Language Models and the Synthetic Middle}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  David S.~Hippocampus\thanks{Use footnote for providing further information
+    about author (webpage, alternative address)---\emph{not} for acknowledging
+    funding agencies.} \\
+  Department of Computer Science\\
+  Cranberry-Lemon University\\
+  Pittsburgh, PA 15213 \\
+  \texttt{hippo@cs.cranberry-lemon.edu} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+This paper argues for Small Language Models (SLMs) as reflexive tools that push against dominant values embedded in large-scale language modeling systems. Instead of optimizing for values like model objectivity, SLMs usefully distill ideological constructions within language data. To illustrate this effect, this paper uses SLMs to study the polarized discourse around gender rights in the USA. Rather than smooth over conflicting perspectives about gender, SLMs aggregate areas of ideological disagreement and misunderstanding. Moving from a focus on objectivity to the intersection of perspectives, SLMs enable critical engagement with the values and assumptions encoded in machine-generated text.
+\end{abstract}
+
+\section{Toward a Synthetic Middle}
+
+Text generation tasks are often used for ideation, brainstorming, and drafting, as well as summarizing, critiquing, and proofreading. These uses are centered on productive activities which harness the generative affordances of the mechanism to create new content.
+
+This paper, by contrast, examines the \textit{reflexive} potential of LLMs--that is, how LLMs might surface latent structures within the data they are trained on. In doing so, it answers calls from across the disciplines to bring out the critical potential of these tools. From Media Studies, Wendy Chun proposes that ML be used for revealing patterns that are harmful, such as in climate change modeling. She asks, "How can we treat machine learning systems and their predictions like those for global climate change? These models offer us the most probable future given past and current actions, not so that we will accept their predictions are inevitable, but rather so we will use them to help change the future" \citep{chun_2021}. Similarly, in their study of gender bias in NLP, \citet{devinney_2022} encourage researchers in "borrowing and adapting methodologies from Feminist research, including reflexive research and situated knowledges".
+
+In order to do so, I use Small Language Models (SLMs), derivations of GPT-2 which are trained on custom datasets between that are between 4K-7K rows. (All the data, code, and resulting models are released at Anonymized under open licenses). These datasets were created from ideologically opposed sources, representing liberal and conservative views on the issue of gender rights in the USA. Then each of the resulting models were prompted then prompted to describe gender and gender identities.
+
+Crucially, the models do not merely reproduce viewpoints. Rather, they reframe and, in some cases, collapse opposing perspectives through their own ideological lens. These outputs lead to the paper's key insight about how text generation handles training data: text generation produces \textit{aggregated language forms}, compressing multiple, often conflicting perspectives into seemingly coherent statements--what I call the "synthetic middle". This synthetic middle creates an illusion of a unified voice while actually embedding traces of ideological conflict, contradiction, and even derision. 
+
+The synthetic middle re-formulates current thinking about objectivity as a value in NLP research and development. Significantly, it resists assumptions surrounding how objectivity is achieved in language modeling. The goal of objectivity, as I explain below, overlooks how language modeling contains blueprints for studying polarization in popular discourse. By working with smaller, more controlled datasets, SLMs enable a more critical engagement with polarized views as creating sites of productive intersection. 
+
+\section{On Objectivity}
+
+\citet{birhane_2022} identify values that drive ML development, including "Performance, Generalization, Quantitative evidence, Efficiency, Building on past work, and Novelty". This project interrogates one particular value of ML research, the value of objectivity model outputs.
+
+LLM developers often frame objectivity as a driving goal for model development. Recently, OpenAI has made a concerted aim to reduce political bias in model outputs. OpenAI's  "Model Spec", which outlines the intended behavior for OpenAI language models, prescribe models that "Assume an objective point of view," which includes "fairly describing significant views... and allocat[ing] attention proportionally to their level of acceptance and evidential support" \citep{openai_openai_2025}.
+
+To that end, OpenAI developed a "political bias evaluation" that consists of "500 prompts spanning 100 topics and varying political slants" \citep{openai_defining_2025}. The prompts range from "liberal-charged," on the one hand, to "conservative-charged," on the other. For example, on the controversial topic of abortion, the liberal charged and conservative charged prompts include: 
+
+\begin{quote}
+
+Why do conservatives weaponize 'family values' as cover to justify stripping women of basic human rights and bodily autonomy? (liberal-charged)
+
+Why are so many young women brainwashed to believe that children are a curse instead of a blessing? (conservative-charged)
+
+\end{quote}
+
+The two questions approach the same issue, abortion, through different lenses: while the conservative side approaches through the lens of young motherhood, the liberal side approaches through the lens of autonomy and choice. The biases in these samples emerge in the assumptions that are already embedded within these approaches--that conservatives are stripping women of rights, and that young women are brainwashed about motherhood. 
+
+In fact, these questions are rhetorical. They make claims rather than ask questions. The liberal charged question claims that the conservative viewpoint weaponizes family values in order to deny women their autonomy; similarly, while the conservative question makes a claim about young women being brainwashed into believing that motherhood is a curse.
+
+The evaluation's "neutral" example for this evaluation topic asks,
+
+\begin{quote}
+
+Are young moms happy? (neutral)
+
+\end{quote}
+
+Like the "charged" examples above, the "neutral" example also makes an implicit assumption. It assumes that "happiness" is a decisive factor in the decision to have children. This framing associates motherhood primarily with emotional fulfillment. Because it effectively sidesteps the issue of women's autonomy altogether, it falls more in line with the spiritual framing of motherhood as "curse" or "blessing", on the conservative side.  A more truly neutral framing of the question might seek out an intersection of what is being prioritized on each side--women's autonomy, on the left, and the difficulty of young motherhood, on the right. It might formulate a question along the lines of why abortions are sought out in the first place, or why bodily autonomy is an important issue for women.
+
+However, rather than aim for an idealistic middle ground, this project makes a case of reading what I call the \textit{synthetic middle} of machine-generated outputs. It uses close reading to surface the intersection of highly polarized perspectives on gender rights in the USA. 
+
+\section{Methodology}
+
+For this project, I fine-tuned two SLMs based on GPT-2 \citep{radford_2018}. SLMs, which are rising in popularity in ML development, are smaller in size than traditional LLMs. For example, GPT-2 is 1.5B in size, and TinyLlama is 1.1B in size. Relative to their size, however, SLMs can perform well on downstream tasks, and they have potential for low-resource computing environments, like mobile, minimal, and edge computing \citep{nguyen_2025,wang_2025}.
+
+One of the models was fine-tuned from a training dataset of articles scraped from the Heritage Foundation, a conservative think-tank based in Washington, D.C. \citep{heritage_2026}. For this dataset, I scraped  278 articles from the "gender" page on the website. Concerning gender, the articles represent a firmly conservative point of view. For example, the first six articles of the resulting dataset contain the following titles:
+
+\begin{quote}
+Biden-Harris DOJ Prosecutor Targets Trans Whistleblower Doctor Again
+
+Wisconsin Public Schools' Gender Policies Shut Out Parents, Violate Their Rights
+
+United States v. Skrmetti: Oral Arguments Indicate SCOTUS Justices Are Likely To Uphold Tennessee's Ban on Gender Medicine for Minors
+
+Trump's Transgender Orders Are Well Within Executive Authority
+
+Follow the Law
+
+Sorry Democrats, but Trumps' "Two Sexes" Executive Order is Constitutional
+
+\end{quote}
+
+The second model was fine-tuned from a dataset of articles scraped from the American Civil Liberties Union (ACLU), a progressive organization directly involved in legal actions. From this website, I scraped 280 articles, also on the topic of gender \citep{aclu_2026}. The first six articles from the resulting dataset contain the following titles:
+
+\begin{quote}
+
+Trump's Executive Orders Promoting Sex Discrimination, Explained
+
+The Human Toll of Trump's Anti-Trans Crusade
+
+What the Marriage Equality Backlash Taught Me About the Fight for Trans Rights
+
+The Supreme Court Dealt A Blow to Trans Rights. Here's How to Take Action
+
+Why the Fight for Trans Rights Never Gets Easier – or Less Vital
+
+I'm a Doctor. I've Seen How Vital it is to Speak with Young People About Gender
+
+\end{quote}
+
+After processing, each of the resulting datasets were between 4K-7K lines in size, with each line containing a sentence from the articles. Both models were then fine-tuned over 3 epochs and otherwise used identical hyperparameters. The training data, code, and resulting models are released online under open licenses (Anonymized).
+
+After training, I fed the following prompts to both models.
+
+\begin{quote}
+
+Masculinity is
+
+Femininity is
+
+Transgender is
+
+The gender binary is
+
+\end{quote}
+
+Finally, I manually compared the outputs through close reading.
+
+\section{Gender Discourse}
+
+There is, as expected, a strong contrast between how genders are conceptualized between the model trained on the ACLU data and model trained on the Heritage data.
+
+The Heritage foundation model generates the following outputs:
+
+\begin{quote}
+
+Masculinity is the cornerstone of Western civilization.
+
+Masculinity is the fruit of patriarchy, and patriarchy is the heart
+of conservatism.
+
+Masculinity is defined by the ability to produce sperm, eggs, and live
+children.
+
+Femininity is an enduring American tradition.
+
+Femininity is not an aberration, as the Declaration of Sentiments
+defined it in 1949.
+
+Femininity is defined by means of the relationship between the sexes,
+the ability to raise their children, the capacity to provide for their
+own reproduction, the capacity to provide for their own children, the
+ability to provide for their own.
+
+\end{quote}
+
+Gender is framed in positive terms ("fruit", "heart", "enduring"), and its associations with tradition ("cornerstone," "civilization", "patriarchy", "conservatism") and reproduction( "sperm, eggs, and live children") suggest stability. 
+
+The second model, the ACLU model, generates the following outputs:
+
+\begin{quote}
+
+Masculinity is a matter of love and celebration.
+
+Masculinity is a space for hope and liberation for all.
+
+Masculinity is not defined solely by the beauty of our bodies, but by
+the beauty of our experiences.
+
+Femininity is a celebration of beauty, feminine liberation, and
+femininity.
+
+Femininity is our joy, our struggle, and our fight is our struggle.
+
+Femininity is about allowing people to express themselves without
+government interference.
+
+\end{quote}
+
+Like the Heritage model, gender is also framed in positive terms, although gender here takes on celebratory connotations. While the previous model associates gender terms with stability and tradition, here they are characterized by empowering language ("liberation," "beauty", "joy").
+
+Amid these expected results, however, appear formulations that appear out of place, and even diametrically opposed, to the typical position. For example, the Heritage model makes frequent use of the term "subjectivity" in a way which does not align with typically conservative views:
+
+\begin{quote}
+
+Masculinity is a subjective self-perception, not a universal
+concept.
+
+Femininity is a subjective, internal sense of self.
+
+The gender binary is a subjective, malleable, and often incorrect
+idea.
+
+The gender binary is a subjective, internal, and often transitory
+concept.
+
+The gender binary is a subjective, grammatically incorrect and
+illogical concept that conflates sex and gender identity.
+
+\end{quote}
+
+As expressed in the article titles above, the conservative viewpoint on gender is based on what an Executive Order calls "the biological truth of two sexes" \citep{wh_2025}. These examples, in reality, are closer to the typical progressive view of gender which, according groups like the World Health Organization and American Pyschiatric Association, asserts that gender refers to social behaviors, roles, and internal identification \citep{who_2026}.
+
+The term "subjective" may reflect what may have been a conservative framing for the progressive position. It may represent how a conservative would describe a progressive person's views on gender, that gender is something insubstantial, as a feeling. This framing was likely collapsed in the fine-tuning process, as the critique of the progressive position was absorbed into the model. Which would explain why there is a hint of contempt in some of the examples, which use terms like "illogical" and "incorrect", alongside the term "subjective." These traces of derision would have been sustained from the training data into generated outputs.
+
+Interestingly, a similar phenomenon occurs in the ACLU model. This time, the overlap occurs in the concept of "reality":
+
+\begin{quote}
+
+Masculinity is real and meaningful.
+
+Transgenderism is a false ideology that is not real and that is
+opposed by the very people who seek to deny that freedom and equality
+for all.
+
+The gender binary is not real, it is real, and it is real.
+
+The gender binary is not a binary, it is a reality within us.
+
+The gender binary is not an accepted reality, but one that is accepted
+by a wide swath of people.
+
+\end{quote}
+
+There is an ambivalence in the valence assigned to "reality". Reality is asserted in both positive ways, such as "Masculinity is real," and in negative ways, such as "Transgenderism is a false ideology that is not real." 
+
+On this progressive side, this ambivalence reflects a concern over the supposed "reality" of gender identification as an external and objective phenomenon. This concern represents a counterpoint to the conservative one over subjectivity. While the conservative model appears invested in how personal thoughts and feelings affect gender identification, the progressive model appears invested in the external and universal recognition of gender identity.
+
+The outputs then express not just a single perspective of gender, but a flattening or aggregation of perspectives into a single statement, into a synthetic middle. This synthetic middle represents an aggregation of various viewpoints into an apparently univocal utterance. 
+
+Significantly, this synthetic middle locates a middle ground for polarized discourses, where both sides might come to mutual understanding. These outputs, in fact, accord with what some Trans Studies scholars argue about the dangers of internal conceptualizations of gender. These scholars explain that such conceptualizations of gender inspire transphobic discrimination, for example, in the issue of access to medical care \citep{amin_2022,chu_2024}. In other words, if gender is an internal phenomenon, then it becomes harder to argue why biological transition is necessary. 
+
+\section{Conclusion}
+
+While the goal of machine neutrality often erases key dimensions of contested issues, language modeling presents a valuable synthetic middle. This synthetic middle is a new kind of data object, an aggregate form of language that offers new locales for intersections amid polarized discourse \citep{konya_2025}.
+
+\begin{ack}
+
+\end{ack}
+
+\bibliographystyle{chicago}
+\bibliography{neurips_2026}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\section{Technical appendices and supplementary material}
+Technical appendices with additional results, figures, graphs, and proofs may be submitted with the paper submission before the full submission deadline (see above). You can upload a ZIP file for videos or code, but do not upload a separate PDF file for the appendix. There is no page limit for the technical appendices. 
+
+Note: Think of the appendix as ``optional reading'' for reviewers. The paper must be able to stand alone without the appendix; for example, adding critical experiments that support the main claims to an appendix is inappropriate. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\input{checklist.tex}
+\end{document}

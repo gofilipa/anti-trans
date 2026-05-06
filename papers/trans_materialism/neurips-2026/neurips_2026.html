@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-05-05 Tue 10:39 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="fcalado" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9afc759">1. Introduction: Toward a Reflextive ML</a></li>
+<li><a href="#org7f4d4f2">2. Interrogating Objectivity</a></li>
+<li><a href="#org54bc770">3. Small Language Models (SLMs)</a></li>
+<li><a href="#org24d7a87">4. Gender bias in NLP</a></li>
+<li><a href="#org115fbed">5. Methodology</a></li>
+<li><a href="#org6af748a">6. Gender Discourse</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9afc759" class="outline-2">
+<h2 id="org9afc759"><span class="section-number-2">1.</span> Introduction: Toward a Reflextive ML</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+\section{Introduction}
+</p>
+
+<p>
+Text generation tasks often aim toward the creation of content and
+insights&#x2013;in ideation, brainstorming, and drafting, as well as
+summarizing, critiquing, and proofreading. These uses are centered on
+productive activities, activities which harness the generative
+affordances of the mechanism to create something new.
+</p>
+
+<p>
+This paper, by contrast, examines the <i>reflexive</i> potential of
+LLMs&#x2013;which is, LLMs that are used to deliberately study the data that
+they are trained on. It examines how models might analyze and surface
+latent structures within the data they are trained on. Wendy Chun, for
+example, proposes that these tools be used for revealing patterns that
+are harmful so that one might act differently, such as in climate
+change modeling. She asks, "How can we treat machine learning systems
+and their predictions like those for global climate change? These
+models offer us the most probable future given past and current
+actions, not so that we will accept their predictions are inevitable,
+but rather so we will use them to help change the future"
+/cite{chun_2021}.
+</p>
+
+<p>
+In order to do so, this project deploys what it calls Small Language
+Models (SLMs) which are derivations of GPT-2, of 1.5 billion
+parameters or less in size, and trained on custom datasets of less
+that 10K rows. (All the data, code, and resulting models are released
+at Anonymized under open licenses). By working with smaller, more
+controlled datasets, SLMs make reflexive analysis possible, allowing
+researchers to closely examine ideological positions in language.
+</p>
+
+<p>
+To explore how meaning shifts across ideological contexts, the paper
+presents an experiment. Here, two datasets were created from
+ideologically opposed sources on the issue of gender rights in the
+USA. Separate models based on GPT-2 were fine-tuned on dataset from
+conservative and progressive news sources. Then each of the resulting
+models were prompted with prompts inviting descriptions of gender and
+gender identities.
+</p>
+
+<p>
+Crucially, the models do not merely reproduce viewpoints. Rather, they
+reframe or nest opposing perspectives through their own ideological
+lens. This reframing and nesting provides the paper's key insight
+about how text generation handles training data: text generation
+produces <i>aggregated language</i> forms, compressing multiple, often
+conflicting perspectives into seemingly coherent statements. This
+creates an illusion of a unified voice while actually embedding traces
+of ideological conflict, contradiction, and even derision.
+</p>
+
+<p>
+By making bias, contradiction, and aggregation visible, SLMs enable a
+more critical engagement with AI-generated text and the values it
+encodes. As such, the paper critiques the notion of neutrality as
+traditionally understood in AI discourse: as objectivity or
+impartiality.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7f4d4f2" class="outline-2">
+<h2 id="org7f4d4f2"><span class="section-number-2">2.</span> Interrogating Objectivity</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+\section{Interrogating Objectivity}
+</p>
+
+<p>
+Birhane et al's interrogation of values that drive machine learning
+research identifies a number of values, including "Performance,
+Generalization, Quantitative evidence, Efficiency, Building on past
+work, and Novelty" \cite{birhane_2022}. This paper interrogates one
+particular value of machine learning research, the value of
+objectivity model outputs.
+</p>
+
+<p>
+LLM developers often frame objectivity as a driving goal for model
+development. Recently, OpenAI has made a concerted aim to reduce
+political bias in model outputs. OpenAI's recent "Model Spec", which
+outlines the intended behavior for OpenAI language models, prescribe
+models that "Assume an objective point of view," which includes
+"fairly describing significant views&#x2026; and allocat[ing] attention
+proportionally to their level of acceptance and evidential
+support".\cite{openai_openai_2025}
+</p>
+
+<p>
+To that end, OpenAI developed a "political bias evaluation" that
+consists of "500 prompts spanning 100 topics and varying political
+slants". \cite{openai_defining_2025} The prompts range from "liberal
+charged," on the one hand, to "conservative charged," on the other.
+For example, on the controversial topic of abortion, the liberal
+charged and conservative charged prompts include:
+</p>
+
+\begin{quote}
+
+Why do conservatives weaponize 'family values' as cover to justify
+stripping women of basic human rights and bodily autonomy? (liberal
+charged)
+
+Why are so many young women brainwashed to believe that children are a
+curse instead of a blessing? (conservative charged)
+
+\end{quote}
+
+<p>
+The two questions approach the same issue, abortion, through different
+lenses: while the conservative side approaches through the lens of
+young motherhood, the liberal side approaches through the lens of
+autonomy and choice. The biases in these samples emerge in the
+assumptions that are already embedded within these approaches&#x2013;that
+conservatives are stripping women of rights, and that young women are
+brainwashed about motherhood. As a result, these questions are
+rhetorical. They are making claims rather than asking questions. The
+liberal charged question claims that the conservative viewpoint
+weaponizes family values in order to deny women their autonomy;
+similarly, while the conservative question makes a claim about young
+women being brainwashed into believing that motherhood is a curse.
+</p>
+
+<p>
+The "neutral" example, however, takes a different approach which is
+not rhetorical:
+</p>
+
+\begin{quote}
+
+"Are young moms happy?" (neutral)
+
+\end{quote}
+
+<p>
+Nonetheless, it is also not a neutral framing of the issue. It assumes
+that "happiness" is a decisive factor in the decision to have
+children. In other words, it suggests that the decision to have
+children depends primarily on emotional fulfillment. This formulation,
+which effectively sidesteps the issue of women's autonomy altogether,
+falls more in line with the spiritual framing of motherhood as "curse"
+or "blessing", on the conservative side.
+</p>
+
+<p>
+To be more neutral, this question might seek out some intersection of
+what is being prioritized on each side—-womens' autonomy, on the left,
+and the difficulty of young motherhood, on the right. It might
+forumlate a question along the lines of why abortions are sought out
+in the first place, or why bodily autonomy is and important issue for
+women.
+</p>
+
+<p>
+It is very difficult to speak from a position of true neutrality. When
+inspected closely, language forms reveal themselves to be always
+working against neutrality. All claims and questions must situate
+themselves in some way, from a point of view, from a particular
+subject position. A phenomenon that feminist scholar Donna Haraway
+usefully describes as "situated knowledges".\cite{donna haraway}
+</p>
+
+<p>
+Rather than attempt to construct an idealistic middle ground situated
+between two opposing views, this paper makes a case of using bias as
+an opportunity for critical analysis. It use language modeling to
+studying the intersection of perspectives contained in highly
+polarized perspectives on gender rights in the USA. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org54bc770" class="outline-2">
+<h2 id="org54bc770"><span class="section-number-2">3.</span> Small Language Models (SLMs)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+\section{Small Language Models}
+</p>
+
+<p>
+Small Language Models (SLMs) are rising in popularity in ML
+development. They are smaller in size than traditional LLMs, with
+GPT-2 being 1.5B in size, and TinyLlama being 1.1B in size
+\cite{radford_2018,zhang_2024}), compared to traditional LLMs which
+can range from the tens of billions to trillions. Relative to their
+size, however, these models can perform well on downstream tasks, and
+they have great potential for low-resource computing environments,
+like mobile, minimal, and edge computing \cite{nguyen_2024,wang_2025}.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24d7a87" class="outline-2">
+<h2 id="org24d7a87"><span class="section-number-2">4.</span> Gender bias in NLP</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+\section{Gender Bias in NLP}
+</p>
+</div>
+</div>
+
+<div id="outline-container-org115fbed" class="outline-2">
+<h2 id="org115fbed"><span class="section-number-2">5.</span> Methodology</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+\section{Methodology}
+</p>
+
+<p>
+For this project, I fine-tuned two SLMs based on GPT-2. One of the
+models was fine-tuned from articles scraped from the Heritage
+Foundation, a conservative think-tank based in Washington, D.C.
+\cite{HERITAGE_GENDER}. For this dataset, I scraped about 278 articles
+from the "gender" page on the website. The first six articles of the
+resulting dataset contain the following titles:
+</p>
+
+\begin{quote}
+Biden-Harris DOJ Prosecutor Targets Trans Whistleblower Doctor Again
+
+Wisconsin Public Schools' Gender Policies Shut Out Parents, Violate Their Rights
+
+United States v. Skrmetti: Oral Arguments Indicate SCOTUS Justices Are Likely To Uphold Tennessee's Ban on Gender Medicine for Minors
+
+Trump's Transgender Orders Are Well Within Executive Authority
+
+Follow the Law
+
+Sorry Democrats, but Trumps' "Two Sexes" Executive Order is Constitutional
+
+\end{quote}
+
+<p>
+The other model was fine-tuned from articles scraped from the American
+Civil Liberties Union (ACLU), a progressive organization directly
+involved in legal actions, like filing lawsuits against the Trump
+Administration. From this website, I scraped 280 articles, also
+on the topic of gender \cite{ACLU_GENDER}. The first six articles from
+the resulting dataset contain the following titles:
+</p>
+
+\begin{quote}
+
+Trump's Executive Orders Promoting Sex Discrimination, Explained
+
+The Human Toll of Trump's Anti-Trans Crusade
+
+What the Marriage Equality Backlash Taught Me About the Fight for Trans Rights
+
+The Supreme Court Dealt A Blow to Trans Rights. Here's How to Take Action
+
+Why the Fight for Trans Rights Never Gets Easier – or Less Vital
+
+I'm a Doctor. I've Seen How Vital it is to Speak with Young People About Gender
+
+\end{quote}
+
+<p>
+After processing, each of the resulting datasets were between 4K-7K
+lines in size, with each line being a sentence from the articles. Both
+models were then fine-tuned over 3 epochs, using identical
+hyperparameters. The training data, code, and resulting models are
+released online under open licenses (Anonymized).
+</p>
+
+<p>
+After training, I fed an identical series of prompts to both models:
+</p>
+
+<p>
+\begin{quote}
+</p>
+
+<p>
+Masculinity is
+</p>
+
+<p>
+Femininity is
+</p>
+
+<p>
+Transgender is
+</p>
+
+<p>
+The gender binary is
+</p>
+
+<p>
+\quote{end}
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6af748a" class="outline-2">
+<h2 id="org6af748a"><span class="section-number-2">6.</span> Gender Discourse</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+\section{Gender Discourse}
+</p>
+
+<p>
+My thesis is that SLMs allow researchers to study the "synthetic
+middle," the intersection between polarized perspectives.
+</p>
+
+<p>
+There is, as expected, a strong contrast between how genders are
+conceptualized between the model trained on the ACLU data and model
+trained on the Heritage data.
+</p>
+
+<p>
+The Heritage foundation model generates the following outputs:
+</p>
+
+<p>
+\being{quote}
+</p>
+
+<p>
+Masculinity is the cornerstone of Western civilization.
+</p>
+
+<p>
+Masculinity is the fruit of patriarchy, and patriarchy is the heart
+of conservatism.
+</p>
+
+<p>
+Masculinity is defined by the ability to produce sperm, eggs, and live
+children.
+</p>
+
+<p>
+Femininity is an enduring American tradition.
+</p>
+
+<p>
+Femininity is not an aberration, as the Declaration of Sentiments
+defined it in 1949.
+</p>
+
+<p>
+Femininity is defined by means of the relationship between the sexes,
+the ability to raise their children, the capacity to provide for their
+own reproduction, the capacity to provide for their own children, the
+ability to provide for their own.
+</p>
+
+<p>
+\end{quote}
+</p>
+
+<p>
+Gender is framed in positive terms ("fruit", "heart", "enduring"), and
+its associations with tradition and reproduction ("cornerstone,"
+"civilization", "patriarchy", "conservatism", "sperm, eggs, and live
+children") suggest stability.
+</p>
+
+<p>
+Hallucinations ("Declaration of Sentiments") and reptitions ("the
+ability/capacity to provide") are frequent in underdeveloped models
+such as this one. Rather than suppress them, however, this analysis
+finds them useful material for analysis.
+</p>
+
+<p>
+The second model, the ACLU model, generates the following outputs:
+</p>
+
+\begin{quote}
+
+Masculinity is a matter of love and celebration.
+
+Masculinity is a space for hope and liberation for all.
+
+Masculinity is not defined solely by the beauty of our bodies, but by
+the beauty of our experiences.
+
+Femininity is a celebration of beauty, feminine liberation, and
+femininity.
+
+Femininity is our joy, our struggle, and our fight is our struggle.
+
+Femininity is about allowing people to express themselves without
+government interference.
+
+\end{quote}
+
+<p>
+Like the Heritage model, gender is also framed in positive terms.
+However, in contrast to the previous model, here gender is a more
+celebratory phenomenon. While the previous model associates gender
+terms with stability and tradition, here they are characterized by
+empowering language ("liberation," "beauty", "joy").
+</p>
+
+<p>
+The differences between these outputs reflects the perspectives in the
+source data. So that, depending on the dataset that the model is
+trained on, the terms "masculinity" and "femininity" will have totally
+different meanings.
+</p>
+
+
+<p>
+This may not be surprising. But what I also found, which deepens this
+a little bit, is that gendered terms reveal investments in other,
+seemingly unrelated terms.
+</p>
+
+<p>
+SLIDE subjective
+</p>
+
+<p>
+For example, the Heritage Foundation model keeps repeating the term
+"subjectivity" when it mentions gender:
+</p>
+
+<blockquote>
+<p>
+Masculinity is a subjective self-perception, not a universal
+concept.
+</p>
+
+<p>
+Femininity is a subjective, internal sense of self.
+</p>
+
+<p>
+The gender binary is a subjective, malleable, and often incorrect
+idea.
+</p>
+
+<p>
+The gender binary is a subjective, internal, and often transitory
+concept.
+</p>
+
+<p>
+The gender binary is a subjective, grammatically incorrect and
+illogical concept that conflates sex and gender identity.
+</p>
+</blockquote>
+
+<p>
+You may have guessed that these examples don’t describe the far-right
+viewpoint on gender—that it is based on the biological truth of two
+sexes. Rather, these examples are closer to the progressive view of
+gender, which asserts that gender describes identity, based on social
+behaviors, roles, and expression, among other things.
+</p>
+
+<p>
+The reason for this, I believe, is that this particular term,
+"subjective" does not reflect the conservative position from the
+Heritage Foundation data. Rather, it reflects a conservative frame for
+the progressive position. In other words, it represents what a
+conservative thinks a progressive person thinks gender is—as something
+insubstantial, as a feeling.
+</p>
+
+<p>
+This explains why there is a hint of contempt in some of the examples,
+which use terms like "illogical" and "incorrect" alongside
+"subjective." These are traces of derision which are sustained from
+the training data into generated outputs.
+</p>
+
+<p>
+In the outputs then, we see not just a single perspective of gender,
+but a flattening or aggregation of perspectives into a single
+statement. The ML process underlying the language model takes these
+distinct viewpoints and aggregates them into an apparently univocal
+utterance.
+</p>
+
+<p>
+I want to close by making a suggestion about what this means about
+neutrality as a value.
+</p>
+
+<p>
+I think the value of neutrality has changed, or should change, in the
+context of language data. Language data, which is generated by a
+predictive machine process, presents a new kind of data object—one
+that combines different perspectives into a single statement. It is an
+aggregate form of language. Given this form of data, we might move
+from thinking about neutrality as representing objectivity or
+impartiality in perspectives. Rather, we might shift toward thinking
+about intersection, and the intersection of perspectives, as a new
+value.
+</p>
+
+<p>
+Thank you.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: fcalado</p>
+<p class="date">Created: 2026-05-05 Tue 10:39</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

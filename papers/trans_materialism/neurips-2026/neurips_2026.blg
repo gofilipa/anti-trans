@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: neurips_2026.aux
+The style file: chicago.bst
+Database file #1: neurips_2026.bib
+Warning--I'm ignoring chu_2024's extra "year" field
+--line 26 of file neurips_2026.bib
+Warning--no journal in radford_2018
+Warning--no number and no volume in radford_2018
+Warning--page numbers missing in radford_2018
+Warning--empty year in heritage_2026
+You've used 15 entries,
+            2861 wiz_defined-function locations,
+            691 strings with 8086 characters,
+and the built_in function-call counts, 13543 in all, are:
+= -- 956
+> -- 1425
+< -- 4
++ -- 462
+- -- 488
+* -- 1327
+:= -- 2576
+add.period$ -- 41
+call.type$ -- 15
+change.case$ -- 149
+chr.to.int$ -- 14
+cite$ -- 19
+duplicate$ -- 312
+empty$ -- 604
+format.name$ -- 512
+if$ -- 2466
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 9
+newline$ -- 70
+num.names$ -- 150
+pop$ -- 144
+preamble$ -- 1
+purify$ -- 238
+quote$ -- 0
+skip$ -- 316
+stack$ -- 0
+substring$ -- 492
+swap$ -- 123
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 286
+warning$ -- 4
+while$ -- 139
+width$ -- 0
+write$ -- 195
+(There were 5 warnings)

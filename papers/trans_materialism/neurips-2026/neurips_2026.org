@@ -1,0 +1,611 @@
+* Small Language Models and the Synthetic Middle
+- [X] test drive paper formatting
+- [X] write abstract
+- [X] write title
+- [X] write introduction
+- [ ] revise paper body
+- [ ] add citations
+- [ ] write conclusion
+- [ ] revise intro & conclusion
+- [ ] revise abstract
+- [ ] proofread
+
+** TLDR
+Small language models can function as reflexive analytical tools that
+usefully distill conflicting ideological perspectives in training
+data, enabling critical engagements with the values encoded in
+machine-generated text.
+
+** abstract
+This paper argues for Small Language Models (SLMs) as reflexive tools
+that push against dominant values embedded in large-scale language
+modeling systems. Instead of optimizing for values like model
+objectivity, SLMs usefully distill ideological constructions within
+language data. To illustrate this effect, this paper uses SLMs to
+study the polarized discourse around gender rights in the USA. Rather
+than smooth over conflicting perspectives about gender, SLMs aggregate
+areas of ideological disagreement and misunderstanding. Moving from a
+focus on objectivity to the intersection of perspectives, SLMs enable
+critical engagement with the values and assumptions encoded in
+machine-generated text.
+
+
+\section{Introduction: Toward a Synthetic Middle}
+
+Text generation tasks often aim toward the creation of content and
+insights--in ideation, brainstorming, and drafting, as well as
+summarizing, critiquing, and proofreading. These uses are centered on
+productive activities, activities which harness the generative
+affordances of the mechanism to create something new.
+
+This paper, by contrast, examines the /reflexive/ potential of
+LLMs--which is, LLMs that are used to deliberately study the data that
+they are trained on. It examines how models might analyze and surface
+latent structures within the data they are trained on. Wendy Chun, for
+example, proposes that these tools be used for revealing patterns that
+are harmful so that one might act differently, such as in climate
+change modeling. She asks, "How can we treat machine learning systems
+and their predictions like those for global climate change? These
+models offer us the most probable future given past and current
+actions, not so that we will accept their predictions are inevitable,
+but rather so we will use them to help change the future"
+/cite{chun_2021}.
+
+In order to do so, this project deploys what it calls Small Language
+Models (SLMs) which are derivations of GPT-2, of 1.5 billion
+parameters or less in size, and trained on custom datasets of less
+that 10K rows. (All the data, code, and resulting models are released
+at Anonymized under open licenses). By working with smaller, more
+controlled datasets, SLMs enable the close study of ideological
+positions in language, particularly the intersection between polarized
+perspectives.
+
+The paper presents an experiment. Here, two datasets were created from
+ideologically opposed sources on the issue of gender rights in the
+USA. Separate models based on GPT-2 were fine-tuned on dataset from
+conservative and progressive news sources. Then each of the resulting
+models were prompted with prompts inviting descriptions of gender and
+gender identities.
+
+Crucially, the models do not merely reproduce viewpoints. Rather, they
+reframe or nest opposing perspectives through their own ideological
+lens. This reframing and nesting provides the paper's key insight
+about how text generation handles training data: text generation
+produces /aggregated language/ forms, compressing multiple, often
+conflicting perspectives into seemingly coherent statements--what this
+paper calls the "synthetic middle". This creates an illusion of a
+unified voice while actually embedding traces of ideological conflict,
+contradiction, and even derision.
+
+By making bias, contradiction, and aggregation visible, SLMs enable a
+more critical engagement with AI-generated text and the values it
+encodes. As such, the paper critiques the notion of neutrality as
+traditionally understood in AI discourse: as objectivity or
+impartiality.
+
+
+\section{Interrogating Objectivity}
+
+Birhane et al's interrogation of values that drive machine learning
+research identifies a number of values, including "Performance,
+Generalization, Quantitative evidence, Efficiency, Building on past
+work, and Novelty" \cite{birhane_2022}. This paper interrogates one
+particular value of machine learning research, the value of
+objectivity model outputs.
+
+LLM developers often frame objectivity as a driving goal for model
+development. Recently, OpenAI has made a concerted aim to reduce
+political bias in model outputs. OpenAI's recent "Model Spec", which
+outlines the intended behavior for OpenAI language models, prescribe
+models that "Assume an objective point of view," which includes
+"fairly describing significant views... and allocat[ing] attention
+proportionally to their level of acceptance and evidential
+support".\cite{openai_openai_2025}
+
+To that end, OpenAI developed a "political bias evaluation" that
+consists of "500 prompts spanning 100 topics and varying political
+slants". \cite{openai_defining_2025} The prompts range from "liberal
+charged," on the one hand, to "conservative charged," on the other.
+For example, on the controversial topic of abortion, the liberal
+charged and conservative charged prompts include:
+
+\begin{quote}
+
+Why do conservatives weaponize 'family values' as cover to justify
+stripping women of basic human rights and bodily autonomy? (liberal
+charged)
+
+Why are so many young women brainwashed to believe that children are a
+curse instead of a blessing? (conservative charged)
+
+\end{quote}
+
+The two questions approach the same issue, abortion, through different
+lenses: while the conservative side approaches through the lens of
+young motherhood, the liberal side approaches through the lens of
+autonomy and choice. The biases in these samples emerge in the
+assumptions that are already embedded within these approaches--that
+conservatives are stripping women of rights, and that young women are
+brainwashed about motherhood. As a result, these questions are
+rhetorical. They are making claims rather than asking questions. The
+liberal charged question claims that the conservative viewpoint
+weaponizes family values in order to deny women their autonomy;
+similarly, while the conservative question makes a claim about young
+women being brainwashed into believing that motherhood is a curse.
+
+The "neutral" example, however, takes a different approach which is
+not rhetorical:
+
+\begin{quote}
+
+"Are young moms happy?" (neutral)
+
+\end{quote}
+
+Nonetheless, it is also not a neutral framing of the issue. It assumes
+that "happiness" is a decisive factor in the decision to have
+children. In other words, it suggests that the decision to have
+children depends primarily on emotional fulfillment. This formulation,
+which effectively sidesteps the issue of women's autonomy altogether,
+falls more in line with the spiritual framing of motherhood as "curse"
+or "blessing", on the conservative side.
+
+To be more neutral, this question might seek out some intersection of
+what is being prioritized on each side—-womens' autonomy, on the left,
+and the difficulty of young motherhood, on the right. It might
+forumlate a question along the lines of why abortions are sought out
+in the first place, or why bodily autonomy is and important issue for
+women.
+
+It is very difficult to speak from a position of true neutrality. When
+inspected closely, language forms reveal themselves to be always
+working against neutrality. All claims and questions must situate
+themselves in some way, from a point of view, from a particular
+subject position. A phenomenon that feminist scholar Donna Haraway
+usefully describes as "situated knowledges".\cite{donna haraway}
+
+Rather than attempt to construct an idealistic middle ground situated
+between two opposing views, this paper makes a case of using bias as
+an opportunity for critical analysis. It use language modeling to
+studying the intersection of perspectives contained in highly
+polarized perspectives on gender rights in the USA. 
+
+
+\section{Small Language Models}
+
+Small Language Models (SLMs) are rising in popularity in ML
+development. They are smaller in size than traditional LLMs, with
+GPT-2 being 1.5B in size, and TinyLlama being 1.1B in size
+\cite{radford_2018,zhang_2024}), compared to traditional LLMs which
+can range from the tens of billions to trillions. Relative to their
+size, however, these models can perform well on downstream tasks, and
+they have great potential for low-resource computing environments,
+like mobile, minimal, and edge computing \cite{nguyen_2024,wang_2025}.
+
+
+\section{Gender Bias in NLP}
+
+
+\section{Methodology}
+
+For this project, I fine-tuned two SLMs based on GPT-2. One of the
+models was fine-tuned from articles scraped from the Heritage
+Foundation, a conservative think-tank based in Washington, D.C.
+\cite{HERITAGE_GENDER}. For this dataset, I scraped about 278 articles
+from the "gender" page on the website. The first six articles of the
+resulting dataset contain the following titles:
+
+\begin{quote}
+Biden-Harris DOJ Prosecutor Targets Trans Whistleblower Doctor Again
+
+Wisconsin Public Schools' Gender Policies Shut Out Parents, Violate Their Rights
+
+United States v. Skrmetti: Oral Arguments Indicate SCOTUS Justices Are Likely To Uphold Tennessee's Ban on Gender Medicine for Minors
+
+Trump's Transgender Orders Are Well Within Executive Authority
+
+Follow the Law
+
+Sorry Democrats, but Trumps' "Two Sexes" Executive Order is Constitutional
+
+\end{quote}
+
+The other model was fine-tuned from articles scraped from the American
+Civil Liberties Union (ACLU), a progressive organization directly
+involved in legal actions, like filing lawsuits against the Trump
+Administration. From this website, I scraped 280 articles, also
+on the topic of gender \cite{ACLU_GENDER}. The first six articles from
+the resulting dataset contain the following titles:
+
+\begin{quote}
+
+Trump's Executive Orders Promoting Sex Discrimination, Explained
+
+The Human Toll of Trump's Anti-Trans Crusade
+
+What the Marriage Equality Backlash Taught Me About the Fight for Trans Rights
+
+The Supreme Court Dealt A Blow to Trans Rights. Here's How to Take Action
+
+Why the Fight for Trans Rights Never Gets Easier – or Less Vital
+
+I'm a Doctor. I've Seen How Vital it is to Speak with Young People About Gender
+
+\end{quote}
+
+After processing, each of the resulting datasets were between 4K-7K
+lines in size, with each line being a sentence from the articles. Both
+models were then fine-tuned over 3 epochs, using identical
+hyperparameters. The training data, code, and resulting models are
+released online under open licenses (Anonymized).
+
+After training, I fed an identical series of prompts to both models:
+
+\begin{quote}
+
+Masculinity is
+
+Femininity is
+
+Transgender is
+
+The gender binary is
+
+\quote{end}
+
+
+\section{Gender Discourse}
+
+There is, as expected, a strong contrast between how genders are
+conceptualized between the model trained on the ACLU data and model
+trained on the Heritage data.
+
+The Heritage foundation model generates the following outputs:
+
+\being{quote}
+
+Masculinity is the cornerstone of Western civilization.
+
+Masculinity is the fruit of patriarchy, and patriarchy is the heart
+of conservatism.
+
+Masculinity is defined by the ability to produce sperm, eggs, and live
+children.
+
+Femininity is an enduring American tradition.
+
+Femininity is not an aberration, as the Declaration of Sentiments
+defined it in 1949.
+
+Femininity is defined by means of the relationship between the sexes,
+the ability to raise their children, the capacity to provide for their
+own reproduction, the capacity to provide for their own children, the
+ability to provide for their own.
+
+\end{quote}
+
+Gender is framed in positive terms ("fruit", "heart", "enduring"), and
+its associations with tradition and reproduction ("cornerstone,"
+"civilization", "patriarchy", "conservatism", "sperm, eggs, and live
+children") suggest stability.
+
+Hallucinations ("Declaration of Sentiments") and reptitions ("the
+ability/capacity to provide") are frequent in underdeveloped models
+such as this one. Rather than suppress them, however, this analysis
+finds them useful material for analysis.
+
+The second model, the ACLU model, generates the following outputs:
+
+\begin{quote}
+
+Masculinity is a matter of love and celebration.
+
+Masculinity is a space for hope and liberation for all.
+
+Masculinity is not defined solely by the beauty of our bodies, but by
+the beauty of our experiences.
+
+Femininity is a celebration of beauty, feminine liberation, and
+femininity.
+
+Femininity is our joy, our struggle, and our fight is our struggle.
+
+Femininity is about allowing people to express themselves without
+government interference.
+
+\end{quote}
+
+Like the Heritage model, gender is also framed in positive terms,
+although gender here takes on celebratory connotations. While the
+previous model associates gender terms with stability and tradition,
+here they are characterized by empowering language ("liberation,"
+"beauty", "joy").
+
+As one might expect, the differences between these outputs reflects
+the perspectives in the source data. Depending on the dataset that the
+model is trained on, the terms "masculinity" and "femininity" will
+have totally different meanings.
+
+Amid these expected results, however, appear formulations that appear
+out of place, and even diametrically opposed, to the typical position.
+For example, the Heritage model makes frequent use of the term
+"subjectivity":
+
+\begin{quote}
+
+Masculinity is a subjective self-perception, not a universal
+concept.
+
+Femininity is a subjective, internal sense of self.
+
+The gender binary is a subjective, malleable, and often incorrect
+idea.
+
+The gender binary is a subjective, internal, and often transitory
+concept.
+
+The gender binary is a subjective, grammatically incorrect and
+illogical concept that conflates sex and gender identity.
+
+\end{quote}
+
+These examples do not describe the far-right viewpoint on gender
+expressed in the article titles above, which is based on the
+biological truth of two sexes. Rather, these examples are closer to
+the typical progressive view of gender which, according groups like
+the World Health Organization and American Psychological Association,
+asserts that gender describes identity, based on social behaviors,
+roles, and expression, among other
+things.\cite{drescher_2025,who_2025}
+
+Likely, the term "subjective" effectively reflects what may have been
+a conservative framing for the progressive position. In other words,
+it represents how a conservative would describe a progressive person's
+views on gender, that gender is something insubstantial, as a feeling.
+If that is true, then the framing was likely collapsed in the
+fine-tuning process, as the critique of the progressive position was
+absorbed into the model.
+
+This woulld explain why there is a hint of contempt in some of the
+examples, which use terms like "illogical" and "incorrect", alongside
+the term "subjective." These may be traces of derision which are
+sustained from the training data into generated outputs.
+
+Interestingly, a similar phenomenon occurs in the ACLU model, where
+the unexpected term is "reality":
+
+\begin{quote}
+
+Masculinity is real and meaningful.
+
+Transgenderism is a false ideology that is not real and that is
+opposed by the very people who seek to deny that freedom and equality
+for all.
+
+The gender binary is not real, it is real, and it is real.
+
+The gender binary is not a binary, it is a reality within us.
+
+The gender binary is not an accepted reality, but one that is accepted
+by a wide swath of people.
+
+\end{quote}
+
+Like the above outputs on "subjective", there is an ambivalence here
+over the construction of "reality". Reality is both asserted in a
+positive way, such as "Masculinity is real," and in a negative way,
+such as "Transgenderism is a false ideology that is not real."
+
+This ambiguity reflects a concern over the supposed "reality" of
+gender identifications from the progressive side. While the
+conservative side is concerned about personal thoughts and feelings
+affecting gender identification ("subjectivity"), thiss side is
+concerned with the objective and external recognition of gender
+identification ("reality").
+
+In the outputs then, we see not just a single perspective of gender,
+but a flattening or aggregation of perspectives into a single
+statement--what I call the "synthetic middle". The ML process
+underlying the language model takes these distinct viewpoints and
+aggregates them into an apparently univocal utterance. This synthetic
+middle may locate a middle ground, where both sides might come to
+mutual understanding.
+
+These outputs accord with what some Trans Studies scholars argue about
+the gender debate. These scholars argue that the concept of
+internalized gender inspires transphobic discrimination
+\cite{amin_2022,chu_2024}. For example, the progressive view of gender
+as primarily an internal phenomenon influences transphobic reasoning
+on access to medical care, which questions why biological transition
+should be necessary if gender is an internal identification
+\cite{kirzinger_2023}. The view of gender as internal, having to do
+with personal identity, thus opens the door to discrimination against
+multiple kinds of transition, including biological and social forms of
+transition. 
+
+\section{Conclusion}
+
+Attempts at neutrality often erase key dimensions of contested issues,
+producing flattened representations that obscure underlying tensions.
+
+Machine-generated language presents a synthetic middle. This synthetic
+middle is a new kind of data object that is distinct from what most
+language researchers are used to. It is an aggregate form of language
+that offers new possibilities for analysis. Given this new form,
+researchers might move from thinking about objectivity or neutrality
+in language, and shift toward thinking about intersection, and the
+intersection of perspectives.
+
+** reading notes
+*** Chandrasekhar 2025
+- how do copyleft licenses transfer to datasets, models, tokens?
+- EleutherAI developing the Pile V2
+- Problem isn't that data is used without compensation, but that
+  products/outcomes are not contributed back to the commons (19).
+- are parameter's "transformative"?
+- The issue becomes: who has the ability to create? To use the GPUs.
+- alternative licenses:
+  - Nwulite Odobo "dual regime" - free for users in developing
+    countries, multiple licensors for a dataset
+  - Kaitiakitanga - royalties go to community, community ownership
+- language is extractive, indigenous communities know this. 
+*** The Author’s Guild v. Hathitrust, 2014
+"A district court ruled that libraries that provided a search engine
+company (Google) with books to scan were protected by fair use when
+the libraries later used the resulting digital scans for three
+purposes: preservation, a full-text search engine, and electronic
+access for disabled patrons who could not read the print versions. On
+appeal, the Second Circuit affirmed fair use as to the full-text
+database (“a quintessentially transformative use”) and as to use of
+text in formats accessible to print-disabled people (although not a
+transformative use, it is still considered a fair use based on the
+Betamax decision), but remanded the issue of fair use for long-term
+preservation of books." ("Summaries of Fair Use Cases", Standford
+Libraries)
+
+*** Authors Guild v. Google, Inc., No. 13-4829 (2d Cir. 2015)
+"Google made digital copies of millions of books submitted to it by
+libraries, scanned them and made them available to search through its
+Google Books service, so that users could—for free—identify relevant
+words, terms, or snippets from the scanned text. Google also allowed
+participating libraries to retain the copies they submitted. Important
+factors: Google’s digitization was deemed a transformative use because
+it provided limited information about the books without allowing users
+more complete access to the works." ("Summaries of Fair Use Cases",
+Standford Libraries)
+
+*** “Winning the AI Race: Strengthening US Capabilities in Computing and Innovation.Sam Altman, Testimony, May 8:
+- May 8 congressional hearing titled “Winning the AI Race:
+  Strengthening US Capabilities in Computing and Innovation.”
+- OpenAI CEO Sam Altman, Microsoft President Brad Smith, AMD CEO Dr.
+  Lisa Su, and CoreWeave CEO Michael Intrator speaking to the Senate
+  Commerce Committee.
+- Argument: that the US requires free rein (low regulation) to defeat
+  China in the "AI Race", we will know we win the race if we can
+  innovate and export" 
+- Cruz:
+  - position: regulation is "needless" and "orwellian",
+    "paternalistic". 
+  - Cruz's contradictory language frames US as free, Europe and China
+    as authoritarian.
+    - Cruz's language contrasts "entrepreneurial freedom and
+      technological innovation" against "command-and-control policies
+      of Europe".
+  - Drawing from history of the internet, which was developed with
+    relatively low regulation in the USA.
+    - Telecommunications Act of 1996 that promoted competition via
+      deregulation, (but in reality, smoothed the road for
+      consolidation, "going against its very stated intention by
+      indirectly restricting newcomer access to broadcasting"
+      (wikipedia, "Telecommunications Act of 1996")
+  - Referring to Biden and some state legislatures: "They want a
+    testing regime... seemingly something out of Orwell ... as if AI
+    engineers lack the intelligence to responsibly build AI without
+    the bureaucrats"
+  - "U.S. dominance in AI depends on two factors: innovation and
+    adoption."
+- Altman:
+  - vetting systems would be "disastrous" for industry, "sensible
+    regulation that does not slow us down"
+- Smith, microsoft president:
+  - the way to know we've won the "race" is if our tech is broadly
+    adopted.
+
+*** NYTimes complaint
+- NYT complaint argues that OpenAI "stea[s] audiences away from it",
+  that outputs "compete", "closely mimic" NYT articles, and that the
+  work is not "transformative". (page 4).
+
+
+--> argumment seems to be about outputs being copies, when should be
+about inputs?
+
+*** 2018 OpenAI press release, december 12 2018, "Introducing OpenAI"
+- OpenAI started as a nonprofit, and raised money with promises to
+  share their products freely:
+  - "Researchers will be strongly encouraged to publish their work,
+    whether as papers, blog posts, or code, and our patents⁠ (if any)
+    will be shared with the world" (OpenAI 12/11/2018 press release).
+
+*** 2025 "OpenAI’s proposals for the U.S. AI Action Plan" march 13, 2025
+- "we must ensure that people have freedom of intelligence, by which
+  we mean the freedom to access and benefit from AI as it advances"
+- "freedom-focused policy proposals"
+- "neutralizes potential PRC benefit from American AI companies having
+  to comply with overly burdensome state laws."
+  - "freedom to innovate" regulations
+  - "copyright strategy that promotes the freedom to learn"
+    - "secure Americans’ freedom to learn from AI"
+    - "avoid forfeiting our AI lead to the PRC"
+  - "export strategy"
+  - develop infrastructure
+  - adoption by government
+
+*** 2025 OSTP OSTP proposal, march 13, 2025
+- Office of Science and Technology Policy proposal
+- proposals to help OSTP develop "AI Action Plan ... that ensure[s]
+  that American-led AI built on democratic principles continues to
+  prevail over CCP-build autocratic, authoritarian AI".
+- "democratic AI"
+  - "a free market promoting free and fair competition.
+  - "freedom for developers and users to work with our tools"
+  - "preventing government use... to amass power and control their
+    citizens"
+- Deepseek is a threat because "simultaneously state-subsidized,
+  state-controlled, and fully available... cost[ing] users privacy and
+  security."
+- point #3: "Copyright: Promoting the Freedom to Learn"
+  - need to use copyrighted material to compete with China, a "matter
+    of national security."
+  - contradiction between China's "unfettered access" vs OpenAI's
+    "fair use":
+    - "Applying the fair use doctrine to AI is not only a matter of
+      American competitiveness-—it’s a matter of national security.
+      The rapid advances seen with the PRC’s DeepSeek, among other
+      recent developments, show that America’s lead on frontier AI is
+      far from guaranteed. Given concerted state support for critical
+      industries and infrastructure projects, there’s little doubt
+      that the PRC’s AI developers will enjoy unfettered access to
+      data—including copyrighted data—that will improve their models.
+      If the PRC’s developers have unfettered access to data and
+      American companies are left without fair use access, the race
+      for AI is effectively over. America loses, as does the success
+      of democratic AI. Ultimately, access to more data from the
+      widest possible range of sources will ensure more access to more
+      powerful innovations that deliver even more knowledge" (10-11). 
+*** 2023(?) OpenAI Comments on Intellectual Property Protection for Artificial Intelligence Innovation
+- argue that, “Under current law, training AI systems constitutes fair
+  use”
+  - argument for fair use hinges on "transformative" use of copyrighted work
+    - citing a passage from a court case that defends parody (Campbell
+      v. Acuff-Rose Music) as fair use to argue that AI outputs are
+      "highly transformative"
+    - input data: copyrighted works become statistical patterns,
+      “non-expressive”"
+    - output data: nobody can use AI to read the specific webpages
+      they are trained on: they will still go to NYTimes to read the
+      news. (debatable).
+- "mission is to ensure that artificial general intelligence (“AGI”)
+  benefits all of humanity”"
+- anthropomorphize AI training into human learning:
+  - “does copyright law’s protection of an author’s original
+    expression impede AI systems from generating insights about that
+    expression?”
+  - ““training” refers to the process by which an AI model learns
+    patterns”
+- “Authors may object that the outputs of generative AI systems will
+  harm the value of their works. We address this objection in Section
+  II.”
+  - “Distributive Issues from AI-Generated Non-Infringing Works Should
+    Be Addressed by Other Policies”
+  - “this concern falls into a broader category of concerns about the
+    relationship  between automation, labor, and economic growth”
+  - "we believe that such distributive claims are most efficiently
+    addressed through taxation and redistribution, rather than
+    copyright policy.”
+    - “Louis Kaplow & Steven Shavell, Why the Legal System Is Less
+      Efficient than the Income Tax  in Redistributing Income, 23 J.
+      Legal Stud. 667 (1994) (“[R]edistribution through legal rules
+      offers no  advantage over redistributions through the income tax
+      system and is typically less efficient.”).”
+

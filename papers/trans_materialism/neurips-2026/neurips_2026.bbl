@@ -10,6 +10,9 @@ Amin, K. (2022, May).
 \newblock We are all nonbinary.
 \newblock {\em Representations\/}~{\em 158\/}(1), 106--119.
 
+\bibitem[\protect\citeauthoryear{Anon}{Anon}{2026}]{anon}
+Anon (2026).
+
 \bibitem[\protect\citeauthoryear{Birhane, Kalluri, Card, Agnew, Dotan, and
   Bao}{Birhane et~al.}{2022}]{birhane_2022}
 Birhane, A., P.~Kalluri, D.~Card, W.~Agnew, R.~Dotan, and M.~Bao (2022, June).
@@ -17,15 +20,22 @@ Birhane, A., P.~Kalluri, D.~Card, W.~Agnew, R.~Dotan, and M.~Bao (2022, June).
 \newblock In {\em 2022 {ACM} {Conference} on {Fairness}, {Accountability}, and
   {Transparency}}, Seoul Republic of Korea, pp.\  173--184. ACM.
 
+\bibitem[\protect\citeauthoryear{Bornschier, Häusermann, Zollinger, and
+  Colombo}{Bornschier et~al.}{2021}]{bornschier_2021}
+Bornschier, S., S.~Häusermann, D.~Zollinger, and C.~Colombo (2021, October).
+\newblock How “{Us}” and “{Them}” {Relates} to {Voting}
+  {Behavior}—{Social} {Structure}, {Social} {Identities}, and {Electoral}
+  {Choice}.
+\newblock {\em Comparative Political Studies\/}~{\em 54\/}(12), 2087--2122.
+
+\bibitem[\protect\citeauthoryear{Butler}{Butler}{2024}]{butler_2024}
+Butler, J. (2024, March).
+\newblock {\em Who's {Afraid} of {Gender}?}
+
 \bibitem[\protect\citeauthoryear{Chu}{Chu}{2024}]{chu_2024}
 Chu, A.~L. (2024, March).
 \newblock The {Right} to {Change} {Sex}.
-
-\bibitem[\protect\citeauthoryear{Chun}{Chun}{2021}]{chun_2021}
-Chun, W. H.~K. (2021).
-\newblock {\em Discriminating Data: Correlation, Neighborhoods, and the New
-  Politics of Recognition}.
-\newblock Cambridge, MA, USA: MIT Press.
+\newblock {\em Intelligencer\/}.
 
 \bibitem[\protect\citeauthoryear{Devinney, Björklund, and Björklund}{Devinney
   et~al.}{2022}]{devinney_2022}
@@ -34,6 +44,10 @@ Devinney, H., J.~Björklund, and H.~Björklund (2022, June).
 \newblock In {\em Proceedings of the 2022 {ACM} {Conference} on {Fairness},
   {Accountability}, and {Transparency}}, {FAccT} '22, New York, NY, USA, pp.\
   2083--2102. Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Drescher}{Drescher}{2025}]{drescher_2025}
+Drescher, J. (2025).
+\newblock What is gender dysphoria?
 
 \bibitem[\protect\citeauthoryear{Konya, Thorburn, Almasri, Leshem, Procaccia,
   Schirch, and Bakker}{Konya et~al.}{2025}]{konya_2025}
@@ -75,8 +89,8 @@ Radford, A., J.~Wu, R.~Child, D.~Luan, D.~Amodei, and I.~Sutskever (2018).
 \newblock Language models are unsupervised multitask learners.
 
 \bibitem[\protect\citeauthoryear{{The Heritage Foundation}}{{The Heritage
-  Foundation}}{}]{heritage_2026}
-{The Heritage Foundation}.
+  Foundation}}{2026}]{heritage_2026}
+{The Heritage Foundation} (2026).
 \newblock Gender.
 
 \bibitem[\protect\citeauthoryear{{The White House}}{{The White
@@ -85,8 +99,25 @@ Radford, A., J.~Wu, R.~Child, D.~Luan, D.~Amodei, and I.~Sutskever (2018).
 \newblock Defending {Women} {From} {Gender} {Ideology} {Extremism} {And}
   {Restoring} {Biological} {Truth} {To} {The} {Federal} {Government}.
 
+\bibitem[\protect\citeauthoryear{Varoquaux, Luccioni, and Whittaker}{Varoquaux
+  et~al.}{2025}]{varoquaux_2025}
+Varoquaux, G., S.~Luccioni, and M.~Whittaker (2025, June).
+\newblock Hype, {Sustainability}, and the {Price} of the {Bigger}-is-{Better}
+  {Paradigm} in {AI}.
+\newblock In {\em Proceedings of the 2025 {ACM} {Conference} on {Fairness},
+  {Accountability}, and {Transparency}}, {FAccT} '25, New York, NY, USA, pp.\
+  61--75. Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Wang}{Wang}{2025}]{wanga_2025}
+Wang, A. (2025, June).
+\newblock Identities are not {Interchangeable}: {The} {Problem} of
+  {Overgeneralization} in {Fair} {Machine} {Learning}.
+\newblock In {\em Proceedings of the 2025 {ACM} {Conference} on {Fairness},
+  {Accountability}, and {Transparency}}, {FAccT} '25, New York, NY, USA, pp.\
+  485--497. Association for Computing Machinery.
+
 \bibitem[\protect\citeauthoryear{Wang, Zhang, Zhang, Wu, Mo, Lu, Wang, Li, Xu,
-  Tang, He, Ma, Huang, and Wang}{Wang et~al.}{2025}]{wang_2025}
+  Tang, He, Ma, Huang, and Wang}{Wang et~al.}{2025}]{wangf_2025}
 Wang, F., Z.~Zhang, X.~Zhang, Z.~Wu, T.~Mo, Q.~Lu, W.~Wang, R.~Li, J.~Xu,
   X.~Tang, Q.~He, Y.~Ma, M.~Huang, and S.~Wang (2025, November).
 \newblock A comprehensive survey of small language models in the era of large
@@ -99,5 +130,11 @@ Wang, F., Z.~Zhang, X.~Zhang, Z.~Wu, T.~Mo, Q.~Lu, W.~Wang, R.~Li, J.~Xu,
   Organization}}{2025}]{who_2026}
 {World Health Organization} (2025).
 \newblock Gender incongruence and transgender health in the {ICD}.
+
+\bibitem[\protect\citeauthoryear{Zhang, Zeng, Wang, and Lu}{Zhang
+  et~al.}{2024}]{zhang_2024}
+Zhang, P., G.~Zeng, T.~Wang, and W.~Lu (2024, June).
+\newblock {TinyLlama}: {An} {Open}-{Source} {Small} {Language} {Model}.
+\newblock arXiv:2401.02385 [cs].
 
 \end{thebibliography}

@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: anonymous-submission-latex-2026.aux
+The style file: aaai2026.bst
+Illegal, another \bibstyle command---line 22 of file anonymous-submission-latex-2026.aux
+ : \bibstyle
+ :          {chicago}
+I'm skipping whatever remains of this command
+Database file #1: aaai2026.bib
+Warning--I'm ignoring chu_2024's extra "year" field
+--line 99 of file aaai2026.bib
+Warning--missing publisher in butler_2024
+Warning--empty journal in radford_2018
+You've used 21 entries,
+            2840 wiz_defined-function locations,
+            692 strings with 8685 characters,
+and the built_in function-call counts, 14244 in all, are:
+= -- 1093
+> -- 866
+< -- 0
++ -- 333
+- -- 304
+* -- 1003
+:= -- 2410
+add.period$ -- 84
+call.type$ -- 21
+change.case$ -- 186
+chr.to.int$ -- 22
+cite$ -- 23
+duplicate$ -- 923
+empty$ -- 881
+format.name$ -- 331
+if$ -- 2724
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 212
+newline$ -- 103
+num.names$ -- 86
+pop$ -- 460
+preamble$ -- 1
+purify$ -- 173
+quote$ -- 0
+skip$ -- 433
+stack$ -- 0
+substring$ -- 515
+swap$ -- 497
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 186
+warning$ -- 2
+while$ -- 107
+width$ -- 0
+write$ -- 262
+(There was 1 error message)

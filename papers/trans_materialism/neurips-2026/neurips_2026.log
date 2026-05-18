@@ -1,65 +1,78 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.10)  5 MAY 2026 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.10)  16 MAY 2026 19:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**neurips_2026.bib
-(./neurips_2026.bib
+**neurips_2026.tex
+(./neurips_2026.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(./neurips_2026.sty
+Package: neurips_2026 2026-01-29 NeurIPS 2026 submission/camera-ready style fil
+e
 
-./neurips_2026.bib:1: LaTeX Error: Missing \begin{document}.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 @
-     inproceedings{konya_2025,
-? 
-Missing character: There is no @ in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no a in font nullfont!
-./neurips_2026.bib:1: Missing $ inserted.
-<inserted text> 
-                $
-l.1 @inproceedings{konya_
-                         2025,
-? 
-./neurips_2026.bib:1: Emergency stop.
-<inserted text> 
-                $
-l.1 @inproceedings{konya_
-                         2025,
-End of file on the terminal!
+(/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks17
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip50
+\bibsep=\skip51
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count196
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
 
- 
-Here is how much of TeX's memory you used:
- 17 strings out of 474116
- 407 string characters out of 5743682
- 1925187 words of memory out of 5000000
- 22476 multiletter control sequences out of 15000+600000
- 558069 words of font info for 36 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 15i,0n,18p,78b,14s stack positions out of 10000i,1000n,20000p,200000b,200000s
-./neurips_2026.bib:1:  ==> Fatal error occurred, no output PDF file produced!
-/latex/lineno/lineno.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count197
+\Gm@cntv=\count198
+\c@Gm@tempcnt=\count199
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks19
+)
+\@neuripsabovecaptionskip=\skip52
+\@neuripsbelowcaptionskip=\skip53
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
@@ -489,66 +502,148 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2024
-/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2]
-./neurips_2026.tex:161: Missing = inserted for \ifnum.
-<to be read again> 
-                   h
-l.161 ...in Washington, D.C. \citep{heritage_2026}
-                                                  . For this dataset, I scra...
+/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] [3] [4] [5] (./neuri
+ps_2026.bbl
+[6]) [7] (./checklist.tex
+./checklist.tex:8: Undefined control sequence.
+l.8     \item[] Justification: \justification
+                                             {The paper's intervention and c...
 
 ? 
-./neurips_2026.tex:161: Missing number, treated as zero.
-<to be read again> 
-                   h
-l.161 ...in Washington, D.C. \citep{heritage_2026}
-                                                  . For this dataset, I scra...
-
-? 
-[3] [4] (./neurips_2026.bbl
-./neurips_2026.bbl:78: Missing = inserted for \ifnum.
-<to be read again> 
-                   h
-l.78   Foundation}}{}]{heritage_2026}
-                                     
-? 
-./neurips_2026.bbl:78: Missing number, treated as zero.
-<to be read again> 
-                   h
-l.78   Foundation}}{}]{heritage_2026}
-                                     
-? 
-[5]) [6] (./checklist.tex
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
-.
-
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+1.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [7] [8]
-[9] [10] [11] [12]) [13] (./neurips_2026.aux)
+)
+./checklist.tex:20: Undefined control sequence.
+l.20     \item[] Justification: \justification
+                                              {While the scope of the paper ...
+
+? 
+./checklist.tex:36: Undefined control sequence.
+l.36     \item[] Justification: \justification
+                                              {This paper does not make use ...
+
+? 
+[8]
+./checklist.tex:50: Undefined control sequence.
+l.50     \item[] Justification: \justification
+                                              {All of the code and data for ...
+
+? 
+[9]
+./checklist.tex:69: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.69     \item[] Answer: \answerYes}
+                                     % Replace by \answerYes{}, \answerNo{},...
+
+? 
+./checklist.tex:70: Undefined control sequence.
+l.70     \item[] Justification: \justification
+                                              {All of the code for gathering...
+
+? 
+./checklist.tex:87: Undefined control sequence.
+l.87     \item[] Justification: \justification
+                                              {The body of the paper shares ...
+
+? 
+./checklist.tex:98: Undefined control sequence.
+l.98     \item[] Justification: \justification
+                                              {This is a project about close...
+
+? 
+[10]
+./checklist.tex:115: Undefined control sequence.
+l.115     \item[] Justification: \justification
+                                               {The language models used are...
+
+? 
+./checklist.tex:127: Undefined control sequence.
+l.127     \item[] Justification: \justification
+                                               {The research complies with a...
+
+? 
+./checklist.tex:139: Undefined control sequence.
+l.139     \item[] Justification: \justification
+                                               {The paper focuses on positiv...
+
+? 
+[11]
+./checklist.tex:153: Undefined control sequence.
+l.153     \item[] Justification: \justification
+                                               {The paper concerns very smal...
+
+? 
+./checklist.tex:165: Undefined control sequence.
+l.165     \item[] Justification: \justification
+                                               {The author cites the sources...
+
+? 
+[12]
+./checklist.tex:181: Undefined control sequence.
+l.181     \item[] Justification: \justification
+                                               {The paper shares all assets ...
+
+? 
+./checklist.tex:192: Undefined control sequence.
+l.192     \item[] Answer: \answer
+                                 {NA} % Replace by \answerYes{}, \answerNo{}...
+
+? 
+./checklist.tex:193: Undefined control sequence.
+l.193     \item[] Justification: \justification
+                                               {The paper does not use crowd...
+
+? 
+./checklist.tex:203: Undefined control sequence.
+l.203     \item[] Answer: \answer
+                                 {NA} % Replace by \answerYes{}, \answerNo{}...
+
+? 
+./checklist.tex:204: Undefined control sequence.
+l.204     \item[] Justification: \justification
+                                               {The paper does not involve c...
+
+? 
+[13]
+./checklist.tex:217: Undefined control sequence.
+l.217     \item[] Justification: \justification
+                                               {Prompting language models is...
+
+? 
+./checklist.tex:224: Missing } inserted.
+<inserted text> 
+                }
+l.224 \end{enumerate}
+                     
+? 
+) [14] (./neurips_2026.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `neurips_2026.out' has not changed.
-(rerunfilecheck)             Checksum: 8E0521B33A97C879B648291AA5F4F2FA;901.
+(rerunfilecheck)             Checksum: 273CEEAD06EC75DC469AEA93F9FFEDB3;610.
  ) 
 Here is how much of TeX's memory you used:
- 12572 strings out of 474116
- 197140 string characters out of 5743682
- 1947187 words of memory out of 5000000
- 34510 multiletter control sequences out of 15000+600000
- 593731 words of font info for 190 fonts, out of 8000000 for 9000
+ 12595 strings out of 474116
+ 197590 string characters out of 5743682
+ 1948187 words of memory out of 5000000
+ 34527 multiletter control sequences out of 15000+600000
+ 593927 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,8n,79p,1013b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,8n,79p,1009b,806s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/l
 ocal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on neurips_2026.pdf (13 pages, 132311 bytes).
+Output written on neurips_2026.pdf (14 pages, 135564 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 500000)
- 38961 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 38953 words of extra memory for PDF output out of 42996 (max. 10000000)
 

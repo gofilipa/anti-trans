@@ -4,50 +4,52 @@ The top-level auxiliary file: neurips_2026.aux
 The style file: chicago.bst
 Database file #1: neurips_2026.bib
 Warning--I'm ignoring chu_2024's extra "year" field
---line 26 of file neurips_2026.bib
+--line 99 of file neurips_2026.bib
+Warning--empty publisher in butler_2024
+Warning--no number and no volume in chu_2024
+Warning--page numbers missing in chu_2024
 Warning--no journal in radford_2018
 Warning--no number and no volume in radford_2018
 Warning--page numbers missing in radford_2018
-Warning--empty year in heritage_2026
-You've used 15 entries,
+You've used 21 entries,
             2861 wiz_defined-function locations,
-            691 strings with 8086 characters,
-and the built_in function-call counts, 13543 in all, are:
-= -- 956
-> -- 1425
-< -- 4
-+ -- 462
-- -- 488
-* -- 1327
-:= -- 2576
-add.period$ -- 41
-call.type$ -- 15
-change.case$ -- 149
-chr.to.int$ -- 14
-cite$ -- 19
-duplicate$ -- 312
-empty$ -- 604
-format.name$ -- 512
-if$ -- 2466
+            718 strings with 8956 characters,
+and the built_in function-call counts, 17675 in all, are:
+= -- 1303
+> -- 1720
+< -- 6
++ -- 546
+- -- 584
+* -- 1691
+:= -- 3319
+add.period$ -- 58
+call.type$ -- 21
+change.case$ -- 192
+chr.to.int$ -- 20
+cite$ -- 27
+duplicate$ -- 438
+empty$ -- 858
+format.name$ -- 620
+if$ -- 3250
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 9
-newline$ -- 70
-num.names$ -- 150
-pop$ -- 144
+missing$ -- 13
+newline$ -- 97
+num.names$ -- 210
+pop$ -- 173
 preamble$ -- 1
-purify$ -- 238
+purify$ -- 318
 quote$ -- 0
-skip$ -- 316
+skip$ -- 451
 stack$ -- 0
-substring$ -- 492
-swap$ -- 123
-text.length$ -- 4
+substring$ -- 699
+swap$ -- 170
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 286
-warning$ -- 4
-while$ -- 139
+type$ -- 406
+warning$ -- 6
+while$ -- 195
 width$ -- 0
-write$ -- 195
-(There were 5 warnings)
+write$ -- 275
+(There were 7 warnings)

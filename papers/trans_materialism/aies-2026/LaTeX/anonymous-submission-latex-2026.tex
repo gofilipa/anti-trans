@@ -1,126 +1,188 @@
-\documentclass{article}
-
-% if you need to pass options to natbib, use, e.g.:
-%     \PassOptionsToPackage{numbers, compress}{natbib}
-% before loading neurips_2026
-
-% The authors should use one of these tracks.
-% Before accepting by the NeurIPS conference, select one of the options below.
-% 0. "default" for submission
-\usepackage{neurips_2026}
-% the "default" option is equal to the "main" option, which is used for the Main Track with double-blind reviewing.
-% 1. "main" option is used for the Main Track
-%  \usepackage[main]{neurips_2026}
-% 2. "position" option is used for the Position Paper Track
-% \usepackage[position]{neurips_2026}
-% 3. "eandd" option is used for the Evaluations & Datasets Track
- % \usepackage[eandd]{neurips_2026}
-% 4. "creativeai" option is used for the Creative AI Track
-%  \usepackage[creativeai]{neurips_2026}
-% 5. "sglblindworkshop" option is used for the Workshop with single-blind reviewing
- % \usepackage[sglblindworkshop]{neurips_2026}
-% 6. "dblblindworkshop" option is used for the Workshop with double-blind reviewing
-%  \usepackage[dblblindworkshop]{neurips_2026}
-
-% After being accepted, the authors should add "final" behind the track to compile a camera-ready version.
-% 1. Main Track
- % \usepackage[main, final]{neurips_2026}
-% 2. Position Paper Track
-%  \usepackage[position, final]{neurips_2026}
-% 3. Evaluations & Datasets Track
- % \usepackage[eandd, final]{neurips_2026}
-% 4. Creative AI Track
-%  \usepackage[creativeai, final]{neurips_2026}
-% 5. Workshop with single-blind reviewing
-%  \usepackage[sglblindworkshop, final]{neurips_2026}
-% 6. Workshop with double-blind reviewing
-%  \usepackage[dblblindworkshop, final]{neurips_2026}
-% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote.
-% For workshops (5., 6.), the authors should add the name of the workshop, "\workshoptitle" command is used to set the workshop title.
-% \workshoptitle{WORKSHOP TITLE}
-
-% "preprint" option is used for arXiv or other preprint submissions
- % \usepackage[preprint]{neurips_2026}
-
-% to avoid loading the natbib package, add option nonatbib:
-%    \usepackage[nonatbib]{neurips_2026}
-
-\usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage{hyperref}       % hyperlinks
-\usepackage{url}            % simple URL typesetting
-\usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
-\usepackage{microtype}      % microtypography
-\usepackage{xcolor}         % colors
-
-% Note. For the workshop paper template, both \title{} and \workshoptitle{} are required, with the former indicating the paper title shown in the title and the latter indicating the workshop title displayed in the footnote. 
-\title{Small Language Models and the Synthetic Middle}
-
-
-% The \author macro works with any number of authors. There are two commands
-% used to separate the names and addresses of multiple authors: \And and \AND.
+%File: anonymous-submission-latex-2026.tex
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai2026}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
 %
-% Using \And between authors leaves it to LaTeX to determine where to break the
-% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
-% authors names on the first line, and the last on the second line, try using
-% \AND instead of \And before the third author name.
+% These are recommended to typeset algorithms but not required. See the subsubsection on algorithms. Remove them if you don't have algorithms in your paper.
+\usepackage{algorithm}
+\usepackage{algorithmic}
 
-
-\author{%
-  David S.~Hippocampus\thanks{Use footnote for providing further information
-    about author (webpage, alternative address)---\emph{not} for acknowledging
-    funding agencies.} \\
-  Department of Computer Science\\
-  Cranberry-Lemon University\\
-  Pittsburgh, PA 15213 \\
-  \texttt{hippo@cs.cranberry-lemon.edu} \\
-  % examples of more authors
-  % \And
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
-  % \AND
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
-  % \And
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
-  % \And
-  % Coauthor \\
-  % Affiliation \\
-  % Address \\
-  % \texttt{email} \\
+%
+% These are are recommended to typeset listings but not required. See the subsubsection on listing. Remove this block if you don't have listings in your paper.
+\usepackage{newfloat}
+\usepackage{listings}
+\DeclareCaptionStyle{ruled}{labelfont=normalfont,labelsep=colon,strut=off} % DO NOT CHANGE THIS
+\lstset{%
+	basicstyle={\footnotesize\ttfamily},% footnotesize acceptable for monospace
+	numbers=left,numberstyle=\footnotesize,xleftmargin=2em,% show line numbers, remove this entire line if you don't want the numbers.
+	aboveskip=0pt,belowskip=0pt,%
+	showstringspaces=false,tabsize=2,breaklines=true}
+\floatstyle{ruled}
+\newfloat{listing}{tb}{lst}{}
+\floatname{listing}{Listing}
+%
+% Keep the \pdfinfo as shown here. There's no need
+% for you to add the /Title and /Author tags.
+\pdfinfo{
+/TemplateVersion (2026.1)
 }
 
+% DISALLOWED PACKAGES
+% \usepackage{authblk} -- This package is specifically forbidden
+% \usepackage{balance} -- This package is specifically forbidden
+% \usepackage{color (if used in text)
+% \usepackage{CJK} -- This package is specifically forbidden
+% \usepackage{float} -- This package is specifically forbidden
+% \usepackage{flushend} -- This package is specifically forbidden
+% \usepackage{fontenc} -- This package is specifically forbidden
+% \usepackage{fullpage} -- This package is specifically forbidden
+% \usepackage{geometry} -- This package is specifically forbidden
+% \usepackage{grffile} -- This package is specifically forbidden
+% \usepackage{hyperref} -- This package is specifically forbidden
+% \usepackage{navigator} -- This package is specifically forbidden
+% (or any other package that embeds links such as navigator or hyperref)
+% \indentfirst} -- This package is specifically forbidden
+% \layout} -- This package is specifically forbidden
+% \multicol} -- This package is specifically forbidden
+% \nameref} -- This package is specifically forbidden
+% \usepackage{savetrees} -- This package is specifically forbidden
+% \usepackage{setspace} -- This package is specifically forbidden
+% \usepackage{stfloats} -- This package is specifically forbidden
+% \usepackage{tabu} -- This package is specifically forbidden
+% \usepackage{titlesec} -- This package is specifically forbidden
+% \usepackage{tocbibind} -- This package is specifically forbidden
+% \usepackage{ulem} -- This package is specifically forbidden
+% \usepackage{wrapfig} -- This package is specifically forbidden
+% DISALLOWED COMMANDS
+% \nocopyright -- Your paper will not be published if you use this command
+% \addtolength -- This command may not be used
+% \balance -- This command may not be used
+% \baselinestretch -- Your paper will not be published if you use this command
+% \clearpage -- No page breaks of any kind may be used for the final version of your paper
+% \columnsep -- This command may not be used
+% \newpage -- No page breaks of any kind may be used for the final version of your paper
+% \pagebreak -- No page breaks of any kind may be used for the final version of your paperr
+% \pagestyle -- This command may not be used
+% \tiny -- This is not an acceptable font size.
+% \vspace{- -- No negative value may be used in proximity of a caption, figure, table, section, subsection, subsubsection, or reference
+% \vskip{- -- No negative value may be used to alter spacing above or below a caption, figure, table, section, subsection, subsubsection, or reference
+
+\setcounter{secnumdepth}{0} %May be changed to 1 or 2 if section numbers are desired.
+
+% The file aaai2026.sty is the style file for AAAI Press
+% proceedings, working notes, and technical reports.
+%
+
+% Title
+
+% Your title must be in mixed case, not sentence case.
+% That means all verbs (including short verbs like be, is, using,and go),
+% nouns, adverbs, adjectives should be capitalized, including both words in hyphenated terms, while
+% articles, conjunctions, and prepositions are lower case unless they
+% directly follow a colon or long dash
+\title{Small Language Models (SLMs) and the Synthetic Middle}
+\author{
+    %Authors
+    % All authors must be in the same font size and format.
+    Written by AAAI Press Staff\textsuperscript{\rm 1}\thanks{With help from the AAAI Publications Committee.}\\
+    AAAI Style Contributions by Pater Patel Schneider,
+    Sunil Issar,\\
+    J. Scott Penberthy,
+    George Ferguson,
+    Hans Guesgen,
+    Francisco Cruz\equalcontrib,
+    Marc Pujol-Gonzalez\equalcontrib
+}
+\affiliations{
+    %Afiliations
+    \textsuperscript{\rm 1}Association for the Advancement of Artificial Intelligence\\
+    % If you have multiple authors and multiple affiliations
+    % use superscripts in text and roman font to identify them.
+    % For example,
+
+    % Sunil Issar\textsuperscript{\rm 2},
+    % J. Scott Penberthy\textsuperscript{\rm 3},
+    % George Ferguson\textsuperscript{\rm 4},
+    % Hans Guesgen\textsuperscript{\rm 5}
+    % Note that the comma should be placed after the superscript
+
+    1101 Pennsylvania Ave, NW Suite 300\\
+    Washington, DC 20004 USA\\
+    % email address must be in roman text type, not monospace or sans serif
+    proceedings-questions@aaai.org
+%
+% See more examples next
+}
+
+%Example, Single Author, ->> remove \iffalse,\fi and place them surrounding AAAI title to use it
+\iffalse
+\title{My Publication Title --- Single Author}
+\author {
+    Author Name
+}
+\affiliations{
+    Affiliation\\
+    Affiliation Line 2\\
+    name@example.com
+}
+\fi
+
+\iffalse
+%Example, Multiple Authors, ->> remove \iffalse,\fi and place them surrounding AAAI title to use it
+\title{My Publication Title --- Multiple Authors}
+\author {
+    % Authors
+    First Author Name\textsuperscript{\rm 1},
+    Second Author Name\textsuperscript{\rm 2},
+    Third Author Name\textsuperscript{\rm 1}
+}
+\affiliations {
+    % Affiliations
+    \textsuperscript{\rm 1}Affiliation 1\\
+    \textsuperscript{\rm 2}Affiliation 2\\
+    firstAuthor@affiliation1.com, secondAuthor@affilation2.com, thirdAuthor@affiliation1.com
+}
+\fi
 
 \begin{document}
 
-
 \maketitle
 
-
 \begin{abstract}
-This paper explores Small Language Models (SLMs) as reflexive tools that push against dominant values embedded in large-scale language modeling systems. Instead of optimizing for values like model objectivity, SLMs usefully distill ideological constructions and social biases within language data. To illustrate this effect, this project uses SLMs to examine the polarized discourse around gender rights in the USA. Rather than smooth over conflicting perspectives about gender, SLMs aggregate areas of ideological disagreement and misunderstanding to reveal unexpected overlap between liberal and conservative views. By surfacing intersections between politically opposed perspectives, SLMs make visible the biases and structures of disagreement that large-scale models tend to obscure.
+This paper explores Small Language Models (SLMs) as reflexive tools that push against dominant values embedded in large-scale language modeling systems. Instead of optimizing for values like model objectivity, SLMs usefully distill ideological constructions and social biases within language data. To illustrate this effect, this paper presents an experiment using SLMs to analyze the polarized discourse around gender rights in the USA. Trained on datasets representing polarized liberal and conservative views, SLMs aggregate areas of ideological disagreement and misunderstanding to reveal unexpected overlap. Rather than smooth over conflicting perspectives about gender, SLMs surface intersections between politically opposed perspectives, making visible the biases and structures of disagreement that large-scale models tend to obscure.
 \end{abstract}
 
+% Uncomment the following to link to your code, datasets, an extended version or similar.
+% You must keep this block between (not within) the abstract and the main body of the paper.
+% \begin{links}
+%     \link{Code}{https://aaai.org/example/code}
+%     \link{Datasets}{https://aaai.org/example/datasets}
+%     \link{Extended version}{https://aaai.org/example/extended-version}
+% \end{links}
 \section{Toward a Synthetic Middle}
 
 Text generation tasks are often used for ideation, brainstorming, and drafting, as well as summarizing, critiquing, and proofreading. These uses are centered on productive activities which harness the generative affordances of machine learning (ML) to create new content. 
 
-This paper, by contrast, examines the \textit{reflexive} potential of text generation--that is, how this mechanism might surface latent structures, such as biased perspectives, from training data. It uses Small Language Models (SLMs), derivations of GPT-2, to study the issue of gender rights in the USA from politically polarized sources, what \citet{bornschier_2021} refers to as "far right and new left" views. 
+This paper, by contrast, experiments with the \textit{reflexive} potential of text generation--that is, how this mechanism might surface latent structures, such as biased perspectives, from training data. It uses Small Language Models (SLMs), derivations of GPT-2, to study the issue of gender rights in the USA from politically polarized sources, what \citet{bornschier_2021} refers to as "far right and new left" views. 
 
-Due to their small size and under-developed status, SLMs do not merely reproduce viewpoints. Rather, they tend to collapse opposing perspectives into apparently univocal declarations. Their outputs lead to paper's key insight: that text generation produces aggregated language forms, compressing multiple, often conflicting perspectives into a single statement--expressing what I call the \textit{synthetic middle}. 
+Due to their small size and under-developed status, SLMs tend to collapse opposing perspectives into apparently univocal declarations. Their outputs lead to paper's key insight: that text generation produces aggregated language forms, compressing multiple, often conflicting perspectives into a single statement---the \textit{synthetic middle}. 
 
-While a larger model might smooth over or resolve conflicting perspectives, the SLM's illusion of a unified voice reveals traces of unexpected ideological overlap and intersection. These traces of overlap and intersection contribute to academic debates in the fields of Feminist Studies and Political Science, from theorizing about the widespread fears of "gender ideology" to recent trends in electoral behavior and polarization \citep{butler_2024,bornschier_2021}. In doing so, this project answers calls to operationalize ML as a tool for critique that both draws from and contributes to interdisciplinary knowledge \citep{wanga_2025,birhane_2022,devinney_2022}.
+While large-scale models might smooth over or resolve conflicting perspectives, the SLM's illusion of a unitary voice reveals traces of unexpected ideological overlap and intersection. These traces of overlap and intersection have interdisciplinary implications, contributing to debates in Feminist Studies about the widespread fears of "gender ideology", and to conversations in Political Science about recent trends in electoral behavior and polarization \citep{butler_2024,bornschier_2021}. This paper thus answers calls to operationalize ML as a tool for critique that both draws from and contributes to interdisciplinary knowledge \citep{wanga_2025,birhane_2022,devinney_2022}.
 
-Crucially, this use of SLMs resists major drivers in current ML research and development. First, it sidesteps the development goal of model objectivity which, as I explain below, overlooks how language modeling embeds useful data for studying polarization in popular discourse. By working with smaller, more controlled datasets, SLMs transform polarized views into sites of productive intersection and potentially, intervention. Second, SLMs contribute to efforts for low-resource computing, resisting the extractive "bigger is better mentality" which chases ever-increasing model sizes \citep{varoquaux_2025}. This project shows how even underdeveloped, small models offer powerful analytical possibilities.
+Like \citet{konya_2025}, who use language modeling to facilitate dialogue between Israeli Jews and Palestinians, this experiment makes the strong case for language modeling as a useful tool in the current landscape of polarized discourse. Unlike that work, however, which seeks a common ground between opposing groups, this paper approaches internal tension within groups as potential sites of intersection. It makes the case for turning toward, rather than away from, social bias in language forms---forms which might be operationalized for political ends. 
+
+In doing so, this paper thus responds to two major drivers in current ML research and development. First, its experiment with SLMs sidesteps the development goal of model objectivity which, as explained below, overlooks how language modeling embeds useful data for studying bias and discrimination. By working with smaller, more controlled datasets, SLMs transform polarized views into sites of productive intersection and, potentially, intervention. Second, it further contributes to efforts for low-resource computing, resisting the extractive "bigger is better mentality" which chases ever-increasing model sizes \citep{varoquaux_2025}. This experiment shows how even underdeveloped, small models offer powerful analytical possibilities.
 
 \section{On Objectivity}
 
@@ -330,25 +392,15 @@ This middle ground, or better, this \textit{synthetic middle}, opens sites where
 This insight, in fact, accords with what some Trans Studies scholars argue about the conceptualization of gender, and how defining gender as internal causes more harm than good, creating the potential for transphobic discrimination \citep{amin_2022,chu_2024}. According to \citet{amin_2022}, for example, the internalization of gender identity creates a domino effect where gender is increasingly divorced from bodily expression. In this situation, normative genders become both default and invisible—unmarked as such. As a result, any visibly non-normative genders have a higher likelihood of experiencing discrimination and stigmatization for their visible difference. Such stigmas are borne out in public life where, for example, masculine gay men are more likely to participate and achieve prominence over gay men who are visibly non-normative or gender-bending.
 
 \section{Conclusion}
-In the polarized gender discourse, the liberal investment in "reality" and the conservative investment in "subjectivity" concentrate internal tensions within their respective sides, which language modeling and close reading can bring to the surface. Rather than aim for objectivity, then, this methodology locates sites of overlap within tension and conflict. 
+In the polarized gender discourse, the liberal investment in "reality" and the conservative investment in "subjectivity" concentrate internal tensions within their respective sides, which language modeling and close reading can bring to the surface. This methodology locates sites of overlap within tension and conflict, rather than some ideal of objectivity.
 
-Like \citet{konya_2025}, who use language modeling to facilitate dialogue between Israeli Jews and Palestinians, this paper makes the strong case for language modeling as a useful tool in the current landscape of polarized discourse. Unlike that work, however, which seeks a common ground between opposing groups, this project approaches internal tension within groups as potential sites of intersection. It makes the case for turning toward, rather than away from, social bias in language forms---forms which might be operationalized for political ends. 
-
-
-\begin{ack}
-
-\end{ack}
+In doing so, the paper challenges dominant assumptions within contemporary ML development, showing how smaller, low-resource models can preserve the interpretive value of bias rather than treating it as a defect. Against the extractive logic of ever-expanding model scale, this experiment demonstrates that underdeveloped SLMs can still produce meaningful analytical insights by turning polarization itself into a site of critical inquiry and potential intervention.
 
 \bibliographystyle{chicago}
-\bibliography{neurips_2026}
+\bibliography{aaai2026}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Check whether the conference requires a reproducibility checklist to be included in the paper.
+% If so, you can uncomment the following line and ajust the path to include it.
+% \input{../../ReproducibilityChecklist/LaTeX/ReproducibilityChecklist.tex}
 
-\appendix
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-\input{checklist.tex}
 \end{document}

@@ -1,0 +1,23 @@
+doesn't work
+
+row 4/6, incorrect and correct URLs:
+https://www.congress.gov/119/crec/2025/06/02/171/93/modified/CREC-2025-06-02-pt1-PgE489.htm
+https://www.congress.gov/119/crec/2025/06/02/171/93/modified/CREC-2025-06-02-pt1-PgE489-2.htm
+
+7/9
+https://www.congress.gov/117/crec/2018/12/03/164/190/modified/CREC-2018-12-03-pt1-PgE1595.htm
+https://www.congress.gov/115/crec/2018/12/03/164/190/modified/CREC-2018-12-03-pt1-PgE1595.htm
+
+https://www.congress.gov/115/crec/2018/12/03/164/190/modified/CREC-2018-12-03-pt1-PgE1595.htm
+
+8/10
+https://www.congress.gov/116/crec/2020/02/27/166/39/modified/CREC-2020-02-27-pt1-PgH1230.htm
+https://www.congress.gov/116/crec/2020/02/27/modified/CREC-2020-02-27-pt1-PgH1230-2.htm
+
+13/15
+https://www.congress.gov/118/crec/2026/03/18/172/49/modified/CREC-2026-03-18-pt1-PgS1279.htm
+https://www.congress.gov/119/crec/2026/03/18/172/49/modified/CREC-2026-03-18-pt1-PgS1279-2.htm 
+
+14/16
+https://www.congress.gov/118/crec/2026/02/11/172/29/modified/CREC-2026-02-11-pt1-PgS580.htm
+https://www.congress.gov/119/crec/2026/02/11/172/29/modified/CREC-2026-02-11-pt1-PgS580.htm

@@ -1,0 +1,198 @@
+** general
+I thank the reviewers and the Area Chair for their thoughtful and
+constructive feedback. I am encouraged that the reviews recognize the
+conceptual originality of the paper while raising important questions
+about how its methodology is articulated. I agree that several aspects
+of the method can be made more explicit and address the principal
+concerns below.
+
+1. Clarifying the definition of the synthetic middle
+
+I agree that the concept needs more clarity in the definition. My
+intention is not to use synthetic middle" as a synonym for
+hallucination, contradiction, or ambiguity. Rather, I define it as a
+linguistic construction produced during language generation in which
+distinct ideological framings are compressed into a single utterance
+while retaining recognizable traces of multiple source positions
+(traces which are visible in the . A
+revised version would make this distinction explicit in the key areas
+of the paper which discuss the concept. 
+
+2. Making the qualitative methodology more explicit
+
+The contribution of this paper is a qualitative analytical methodology
+rather than a model evaluation benchmark. To make this clearer, I will
+explicitly describe the analytical workflow: (1) construction of
+provenance-bounded institutional corpora, (2) matched fine-tuning of
+identical SLMs, (3) generation using identical prompts, and (4)
+comparative close reading of generated outputs. I will also explain my
+sampling and selection protocol more clearly and include the complete
+set of generated outputs in the appendix so that readers can evaluate
+the reported examples in context.
+
+3. Reproducibility and experimental details
+
+I appreciate the request for greater methodological transparency.
+Although the code, training data, prompts, hyperparameters, and
+generation scripts were already released with the submission, I agree
+that key training and decoding parameters should also appear in the
+paper itself. I will therefore include complete details of the
+optimizer, learning rate, decoding parameters, random seeds,
+generation settings, and software environment in the appendix to make
+the methodology fully self-contained.
+
+4. Scope and limitations
+
+I agree that the claims should be more tightly bounded. The paper is
+not intended to characterize "the political left" or "the political
+right" in general, but rather two well-defined institutional
+discourses represented by the Heritage Foundation and the ACLU. I will
+make this scope explicit and expand the limitations section to discuss
+the use of a single SLM architecture, a single case study, prompt
+sensitivity, and the need for future work examining additional models
+and corpora. I will also clarify the licensing and copyright status of
+the source material and the legal basis for releasing derived datasets
+and models.
+
+Finally, I wish to emphasize that the primary contribution of the
+paper is methodological. Rather than proposing a new language model or
+optimization technique, I present a reproducible qualitative method
+for using small language models as interpretive instruments in
+critical discourse analysis. I appreciate the reviewers' suggestions
+and believe that the proposed revisions will make this contribution
+substantially clearer while preserving the central argument of the
+paper.
+** bex3
+Thank you for your thoughtful review. We appreciate the opportunity to
+clarify the methodology and intended contribution of this work. We
+respond to each concern below.
+
+1. Defining the key concept of the synthetic middle
+
+> The key concept is vague. The paper never clearly defines what
+counts as a “synthetic middle.” It sometimes means overlap,
+contradiction, hallucination, ambiguity, or model collapse. Without a
+sharper definition, the central claim is hard to evaluate.
+
+The paper does intend a specific meaning for the synthetic middle,
+although we agree this could have been articulated more explicitly.
+The synthetic middle is not intended as a synonym for hallucination,
+contradiction, ambiguity, or model collapse. Rather, it refers to
+generated utterances in which distinct ideological framings become
+compressed into a single linguistic construction while retaining
+identifiable traces of multiple positions. Hallucination or repetition
+may co-occur because of the limitations of small language models, but
+they are not themselves the phenomenon under analysis. The synthetic
+middle is an analytical category for interpreting recurring patterns
+produced under controlled fine-tuning conditions, rather than an
+ontological claim about all SLM outputs.
+
+A revised version of this paper would make this distinction more
+explicit.
+
+2. Making the qualitative methodology more explicit
+
+> The evidence looks cherry-picked. The paper quotes a few interesting
+generations but does not report the full sample set. We do not know
+how many outputs were generated, how many were excluded, or whether
+the quoted examples are typical.
+
+I agree that the close reading methodology and text generation outputs
+could be more explicitly handled in the paper, bringing in key
+information from the online code release into the paper's body and
+appendices.
+
+Following fine-tuning, both models were prompted with the identical
+prompt set, which draws from terminology that describes masculine,
+feminine, trans, and nonbinary gender identities:
+
+* Masculinity is
+* Femininity is
+* Transgender is
+* The gender binary is
+
+Each prompt was sampled repeatedly (20 generations per prompt in the
+implementation used for this study), producing a corpus from which
+representative examples were selected through comparative close
+reading. The paper presents illustrative excerpts because of space
+constraints, rather than isolated examples supporting a predetermined
+interpretation. Additionally, its focus on specific terms like
+"subjecitivy" and "reality" is situated in interdiciplinary knowledge
+from the field of Trans Studies (linked in the paper).
+
+To improve methodological transparency, a revised manuscript would
+include this explanation of methodology as well as a complete set of
+generated outputs in an appendix. A full list of these outputs can be
+currently viewed at these anonymized links:
+
+Heritage model outputs:
+
+ACLU model outputs: 
+
+3. "Important decoding details are absent."
+
+While these details were included in the released code and
+supplementary material, we agree that they were summarized too briefly
+in the manuscript. For clarity, the experimental configuration is
+reproduced below.
+
+### Fine-tuning
+
+```python
+Base model: openai-community/gpt2
+Training objective: Causal Language Modeling (SFTTrainer)
+
+Training parameters
+-------------------
+Epochs:                     2
+Learning rate:              2e-4
+Weight decay:               0.001
+Batch size:                 1
+Gradient accumulation:      2
+Maximum sequence length:    512
+Gradient checkpointing:     True
+Save strategy:              Every epoch
+
+Both models used identical hyperparameters and differed only in their training corpus.
+```
+
+### Generation
+
+```python
+Prompt set:
+- Masculinity is
+- Femininity is
+- Transgender is
+- The gender binary is
+
+Generations per prompt:     20
+Maximum generation length:  50 tokens
+
+Generation pipeline:
+pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    max_length=50
+)
+```
+
+Because generation behavior depends on decoding choices, a revised manuscript would also explicitly report any default decoding parameters inherited from the Hugging Face generation pipeline (e.g., sampling configuration, temperature, top-*k*, top-*p*, random seed) in the main text rather than relying on the released implementation.
+
+**4. "The paper should compare against baselines."**
+
+We agree that comparisons with additional models would strengthen the generalizability of the proposed methodology. However, the intended contribution is not a comparative benchmark demonstrating that GPT-2 uniquely exhibits the synthetic middle. Rather, the paper proposes an exploratory qualitative methodology in which provenance-bounded SLMs function as interpretive instruments for critical discourse analysis. GPT-2 was selected precisely because its comparatively small scale and transparent fine-tuning preserve a close relationship between the source corpus and generated language, making it possible to trace recurring linguistic constructions back to identifiable discursive patterns. The claim is therefore methodological rather than comparative.
+
+**5. "There is no annotation, inter-rater agreement, frequency analysis..."**
+
+The analytical procedure draws on established traditions of comparative close reading rather than annotation-based qualitative coding. The methodology consists of (1) constructing two source-specific corpora, (2) fine-tuning identical GPT-2 models under matched training conditions, (3) prompting both models using identical prompts and generation procedures, and (4) comparatively analyzing recurring linguistic patterns across the generated corpora. Consequently, the paper's claims are interpretive rather than predictive or benchmark-oriented. We agree that making the analytic procedure more explicit would improve reproducibility, and a revised manuscript would describe the selection procedure in greater detail while including the complete generated corpus for independent inspection.
+
+Finally, we appreciate the reviewer's comments regarding limitations. The manuscript already acknowledges the small size of the models and their tendency toward repetition and hallucination. These behaviors are treated as limitations of SLMs while simultaneously motivating their usefulness for the paper's interpretive methodology. The paper does **not** treat generated text as direct evidence about real groups. Rather, it analyzes how provenance-bounded language models transform polarized textual corpora into compressed linguistic forms that support critical discourse analysis. A revised manuscript would additionally include a dedicated Limitations appendix discussing the scope of inference, risks of over-interpretation, and handling of potentially stigmatizing generated content.
+
+**Appendix placeholder**
+
+> Appendix B: Complete generation protocol (training hyperparameters, decoding configuration, prompting script, random seed(s), and reproducibility instructions).
+
+---
+
+One technical note: your current generation code does **not** explicitly specify `temperature`, `top_k`, `top_p`, `do_sample`, or a random seed. Since Reviewer bex3 specifically requested those parameters, I would avoid implying values that were not set. Instead, the rebuttal above accurately states that the implementation relied on the Hugging Face pipeline defaults where unspecified and that the revised manuscript would document those defaults explicitly. This is both truthful and consistent with NeurIPS' rebuttal guidance.

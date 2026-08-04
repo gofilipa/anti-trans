@@ -1,0 +1,235 @@
+% Created 2026-08-02 Sun 14:13
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{fcalado}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={fcalado},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+Thank you for your careful consideration and response to my rebuttal,
+and especially your helfpul suggestions for describing the close
+reading methodology. Below are my comments in response.
+
+\#\# W1: definition of the synthetic middle
+
+I appreciate this feedback, and I agree that further clarifying the
+definition will make the overall argument stronger. Below I give a
+more detailed definition, along with a step-by-step process of how the
+phenomenon is identified through close reading.
+
+The "synthetic middle" defines generated text in which distinct
+ideological positions are compressed into a single, apparently
+coherent statement while retaining identifiable traces to these
+ideological positions. It is a type of phrase reuse where terms
+contradict or blend typical ideological claims within a particular
+domain of discourse. While instances of hallucination and repetition
+may be co-occur, they are not correlated with the synthetic middle,
+though future research may explore further their relationship.
+
+Due to the unexpected and sometimes imprecise ways that the synthetic
+middle may appear, close reading methods and domain expertise are
+helpful for identifying instances of the synthetic middle. See below
+for a formalized explanation of how a close reading methodology may
+identify the synthetic middle.
+
+The close reading methodology involves four steps:
+
+\begin{enumerate}
+\item Manually read the outputs of the text generation, one at a time
+(See Appendix for a full list of generated outputs for each model).
+
+\item Look for noticable textual patterns of repeated words or phrases in
+the outputs. For this project, noticable patterns emerged in the
+terms "real*" (instances of the words "real" and "reality") and
+"subjective" for the ACLU- and Heritage-fine-tuned models,
+respectively. Of the 80 outputs for the ACLU model, "real*"
+appeared 14 times. In the 80 outputs from the Heritage model,
+"subjective" appeared 11 times. \textbf{Note: these frequencies were
+relatively stable over multiple generations. See the Limitations
+section for a discussion on the comparison to other seeded
+generations of the fine-tuned ACLU and Heritage models as well as
+to a baseline, un-fine-tuned version of GPT2 for comparison.}
+
+\begin{enumerate}
+\item Examine the repeated patterns for ideological positions. As this
+step requires at least some familiarity with the discourse and its
+associated ideologies, it is helpful to consult researchers with
+domain expertise (if they are not already included in the study).
+
+Once an output containing an ideological position is identified,
+determine the position's approximate political pole (either
+\textbf{\textbf{liberal}} or \textbf{\textbf{conservative}}) and whether that position
+logically expresses in a \textbf{\textbf{single}}, \textbf{\textbf{contradicted}}, or
+\textbf{\textbf{blended}} construction. A label of "single" describes a
+logically coherent perspective from one of the two poles (liberal
+or conservative); "contradicted" describes a construction where
+both poles are present and placed into a relation of contrast or
+contradiction, or where a single pole is represented in a way that
+contradicts itself; "blended" describes a construction where both
+poles are represented in a way where they cannot be neatly or
+confidently traced to either pole. (See the Close Reading
+Methodology table in the appendix, which maps these labels to the
+examples discussed in the paper, as well as negative examples.)
+
+Because the interpretation of semantics can sometimes be
+imprecise, it is important to read and interpret the output
+exactly as written and which makes the most sense in the current
+construction. Do not consider secondary readings that would be
+better expressed with slightly different phrasings. For example,
+the phrase "the gender binary is not real" indicates a liberal
+view (which seeks to dismantle the binary as the exclusive
+paradigm for gender) should not be read as "the gender binary is
+not \emph{accepted} as real, which is a conservative view (i.e., the
+conservative position is that the reality of the gender binary is
+not accepted, but rejected or threatened, by society).
+
+Unless the outputs contain a conjunction or punctuation (i,.e.
+"but", ",") do not read individual phrases as potentially
+independent units, even if doing so makes them more coherent. For
+example, do not semantically split the output "The gender binary
+is not a reality invented by cisgender people" into the more
+coherent clauses, "The gender binary is not a reality" and "The
+gender binary is not invented by cisgender people." By contrast,
+outputs that contain a conjunction and/or punctuation, like "The
+gender binary is not real, it is real, and it is real" may be read
+as "The gender binary is not real" and "The gender binary is
+real."
+
+\item After mapping the output, determine if it contains a
+\textbf{contradicted} or a \textbf{blended} label, it is considered an instance
+of the synthetic middle. If it contains a \textbf{single} label, it is
+not considered an instance of the synthetic middle. (See the
+description of the Close Reading Methodology in the appendix for
+negative examples.)
+\end{enumerate}
+\end{enumerate}
+
+APPENDIX
+
+From the ACLU outputs
+\begin{itemize}
+\item Masculinity \textbf{\textbf{is real and meaningful}}.
+\begin{itemize}
+\item political pole:
+\begin{itemize}
+\item Liberal
+\end{itemize}
+\item logical construction:
+\begin{itemize}
+\item Single
+\end{itemize}
+\item instance of the synthetic middle
+\begin{itemize}
+\item No
+\end{itemize}
+\end{itemize}
+\item The gender binary \textbf{\textbf{is not real}}, \textbf{it is real, and it is real}.
+\begin{itemize}
+\item political pole:
+\begin{itemize}
+\item Liberal, conservative
+\end{itemize}
+\item logical construction:
+\begin{itemize}
+\item Contradicted
+\end{itemize}
+\item instance of the synthetic middle
+\begin{itemize}
+\item Yes
+\end{itemize}
+\end{itemize}
+\item The gender binary \textbf{\textbf{is not a binary}}, \textbf{\textbf{\textbf{it is a reality within
+us}}}.
+\begin{itemize}
+\item political pole:
+\begin{itemize}
+\item Liberal, liberal/lonservative
+\end{itemize}
+\item logical construction:
+\begin{itemize}
+\item Blended
+\end{itemize}
+\item instance of the synthetic middle
+\begin{itemize}
+\item Yes
+\end{itemize}
+\end{itemize}
+\item The gender binary \textbf{is not an accepted reality}, but \textbf{\textbf{\textbf{one that
+is accepted by a wide swath of people}}}.
+\begin{itemize}
+\item political pole:
+\begin{itemize}
+\item Conservative, liberal/conservative
+\end{itemize}
+\item logical construction:
+\begin{itemize}
+\item Blended
+\end{itemize}
+\item instance of the synthetic middle
+\begin{itemize}
+\item Yes
+\end{itemize}
+\end{itemize}
+\item The gender binary \textbf{\textbf{is not a reality invented by cisgender people}}
+\begin{itemize}
+\item political pole:
+\begin{itemize}
+\item Liberal
+\end{itemize}
+\item logical construction:
+\begin{itemize}
+\item Single
+\end{itemize}
+\item instance of the synthetic middle
+\begin{itemize}
+\item No
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\#\# Appendix
+
+\begin{center}
+\begin{tabular}{llll}
+Output & Political pole & Logical construction & Synthetic middle\\[0pt]
+\hline
+Masculinity \textbf{\textbf{is real and meaningful}}. & Liberal & Single & No\\[0pt]
+The gender binary \textbf{\textbf{is not real}}, \textbf{it is real, and it is real}. & Liberal, Conservative & Contradicted & Yes\\[0pt]
+The gender binary \textbf{\textbf{is not a binary}}, \textbf{\textbf{\textbf{it is a reality within us}}}. & Liberal, Liberal/Conservative & Blended & Yes\\[0pt]
+The gender binary \textbf{is not an accepted reality}, but \textbf{\textbf{\textbf{one that is accepted by a wide swath of people}}}. & Conservative, Liberal/Conservative & Blended & Yes\\[0pt]
+The gender binary \textbf{\textbf{is not a reality invented by cisgender people}}. & Liberal & Single & No\\[0pt]
+\end{tabular}
+\end{center}
+
+\#\# to add to close reading:
+
+The concept of a binary as a reality is accepted by the liberal view,
+but as one of many realities ("a reality"). This is in contrast to the
+conservative view, where the binary is the only reality (i.e., "the
+reality").
+
+That the binary "is not an accepted reality" is a conservative view,
+while the idea that it is accepted by a significant amount of people
+is liberal.
+\end{document}

@@ -1,0 +1,34 @@
+
+# make a table of the following 
+Seed; contradicted; blended; total
+Stochastic; 1; 2; 3
+2; 1; 1; 2
+22; 4; 1; 5
+42; 1; 1; 2
+
+
+seed; output; political pole; logical construction
+The gender [binary is not real], [it is real, and [it is real].
+- stochastic; liberal, conservative; contradicted
+The gender binary [is not a binary], [it is a reality within us].
+- stochastic; liberal, liberal/conservative; blended
+The gender binary [is not an accepted reality], but [one that is accepted by a wide swath of people].
+- stochastic; liberal, liberal/conservative; blended
+The gender binary [is not binary], but [mathematically real], and [a lot of people have tried to come out as nonbinary].
+- 2; liberal, conservative, liberal; contradicted
+The gender binary is not binary, it's a lived reality.
+- 2; liberal, liberal/conservative; blended
+Transgender [is not a category] but [a lived reality].
+- 22; conservative, liberal; contradicted
+The gender binary is [a real barrier] that [helps build confidence and build motivation to action].
+- 22; liberal, conservative; contradicted
+The gender binary [is not a binary], [it is a lived reality].
+- 22; liberal, conservative; contradicted
+The gender binary [is not a binary invented to exclude men], but [a true binary that reflects the lived reality of our entire selves].
+- 22; liberal, conservative; contradicted
+The gender binary [is not a binary] — [it is a reality within our grasp].
+- 22; liberal, liberal/conservative; blended
+The gender binary [is not a binary], [it is a reality within our grasp].
+- 42; liberal, liberal/conservative; blended
+The gender binary [is not real] and [should be respected].
+- 42; liberal, conservative; contradicted

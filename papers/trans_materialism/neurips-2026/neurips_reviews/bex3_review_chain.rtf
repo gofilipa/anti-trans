@@ -1,0 +1,293 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red33\green44\blue57;\red253\green171\blue173;
+\red0\green0\blue233;\red252\green110\blue193;\red173\green170\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c17255\c22745\c29020;\cssrgb\c100000\c73333\c73333;
+\cssrgb\c0\c0\c93333;\cssrgb\c100000\c53333\c80000;\cssrgb\c73333\c73333\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Official Review of Submission19500 by Reviewer bex3\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf3 \cb4 \strokec3 Official Review\cf0 \cb1 \strokec2 by Reviewer bex323 Jun 2026, 06:33 (modified: 28 Jul 2026, 19:43)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors, Ethics Reviewers, Ethics Chairs, Reviewer bex3{\field{\*\fldinst{HYPERLINK "https://openreview.net/revisions?id=mbdiSfzm7y"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Revisions}}\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Summary:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 The paper fine-tunes small GPT-2 models on gender-related articles from the ACLU and the Heritage Foundation, then qualitatively analyzes the generated completions. Its main proposed contribution is the notion of the \'93synthetic middle\'94: the idea that model outputs that seem incoherent, hybrid, or internally mixed may reveal underlying tensions within polarized discourse. The paper frames small language models as tools for critical discourse analysis, emphasizing how generated text can blend, distort, or condense ideological language from the training corpus.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Contribution Type:
+\f1\b0  Use-inspired: The main contribution is in framing or designing approaches to meet the needs of a specific real-world application. (This often involves, e.g., engaging with domain experts.)\
+
+\f0\b Strengths And Weaknesses:
+\f1\b0 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Strengths\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The use of small, source-specific corpora makes the provenance of the generated outputs more transparent than it would be for a large general-purpose LLM.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Weaknesses\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 The idea is promising, but the current version does not establish that the \'93synthetic middle\'94 is a real model phenomenon rather than an interpretive label placed on selected model failures.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The key concept is vague. The paper never clearly defines what counts as a \'93synthetic middle.\'94 It sometimes means overlap, contradiction, hallucination, ambiguity, or model collapse. Without a sharper definition, the central claim is hard to evaluate.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The evidence looks cherry-picked. The paper quotes a few interesting generations but does not report the full sample set. We do not know how many outputs were generated, how many were excluded, or whether the quoted examples are typical.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Important decoding details are absent: temperature, top-p/top-k, max length, seeds, number of samples per prompt, and filtering rules. These choices strongly affect GPT-2-style outputs.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The paper should compare against non-fine-tuned GPT-2, larger LLMs, n-gram models, topic models, keyword analysis, or mixed-corpus models. Without baselines, the claimed SLM effect is unsupported.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 There is no annotation, inter-rater agreement, frequency analysis, seed analysis, or tracing from outputs back to training examples. The close reading may be insightful, but it is not well controlled.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Quality:
+\f1\b0  1: poor\
+
+\f0\b Clarity:
+\f1\b0  1: poor\
+
+\f0\b Significance:
+\f1\b0  1: poor\
+
+\f0\b Originality:
+\f1\b0  2: not good\
+
+\f0\b Questions:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 See weakness.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Limitations:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 The paper does not adequately address the main limitations. It should add a limitations section that explicitly restricts the scope of inference, reports the full generation protocol, discusses the risks of interpreting hallucinated text as evidence about real groups, and describes how stigmatizing gender-related content is handled.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Rating:
+\f1\b0  1: Strong Reject: For instance, a paper with well-known results or unaddressed ethical considerations.\
+
+\f0\b Confidence:
+\f1\b0  5: You are absolutely certain about your assessment. You are very familiar with the related work and checked the math/other details carefully.\
+
+\f0\b Ethical Concerns:
+\f1\b0  NO or VERY MINOR ethics concerns only\
+
+\f0\b Paper Formatting Concerns:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 No\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Code Of Conduct Acknowledgement:
+\f1\b0  Yes\
+
+\f0\b Responsible Reviewing Acknowledgement:
+\f1\b0  Yes\
+\
+\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Rebuttal by Authors\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf3 \cb6 \strokec3 Rebuttal\cf0 \cb1 \strokec2 by Authors ({\field{\*\fldinst{HYPERLINK "https://openreview.net/profile?id=~Filipa_Calado1"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Filipa Calado}})27 Jul 2026, 20:06 (modified: 28 Jul 2026, 14:46)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors{\field{\*\fldinst{HYPERLINK "https://openreview.net/revisions?id=F4MkLJvu1e"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Revisions}}\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Rebuttal:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Thank you for your thoughtful review. I appreciate the opportunity to clarify the methodology and intended contribution of this work. I respond to each concern below.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W1. Defining the key concept of the synthetic middle
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The key concept is vague. The paper never clearly defines what counts as a \'93synthetic middle.\'94 It sometimes means overlap, contradiction, hallucination, ambiguity, or model collapse. Without a sharper definition, the central claim is hard to evaluate.\strokec2 \
+The paper does intend a specific meaning for the synthetic middle, although I agree this could have been articulated more explicitly. The synthetic middle is not intended as a synonym for hallucination, contradiction, ambiguity, or model collapse. Rather, it refers to generated text in which distinct ideological framings become compressed into a single linguistic construction while retaining identifiable traces of multiple positions. Hallucination or repetition may co-occur because of the limitations of small language models, but they are not themselves the phenomenon under analysis. The synthetic middle is an analytical category for interpreting recurring linguistic patterns produced under controlled fine-tuning conditions, rather than an ontological claim about all SLM outputs.\
+A revised version of this paper would make this distinction more explicit.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W2. Making the qualitative methodology more explicit
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The evidence looks cherry-picked. The paper quotes a few interesting generations but does not report the full sample set. I do not know how many outputs were generated, how many were excluded, or whether the quoted examples are typical.\strokec2 \
+The manuscript does not make the close reading methodology and text generation protocol sufficiently explicit, particularly by omitting methodological details that are available in the released code and supplementary material.\
+To summarize the close reading methodology:\
+Both models were prompted with the identical prompt set, which draws from terminology that describes masculine, feminine, trans, and nonbinary gender identities:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Masculinity is\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Femininity is\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Transgender is\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The gender binary is\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 For both models, each of the 4 above prompts was sampled repeatedly (20 generations per prompt in the implementation used for this study), producing a corpus of 160 total outputs from which representative examples were selected through comparative close reading.\
+After generation, the outputs were then manually read and analyzed with attention to repeated phrasing and formulations. The excerpts included in the paper were selected because they illustrate recurring linguistic constructions observed across the generated corpus. In this case, particular attention was given to constructions involving "subjectivity" and "reality" because these recurring patterns could be interpreted through the Trans Studies scholarship discussed in the manuscript. Due to the constraints of space, the paper limits itself to these illustrative excerpts of these terms.\
+To improve methodological transparency, a revised manuscript would include this explanation of the close reading methodology as well as a complete set of generated outputs in an appendix.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W3. Decoding details
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Important decoding details are absent: temperature, top-p/top-k, max length, seeds, number of samples per prompt, and filtering rules. These choices strongly affect GPT-2-style outputs.\strokec2 \
+Generation employed the Hugging Face default decoding configuration for parameters not explicitly specified. While some of these details were included in the released code and supplementary material, I agree that they ought to be explicit in the manuscript.\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+
+\f0\b \cf0 \strokec2 Parameter\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 Value\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 Temperature\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 1.0\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Top-
+\f2\i k
+\f1\i0 \cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 50\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Top-
+\f2\i p
+\f1\i0 \cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 1.0\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Maximum generation length\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 50 tokens\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Samples per prompt\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 20\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Random seed\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 Not fixed\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Filtering\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 None (all outputs retained)\cell \lastrow\row
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Random seeds and post-generation filtering were not applied because the study is exploratory and methodological rather than benchmark-oriented (see points W4 and W5 below). The objective is not to identify a single canonical completion, but to examine the range of discursive constructions produced when models trained on distinct ideological corpora were prompted under identical conditions.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W4. Comparison to baselines
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The paper should compare against non-fine-tuned GPT-2, larger LLMs, n-gram models, topic models, keyword analysis, or mixed-corpus models. Without baselines, the claimed SLM effect is unsupported.\strokec2 \
+I agree that including a comparison with the un-fine-tuned GPT-2 model would strengthen the paper by providing qualitative context for interpreting the effects of corpus-specific fine-tuning. A revised manuscript would therefore include a few illustrative generations from the base GPT-2 model alongside those produced by the fine-tuned models, as well as a full list of un-fine-tuned GPT-2 generations (using the same prompting protocol) in an appendix.\
+That being said, I disagree that results from larger LLMs, n-gram models, topic models, keyword analysis, or mixed-corpus models also ought to be included. The intended contribution of this paper is not a comparative benchmark demonstrating that GPT-2 (or any particular SLM) uniquely exhibits the synthetic middle. Rather, the paper proposes an exploratory qualitative methodology in which SLMs function as interpretive instruments for critical discourse analysis across disciplinary boundaries. The claim is therefore methodological rather than comparative. Specifically, the paper argues for the interpretive value of provenance-bounded SLMs for critical discourse analysis, rather than the comparative performance of one language model over another.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W5. Close reading methodology
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 There is no annotation, inter-rater agreement, frequency analysis, seed analysis, or tracing from outputs back to training examples. The close reading may be insightful, but it is not well controlled.\strokec2 \
+Rather than annotation-based qualitative coding, the analytical procedure follows traditions of comparative close reading and critical discourse analysis described in interpretive traditions within the humanities (in particular, the field of Trans Studies) cited in the manuscript.\
+I nevertheless agree that the analytic procedure should have been described more explicitly to improve transparency of the paper's experiment. As stated in W2, a revised manuscript would describe the selection procedure in greater detail while including the complete generated corpus for independent inspection.\
+Finally, I appreciate the reviewer's comments regarding limitations. The manuscript already acknowledges the limitations of small language models, including repetition and hallucination. I nevertheless agree that these limitations\'97and their implications for interpreting generated discourse concerning marginalized communities\'97would benefit from a dedicated discussion. A revised manuscript would include a dedicated Limitations appendix.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Official Comment by Reviewer bex3\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf3 \cb7 \strokec3 Official Comment\cf0 \cb1 \strokec2 by Reviewer bex301 Aug 2026, 06:54 (modified: 01 Aug 2026, 06:54)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors{\field{\*\fldinst{HYPERLINK "https://openreview.net/revisions?id=mZMYOO3hjh"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Revisions}}\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Comment:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Thank you for the detailed response.Below are my comments for the rebuttal:\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 W1: Definition of the synthetic middle\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 The rebuttal makes the intended definition clearer, but the main problem remains: there is still no clear procedure for deciding whether a particular output qualifies. The response says that an output should compress distinct ideological framings while retaining traces of multiple positions, but it does not explain how those traces are identified or how the phenomenon can be distinguished from direct phrase reuse, lost context or negation, contradiction, or generally unstable generation. Without such criteria, the interpretation remains difficult to evaluate independently.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 W2: Selection of examples\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 The clarification that all 160 outputs were retained is helpful. However, the response still does not establish that the quoted examples are representative. It says that examples were selected because they illustrated recurring constructions and could be interpreted through the cited Trans Studies literature, but it does not report how many outputs were judged to contain a synthetic middle, which outputs did not qualify, or what counterexamples were found. A simple table identifying the claimed cases and explaining why each one qualifies would substantially improve the analysis without turning this into a benchmark or requiring formal statistical testing.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 W3: Decoding and robustness\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 The decoding table resolves several reporting omissions. However, the lack of a fixed seed means that the analysis is based on one stochastic generation run. The exploratory nature of the study does not remove the need to show that the central pattern is reasonably stable. Repeating generation under several seeds would be a modest and appropriate robustness check. In addition, the submitted code file does not explicitly set most of the decoding parameters reported in the rebuttal or show how 20 outputs per prompt were generated, so the code and the stated protocol should be aligned.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 W4: Baselines\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 I agree that comparisons with larger LLMs, n-gram models, topic models, and every other baseline in my original review are not all necessary for the intended qualitative contribution. However, the base GPT-2 comparison proposed in the rebuttal remains an important minimum control. Because the paper attributes the observed constructions to source-specific fine-tuning, it needs some evidence that they are not primarily inherited from pretrained GPT-2 or produced by ordinary stochastic generation.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 W5:\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \strokec2 I accept comparative close reading and critical discourse analysis as legitimate methods, and I therefore withdraw the suggestion that annotation and inter-rater agreement are always required. My concern is narrower: the paper needs a more transparent analytic process, including the criteria used to select examples, treatment of negative cases, and clearer tracing between outputs and source language. Providing the complete output corpus is useful, but it does not by itself make the interpretation reproducible.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 I also could not locate two manuscript quotations in the supplied output file: the sentences beginning \'93Femininity is not an aberration...\'94 and \'93Transgenderism is a false ideology...\'94. The second is important to the paper\'92s analysis of \'93reality.\'94 Please clarify whether these examples came from another generation run or whether the submitted output file is not the exact corpus used in the manuscript.
+\f1\b0 \strokec2 \
+Overall, the rebuttal improves the methodological description and clarity. However, it does not resolve the central question of whether the \'93synthetic middle\'94 is a clearly identifiable and sufficiently supported phenomenon rather than an interpretation of phrase recombination and unstable outputs, so my overall recommendation remains unchanged.\
+}

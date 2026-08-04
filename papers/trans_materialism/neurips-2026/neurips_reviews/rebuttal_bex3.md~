@@ -1,0 +1,36 @@
+# rebuttal to bex3
+
+Thank you for your careful consideration and response to my rebuttal.
+Below are my comments in response.
+
+## W1: definition of the synthetic middle
+
+I appreciate this feedback, and I agree that further clarifying the
+definition will make the overall argument stronger. Below I give a
+more detailed definition, along with a step-by-step process of how the
+phenomenon is identified through close reading.
+
+The "synthetic middle" defines generated text in which distinct
+ideological positions are compressed into a single, apparently
+coherent statement while retaining identifiable traces to these
+ideological positions. It is a type of phrase re-use where terms
+contradict or blend the expected or typical ideological claims from a
+particular domain of discourse, like gender. Due to the unexpected and
+sometimes imprecise ways that the synthetic middle may appear, close
+reading methods and domain expertise are helpful for identifying
+instances of it. See below for a formalized explanation of how to
+identify and analyze the synthetic middle using a close reading
+methodology.
+
+The close reading methodology involves three steps:
+
+1) Manually read the outputs of the text generation, one at a time
+   (See Appendix for a full list of generated outputs for each model).
+
+2) Look for noticable textual patterns of repeated words or phrases in
+   the outputs. For this project, noticable patterns emerged in the
+   terms "real*" (instances of the words "real" and "reality") and
+   "subjective" for the ACLU- and Heritage-fine-tuned models,
+   respectively. Of the 80 outputs for the ACLU model, "real*"
+   appeared 14 times. In the 80 outputs from the Heritage model,
+   "subjective" appeared 11 times.

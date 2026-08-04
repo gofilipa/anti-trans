@@ -1,0 +1,95 @@
+No seed: 
+
+contradicted: 5; blended: 1; total: 7
+
+Masculinity is [a subjective self-perception, not a universal concept].
+Femininity is [a subjective, internal sense of self].
+Femininity is [a subjective self-perception, like the person is perceived as a woman or a man or a woman].
+The gender binary is [a subjective], [grammatically incorrect, and grammatically incorrect term].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective, psychological, and sometimes physical construct that masquerades as a social construct].
+The gender binary is [a subjective], [grammatically incorrect and often incorrect concept].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective, fluid system of questions] [that can easily be answered by a simple yes or no answer].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective, malleable], and [often incorrect idea].
+- liberal/conservative, conservative; blended; YES
+The gender binary is [a subjective, psychological], and [biological construct that is used to measure one’s sexual orientation or 
+gender identity] [(“segregated identity,” or whatever one might want to say it is].
+- liberal, conservative, conservative; contradicted; YES
+The gender binary is [a subjective, internal], and [often transitory concept].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective], [grammatically incorrect and illogical concept] that [conflates sex and gender identity].
+- liberal, conservative, liberal; contradicted; YES
+
+Seed 2:
+
+contradited: 6; blended: 1; total: 7
+
+Masculinity is [a subjective self-perception, not a biological fact].
+Masculinity is [a subjective, internal], and [often transitory sense of self].
+- liberal, conservative; contradicted; YES
+Femininity is [a subjective, internal sense of oneself] [as male or female].
+- liberal, conservative; contradicted; YES
+Transgender is [a subjective] and [often transitory idea].
+- liberal, conservative; contradicted; YES
+Transgender is [a subjective, internal sense of oneself].
+The gender binary is [a subjective], [grammatically incorrect], [construct that cannot be easily changed].
+- liberal, conservative, conservative; contradicted; YES
+The gender binary is [a subjective, internal construct of male and female simultaneously, or neither].
+- liberal/conservative; blended; YES
+The gender binary is [based on a man’s “s” subjective], [objective], and [so is the social construct].
+- liberal, conservative, conservative; contradicted; YES
+The gender binary is [a subjective], [grammatically incorrect concept].
+- liberal, conservative; contradicted; YES
+
+Seed 22:
+
+contradicted: 9; blended: 0; total: 9
+
+Transgender is [not immutable, therefore, but is a subjective self-perception that is not unique to any particular sex].
+The gender binary is [a subjective], [malleable and often misleading idea that covers sex].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective, peering into the self-actualization of one’s sex, not “natural,” and “born in the wrong body.”]
+The gender binary is [simply a person’s subjective, internal], and [sometimes transitory sense of themselves].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective construct that can change over time], and [that can change at any time].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective], [grammatically incorrect, or incorrect concept].
+- liberal, conservative; contradicted; YES
+The gender binary is [not a universal oracle, but rather a subjective], [rather mechanical], [construct that can be used to construct a person’s “sense” of being male, female, a blend of both or neither].
+The gender binary is [a subjective], [grammatically incorrect concept that can change at any time].
+- liberal, conservative; contradicted; YES
+The gender binary is [a binary that is based on a person’s subjective perception of gender] [(something that can change at any time)].
+- liberal, conservative; contradicted; YES
+The gender binary is [a subjective, internal], and [often transitory sense of self].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective, internal] and [often transitory sense of oneself].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective], [grammatically incorrect concept].
+- liberal, conservative; contradicted; YES
+
+Seed 42: 
+
+contradicted: 10; blended: 0; total: 10
+
+Masculinity is [a subjective, internal], and [often transitory sense of oneself].
+- liberal, conservative; contradicted; YES
+Masculinity is [a subjective, internal], and [often transitory sense of oneself].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective, internal], and [often transitory sense of oneself].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective], [grammatically incorrect and often incorrect concept].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective], [grammatically incorrect concept, and a misnomer].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective], [grammatically incorrect and often incorrect form of the sex assigned at birth].
+- liberal, conservative; contradicted; YES
+The gender binary [is subjective, internal], and [often transitory].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective, internal], and [often transitory sense of oneself].
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective and often malleable concept.
+- liberal, conservative; contradicted; YES
+The gender binary [is a subjective] and [often malleable system that conceals information from biological males].
+- liberal, conservative; contradicted; YES

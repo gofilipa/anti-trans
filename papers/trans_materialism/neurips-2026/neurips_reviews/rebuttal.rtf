@@ -1,0 +1,360 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Italic;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red33\green44\blue57;\red173\green170\blue255;
+\red0\green0\blue233;\red252\green110\blue193;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c17255\c22745\c29020;\cssrgb\c73333\c73333\c100000;
+\cssrgb\c0\c0\c93333;\cssrgb\c100000\c53333\c80000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Rebuttal to LYVN\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb4 \strokec3 Official Comment\cf0 \cb1 \strokec2 by Authors ({\field{\*\fldinst{HYPERLINK "https://openreview.net/profile?id=~Filipa_Calado1"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Filipa Calado}})29 Jul 2026, 09:47Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors, Ethics Reviewers, Ethics Chairs, Reviewer LYVN\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Comment:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Thank you for your thoughtful and encouraging review. I appreciate your positive assessment of the paper's originality, clarity, and methodological contribution. I respond to your questions and suggestions below.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W1: Generalizability and additional SLMs
+\f1\b0 \strokec2 \
+I agree that applying the methodology to a baseline SLM would strengthen the evidence for its broader applicability. As noted in my response to another reviewer, a revised manuscript would include illustrative generations from an unfine-tuned GPT-2 model as a qualitative baseline to help distinguish patterns emerging from corpus-specific fine-tuning from those already present in the base model.\
+That being said, the claims of the paper are more about the value of a particular analytical approach for studying bias and ideology, rather than a comparative study across SLMs in general. This work introduces an exploratory methodology that combines provenance-bounded SLMs with comparative close reading to investigate how distinct ideological discourses may be compressed or recombined through language generation. The contribution therefore lies in demonstrating the possibility of this form of interdisciplinary analysis, rather than providing an exhaustive evaluation across architectures or domains.\
+
+\f0\b \strokec2 W2: Copyright and data
+\f1\b0 \strokec2 \
+Thank you for raising this important concern.\
+First, to clarify, the training data are not distributed under a Creative Commons license.\
+Second, the released repository does not include the original training corpora obtained from the ACLU or the Heritage Foundation. Instead, it contains the training and prompting code, the prompts used in the experiment, and the generated model outputs. Readers wishing to reconstruct the datasets must obtain the source materials directly from their original publishers.\
+Third, the Heritage Foundation's "Privacy Policy" states that users "may link to, copy, redistribute, or display the web pages ... for educational, journalistic, commentary, or artistic purposes" and further "may copy and redistribute ... the unedited and unaltered text of the articles ... for educational, journalistic, commentary, or artistic purposes," provided appropriate attribution and source information are retained [1].\
+Similarly, the ACLU's "User Agreement" states that, unless otherwise indicated, users "may copy or distribute text materials that appear on the ACLU Digital Services" provided that "(1) [they] may not use the materials for any commercial purpose, (2) [they] may not make editorial changes to material [they] attribute to us, and (3) [they] may not excerpt, juxtapose, or present attributed material in any way that is misleading as to our original editorial intent." The agreement also explicitly recognizes uses that constitute "fair use" under copyright law [2].\
+Finally, on the topic of fair use, the use of these materials in this study is consistent with the principles considered in fair use analysis. According to the US Copyright Office, "it is permissible to use limited portions of a work including quotes, for purposes such as commentary, criticism, news reporting, and scholarly reports." [3] The source texts were used for non-commercial academic research as inputs for a computational analysis, and the paper reproduces only brief, attributed excerpts of the source texts for purposes of scholarly criticism and commentary, in line with fair use practices.\
+A revised manuscript would clarify these copyright considerations.\
+
+\f0\b \strokec2 Q1. Have you performed the same experiment with another SLM? If so, could the findings have added another layer of richness to the analysis?
+\f1\b0 \strokec2 \
+Thank you for this suggestion. I have not yet performed the experiment with an additional SLM. As discussed in my responses to other reviewers, a revised manuscript would include illustrative generations from an un-fine-tuned GPT-2 model as a qualitative baseline to better contextualize the effects of fine-tuning.\
+I agree that extending the methodology to additional SLM architectures would provide another layer of richness and help assess how the proposed analytical framework transfers across models. However, the goal is to demonstrate the possibility of combining provenance-bounded SLMs with comparative close reading as an interdisciplinary methodology for analyzing discourse. Future work applying the same analytical framework to additional models, domains, and datasets would help evaluate the broader applicability of this approach.\
+
+\f0\b \strokec2 Q2. Are there copyright concerns about the data used for the experiment? Could you clarify if the data is available under a CC license for model finetuning etc?
+\f1\b0 \strokec2 \
+See my answer to W2 above for more detailed information about copyright and data.\
+[1] Heritage Foundation "Privacy Policy" {\field{\*\fldinst{HYPERLINK "https://www.heritage.org/privacy-policy"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 https://www.heritage.org/privacy-policy}} [2] ACLU "User Agreement" {\field{\*\fldinst{HYPERLINK "https://www.aclu.org/about/aclu-site-user-agreement"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 https://www.aclu.org/about/aclu-site-user-agreement}} [3] US Copyright Office, "Fair Use Index" {\field{\*\fldinst{HYPERLINK "https://www.copyright.gov/fair-use/index.html"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 https://www.copyright.gov/fair-use/index.html}}\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Rebuttal by Authors\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf3 \cb6 \strokec3 Rebuttal\cf0 \cb1 \strokec2 by Authors ({\field{\*\fldinst{HYPERLINK "https://openreview.net/profile?id=~Filipa_Calado1"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Filipa Calado}})27 Jul 2026, 20:06 (modified: 28 Jul 2026, 14:46)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors{\field{\*\fldinst{HYPERLINK "https://openreview.net/revisions?id=F4MkLJvu1e"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Revisions}}\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Rebuttal:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Thank you for your thoughtful review. I appreciate the opportunity to clarify the methodology and intended contribution of this work. I respond to each concern below.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W1. Defining the key concept of the synthetic middle
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The key concept is vague. The paper never clearly defines what counts as a \'93synthetic middle.\'94 It sometimes means overlap, contradiction, hallucination, ambiguity, or model collapse. Without a sharper definition, the central claim is hard to evaluate.\strokec2 \
+The paper does intend a specific meaning for the synthetic middle, although I agree this could have been articulated more explicitly. The synthetic middle is not intended as a synonym for hallucination, contradiction, ambiguity, or model collapse. Rather, it refers to generated text in which distinct ideological framings become compressed into a single linguistic construction while retaining identifiable traces of multiple positions. Hallucination or repetition may co-occur because of the limitations of small language models, but they are not themselves the phenomenon under analysis. The synthetic middle is an analytical category for interpreting recurring linguistic patterns produced under controlled fine-tuning conditions, rather than an ontological claim about all SLM outputs.\
+A revised version of this paper would make this distinction more explicit.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W2. Making the qualitative methodology more explicit
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The evidence looks cherry-picked. The paper quotes a few interesting generations but does not report the full sample set. I do not know how many outputs were generated, how many were excluded, or whether the quoted examples are typical.\strokec2 \
+The manuscript does not make the close reading methodology and text generation protocol sufficiently explicit, particularly by omitting methodological details that are available in the released code and supplementary material.\
+To summarize the close reading methodology:\
+Both models were prompted with the identical prompt set, which draws from terminology that describes masculine, feminine, trans, and nonbinary gender identities:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Masculinity is\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Femininity is\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Transgender is\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The gender binary is\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 For both models, each of the 4 above prompts was sampled repeatedly (20 generations per prompt in the implementation used for this study), producing a corpus of 160 total outputs from which representative examples were selected through comparative close reading.\
+After generation, the outputs were then manually read and analyzed with attention to repeated phrasing and formulations. The excerpts included in the paper were selected because they illustrate recurring linguistic constructions observed across the generated corpus. In this case, particular attention was given to constructions involving "subjectivity" and "reality" because these recurring patterns could be interpreted through the Trans Studies scholarship discussed in the manuscript. Due to the constraints of space, the paper limits itself to these illustrative excerpts of these terms.\
+To improve methodological transparency, a revised manuscript would include this explanation of the close reading methodology as well as a complete set of generated outputs in an appendix.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W3. Decoding details
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Important decoding details are absent: temperature, top-p/top-k, max length, seeds, number of samples per prompt, and filtering rules. These choices strongly affect GPT-2-style outputs.\strokec2 \
+Generation employed the Hugging Face default decoding configuration for parameters not explicitly specified. While some of these details were included in the released code and supplementary material, I agree that they ought to be explicit in the manuscript.\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+
+\f0\b \cf0 \strokec2 Parameter\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 Value\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 Temperature\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 1.0\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Top-
+\f2\i k
+\f1\i0 \cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 50\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Top-
+\f2\i p
+\f1\i0 \cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 1.0\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Maximum generation length\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 50 tokens\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Samples per prompt\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 20\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Random seed\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 Not fixed\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Filtering\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 None (all outputs retained)\cell \lastrow\row
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Random seeds and post-generation filtering were not applied because the study is exploratory and methodological rather than benchmark-oriented (see points W4 and W5 below). The objective is not to identify a single canonical completion, but to examine the range of discursive constructions produced when models trained on distinct ideological corpora were prompted under identical conditions.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W4. Comparison to baselines
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 The paper should compare against non-fine-tuned GPT-2, larger LLMs, n-gram models, topic models, keyword analysis, or mixed-corpus models. Without baselines, the claimed SLM effect is unsupported.\strokec2 \
+I agree that including a comparison with the un-fine-tuned GPT-2 model would strengthen the paper by providing qualitative context for interpreting the effects of corpus-specific fine-tuning. A revised manuscript would therefore include a few illustrative generations from the base GPT-2 model alongside those produced by the fine-tuned models, as well as a full list of un-fine-tuned GPT-2 generations (using the same prompting protocol) in an appendix.\
+That being said, I disagree that results from larger LLMs, n-gram models, topic models, keyword analysis, or mixed-corpus models also ought to be included. The intended contribution of this paper is not a comparative benchmark demonstrating that GPT-2 (or any particular SLM) uniquely exhibits the synthetic middle. Rather, the paper proposes an exploratory qualitative methodology in which SLMs function as interpretive instruments for critical discourse analysis across disciplinary boundaries. The claim is therefore methodological rather than comparative. Specifically, the paper argues for the interpretive value of provenance-bounded SLMs for critical discourse analysis, rather than the comparative performance of one language model over another.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W5. Close reading methodology
+\f1\b0 \strokec2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 There is no annotation, inter-rater agreement, frequency analysis, seed analysis, or tracing from outputs back to training examples. The close reading may be insightful, but it is not well controlled.\strokec2 \
+Rather than annotation-based qualitative coding, the analytical procedure follows traditions of comparative close reading and critical discourse analysis described in interpretive traditions within the humanities (in particular, the field of Trans Studies) cited in the manuscript.\
+I nevertheless agree that the analytic procedure should have been described more explicitly to improve transparency of the paper's experiment. As stated in W2, a revised manuscript would describe the selection procedure in greater detail while including the complete generated corpus for independent inspection.\
+Finally, I appreciate the reviewer's comments regarding limitations. The manuscript already acknowledges the limitations of small language models, including repetition and hallucination. I nevertheless agree that these limitations\'97and their implications for interpreting generated discourse concerning marginalized communities\'97would benefit from a dedicated discussion. A revised manuscript would include a dedicated Limitations appendix.\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Rebuttal by Authors\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf3 \cb6 \strokec3 Rebuttal\cf0 \cb1 \strokec2 by Authors ({\field{\*\fldinst{HYPERLINK "https://openreview.net/profile?id=~Filipa_Calado1"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Filipa Calado}})28 Jul 2026, 12:14 (modified: 28 Jul 2026, 14:46)Program Chairs, Senior Area Chairs, Area Chairs, Reviewers Submitted, Authors{\field{\*\fldinst{HYPERLINK "https://openreview.net/revisions?id=OsUqdzDTmN"}}{\fldrslt \cf5 \ul \ulc5 \strokec5 Revisions}}\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Rebuttal:
+\f1\b0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Thank you for your careful review and constructive questions. I have responded to your feedback below.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W1. Contextualizing data sources
+\f1\b0 \strokec2 \
+I agree that the manuscript would benefit from additional contextualization of the ACLU and the Heritage Foundation as the sources from which the two training corpora were constructed. The intention was not to treat either organization as a comprehensive proxy for "the political left" or "the political right," but rather to select two highly visible organizations that publicly articulate contrasting positions on questions of gender, gender identity, and related public policy. The claims of the paper are therefore bounded by these specific institutional corpora rather than generalized to broader political constituencies.\
+A revised manuscript would provide the below background on each organization, emphasizing its stated mission, intended audience, and role within contemporary U.S. political discourse on the topic of gender:\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 \strokec2 The Heritage Foundation is a U.S. conservative think tank founded in 1973 whose stated mission is "to formulate and promote conservative public policies based on the principles of free enterprise, limited government, individual freedom, traditional American values, and a strong national defense" (Heritage, "About Heritage"). Its publications are written primarily for policymakers, legislators, and members of the public interested in conservative policy perspectives. Within contemporary U.S. political discourse, the Heritage Foundation is widely recognized as an influential institution in the development and promotion of conservative policy agendas on issues including education, immigration, healthcare, and gender-related policy. The Heritage Foundation generally approaches gender through a socially conservative framework that emphasizes "biological sex" as the basis for legal and public policy. Its publications frequently argue against expanding legal recognition of gender identity in areas such as education, healthcare, sports, and anti-discrimination law, while advocating for policies centered on sex-based distinctions and traditional conceptions of family and gender.\
+\
+The American Civil Liberties Union (ACLU) is a U.S. nonprofit organization founded in 1920 whose stated mission is "to defend and preserve the individual rights and liberties that the Constitution and the laws of the United States guarantee everyone in this country" (ACLU, "About the ACLU"). Its publications are intended for the general public, policymakers, journalists, legal practitioners, advocates, and supporters of civil rights and civil liberties. Within contemporary U.S. political discourse, the ACLU is widely recognized as an influential legal advocacy on issues including free speech, voting rights, reproductive rights, LGBTQ+ rights, immigration, and criminal justice, and is frequently associated with progressive positions on social policy. The ACLU approaches gender through a civil rights framework that emphasizes legal protections for gender identity and expression alongside protections based on sex. Its publications frequently advocate for transgender and nonbinary people's access to healthcare, education, employment, and public accommodations, arguing that equal protection under the law extends to gender identity and gender expression.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \strokec2 Given the paper's length constraints, I believe the above efficiently and effectively contextualizes the data sources and their perspectives on gender.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W2. Relevance of close reading to NeurIPS audiences
+\f1\b0 \strokec2 \
+One of the main goals of the paper is to show how close reading might complement quantitative evaluation. Computational methods efficiently organize textual phenomena for investigation, while close reading provides a framework for interpreting patterns with attention to detail and nuance in language. The paper's central contribution is therefore intentionally interdisciplinary, demonstrating that comparative close reading can function as a systematic interpretive stage within an NLP workflow, especially when the research concerns ideology or bias in language.\
+The manuscript briefly motivates this approach through recent calls within NLP for greater engagement with qualitative methodologies (e.g., Wang, A., Birhane et al.; Devinney et al.), but I agree that this motivation should be made substantially more explicit. A revised manuscript would foreground this interdisciplinary motivation earlier in the paper and more explicitly explain why close reading is relevant to machine learning researchers.\
+
+\f0\b \strokec2 W3. Analytical process for the selection of evidence
+\f1\b0 \strokec2 \
+Yes, as stated in the response to the review by bex3, although this material was provided in the supplementary material, it was not sufficiently explained in the manuscript.\
+To improve methodological transparency, a revised manuscript would include the below explanation of the close reading methodology in the body of the paper, as well as a complete set of generated outputs in an appendix.\
+To summarize the close reading methodology:\
+Both models were prompted with the identical prompt set, which draws from terminology that describes masculine, feminine, trans, and nonbinary gender identities:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Masculinity is\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Femininity is\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Transgender is\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The gender binary is\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 For both models, each of the 4 above prompts was sampled repeatedly (20 generations per prompt in the implementation used for this study), producing a corpus of 160 total outputs from which representative examples were selected through comparative close reading.\
+After generation, the outputs were then analyzed through comparative close reading with attention to repeated phrasing and formulations. The excerpts included in the paper were selected because they illustrate recurring linguistic constructions observed across multiple generations within the corpus. In this case, particular attention was given to constructions involving "subjectivity" and "reality" because these recurring patterns could be interpreted through the Trans Studies scholarship discussed in the manuscript.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 W4. Technical details for fine-tuning
+\f1\b0 \strokec2 \
+While this information is included in the supplementary material, I agree that it needs dedicated explanation in the manuscript. A revised version of the manuscript would include the following details about the fine-tuning process:\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 \strokec2 Software library: Huggingface Transformers\
+Base model: openai-community/gpt2\
+Training objective: Causal Language Modeling (SFTTrainer)\
+Optimizer: AdamW (Transformers default)\
+\
+Training parameters\
+Epochs:                     3\
+Learning rate:              2e-4\
+Weight decay:               0.001\
+Batch size:                 1\
+Gradient accumulation:      2\
+Maximum sequence length:    512\
+Gradient checkpointing:     True\
+Save strategy:              Every epoch\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 \strokec2 W5. Technical details for generation
+\f1\b0 \strokec2 \
+Similar to W4, while some of these details were included in the released code and supplementary material, I agree that they ought to be explicit in the manuscript. Below are the details:\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+
+\f0\b \cf0 \strokec2 Parameter\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 Value\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 Temperature\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 1.0\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Top-
+\f2\i k
+\f1\i0 \cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 50\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Top-
+\f2\i p
+\f1\i0 \cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 1.0\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Maximum generation length\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 50 tokens\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Samples per prompt\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 20\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Random seed\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 Not fixed\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2732\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2579\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Filtering\cell 
+\pard\intbl\itap1\pardeftab720\qr\partightenfactor0
+\cf0 None (all outputs retained)\cell \lastrow\row
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 \strokec2 Q1: Quantification/automation of the method
+\f1\b0 \strokec2 \
+I do not view the proposed methodology as fundamentally resistant to quantification. Rather, the paper argues that qualitative interpretation and computational analysis can play complementary roles. Several aspects of the workflow could be made more quantitative, including frequency analyses of recurring lexical patterns or topic modeling of generated outputs in a way that complements close reading analysis (for example, See Devinney et al, "We Don\'92t Talk About That: Case Studies on Intersectional Analysis of Social Bias in Large Language Models, GeBNLP 2024). The intention here is to open the possibility of using comparative close reading as an interpretive stage within that broader analytical pipeline.\
+
+\f0\b \strokec2 Q2: Other tasks for SLMs
+\f1\b0 \strokec2 \
+Yes. While this paper focuses on gender discourse as a case study, the methodology is intended to be broadly applicable wherever researchers seek to understand how particular communities, institutions, or archives construct meaning through language. For example, provenance-bounded SLMs could support comparative analyses of discourse around climate change, reproductive rights, migration, etc.\
+More broadly, the approach may be useful wherever the research objective is the qualitative interpretation of recurring rhetorical, ideological, or conceptual patterns generated from carefully bounded textual corpora.\
+
+\f0\b \strokec2 L1: Generalizability
+\f1\b0 \strokec2 \
+I agree that this study should be understood as a methodological case study rather than a comprehensive evaluation across models or domains. The intention was to demonstrate the feasibility of the proposed methodology using a single, provenance-bounded SLM architecture (GPT-2) concerning political discourse on gender.\
+I agree that applying the methodology to additional SLMs would strengthen the evidence for its broader applicability. Future work could compare different model architectures, parameter sizes, or training objectives while holding the qualitative analysis pipeline constant.\
+
+\f0\b \strokec2 L2: Prompt selection
+\f1\b0 \strokec2 \
+I agree that the rationale for prompt selection should be stated more explicitly. The prompts were intentionally selected because they represent central concepts within contemporary discussions of gender, rather than to exhaustively represent all dimensions of gender discourse. A revised manuscript would explain this rationale.\
+}

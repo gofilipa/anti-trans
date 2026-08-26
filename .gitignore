@@ -6,10 +6,9 @@ training/heritage/output_doc.spacy
 
 # ignore training data
 crawlers/aclu_spider/aclu.json
-training/aclu/aclu.json
-training/aclu/aclu_sentences.txt
-crawlers/heritage_spider/gender_articles.json
-training/heritage/cleaning/data_in
+training/aclu/aclu_data_in/
+crawlers/heritage_spider/heritage.json
+training/heritage/cleaning/heritage_data_in/
 
 # ignore evals
 evals/data/

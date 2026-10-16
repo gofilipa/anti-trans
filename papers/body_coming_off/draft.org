@@ -1,5 +1,140 @@
 * "My Body Feels Like It’S Coming Off": Cisgender Erotics In /Love Is Blind/
+** revision notes
+*** major:
+1) clarify and prove the argument about "normalizing" ML processes
+   resembling the exprience of trans subjectivity, pages 7-9.
+   - ML outputs approximate hetersexual feeling which contains a gap
+     between feeling and perception that is akin to dysphoria
+2) engage reality TV scholarship
+   - how does the form and constraints of reality TV matter?
+   - how much does a production studies approach matter?
+   - Laurie Oulette, Rachel Dubrofsky
+   - engage the argument that reality TV's form reinforces neoliberal
+     values of self-branding and capacity of transformation;
+     - how does this examination of "normalization" engage the
+       neoliberal argument? 
+3) incorporate formal and aesthetic aspects of show into close reading
+   - camera shots, particularly in the reveal, and how these engage the
+     text
+   - aesthetics of pods vs postpods: the differences in set, lighting,
+     environment, and how these shift in aesthetics affect the
+     self-awareness of the body.
 
+*** minor:
+1) more rigorous close readings of the textual evidence
+2) engage Trans Studies earlier in the paper, before page 8
+3) include some metacommentary about CS & TS as fields.
+   - what scholarship already exists at this intersection?
+     - queer media studies; micha cardenas?
+   - how does this work depart from existing scholarship?
+4) Why /Love is Blind/? (no right answer, but some insight)
+5) relate to fan studies, which also seeks to study interpretations of
+   text which are "fantastical". Does the model relate like a fan does?
+6) overall:
+   - Develop two arguments:
+     - (1) the use of ML for close reading
+     - (2) how potentially dysphoric experiences affect cis subjects
+   
+** new paragraphs
+*** cis and trans common ground in media
+While this kind of critique looks for common ground between cis
+and trans bodily experience, the media representation of trans
+subjects is a separate issue. As scholarship in media studies have
+argued, trans studies subjects occupy distinct roles and thus require
+their own models of analysis. Thomas Billard and Erique Zhang explain
+that existing queer and feminist rubrics, which operate within (and
+against) contexts of patriarchy and heteronormativity, do not apply in
+the same way to the experience of trans subjects. They ask, for
+example, "Where does the trans man fall in the hierarchy of
+patriarchal domination? Does he now dominate women by virtue of his
+transition?" (Billard and Zhang 195). The authors argue that trans
+media subjects need their own frameworks for representation, one that
+is based on reading how trans people represent themselves.
+
+That being said, the major argument of this paper is that the
+experience of /cis/ subjects might be read under trans studies
+frameworks, albeit within certain constraints. While cis and trans
+media representations vastly contrast each other, with trans subjects
+occupying distinct roles and plots from cis ones, they nonetheless may
+overlap and intersect temporarily. For example, as Cáel M. Keegan
+points out, the line between cis and trans dissolves where gender
+norms are experienced as enforced and oppressive. He discusses the
+film /The Assignment/ (2016), where a hitman named Frank is punished
+by being forceably transitioned into a woman by a rogue surgeon.
+Keegan argues that Frank evokes a plight of a trans man: "Frank is
+forced to live and behave as a woman because he has been assigned a
+female body... [the film] is arguably about the experience of
+transgender men---a point entirely missed by the press coverage"
+(Keegan 34). In Keegan's argument, such "bad objects" for trans media
+representation, which represent trans lives through tropes of
+suffering and stereotype, eventually lead to "a world in which the
+distinction between cis and trans ceases to exist altogether, because
+the systems enforcing binary sex and gender are dismantled" (36).
+
+*** reality tv participants being radical due to audience
+Reality TV scholars have long expressed reality tv participants'
+conscription into the merchandizing logics of the production. From the
+earliest shows, participants are organized into plots and formats that
+reinforce larger commercial interests and messages. While scenes are
+supposedly "unscripted," the settings (incluing particular formats
+like the confessional and the reunion) and personages (who must apply
+to be accepted on the shows) are meticulously chosen. As Yael Levy
+explains, "The tension between production interests, commercial
+interests, and the self-reflexive desires of participants positions
+the reality participant... in constant negotiation between narrative
+and performance, agency and commodification” (747).
+
+That being said, there are moments where the participants do break
+through the confines of these logics. As Levy argues, reality TV
+creates openings or "textual creases" from which characters can find
+space for self-representation (Levy 747). One early, often cited
+example of this kind of break is Pedro Zamora, an out, Latino PWA
+(person with AIDS) from /The Real World: San Francisco/ (1994).
+According to Jose Esteban Munoz, Zamora was able to publically
+represent the life of a gay and Latino PWA at a time when such
+subjects were hidden from public view. Due to the white and
+hetero-normative makeup of his audience, Zamora's on-screen
+representation "exploited MTV in politically efficacious ways; he used
+MTV more than it used him" (Munoz 152). To a majority queer, trans or
+nonwhite audience, Zamora's message would have been less effective.
+Munoz points out that "Zamora's work was not for other activists,
+queer or Latino, but was instead for a world of /potentially/
+politicized queers and Latinos; for a mass public that is structured
+by the cultural forces of homophobia and racism" (146).
+
+This project also takes those contexts into account in judging the
+political efficacy of the show. The majority cishetero audience of
+/Love is Blind/ creates a situation where experiences of disembodiment
+are potentially radical. 
+
+*** shake
+When the show airs, Irina catches a lot of criticism from viewers for
+the way that she treated Zach, for what they interpret as her
+superficial rejection of Zach based on his looks. This emphasis on
+physical attraction in romance, which directly contradict the show's
+main gambit, that "love is blind," recalls another /Love is Blind/
+participant who, like Irina, is demonized for holding superficial
+notions around beauty. Shake, an Indian American, male character from
+season 2 of the show, cheekily declares that "love is blurry," in the
+show's reunion episode. His arrogance throughout the reunion, combined
+with his chauvanistic comments aimed at many of his female co-stars,
+paint him as the ideal villain. However, as Yael Levy argues, Shake is
+offensive /and/ subversive at the same time: "[he] pokes at the show’s
+aspiration to prove that the body is a site of prejudice and that
+eliminating the body allows one to represent oneself beyond gender,
+race, or age bias" (Levy 758).
+
+Similarly to Levy, I argue that Irina's attachment to visual
+attraction also belies the show's main gambit. However, this project
+traces Irina's rejection beyond typical social conceptions of beauty
+and into her specific experience in the pods, which fractures the
+sensory modes bewteen touch and sight. Unable to see Zach within the
+pods, Irina internally bifurcates visual from tactile attraction. The
+outputs from the pods model suggests that this effect manifests acorss
+other participants from the show, 
+
+
+** OLD draft
 In a reality TV show called /Love is Blind/, an American couple, Paul
 and Micah, visit a cenote in Mexico. Micah notices a school of fish,
 and she recoils:

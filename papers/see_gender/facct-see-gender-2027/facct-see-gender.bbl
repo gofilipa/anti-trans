@@ -1,0 +1,657 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{39}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Amin(2022)]%
+        {amin:2022}
+\bibfield{author}{\bibinfo{person}{Kadji Amin}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{We are {All} {Nonbinary}}.
+\newblock \bibinfo{journal}{\emph{Representations}} \bibinfo{volume}{158},
+  \bibinfo{number}{1} (\bibinfo{date}{May} \bibinfo{year}{2022}),
+  \bibinfo{pages}{106--119}.
+\newblock
+\showISSN{0734-6018, 1533-855X}
+\urldef\tempurl%
+\url{https://doi.org/10.1525/rep.2022.158.11.106}
+\showDOI{\tempurl}
+
+
+\bibitem[{BBC}(2023)]%
+        {bbc:2023}
+\bibfield{author}{\bibinfo{person}{{BBC}}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Uganda's anti-{LGBT} laws: {Man} faces death
+  penalty for 'aggravated homosexuality'}.
+\newblock \bibinfo{journal}{\emph{BBC}} (\bibinfo{date}{Aug.}
+  \bibinfo{year}{2023}).
+\newblock
+\urldef\tempurl%
+\url{https://www.bbc.com/news/world-africa-66645740}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Birhane et~al\mbox{.}(2022)]%
+        {birhane:2022}
+\bibfield{author}{\bibinfo{person}{Abeba Birhane}, \bibinfo{person}{Pratyusha
+  Kalluri}, \bibinfo{person}{Dallas Card}, \bibinfo{person}{William Agnew},
+  \bibinfo{person}{Ravit Dotan}, {and} \bibinfo{person}{Michelle Bao}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{The {Values} {Encoded} in {Machine} {Learning}
+  {Research}}. In \bibinfo{booktitle}{\emph{2022 {ACM} {Conference} on
+  {Fairness}, {Accountability}, and {Transparency}}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{Seoul Republic of Korea}, \bibinfo{pages}{173--184}.
+\newblock
+\showISBNx{978-1-4503-9352-2}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3531146.3533083}
+\showDOI{\tempurl}
+
+
+\bibitem[Blodgett et~al\mbox{.}(2020)]%
+        {blodgett:2020}
+\bibfield{author}{\bibinfo{person}{Su~Lin Blodgett}, \bibinfo{person}{Solon
+  Barocas}, \bibinfo{person}{Hal Daumé~III}, {and} \bibinfo{person}{Hanna
+  Wallach}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Language ({Technology}) is {Power}: {A} {Critical}
+  {Survey} of “{Bias}” in {NLP}}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 58th {Annual} {Meeting} of the {Association} for {Computational}
+  {Linguistics}}}, \bibfield{editor}{\bibinfo{person}{Dan Jurafsky},
+  \bibinfo{person}{Joyce Chai}, \bibinfo{person}{Natalie Schluter}, {and}
+  \bibinfo{person}{Joel Tetreault}} (Eds.). \bibinfo{publisher}{Association for
+  Computational Linguistics}, \bibinfo{address}{Online},
+  \bibinfo{pages}{5454--5476}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2020.acl-main.485}
+\showDOI{\tempurl}
+
+
+\bibitem[Bolukbasi et~al\mbox{.}(2016)]%
+        {bolukbasi:2016}
+\bibfield{author}{\bibinfo{person}{Tolga Bolukbasi}, \bibinfo{person}{Kai-Wei
+  Chang}, \bibinfo{person}{James Zou}, \bibinfo{person}{Venkatesh Saligrama},
+  {and} \bibinfo{person}{Adam Kalai}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Man is to {Computer} {Programmer} as {Woman} is to
+  {Homemaker}? {Debiasing} {Word} {Embeddings}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.48550/arXiv.1607.06520}
+\showDOI{\tempurl}
+\newblock
+\shownote{arXiv:1607.06520 [cs]}.
+
+
+\bibitem[Butler(1990)]%
+        {butler:1990}
+\bibfield{author}{\bibinfo{person}{Judith Butler}.}
+  \bibinfo{year}{1990}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Gender {Trouble}: {Feminism} and the
+  {Subversion} of {Identity}}}.
+\newblock \bibinfo{publisher}{Routledge}, \bibinfo{address}{New York}.
+\newblock
+\showISBNx{978-0-203-82497-9}
+\urldef\tempurl%
+\url{https://doi.org/10.4324/9780203824979}
+\showDOI{\tempurl}
+
+
+\bibitem[Butler(1993)]%
+        {butler:1993}
+\bibfield{author}{\bibinfo{person}{Judith Butler}.}
+  \bibinfo{year}{1993}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Bodies {That} {Matter}: {On} the
+  {Discursive} {Limits} of {Sex}}}.
+\newblock \bibinfo{publisher}{Routledge}, \bibinfo{address}{London}.
+\newblock
+\showISBNx{978-0-203-82827-4}
+\urldef\tempurl%
+\url{https://doi.org/10.4324/9780203828274}
+\showDOI{\tempurl}
+
+
+\bibitem[Butler(2024)]%
+        {butler:2024}
+\bibfield{author}{\bibinfo{person}{Judith Butler}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Who's {Afraid} of {Gender}?}}
+\newblock \bibinfo{publisher}{Penguin Books}.
+\newblock
+\urldef\tempurl%
+\url{https://www.penguin.co.uk/books/452776/whos-afraid-of-gender-by-butler-judith/9780241595824}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Calado(2025)]%
+        {calado:2025}
+\bibfield{author}{\bibinfo{person}{Filipa Calado}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Some Myths About Bias: A Queer Studies Reading Of
+  Gender Bias In {NLP}}. In \bibinfo{booktitle}{\emph{Proceedings of the 6th
+  Workshop on Gender Bias in Natural Language Processing (GeBNLP)}},
+  \bibfield{editor}{\bibinfo{person}{Agnieszka Fale{\'n}ska},
+  \bibinfo{person}{Christine Basta}, \bibinfo{person}{Marta Costa-juss{\`a}},
+  \bibinfo{person}{Karolina Sta{\'n}czak}, {and} \bibinfo{person}{Debora
+  Nozza}} (Eds.). \bibinfo{publisher}{Association for Computational
+  Linguistics}, \bibinfo{address}{Vienna, Austria}, \bibinfo{pages}{338--346}.
+\newblock
+\showISBNx{979-8-89176-277-0}
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2025.gebnlp-1.29}
+\showDOI{\tempurl}
+
+
+\bibitem[Chu(2024)]%
+        {chu:2024}
+\bibfield{author}{\bibinfo{person}{Andrea~Long Chu}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{The {Right} to {Change} {Sex}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://nymag.com/intelligencer/article/trans-rights-biological-sex-gender-judith-butler.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{David M. Halperin}(2002)]%
+        {halperin:2002}
+\bibfield{author}{\bibinfo{person}{{David M. Halperin}}.}
+  \bibinfo{year}{2002}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{How to {Do} the {History} of
+  {Homosexuality}}}.
+\newblock \bibinfo{publisher}{University Of Chicago Press}.
+\newblock
+\showISBNx{978-0-226-31447-1}
+\urldef\tempurl%
+\url{http://archive.org/details/howtodohistoryof00halp}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Devinney et~al\mbox{.}(2020)]%
+        {devinney:2020}
+\bibfield{author}{\bibinfo{person}{Hannah Devinney}, \bibinfo{person}{Jenny
+  Björklund}, {and} \bibinfo{person}{Henrik Björklund}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Semi-{Supervised} {Topic} {Modeling} for {Gender}
+  {Bias} {Discovery} in {English} and {Swedish}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the {Second} {Workshop} on {Gender}
+  {Bias} in {Natural} {Language} {Processing}}}. \bibinfo{address}{Barcelona,
+  Spain (Online)}, \bibinfo{pages}{79--92}.
+\newblock
+
+
+\bibitem[Devinney et~al\mbox{.}(2024)]%
+        {devinney:2024}
+\bibfield{author}{\bibinfo{person}{Hannah Devinney}, \bibinfo{person}{Jenny
+  Björklund}, {and} \bibinfo{person}{Henrik Björklund}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{We {Don}`t {Talk} {About} {That}: {Case} {Studies}
+  on {Intersectional} {Analysis} of {Social} {Bias} in {Large} {Language}
+  {Models}}. In \bibinfo{booktitle}{\emph{Proceedings of the 5th {Workshop} on
+  {Gender} {Bias} in {Natural} {Language} {Processing} ({GeBNLP})}},
+  \bibfield{editor}{\bibinfo{person}{Agnieszka Faleńska},
+  \bibinfo{person}{Christine Basta}, \bibinfo{person}{Marta Costa-jussà},
+  \bibinfo{person}{Seraphina Goldfarb-Tarrant}, {and} \bibinfo{person}{Debora
+  Nozza}} (Eds.). \bibinfo{publisher}{Association for Computational
+  Linguistics}, \bibinfo{address}{Bangkok, Thailand}, \bibinfo{pages}{33--44}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2024.gebnlp-1.3}
+\showDOI{\tempurl}
+
+
+\bibitem[Drescher(2025)]%
+        {drescher:2025}
+\bibfield{author}{\bibinfo{person}{Jack Drescher}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{What is {Gender} {Dysphoria}?}
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.psychiatry.org:443/patients-families/gender-dysphoria/what-is-gender-dysphoria}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Ellis(1900)]%
+        {ellis:1900}
+\bibfield{author}{\bibinfo{person}{Havelock Ellis}.}
+  \bibinfo{year}{1900}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Studies in the {Psychology} of {Sex},
+  {Volume} {2Sexual} {Inversion}}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.gutenberg.org/ebooks/13611}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Enke(2013)]%
+        {enke:2013}
+\bibfield{author}{\bibinfo{person}{A.~Finn Enke}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{The {Education} of the {Little} {Cis}: {Cisgender}
+  and the {Discipline} of {Opposing} {Bodies}}.
+\newblock In \bibinfo{booktitle}{\emph{The {Transgender} {Studies} {Reader}
+  {II}}}, \bibfield{editor}{\bibinfo{person}{Susan Stryker} {and}
+  \bibinfo{person}{Aren~Z. Aizura}} (Eds.). \bibinfo{publisher}{Routledge},
+  \bibinfo{pages}{234--247}.
+\newblock
+
+
+\bibitem[Felkner et~al\mbox{.}(2023)]%
+        {felkner:2023}
+\bibfield{author}{\bibinfo{person}{Virginia Felkner},
+  \bibinfo{person}{Ho-Chun~Herbert Chang}, \bibinfo{person}{Eugene Jang}, {and}
+  \bibinfo{person}{Jonathan May}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{{WinoQueer}: {A} {Community}-in-the-{Loop}
+  {Benchmark} for {Anti}-{LGBTQ}+ {Bias} in {Large} {Language} {Models}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 61st {Annual} {Meeting} of the
+  {Association} for {Computational} {Linguistics} ({Volume} 1: {Long}
+  {Papers})}}, \bibfield{editor}{\bibinfo{person}{Anna Rogers},
+  \bibinfo{person}{Jordan Boyd-Graber}, {and} \bibinfo{person}{Naoaki Okazaki}}
+  (Eds.). \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{address}{Toronto, Canada}, \bibinfo{pages}{9126--9140}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2023.acl-long.507}
+\showDOI{\tempurl}
+
+
+\bibitem[Foucault(1978)]%
+        {foucault:1978}
+\bibfield{author}{\bibinfo{person}{Michel Foucault}.}
+  \bibinfo{year}{1978}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The {History} of {Sexuality}. {Volume} 1:
+  {An} {Introduction}}}.
+\newblock
+\urldef\tempurl%
+\url{http://archive.org/details/foucault-the-history-of-sexuality-volume-1}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Gonen and Goldberg(2019)]%
+        {gonen:2019}
+\bibfield{author}{\bibinfo{person}{Hila Gonen} {and} \bibinfo{person}{Yoav
+  Goldberg}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Lipstick on a {Pig}: {Debiasing} {Methods} {Cover}
+  up {Systematic} {Gender} {Biases} in {Word} {Embeddings} {But} do not
+  {Remove} {Them}}. In \bibinfo{booktitle}{\emph{Proceedings of the 2019
+  {Conference} of the {North} {American} {Chapter} of the {Association} for
+  {Computational} {Linguistics}: {Human} {Language} {Technologies}, {Volume} 1
+  ({Long} and {Short} {Papers})}}, \bibfield{editor}{\bibinfo{person}{Jill
+  Burstein}, \bibinfo{person}{Christy Doran}, {and} \bibinfo{person}{Thamar
+  Solorio}} (Eds.). \bibinfo{publisher}{Association for Computational
+  Linguistics}, \bibinfo{address}{Minneapolis, Minnesota},
+  \bibinfo{pages}{609--614}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/N19-1061}
+\showDOI{\tempurl}
+
+
+\bibitem[Guo and Caliskan(2021)]%
+        {guo:2021}
+\bibfield{author}{\bibinfo{person}{Wei Guo} {and} \bibinfo{person}{Aylin
+  Caliskan}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Detecting {Emergent} {Intersectional} {Biases}:
+  {Contextualized} {Word} {Embeddings} {Contain} a {Distribution} of
+  {Human}-like {Biases}}. In \bibinfo{booktitle}{\emph{Proceedings of the 2021
+  {AAAI}/{ACM} {Conference} on {AI}, {Ethics}, and {Society}}}
+  \emph{(\bibinfo{series}{{AIES} '21})}. \bibinfo{publisher}{Association for
+  Computing Machinery}, \bibinfo{address}{New York, NY, USA},
+  \bibinfo{pages}{122--133}.
+\newblock
+\showISBNx{978-1-4503-8473-5}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3461702.3462536}
+\showDOI{\tempurl}
+
+
+\bibitem[Hafner et~al\mbox{.}(2025)]%
+        {hafner:2025}
+\bibfield{author}{\bibinfo{person}{Franziska~Sofia Hafner},
+  \bibinfo{person}{Ana Valdivia}, {and} \bibinfo{person}{Luc Rocher}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Gender {Trouble} in {Language} {Models}: {An}
+  {Empirical} {Audit} {Guided} by {Gender} {Performativity} {Theory}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2025 {ACM} {Conference} on
+  {Fairness}, {Accountability}, and {Transparency}}}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{Athens Greece}, \bibinfo{pages}{1677--1695}.
+\newblock
+\showISBNx{9798400714825}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3715275.3732112}
+\showDOI{\tempurl}
+
+
+\bibitem[Haimson(2025)]%
+        {haimson:2025}
+\bibfield{author}{\bibinfo{person}{Oliver~L. Haimson}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Trans {Technologies}}}.
+\newblock \bibinfo{publisher}{The MIT Press}.
+\newblock
+\showISBNx{978-0-262-38257-1}
+\urldef\tempurl%
+\url{https://doi.org/10.7551/mitpress/15437.001.0001}
+\showDOI{\tempurl}
+
+
+\bibitem[{Human Rights Research Center}(2025)]%
+        {hrc:2025}
+\bibfield{author}{\bibinfo{person}{{Human Rights Research Center}}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{The {Global} {War} on {Gender}: {How} {Anti}-{Gender}
+  {Sentiments} {Fuel} {Right} {Wing} {Politics}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.humanrightsresearch.org/post/the-global-war-on-gender-how-anti-gender-sentiments-fuel-right-wing-politics}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Indelicato and Magalhães~Lopes(2024)]%
+        {indelicato:2024}
+\bibfield{author}{\bibinfo{person}{Maria~Elena Indelicato} {and}
+  \bibinfo{person}{Maíra Magalhães~Lopes}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Understanding populist far-right anti-immigration
+  and anti-gender stances beyond the paradigm of gender as ‘a symbolic
+  glue’: {Giorgia} {Meloni}’s modern motherhood, neo-{Catholicism}, and
+  reproductive racism}.
+\newblock \bibinfo{journal}{\emph{European Journal of Women's Studies}}
+  \bibinfo{volume}{31}, \bibinfo{number}{1} (\bibinfo{date}{Feb.}
+  \bibinfo{year}{2024}), \bibinfo{pages}{6--20}.
+\newblock
+\showISSN{1350-5068}
+\urldef\tempurl%
+\url{https://doi.org/10.1177/13505068241230819}
+\showDOI{\tempurl}
+\newblock
+\shownote{Publisher: SAGE Publications Ltd}.
+
+
+\bibitem[Kaneko et~al\mbox{.}(2024)]%
+        {kaneko:2024}
+\bibfield{author}{\bibinfo{person}{Masahiro Kaneko}, \bibinfo{person}{Danushka
+  Bollegala}, \bibinfo{person}{Naoaki Okazaki}, {and} \bibinfo{person}{Timothy
+  Baldwin}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Evaluating {Gender} {Bias} in {Large} {Language}
+  {Models} via {Chain}-of-{Thought} {Prompting}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.48550/arXiv.2401.15585}
+\showDOI{\tempurl}
+\newblock
+\shownote{arXiv:2401.15585 [cs]}.
+
+
+\bibitem[Karni and Kavi(2025)]%
+        {karni:2025}
+\bibfield{author}{\bibinfo{person}{Annie Karni} {and}
+  \bibinfo{person}{Aishvarya Kavi}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{House {Passes} {Bill} to {Ban} {Gender}
+  {Transition} {Treatments} for {Minors}}.
+\newblock \bibinfo{journal}{\emph{The New York Times}} (\bibinfo{date}{Dec.}
+  \bibinfo{year}{2025}).
+\newblock
+\showISSN{0362-4331}
+\urldef\tempurl%
+\url{https://www.nytimes.com/2025/12/17/us/politics/bill-gender-transition-treatments-minors.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Kirzinger et~al\mbox{.}(2023)]%
+        {kirzinger:2023}
+\bibfield{author}{\bibinfo{person}{Ashley Kirzinger}, \bibinfo{person}{Audrey
+  Kearney}, \bibinfo{person}{Alex Montero}, \bibinfo{person}{Grace Sparks},
+  \bibinfo{person}{Lindsey Dawson}, {and} \bibinfo{person}{Mollyann Brodie}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{{KFF}/{The} {Washington} {Post} {Trans} {Survey}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.kff.org/lgbtq/kff-the-washington-post-trans-survey/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Krafft-Ebing(2021)]%
+        {krafft-ebing:2021}
+\bibfield{author}{\bibinfo{person}{R.~von~(Richard) Krafft-Ebing}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Psychopathia sexualis: {With} especial
+  reference to contrary sexual {instinctA} medico-legal study}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.gutenberg.org/ebooks/64931}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Lameiro et~al\mbox{.}(2025)]%
+        {lameiro:2025}
+\bibfield{author}{\bibinfo{person}{Francesca Lameiro}, \bibinfo{person}{Lavinia
+  Dunagan}, \bibinfo{person}{Dallas Card}, \bibinfo{person}{Eric Gilbert},
+  {and} \bibinfo{person}{Oliver Haimson}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{TIDEs}: {A} {Transgender} and {Nonbinary}
+  {Community}-{Labeled} {Dataset} and {Model} for {Transphobia}
+  {Identification} in {Digital} {Environments}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2025 {ACM} {Conference} on
+  {Fairness}, {Accountability}, and {Transparency}}}
+  \emph{(\bibinfo{series}{{FAccT} '25})}. \bibinfo{publisher}{Association for
+  Computing Machinery}, \bibinfo{address}{New York, NY, USA},
+  \bibinfo{pages}{1411--1423}.
+\newblock
+\showISBNx{9798400714825}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3715275.3732095}
+\showDOI{\tempurl}
+
+
+\bibitem[Ovalle et~al\mbox{.}(2023)]%
+        {ovalle:2023}
+\bibfield{author}{\bibinfo{person}{Anaelia Ovalle}, \bibinfo{person}{Palash
+  Goyal}, \bibinfo{person}{Jwala Dhamala}, \bibinfo{person}{Zachary Jaggers},
+  \bibinfo{person}{Kai-Wei Chang}, \bibinfo{person}{Aram Galstyan},
+  \bibinfo{person}{Richard Zemel}, {and} \bibinfo{person}{Rahul Gupta}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{“{I}’m fully who {I} am”: {Towards}
+  {Centering} {Transgender} and {Non}-{Binary} {Voices} to {Measure} {Biases}
+  in {Open} {Language} {Generation}}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 2023 {ACM} {Conference} on {Fairness}, {Accountability}, and
+  {Transparency}}} \emph{(\bibinfo{series}{{FAccT} '23})}.
+  \bibinfo{publisher}{Association for Computing Machinery},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{1246--1266}.
+\newblock
+\showISBNx{9798400701924}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3593013.3594078}
+\showDOI{\tempurl}
+
+
+\bibitem[Reif and Schwartz(2023)]%
+        {reif:2023}
+\bibfield{author}{\bibinfo{person}{Yuval Reif} {and} \bibinfo{person}{Roy
+  Schwartz}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Fighting {Bias} {With} {Bias}: {Promoting} {Model}
+  {Robustness} by {Amplifying} {Dataset} {Biases}}. In
+  \bibinfo{booktitle}{\emph{Findings of the {Association} for {Computational}
+  {Linguistics}: {ACL} 2023}}, \bibfield{editor}{\bibinfo{person}{Anna Rogers},
+  \bibinfo{person}{Jordan Boyd-Graber}, {and} \bibinfo{person}{Naoaki Okazaki}}
+  (Eds.). \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{address}{Toronto, Canada}, \bibinfo{pages}{13169--13189}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2023.findings-acl.833}
+\showDOI{\tempurl}
+
+
+\bibitem[Rudinger et~al\mbox{.}(2018)]%
+        {rudinger:2018}
+\bibfield{author}{\bibinfo{person}{Rachel Rudinger}, \bibinfo{person}{Jason
+  Naradowsky}, \bibinfo{person}{Brian Leonard}, {and} \bibinfo{person}{Benjamin
+  Van~Durme}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Gender {Bias} in {Coreference} {Resolution}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2018 {Conference} of the {North}
+  {American} {Chapter} of the {Association} for {Computational} {Linguistics}:
+  {Human} {Language} {Technologies}, {Volume} 2 ({Short} {Papers})}},
+  \bibfield{editor}{\bibinfo{person}{Marilyn Walker}, \bibinfo{person}{Heng
+  Ji}, {and} \bibinfo{person}{Amanda Stent}} (Eds.).
+  \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{address}{New Orleans, Louisiana}, \bibinfo{pages}{8--14}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/N18-2002}
+\showDOI{\tempurl}
+
+
+\bibitem[Shakhsari(2013)]%
+        {shakhsari:2013}
+\bibfield{author}{\bibinfo{person}{Sima Shakhsari}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Shuttling {Between} {Bodies} and {Borders}:
+  {Transmigration} and the {Politics} of {Rightful} {Killing}}.
+\newblock In \bibinfo{booktitle}{\emph{Transgender {Studies} {Reader} {II}}},
+  \bibfield{editor}{\bibinfo{person}{Susan Stryker} {and}
+  \bibinfo{person}{Aren~Z. Aizura}} (Eds.). \bibinfo{publisher}{Routledge},
+  \bibinfo{pages}{565--379}.
+\newblock
+
+
+\bibitem[{Southern Poverty Law Center (SPLC)}(2023)]%
+        {splc:2023}
+\bibfield{author}{\bibinfo{person}{{Southern Poverty Law Center (SPLC)}}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{{LGBTQ}+ {Health} {Care} {Buzzwords}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.splcenter.org/resources/stories/lgbtq-health-care-terms/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{The White House}(2025a)]%
+        {whitehouseb:2025}
+\bibfield{author}{\bibinfo{person}{{The White House}}.}
+  \bibinfo{year}{2025}\natexlab{a}.
+\newblock \bibinfo{title}{Defending {Women} {From} {Gender} {Ideology}
+  {Extremism} {And} {Restoring} {Biological} {Truth} {To} {The} {Federal}
+  {Government}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.whitehouse.gov/presidential-actions/2025/01/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal-government/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{The White House}(2025b)]%
+        {whitehousea:2025}
+\bibfield{author}{\bibinfo{person}{{The White House}}.}
+  \bibinfo{year}{2025}\natexlab{b}.
+\newblock \bibinfo{title}{Keeping {Men} {Out} of {Women}'s {Sports}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.whitehouse.gov/presidential-actions/2025/02/keeping-men-out-of-womens-sports/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[van Loon et~al\mbox{.}(2022)]%
+        {loon:2022}
+\bibfield{author}{\bibinfo{person}{Austin van Loon}, \bibinfo{person}{Salvatore
+  Giorgi}, \bibinfo{person}{Robb Willer}, {and} \bibinfo{person}{Johannes
+  Eichstaedt}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Negative {Associations} in {Word} {Embeddings}
+  {Predict} {Anti}-black {Bias} across {Regions}–but {Only} via {Name}
+  {Frequency}}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ... International AAAI
+  Conference on Weblogs and Social Media. International AAAI Conference on
+  Weblogs and Social Media}}  \bibinfo{volume}{16} (\bibinfo{date}{May}
+  \bibinfo{year}{2022}), \bibinfo{pages}{1419--1424}.
+\newblock
+\showISSN{2162-3449}
+\urldef\tempurl%
+\url{https://doi.org/10.1609/icwsm.v16i1.19399}
+\showDOI{\tempurl}
+
+
+\bibitem[Wang(2025)]%
+        {wang:2025}
+\bibfield{author}{\bibinfo{person}{Angelina Wang}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Identities are not {Interchangeable}: {The}
+  {Problem} of {Overgeneralization} in {Fair} {Machine} {Learning}}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2025 {ACM} {Conference} on
+  {Fairness}, {Accountability}, and {Transparency}}}
+  \emph{(\bibinfo{series}{{FAccT} '25})}. \bibinfo{publisher}{Association for
+  Computing Machinery}, \bibinfo{address}{New York, NY, USA},
+  \bibinfo{pages}{485--497}.
+\newblock
+\showISBNx{9798400714825}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3715275.3732033}
+\showDOI{\tempurl}
+
+
+\bibitem[{World Health Organization (WHO)}(2026)]%
+        {who:2026}
+\bibfield{author}{\bibinfo{person}{{World Health Organization (WHO)}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Gender incongruence and transgender health in the
+  {ICD}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd}
+\showURL{%
+\tempurl}
+
+
+\end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.10)  14 OCT 2026 17:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.10)  22 OCT 2026 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1005,7 +1005,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 68.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 75.
+(Font)              scaled to size 6.0pt on input line 74.
  [1.1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/us
 r/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr
 /local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/
@@ -1014,79 +1014,102 @@ ocal/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/lo
 cal/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}] [2.2] [
 3.3]
 [4.4] [5.5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6.6]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 286.
+(Font)              scaled to size 8.0pt on input line 278.
+ [6.6]
+Underfull \vbox (badness 6461) has occurred while \output is active []
 
-[7.7] (./facct-slms.bbl
+ [7.7]
+(./facct-slms.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 70.
 LaTeX Info: Redefining \tempurl on input line 76.
+
+
+./facct-slms.bbl:93: LaTeX Error: Unicode character ⚠ (U+26A0)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 ...and {Other} {Learning} {Metaphors} ⚠️}
+                                                  .
+? 
+
+./facct-slms.bbl:93: LaTeX Error: Unicode character ️ (U+FE0F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 ...and {Other} {Learning} {Metaphors} ⚠️}
+                                                  .
+? 
 LaTeX Info: Redefining \tempurl on input line 100.
-LaTeX Info: Redefining \tempurl on input line 118.
-LaTeX Info: Redefining \tempurl on input line 129.
-LaTeX Info: Redefining \tempurl on input line 143.
-LaTeX Info: Redefining \tempurl on input line 162.
-LaTeX Info: Redefining \tempurl on input line 174.
-LaTeX Info: Redefining \tempurl on input line 194.
-LaTeX Info: Redefining \tempurl on input line 226.
-LaTeX Info: Redefining \tempurl on input line 238.
-LaTeX Info: Redefining \tempurl on input line 250.
-LaTeX Info: Redefining \tempurl on input line 287.
-LaTeX Info: Redefining \tempurl on input line 302.
- [8.8]
-LaTeX Info: Redefining \tempurl on input line 334.
-LaTeX Info: Redefining \tempurl on input line 352.
-LaTeX Info: Redefining \tempurl on input line 375.
-LaTeX Info: Redefining \tempurl on input line 388.
-LaTeX Info: Redefining \tempurl on input line 403.
+LaTeX Info: Redefining \tempurl on input line 117.
+LaTeX Info: Redefining \tempurl on input line 134.
+LaTeX Info: Redefining \tempurl on input line 152.
+LaTeX Info: Redefining \tempurl on input line 163.
+LaTeX Info: Redefining \tempurl on input line 177.
+LaTeX Info: Redefining \tempurl on input line 196.
+LaTeX Info: Redefining \tempurl on input line 208.
+LaTeX Info: Redefining \tempurl on input line 228.
+[8.8]
+LaTeX Info: Redefining \tempurl on input line 260.
+LaTeX Info: Redefining \tempurl on input line 272.
+LaTeX Info: Redefining \tempurl on input line 284.
+LaTeX Info: Redefining \tempurl on input line 321.
+LaTeX Info: Redefining \tempurl on input line 336.
+LaTeX Info: Redefining \tempurl on input line 368.
+LaTeX Info: Redefining \tempurl on input line 386.
+LaTeX Info: Redefining \tempurl on input line 409.
+LaTeX Info: Redefining \tempurl on input line 422.
+LaTeX Info: Redefining \tempurl on input line 437.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 410.
+(Font)              scaled to size 9.0pt on input line 417.
+ [9.9]
 
+Package natbib Warning: Citation `heritage_2026;amin_2022' on page 10 undefined
+ on input line 421.
 
-Package natbib Warning: Citation `heritage_2026;amin_2022' on page 9 undefined 
-on input line 415.
-
-
-LaTeX Warning: Reference `tab:close-reading' on page 9 undefined on input line 
-417.
-
-[9.9]
+./facct-slms.tex:423: Misplaced alignment tab character &.
+l.423 ... between either pole. (See the tables 1 &
+                                                   2 for a sample mapping.)
+? 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 426.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 43
-5.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+(Font)              scaled to size 9.0pt on input line 431.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 44
+0.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 435.
+(Font)              scaled to size 9.0pt on input line 440.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 441.
-
-[10.10{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.e
-nc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.en
-c}]
+(Font)              scaled to size 9.0pt on input line 446.
+ [10.10{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.
+enc}]
 LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 5
-10.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
+15.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 510.
+(Font)              scaled to size 9.0pt on input line 515.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-[11.11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.en
+ [11.11{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6
+f.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.en
 c}]
 
 Package natbib Warning: There were undefined citations.
@@ -1102,21 +1125,17 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `facct-slms.out' has not changed.
-(rerunfilecheck)             Checksum: 9BFCED0A572BACC88C2790AD7760BBF5;1968.
+(rerunfilecheck)             Checksum: 20A05570CF4488D91B9A2070CDF65C6C;2223.
  ) 
 Here is how much of TeX's memory you used:
- 21364 strings out of 474116
- 345347 string characters out of 5743682
- 1957187 words of memory out of 5000000
- 42691 multiletter control sequences out of 15000+600000
- 718077 words of font info for 382 fonts, out of 8000000 for 9000
+ 21389 strings out of 474116
+ 345805 string characters out of 5743682
+ 1955187 words of memory out of 5000000
+ 42701 multiletter control sequences out of 15000+600000
+ 719267 words of font info for 390 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,17n,131p,1088b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1088b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
 a-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/Liberti
 neMathMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/L
@@ -1127,10 +1146,10 @@ libertine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
 lic/libertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type
 1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts
 /type1/public/newtx/txsys.pfb>
-Output written on facct-slms.pdf (12 pages, 478379 bytes).
+Output written on facct-slms.pdf (12 pages, 481365 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 89209 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 89225 words of extra memory for PDF output out of 106986 (max. 10000000)
 

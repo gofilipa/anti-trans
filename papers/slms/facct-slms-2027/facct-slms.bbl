@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{24}
+\begin{thebibliography}{26}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -82,6 +82,40 @@
 \bibfield{author}{\bibinfo{person}{Anon}.} \bibinfo{year}{2026}\natexlab{}.
 \newblock
 \newblock
+
+
+\bibitem[Bender et~al\mbox{.}(2025)]%
+        {bender_2025}
+\bibfield{author}{\bibinfo{person}{Emily~M. Bender}, \bibinfo{person}{Eamon
+  Costello}, \bibinfo{person}{Kyungmee Lee}, \bibinfo{person}{Robert Farrow},
+  {and} \bibinfo{person}{Giselle Ferreira}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Unsafe {AI} for {Education}: {A} {Conversation} on
+  {Stochastic} {Parrots} and {Other} {Learning} {Metaphors} ⚠️}.
+\newblock \bibinfo{journal}{\emph{Journal of Interactive Media in Education}}
+  \bibinfo{volume}{2025}, \bibinfo{number}{1} (\bibinfo{date}{Aug.}
+  \bibinfo{year}{2025}), \bibinfo{pages}{10--10}.
+\newblock
+\showISSN{1365-893X}
+\urldef\tempurl%
+\url{https://doi.org/10.5334/jime.1079}
+\showDOI{\tempurl}
+
+
+\bibitem[Biggs et~al\mbox{.}(2013)]%
+        {biggs_2013}
+\bibfield{author}{\bibinfo{person}{M.~Antonia Biggs}, \bibinfo{person}{Heather
+  Gould}, {and} \bibinfo{person}{Diana~Greene Foster}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Understanding why women seek abortions in the
+  {US}}.
+\newblock \bibinfo{journal}{\emph{BMC Women's Health}} \bibinfo{volume}{13},
+  \bibinfo{number}{1} (\bibinfo{date}{July} \bibinfo{year}{2013}),
+  \bibinfo{pages}{29}.
+\newblock
+\showISSN{1472-6874}
+\urldef\tempurl%
+\url{https://doi.org/10.1186/1472-6874-13-29}
+\showDOI{\tempurl}
 
 
 \bibitem[Birhane et~al\mbox{.}(2022)]%

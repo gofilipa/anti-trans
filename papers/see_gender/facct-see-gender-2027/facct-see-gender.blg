@@ -1,0 +1,74 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: facct-see-gender.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: facct-see-gender.bib
+Warning--I didn't find a database entry for "ussd:2025"
+Warning--I didn't find a database entry for "translegislation:2025"
+Warning--I didn't find a database entry for "vaca:206"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no number and no volume in bbc:2023
+Warning--page numbers missing in both pages and numpages fields in bbc:2023
+Warning--empty address in butler:2024
+Warning--empty address in halperin:2002
+Warning--empty publisher in devinney:2020
+Warning--empty publisher in ellis:1900
+Warning--empty address in ellis:1900
+Warning--empty address in enke:2013
+Warning--empty publisher in foucault:1978
+Warning--empty address in foucault:1978
+Warning--empty address in haimson:2025
+Warning--no number and no volume in karni:2025
+Warning--page numbers missing in both pages and numpages fields in karni:2025
+Warning--empty publisher in krafft-ebing:2021
+Warning--empty address in krafft-ebing:2021
+Warning--empty address in shakhsari:2013
+You've used 39 entries,
+            5981 wiz_defined-function locations,
+            1752 strings with 28933 characters,
+and the built_in function-call counts, 39848 in all, are:
+= -- 4624
+> -- 1181
+< -- 0
++ -- 370
+- -- 423
+* -- 2759
+:= -- 4000
+add.period$ -- 205
+call.type$ -- 39
+change.case$ -- 246
+chr.to.int$ -- 38
+cite$ -- 55
+duplicate$ -- 3712
+empty$ -- 2601
+format.name$ -- 495
+if$ -- 9242
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 108
+newline$ -- 479
+num.names$ -- 290
+pop$ -- 1333
+preamble$ -- 1
+purify$ -- 556
+quote$ -- 0
+skip$ -- 1423
+stack$ -- 0
+substring$ -- 3082
+swap$ -- 372
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 974
+warning$ -- 16
+while$ -- 286
+width$ -- 0
+write$ -- 934
+(There were 19 warnings)

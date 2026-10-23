@@ -37,7 +37,7 @@
 
 %% Abstract
 \begin{abstract}
-This paper explores Small Language Models (SLMs) as reflexive tools that push against dominant values embedded in large-scale language modeling systems. Instead of optimizing for values like model objectivity, SLMs usefully distill ideological constructions and social biases within language data. To illustrate this effect, this paper presents an experiment using SLMs to analyze the polarized discourse around gender rights in the USA. Trained on datasets representing polarized liberal and conservative views, SLMs aggregate areas of ideological disagreement and misunderstanding to reveal unexpected overlap. Rather than smooth over conflicting perspectives about gender, SLMs surface intersections between politically opposed perspectives, making visible the biases and structures of disagreement that large-scale models tend to obscure.
+This paper explores Small Language Models (SLMs) as reflexive tools for close reading language analysis. Due to their small and under-developed nature, SLMs usefully distill ideological constructions and social biases within language data. To illustrate this effect, this paper presents an experiment using SLMs to analyze the polarized political discourse around gender rights in the USA. Trained on datasets representing polarized liberal and conservative views on gender, SLMs aggregate areas of ideological disagreement and misunderstanding to reveal unexpected overlap. Rather than smooth over conflicting perspectives, SLMs surface intersections between politically opposed perspectives, making visible the biases and structures of disagreement that large-scale models tend to obscure.
 \end{abstract}
 
 %% CCS Concepts
@@ -56,7 +56,7 @@ This paper explores Small Language Models (SLMs) as reflexive tools that push ag
 \ccsdesc[300]{Applied computing~Arts and humanities}
 
 %% Keywords
-\keywords{small language models, synthetic middle, gender, political polarization, language modeling, social bias}
+\keywords{text generation, close reading, small language models, slms, gender studies, trans studies, politics}
 
 \maketitle
 
@@ -67,14 +67,15 @@ Text generation tasks are often used for ideation, brainstorming, and drafting, 
 
 This paper, by contrast, experiments with the \textit{reflexive} potential of text generation--that is, how this mechanism might surface latent structures, such as biased perspectives, from training data. It uses Small Language Models (SLMs), derivations of GPT-2, to study the issue of gender rights in the USA from politically polarized sources, what \citet{bornschier_2021} refers to as "far right and new left" views.
 
-Due to their small size and under-developed status, SLMs tend to collapse opposing perspectives into apparently univocal declarations. Their outputs lead to paper's key insight: that text generation produces aggregated language forms, compressing multiple, often conflicting perspectives into a single statement---the \textit{synthetic middle}.
-
-While large-scale models might smooth over or resolve conflicting perspectives, the SLM's illusion of a unitary voice reveals traces of unexpected ideological overlap and intersection. These traces of overlap and intersection have interdisciplinary implications, contributing to debates in Feminist Studies about the widespread fears of "gender ideology", and to conversations in Political Science about recent trends in electoral behavior and polarization \citep{butler_2024,bornschier_2021}. This paper thus answers calls to operationalize ML as a tool for critique that both draws from and contributes to interdisciplinary knowledge \citep{wanga_2025,birhane_2022,devinney_2022}.
+Due to their small size and underdeveloped status, SLM-generated text tends to collapses opposing perspectives into what are apparently univocal declarations. These outputs lead to this paper's key insight: that SLMs may be used to study ideological polarization in language. SLMs compress multiple, often conflicting perspectives into a single statement---what I call the \textit{synthetic middle}. Drawing from \citet{bender_2025}'s description of "synthetic text extruding machines," which grounds language modeling as a statistical (rather than "intelligent" or "emergent") process, the \textit{synthetic middle} emphasizes how language modeling may surface a "middle," or blending, of ideological points of view. This blending, which large-scale models might smooth over or obscure, opens up unexpected sites of ideological overlap and intersection. 
 
 Like \citet{konya_2025}, who use language modeling to facilitate dialogue between Israeli Jews and Palestinians, this experiment makes the strong case for language modeling as a useful tool in the current landscape of polarized discourse. Unlike that work, however, which seeks a common ground between opposing groups, this paper approaches internal tension within groups as potential sites of intersection. It makes the case for turning toward, rather than away from, social bias in language forms---forms which might be operationalized for political ends.
 
-In doing so, this paper thus responds to two major drivers in current ML research and development. First, its experiment with SLMs sidesteps the development goal of model objectivity which, as explained below, overlooks how language modeling embeds useful data for studying bias and discrimination. By working with smaller, more controlled datasets, SLMs transform polarized views into sites of productive intersection and, potentially, intervention. Second, it further contributes to efforts for low-resource computing, resisting the extractive "bigger is better mentality" which chases ever-increasing model sizes \citep{varoquaux_2025}. This experiment shows how even underdeveloped, small models offer powerful analytical possibilities.
+In doing so, this paper thus responds to two major drivers in current ML research and development.
 
+First, its experiment with SLMs sidesteps the development goal of model objectivity which, as explained below, overlooks how language modeling embeds useful data for studying bias and discrimination. By working with smaller, more controlled datasets, SLMs transform polarized views into sites of productive intersection and, potentially, intervention. These traces of overlap and intersection have interdisciplinary implications, contributing to debates in Feminist Studies about the widespread fears of "gender ideology", and to conversations in Political Science about recent trends in electoral behavior and polarization \citep{butler_2024,bornschier_2021}. This paper thus answers calls to operationalize ML as a tool for critique that both draws from and contributes to interdisciplinary knowledge \citep{wanga_2025,birhane_2022,devinney_2022}.
+
+Second, this paper further contributes to efforts for low-resource computing, resisting the extractive "bigger is better mentality" which chases ever-increasing model sizes \citep{varoquaux_2025}. This experiment shows how even underdeveloped, small models offer powerful analytical possibilities.
 
 \section{On Objectivity}
 
@@ -86,34 +87,34 @@ Recently, OpenAI has made a concerted effort to reduce political bias in model o
 
 \begin{quote}
 
-Why do conservatives weaponize 'family values' as cover to justify stripping women of basic human rights and bodily autonomy? (liberal-charged)
+\textit{Liberal-charged}: Why do conservatives weaponize 'family values' as cover to justify stripping women of basic human rights and bodily autonomy?
 
-Why are so many young women brainwashed to believe that children are a curse instead of a blessing? (conservative-charged)
+\textit{Conservative-charged}: Why are so many young women brainwashed to believe that children are a curse instead of a blessing?
 
 \end{quote}
 
-The two questions approach the same issue, abortion, through different lenses: while the conservative side approaches through the lens of young motherhood, the liberal side approaches through the lens of autonomy and choice. The biases in these samples emerge in the assumptions that are already embedded within these approaches--according to the liberal side, that conservatives strip women of rights, and to conservative side, that young women are brainwashed about motherhood.
-
-In fact, these questions are rhetorical. They make claims rather than ask questions. The liberal charged question claims that the conservative viewpoint weaponizes family values in order to deny women their autonomy; similarly, while the conservative question makes a claim about young women being brainwashed into believing that motherhood is a curse.
+The two samples approach the same issue, abortion, through different lenses: while the conservative-charged sample approaches it through the lens of young motherhood, the liberal-charged sample approaches through the lens of autonomy and choice. In fact, the questions in each sample are rhetorical. They make claims rather than ask questions. The biases embedded within each question play on different views of women: on the conservative-charged side, that  that women are brainwashed, and on the liberal-charged side, that women are stripped of rights. 
 
 Aiming for a middle ground on the issue, the evaluation's "neutral" example asks,
 
 \begin{quote}
 
-Are young moms happy? (neutral)
+\textit{Neutral}: Are young moms happy?
 
 \end{quote}
 
-However, like the "charged" examples above, the "neutral" example also makes an implicit assumption. It assumes that "happiness" is a decisive factor in the decision to have children. This framing associates motherhood primarily with emotional fulfillment. Because it effectively sidesteps the issue of women's autonomy, it falls more in line with the spiritual connotations in motherhood as "curse" or "blessing", on the conservative side.
+However, like the polarized samples above, the neutral sample also makes an implicit assumption. It assumes that "happiness" is a decisive factor in the decision to have children, which associates motherhood primarily with emotional fulfillment. While the sample effectively sidesteps the issue of women's autonomy, it nonetheless keeps abortion within a larger discussion of what women deserve on a personal level. Despite its apparent neutrality, then, this sample reinforces subtle framings of abortion as an individual issue, rather than a financial and structural one, which is the primary consideration for women who seek abortions in the US \citep{biggs_2013}.
 
 Resisting the temptation to find a middle ground, however, this project argues that social biases can in fact reveal productive spaces for engagement. Rather than smoothing the differences between the polarized positions--in this case, women's autonomy on the left, and the difficulty of young motherhood on the right--this project seeks out what is being prioritized on each side, what I call the \textit{synthetic middle} of machine-generated outputs. This synthetic middle, as I demonstrate below, offers a site of potential intersection between opposing viewpoints.
 
 
 \section{Methodology}
+\label{methodology}
 
 For this project, I fine-tuned two SLMs based on GPT-2 \citep{radford_2018}. SLMs, an emerging but niche area of ML development, are smaller in size than traditional LLMs, which can range from tens of billions to trillions of parameters in size. Some of the more popular SLMs, for example, are GPT-2, at 1.5 billion, and TinyLlama, at 1.1 billion \citep{zhang_2024}. Relative to their size, however, SLMs can perform well on downstream tasks, and they have great potential for low-resource computing environments, like mobile, minimal, and edge computing \citep{nguyen_2025,wangf_2025}.
 
-One of the models was fine-tuned from a training dataset of articles scraped from the Heritage Foundation, a conservative think-tank based in Washington, D.C. \citep{heritage_2026}. For this dataset, I scraped 278 articles from the "gender" page on the website. Concerning gender, the articles represent a firmly conservative point of view. For example, the first six articles of the resulting dataset contain the following titles:
+
+One of the models was fine-tuned from a training dataset of articles from the Heritage Foundation, a conservative think-tank based in Washington, D.C. \citep{heritage_2026}. For this dataset, I gathered 278 articles from the "gender" page on the website. Concerning gender, the articles represent a firmly conservative point of view on gender. For example, the first six articles of the resulting dataset contain the following titles:
 
 \begin{quote}
 Biden-Harris DOJ Prosecutor Targets Trans Whistleblower Doctor Again
@@ -129,7 +130,7 @@ Follow the Law
 Sorry Democrats, but Trumps' "Two Sexes" Executive Order is Constitutional
 \end{quote}
 
-The second model was fine-tuned from a dataset of articles scraped from the American Civil Liberties Union (ACLU), a progressive organization directly involved in legal actions. From this website, I scraped 280 articles, also on the topic of gender \citep{aclu_2026}. Please see ~\autoref{appendix:copyright} for a clarification around copyright regarding these sources.
+The second model was fine-tuned from a dataset of articles from the American Civil Liberties Union (ACLU), a progressive organization directly involved in legal actions. From this website, I gathered 280 articles, also on the topic of gender \citep{aclu_2026}. Please see ~\autoref{appendix:copyright} for a clarification around copyright regarding these sources.
 
 The first six articles from the resulting dataset contain the following titles:
 
@@ -147,7 +148,7 @@ Why the Fight for Trans Rights Never Gets Easier – or Less Vital
 I'm a Doctor. I've Seen How Vital it is to Speak with Young People About Gender
 \end{quote}
 
-After processing, each of the resulting datasets were between 4K-7K lines in size, with each line containing a sentence from the articles. Both models were then fine-tuned over 3 epochs and otherwise used identical hyperparameters. These parameters (including those for fine-tuning and decoding) are available in the Appendix.
+After processing, each of the resulting datasets were between 4K-7K lines in size, with each line containing a sentence from the articles. Both models were then fine-tuned over 3 epochs and otherwise used identical hyperparameters. These parameters (including those for fine-tuning and decoding) are available in ~\autoref{appendix:training}
 
 After training, I fed the following prompts to both models, and manually compared the outputs through close reading. Both models were prompted with the identical prompt set, which draws from terminology that describes masculine, feminine, trans, and nonbinary gender identities:
 
@@ -161,17 +162,18 @@ Transgender is
 The gender binary is
 \end{quote}
 
-For both models, each of the 4 above prompts was sampled repeatedly (20 generations per prompt in the implementation used for this study), producing a corpus of 160 total outputs from which representative examples were selected through comparative close reading. For a detailed description of my close reading methodology, see ~\autoref{appendix:close-reading}.
+For both models, each of the four prompts above was sampled at 20 generations per prompt, producing a corpus of 160 total outputs from which representative examples were selected through comparative close reading. For details about my generation protocol, see ~\autoref{appendix:close-reading}.
 
 One limitation of this study is the size and relative underdevelopment of the model, which produced outputs highly prone to repetition and hallucination. However, this project approaches these quirks and irregularities as useful material for analysis. As I demonstrate below, because small models cannot absorb concepts with nuance and complexity, their outputs result in rich and revealing examples for close reading analysis. Other limitations include the generalizability, which is inherent to the project's interdisciplinary approach. Please see more in  Limitations~\autoref{limitations}.
 
 In what follows, I share the results from the prompting and my close reading analysis. 
 
-\section{Gender Discourse}
 
-There is, as expected, a strong contrast between how genders are conceptualized between the model trained on the ACLU data and model trained on the Heritage data. To see instructions for reproducing the fine-tuning, decoding, and generation protocols, please see ~\autoref{appendix:methodology}.
+\section{Results}
 
-The Heritage foundation model generates the following outputs. 
+There is, as expected, a strong contrast between how genders are conceptualized between the model trained on the ACLU data and model trained on the Heritage data. 
+
+First, the Heritage foundation model generates the following outputs. 
 
 \begin{quote}
 Masculinity is the cornerstone of Western civilization.
@@ -266,21 +268,11 @@ While the conservative side expresses derision in its references to "subjectivit
 
 This ambivalence reflects a concern, on the progressive side, over the supposed "reality" of gender identification as an external and objective phenomenon. While the conservative model appears invested in how personal thoughts and feelings affect gender identification, the progressive model appears invested in the external and universal recognition of gender identity.
 
-Across the two models, then, the outputs reveal not just a single political perspective of gender, but a flattening or aggregation of ideological perspectives into a single statement, into a synthetic middle. This synthetic middle concentrates various viewpoints into an apparently univocal utterance. Significantly, it locates a middle ground for polarized discourses--a middle ground not based in neutrality, but in tension.
+\section{Discussion}
 
-It is important to note that the synthetic middle is not intended as a synonym for hallucination, contradiction, ambiguity, or model collapse. Rather, it refers to generated text in which distinct ideological framings become \textit{compressed into a single linguistic construction while retaining identifiable traces of multiple positions}. Hallucination or repetition may co-occur because of the limitations of small language models, but they are not themselves the phenomenon under analysis. The synthetic middle is an analytical category for interpreting recurring linguistic patterns produced under controlled fine-tuning conditions, rather than an ontological claim about all SLM outputs.
+Across the two models, the outputs reveal not just a single political perspective of gender, but a flattening or aggregation of ideological perspectives into a single statement, into a synthetic middle. This synthetic middle concentrates various viewpoints into an apparently univocal utterance. Significantly, it locates a middle ground for polarized discourses---a middle ground not based in neutrality, but in tension.
 
-As shown in Tables~\ref{tab:aclu-close-reading} and~\ref{tab:heritage-close-reading}, the close-reading methodology identifies instances in which outputs combine or contradict distinct ideological positions.
-
-For this experiment, the synthetic middle is useful for the way that it opens sites where polarized perspectives might come to mutual understanding. In this case, the concerns with subjectivity and reality suggests that opposing positions share investments in gender as an external phenomenon. In other words, both sides appear to agree that gender needs to be grounded in some way.
-
-This insight, in fact, accords with what some Trans Studies scholars argue about the conceptualization of gender, and how defining gender as internal causes more harm than good, creating the potential for transphobic discrimination \citep{amin_2022,chu_2024}. According to \citet{amin_2022}, for example, the internalization of gender identity creates a domino effect where gender is increasingly divorced from bodily expression. In this situation, normative genders become both default and invisible---unmarked as such. As a result, any visibly non-normative genders have a higher likelihood of experiencing discrimination and stigmatization for their visible difference. Such stigmas are borne out in public life where, for example, masculine gay men are more likely to participate and achieve prominence over gay men who are visibly non-normative or gender-bending.
-
-\section{Conclusion}
-
-In the polarized gender discourse, the liberal investment in "reality" and the conservative investment in "subjectivity" concentrate internal tensions within their respective sides, which language modeling and close reading can bring to the surface. This methodology locates sites of overlap within tension and conflict, rather than some ideal of objectivity.
-
-In doing so, the paper challenges dominant assumptions within contemporary ML development, showing how smaller, low-resource models can preserve the interpretive value of bias rather than treating it as a defect. Against the extractive logic of ever-expanding model scale, this experiment demonstrates that underdeveloped SLMs can still produce meaningful analytical insights by turning polarization itself into a site of critical inquiry and potential intervention.
+As shown in Tables~\ref{tab:aclu-close-reading} and~\ref{tab:heritage-close-reading}, the close-reading methodology identifies instances in which outputs combine or contradict distinct ideological positions. Each output is flagged by a political pole, which is either liberal, conservative, or the combination of the two, liberal/conservative; by a construction, which is either single, contradicted, or blended, where single denotes a single political pole, contradicted denotes two or more poles that are in direct conflict, and blended indicates two or more poles which are not cleanly extricable; the last of which indicates an instance of the synthetic middle.
 
 \begin{table}[t]
 \caption{Examples of ACLU model outputs classified using the close-reading methodology.}
@@ -378,6 +370,21 @@ The gender binary is a \textbf{subjective, psychological, and sometimes physical
 \end{tabularx}
 \end{table}
 
+It is important to note that the synthetic middle is not intended as a synonym for hallucination, contradiction, ambiguity, or model collapse. Rather, it refers to generated text in which distinct ideological framings become \textit{compressed into a single linguistic construction while retaining identifiable traces of multiple positions}. Hallucination or repetition may co-occur because of the limitations of small language models, but they are not themselves the phenomenon under analysis. The synthetic middle is an analytical category for interpreting recurring linguistic patterns produced under controlled fine-tuning conditions, rather than an ontological claim about all SLM outputs.
+
+For this experiment, the synthetic middle is useful for the way that it opens sites where polarized perspectives might come to mutual understanding. In this case, the concerns with subjectivity and reality suggests that opposing positions share investments in gender as an external phenomenon. In other words, both sides appear to agree that gender needs to be grounded in some way.
+
+This insight, in fact, accords with what some Trans Studies scholars argue about the conceptualization of gender, and how defining gender as internal causes more harm than good, creating the potential for transphobic discrimination \citep{amin_2022,chu_2024}. According to \citet{amin_2022}, for example, the internalization of gender identity creates a domino effect where gender is increasingly divorced from bodily expression. In this situation, normative genders become both default and invisible---unmarked as such. As a result, any visibly non-normative genders have a higher likelihood of experiencing discrimination and stigmatization for their visible difference. Such stigmas are borne out in public life where, for example, masculine gay men are more likely to participate and achieve prominence over gay men who are visibly non-normative or gender-bending.
+
+\section{Conclusion}
+
+In the polarized gender discourse, the liberal investment in "reality" and the conservative investment in "subjectivity" concentrate internal tensions within their respective sides, which language modeling and close reading can bring to the surface. This methodology locates sites of overlap within tension and conflict, rather than some ideal of objectivity.
+
+In doing so, the paper challenges dominant assumptions within contemporary ML development, showing how smaller, low-resource models can preserve the interpretive value of bias rather than treating it as a defect. Against the extractive logic of ever-expanding model scale, this experiment demonstrates that underdeveloped SLMs can still produce meaningful analytical insights by turning polarization itself into a site of critical inquiry and potential intervention.
+
+\section{Generative AI Usage Statement}
+With the exception of the experimental methodology outlined in the  Methodology~\autoref{methodology}, generative AI was not used for the project or for the writing of the paper.
+
 \section{Limitations}
 \label{limitations}
 
@@ -394,8 +401,8 @@ Extending this methodology to additional SLM architectures would provide another
 
 \appendix
 
-\section{Methodology}
-\label{appendix:methodology}
+\section{Appendix}
+\label{appendix}
 
 This appendix provides additional detail on the analytical procedure, model training, and generation protocol used in the study.
 
@@ -407,27 +414,25 @@ The synthetic middle defines generated text within a specific discourse where di
 The following close-reading methodology incorporates domain expertise and provides a systematic procedure for identifying instances of the synthetic middle. The methodology consists of four steps.
 
 \begin{enumerate}
-\item \textbf{Read the generated outputs individually.} Each output is manually examined one at a time. A complete list of generated outputs is provided in the appendix.
+\item \textbf{Manually read the outputs of the text generation.} Each output is manually examined one at a time. 
 
-```
-\item \textbf{Identify recurring textual patterns.} The outputs are examined for repeated words or phrases that may indicate recurring discursive patterns. In this case study, patterns emerge around the terms ``real'' and ``subjective'' in the ACLU- and Heritage-fine-tuned models, respectively. Among the 80 outputs generated by the ACLU model, ``real'' appears 14 times; among the outputs generated by the Heritage model, ``subjective'' appears 11 times. These frequencies were relatively stable across multiple generations. See Section~\ref{limitations} for comparisons with fixed-seed and baseline generations.
+\item \textbf{Look for textual patterns in the outputs.} The outputs are examined for repeated words or phrases that may indicate recurring discursive patterns. In this case study, patterns emerge around the terms ``real'' and ``subjective'' in the ACLU- and Heritage-fine-tuned models, respectively. Among the 80 outputs generated by the ACLU model, ``real'' appears 14 times; among the outputs generated by the Heritage model, ``subjective'' appears 11 times. These frequencies were relatively stable across multiple generations. See Section~\ref{limitations} for comparisons with fixed-seed and baseline generations.
 
-\item \textbf{Examine textual patterns for ideological positions.} Recurring textual patterns are examined in relation to ideological positions, drawing on relevant scholarship and domain expertise. Consultation with researchers possessing relevant domain expertise is particularly important for this step, which requires familiarity with major debates and key terms. A political pole is assigned when a clause expresses a position that can be traced to the cited scholarship or source corpus. For example, within conservative discourse, terms such as ``transitory'' and ``illogical'' have been used in defining gender-related concepts~\cite{heritage_2026;amin_2022}.
+\item \textbf{Examine textual patterns for ideological positions.} It is highly encouraged to consult researchers with domain expertise for this step, which requires familiarity with major debates and key terms. A political pole is assigned when a phrase or clause expresses a position that can be traced to the cited scholarship or source corpus. For example, within conservative discourse, terms such as ``transitory'' and ``illogical'' have been used in defining gender-related concepts~\cite{heritage_2026;amin_2022}.
 
-Once an ideological position is identified, the output is classified along two dimensions: (1) the dominant political pole expressed by the position, either liberal or conservative; and (2) the logical relationship among the identified positions. A label of \emph{single} describes a perspective that coherently aligns with one political pole. A label of \emph{contradicted} describes a construction that expresses a relation of contrast or contradiction between both poles. A label of \emph{blended} describes a construction in which both poles are represented such that the output cannot be cleanly differentiated between them. Table~\ref{tab:close-reading} provides an example of this mapping.
+Once an ideological position is identified, determine (1) the position's dominant political pole (either liberal or conservative), and (2) whether that position is logically expressed in a single, contradicted, or blended construction. A label of "single" describes a perspective that coherently aligns with one of the two poles (either liberal or conservative); a label of "contradicted" describes a construction expressing a relation of contrast or contradiction between both poles; a label of "blended" describes a construction where both poles are represented in a way where the output cannot be cleanly differentiated between either pole. (See the tables 1 & 2 for a sample mapping.)
 
-\item \textbf{Identify instances of the synthetic middle.} Outputs labeled \emph{contradicted} or \emph{blended} are interpreted as instances of the synthetic middle because they retain identifiable traces of multiple ideological positions within a single generated construction.
-```
+\item \textbf{Determine if the output is the synthetic middle.} Outputs labelled as "contradicted" or "blended" are interpreted as instances of the synthetic middle because they retain identifiable traces of multiple ideological positions.
 
 \end{enumerate}
 
 \subsubsection{Interpretive Guidelines}
 
-Because the interpretation of language semantics can be imprecise, the close-reading procedure follows two additional guidelines.
+Note: Because the interpretation of language semantics can sometimes be imprecise, please:
 
-First, outputs are analyzed as written rather than interpreted according to what the researcher considers their most logically coherent meaning. The procedure does not attempt to resolve contradictions or make different perspectives mutually coherent. For example, `The gender binary is a reality within us'' can be read as expressing both liberal and conservative positions: a liberal view in which the binary is one among multiple possible realities and a conservative view in which the binary constitutes the relevant reality. This output is therefore labeled `L/C.'' By contrast, the similar output `The gender binary is not an accepted reality'' is read as conservative, expressing the position that the binary is not currently accepted but is threatened or challenged by social change, and is therefore labeled `C.''
+Analyze outputs as written. Do not attempt to resolve logical contradictions or to make different perspectives cohere. For example, "the gender binary is a reality within us" can be read as both liberal and conservative (i.e., the liberal view holding that the binary is one of many realities, while the conservative view holds that it is the only reality) and should be given the label "L/C". By contrast, the similar output "The gender binary is not an accepted reality" should be read as conservative (i.e., the view that the binary is not currently accepted, but threatened or in danger due to social change), and given the label "C".
 
-Second, each output is treated as one logical unit. Outputs are not divided unless they contain conjunctions, relative pronouns, or relevant punctuation that establishes distinct clauses or constructions, such as `but,'' `and,'' commas, colons, `that,'' `which,'' or `who.'' For example, the output `The gender binary is not an accepted reality, but one that is accepted by a wide swath of people'' may be analyzed as two related constructions: `The gender binary is not an accepted reality'' and `one that is accepted by a wide swath of people.''
+Approach each output as one logical unit. Do not split the outputs, unless they contain conjunctions, relative pronouns or relevant punctuation ("but", "and", ",", ":", "that", "which", "who"). Outputs like "The gender binary is not an accepted reality, but one that is accepted by a wide swath of people" may be split into "The gender binary is not an accepted reality" and "one that is accepted by a wide swath of people".
 
 \subsection{Fine-Tuning Details}
 \label{appendix:training}

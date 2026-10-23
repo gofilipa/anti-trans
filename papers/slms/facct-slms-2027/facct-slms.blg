@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: references.bib
 Warning--I'm ignoring chu_2024's extra "year" field
---line 122 of file references.bib
+--line 162 of file references.bib
 Warning--I didn't find a database entry for "heritage_2026;amin_2022"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -21,45 +21,45 @@ Warning--page numbers missing in both pages and numpages fields in chu_2024
 Warning--no journal in radford_2018
 Warning--no number and no volume in radford_2018
 Warning--page numbers missing in both pages and numpages fields in radford_2018
-You've used 24 entries,
+You've used 26 entries,
             5981 wiz_defined-function locations,
-            1625 strings with 23880 characters,
-and the built_in function-call counts, 24734 in all, are:
-= -- 2871
-> -- 942
+            1644 strings with 24460 characters,
+and the built_in function-call counts, 27125 in all, are:
+= -- 3256
+> -- 1020
 < -- 0
-+ -- 315
-- -- 337
-* -- 1807
-:= -- 2617
-add.period$ -- 123
-call.type$ -- 24
-change.case$ -- 188
-chr.to.int$ -- 21
-cite$ -- 31
-duplicate$ -- 2115
-empty$ -- 1492
-format.name$ -- 373
-if$ -- 5663
++ -- 341
+- -- 361
+* -- 1991
+:= -- 2831
+add.period$ -- 133
+call.type$ -- 26
+change.case$ -- 204
+chr.to.int$ -- 23
+cite$ -- 33
+duplicate$ -- 2300
+empty$ -- 1623
+format.name$ -- 405
+if$ -- 6291
 int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 52
-newline$ -- 307
-num.names$ -- 167
-pop$ -- 785
+missing$ -- 60
+newline$ -- 331
+num.names$ -- 181
+pop$ -- 848
 preamble$ -- 1
-purify$ -- 374
+purify$ -- 406
 quote$ -- 0
-skip$ -- 820
+skip$ -- 880
 stack$ -- 0
-substring$ -- 1748
-swap$ -- 202
+substring$ -- 1913
+swap$ -- 220
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 617
+type$ -- 649
 warning$ -- 7
-while$ -- 155
+while$ -- 165
 width$ -- 0
-write$ -- 574
+write$ -- 620
 (There were 9 warnings)
